@@ -1,0 +1,384 @@
+********************************************************************************
+*                         FREEZE-AND-THAW CALCULATION                          *
+********************************************************************************
+
+================================== Input File ==================================
+subsystem
+C          0.00778        2.36604        0.66769
+H         -0.53232        3.17188        1.19098
+C          0.00778        2.36604       -0.66769
+H         -0.53232        3.17188       -1.19098
+C         -0.66014       -1.15393        4.23831
+H         -1.42173       -1.65050        3.60712
+H         -1.22017       -0.41746        4.84591
+C          0.32117       -0.41632        3.34419
+H          0.88355       -1.14956        2.73174
+H          1.08554        0.08531        3.97131
+C         -0.33327        0.60521        2.43291
+H         -0.89070        1.34234        3.04453
+H         -1.09786        0.10981        1.80345
+C          0.65548        1.33788        1.53433
+H          1.19929        0.60830        0.90482
+H          1.42288        1.81714        2.17506
+C          0.65548        1.33788       -1.53433
+H          1.19929        0.60830       -0.90482
+H          1.42288        1.81714       -2.17506
+C         -0.33327        0.60521       -2.43291
+H         -0.89070        1.34234       -3.04453
+H         -1.09786        0.10981       -1.80345
+C          0.32117       -0.41632       -3.34419
+H          1.08554        0.08531       -3.97131
+H          0.88355       -1.14956       -2.73174
+C         -0.66014       -1.15393       -4.23831
+H         -1.42173       -1.65050       -3.60712
+H         -1.22017       -0.41746       -4.84591
+end
+
+subsystem
+C          0.00778       -2.17120        5.14231
+H          0.74923       -1.69124        5.80363
+H          0.54542       -2.93477        4.55466
+H         -0.71596       -2.69728        5.78418
+C          0.00778       -2.17120       -5.14231
+H         -0.71596       -2.69728       -5.78418
+H          0.74923       -1.69124       -5.80363
+H          0.54542       -2.93477       -4.55466
+end
+
+embed
+ huzfermi
+ cycles 3000
+ conv 1e-8
+ method m06
+end
+
+basis cc-pVDZ
+method cas[2,2]/nevpt2
+grid 4
+conv 1e-8
+grad 1e-8
+maxiter 100
+================================== End Input ===================================
+tot grids = 725328
+
+                      Getting subsystem overlap integrals                       
+
+                          Initial subsystem densities                           
+Guessing initial subsystem densities
+Initial guess from superpostion of atomic densties.
+Guessing initial subsystem densities
+Initial guess from superpostion of atomic densties.
+
+=========================== Starting Freeze-and-Thaw ===========================
+ iter:   1:1        |ddm|: 5.911794e+00     Tr[DP]  6.954127e-01
+ iter:   1:2        |ddm|: 2.718473e+00     Tr[DP]  4.255006e-01
+ iter:   2:1        |ddm|: 2.654882e+01     Tr[DP]  8.420252e-01
+ iter:   2:2        |ddm|: 1.226576e+00     Tr[DP]  7.090386e-01
+ iter:   3:1        |ddm|: 2.648269e+01     Tr[DP]  3.741264e-01
+ iter:   3:2        |ddm|: 9.073599e-01     Tr[DP]  4.318298e-01
+ iter:   4:1        |ddm|: 4.822776e+00     Tr[DP]  6.095981e-01
+ iter:   4:2        |ddm|: 7.420174e-01     Tr[DP]  4.582412e-01
+ iter:   5:1        |ddm|: 1.665628e+00     Tr[DP]  6.186903e-01
+ iter:   5:2        |ddm|: 2.001100e-01     Tr[DP]  5.146910e-01
+ iter:   6:1        |ddm|: 1.095449e+00     Tr[DP]  6.031264e-01
+ iter:   6:2        |ddm|: 1.602607e-01     Tr[DP]  5.499024e-01
+ iter:   7:1        |ddm|: 5.838875e-01     Tr[DP]  5.865407e-01
+ iter:   7:2        |ddm|: 1.258622e-01     Tr[DP]  5.624656e-01
+ iter:   8:1        |ddm|: 3.252143e-01     Tr[DP]  5.819105e-01
+ iter:   8:2        |ddm|: 6.685152e-02     Tr[DP]  5.607175e-01
+ iter:   9:1        |ddm|: 1.844632e-01     Tr[DP]  5.750890e-01
+ iter:   9:2        |ddm|: 2.798394e-02     Tr[DP]  5.628910e-01
+ iter:  10:1        |ddm|: 1.537542e-01     Tr[DP]  5.675807e-01
+ iter:  10:2        |ddm|: 3.720947e-02     Tr[DP]  5.646818e-01
+ iter:  11:1        |ddm|: 6.556391e-02     Tr[DP]  5.689980e-01
+ iter:  11:2        |ddm|: 1.444934e-02     Tr[DP]  5.652458e-01
+ iter:  12:1        |ddm|: 3.242294e-02     Tr[DP]  5.671751e-01
+ iter:  12:2        |ddm|: 7.278312e-03     Tr[DP]  5.649880e-01
+ iter:  13:1        |ddm|: 1.763247e-02     Tr[DP]  5.663526e-01
+ iter:  13:2        |ddm|: 2.712006e-03     Tr[DP]  5.652512e-01
+ iter:  14:1        |ddm|: 9.309715e-03     Tr[DP]  5.659354e-01
+ iter:  14:2        |ddm|: 1.456351e-03     Tr[DP]  5.653143e-01
+ iter:  15:1        |ddm|: 5.186774e-03     Tr[DP]  5.656866e-01
+ iter:  15:2        |ddm|: 7.948342e-04     Tr[DP]  5.653632e-01
+ iter:  16:1        |ddm|: 3.099419e-03     Tr[DP]  5.655357e-01
+ iter:  16:2        |ddm|: 5.844767e-04     Tr[DP]  5.653947e-01
+ iter:  17:1        |ddm|: 1.889162e-03     Tr[DP]  5.654671e-01
+ iter:  17:2        |ddm|: 4.489209e-04     Tr[DP]  5.653964e-01
+ iter:  18:1        |ddm|: 1.004619e-03     Tr[DP]  5.654451e-01
+ iter:  18:2        |ddm|: 2.005770e-04     Tr[DP]  5.654063e-01
+ iter:  19:1        |ddm|: 5.092781e-04     Tr[DP]  5.654259e-01
+ iter:  19:2        |ddm|: 1.160556e-04     Tr[DP]  5.654037e-01
+ iter:  20:1        |ddm|: 2.779599e-04     Tr[DP]  5.654160e-01
+ iter:  20:2        |ddm|: 5.990612e-05     Tr[DP]  5.654038e-01
+ iter:  21:1        |ddm|: 1.642899e-04     Tr[DP]  5.654093e-01
+ iter:  21:2        |ddm|: 4.150331e-05     Tr[DP]  5.654035e-01
+ iter:  22:1        |ddm|: 8.402903e-05     Tr[DP]  5.654076e-01
+ iter:  22:2        |ddm|: 1.644905e-05     Tr[DP]  5.654034e-01
+ iter:  23:1        |ddm|: 4.409876e-05     Tr[DP]  5.654057e-01
+ iter:  23:2        |ddm|: 8.954622e-06     Tr[DP]  5.654035e-01
+ iter:  24:1        |ddm|: 2.507009e-05     Tr[DP]  5.654046e-01
+ iter:  24:2        |ddm|: 5.434031e-06     Tr[DP]  5.654035e-01
+ iter:  25:1        |ddm|: 1.372297e-05     Tr[DP]  5.654041e-01
+ iter:  25:2        |ddm|: 2.966453e-06     Tr[DP]  5.654035e-01
+ iter:  26:1        |ddm|: 8.067940e-06     Tr[DP]  5.654038e-01
+ iter:  26:2        |ddm|: 1.974890e-06     Tr[DP]  5.654036e-01
+ iter:  27:1        |ddm|: 4.271702e-06     Tr[DP]  5.654037e-01
+ iter:  27:2        |ddm|: 9.975839e-07     Tr[DP]  5.654035e-01
+ iter:  28:1        |ddm|: 2.306104e-06     Tr[DP]  5.654036e-01
+ iter:  28:2        |ddm|: 5.448799e-07     Tr[DP]  5.654035e-01
+ iter:  29:1        |ddm|: 1.245509e-06     Tr[DP]  5.654036e-01
+ iter:  29:2        |ddm|: 2.887731e-07     Tr[DP]  5.654035e-01
+ iter:  30:1        |ddm|: 6.771197e-07     Tr[DP]  5.654036e-01
+ iter:  30:2        |ddm|: 1.559710e-07     Tr[DP]  5.654035e-01
+ iter:  31:1        |ddm|: 3.667766e-07     Tr[DP]  5.654035e-01
+ iter:  31:2        |ddm|: 8.338833e-08     Tr[DP]  5.654035e-01
+ iter:  32:1        |ddm|: 3.891775e-07     Tr[DP]  5.654035e-01
+ iter:  32:2        |ddm|: 1.280392e-07     Tr[DP]  5.654035e-01
+ iter:  33:1        |ddm|: 2.017287e-07     Tr[DP]  5.654035e-01
+ iter:  33:2        |ddm|: 4.493493e-08     Tr[DP]  5.654035e-01
+ iter:  34:1        |ddm|: 5.168167e-08     Tr[DP]  5.654035e-01
+ iter:  34:2        |ddm|: 8.809714e-09     Tr[DP]  5.654035e-01
+ iter:  35:1        |ddm|: 3.520380e-08     Tr[DP]  5.654035e-01
+ iter:  35:2        |ddm|: 8.460092e-09     Tr[DP]  5.654035e-01
+ iter:  36:1        |ddm|: 2.266876e-08     Tr[DP]  5.654035e-01
+ iter:  36:2        |ddm|: 6.222010e-09     Tr[DP]  5.654035e-01
+ iter:  37:1        |ddm|: 1.437278e-08     Tr[DP]  5.654035e-01
+ iter:  37:2        |ddm|: 4.574063e-09     Tr[DP]  5.654035e-01
+ iter:  38:1        |ddm|: 9.648448e-09     Tr[DP]  5.654035e-01
+ iter:  38:2        |ddm|: 3.545122e-09     Tr[DP]  5.654035e-01
+ iter:  39:1        |ddm|: 1.959165e-08     Tr[DP]  5.654035e-01
+ iter:  39:2        |ddm|: 4.910887e-09     Tr[DP]  5.654035e-01
+ iter:  40:1        |ddm|: 1.544280e-08     Tr[DP]  5.654035e-01
+ iter:  40:2        |ddm|: 5.251853e-09     Tr[DP]  5.654035e-01
+ iter:  41:1        |ddm|: 5.011502e-09     Tr[DP]  5.654035e-01
+ iter:  41:2        |ddm|: 1.621307e-09     Tr[DP]  5.654035e-01
+                           Freeze-and-Thaw converged!                           
+
+=================== Subsystem 1 at higher mean-field method ====================
+  subiter:   1      |ddm|: 8.215116e-01
+  subiter:   2      |ddm|: 1.496028e-01
+  subiter:   3      |ddm|: 2.844504e-02
+  subiter:   4      |ddm|: 1.926240e-02
+  subiter:   5      |ddm|: 2.434609e-03
+  subiter:   6      |ddm|: 1.093136e-03
+  subiter:   7      |ddm|: 2.599809e-04
+  subiter:   8      |ddm|: 8.109159e-05
+  subiter:   9      |ddm|: 2.901250e-05
+  subiter:  10      |ddm|: 8.680474e-06
+  subiter:  11      |ddm|: 5.086944e-06
+  subiter:  12      |ddm|: 8.216184e-07
+  subiter:  13      |ddm|: 3.380020e-07
+  subiter:  14      |ddm|: 4.575817e-08
+  subiter:  15      |ddm|: 2.099368e-08
+  subiter:  16      |ddm|: 7.441625e-09
+
+
+******** <class 'pyscf.scf.hf.RHF'> flags ********
+method = RHF
+initial guess = minao
+damping factor = 0
+level shift factor = 0
+DIIS = <class 'pyscf.scf.diis.CDIIS'>
+DIIS start cycle = 1
+DIIS space = 8
+SCF tol = 1e-09
+SCF gradient tol = None
+max. SCF cycles = 100
+direct_scf = True
+direct_scf_tol = 1e-13
+chkfile to save SCF result = /panfs/roc/scratch/graha682/D180/201712_ccpVDZ_NEVPT2_m06_180_10c12h24/tmpSbukSm
+max_memory 4000 MB (current use 2999 MB)
+Set gradient conv threshold to 3.16228e-05
+init E= -388.28389129934
+  HOMO = -0.337514739520728  LUMO = 0.177156285659963
+cycle= 1 E= -388.283891299338  delta_E= 1.48e-12  |g|= 2.19e-09  |ddm|= 1.19e-08
+  HOMO = -0.337514739604449  LUMO = 0.177156285634568
+Extra cycle  E= -388.283891299339  delta_E= -1.14e-12  |g|= 8.84e-10  |ddm|= 4.79e-09
+converged SCF energy = -388.283891299339
+
+
+******** <class 'pyscf.dft.rks.RKS'> flags ********
+method = RKS
+initial guess = atom
+damping factor = 0
+level shift factor = 0.0
+DIIS = <class 'pyscf.scf.diis.CDIIS'>
+DIIS start cycle = 1
+DIIS space = 8
+SCF tol = 1e-08
+SCF gradient tol = 1e-08
+max. SCF cycles = 1
+direct_scf = True
+direct_scf_tol = 1e-13
+chkfile to save SCF result = /panfs/roc/scratch/graha682/D180/201712_ccpVDZ_NEVPT2_m06_180_10c12h24/tmpXlvYbc
+max_memory 4000 MB (current use 3001 MB)
+XC functionals = m06
+small_rho_cutoff = 1e-20
+radial grids: Treutler-Ahlrichs (JCP 102, 346 (M4)) radial grids
+becke partition: Becke, JCP, 88, 2547 (1988)
+pruning grids: <function nwchem_prune at 0x1827578>
+grids dens level: 4
+symmetrized grids: False
+atomic radii adjust function: <function treutler_atomic_radii_adjust at 0x1827410>
+init E= -390.842542594833
+  HOMO = -0.249640979117076  LUMO = 0.0322383242241312
+cycle= 1 E= -390.842542594834  delta_E= -1.02e-12  |g|= 1.86e-09  |ddm|= 3.5e-09
+  HOMO = -0.249640979049149  LUMO = 0.0322383242917772
+Extra cycle  E= -390.842542594833  delta_E= 1.02e-12  |g|= 2.04e-09  |ddm|= 3.99e-09
+converged SCF energy = -390.842542594833
+ iter:  42:1        |ddm|: 9.592607e-01     Tr[DP]  6.638407e-01
+
+******** <class 'pyscf.mcscf.mc1step.CASSCF'> flags ********
+CAS (1e+1e, 2o), ncore = 38, nvir = 190
+max_cycle_macro = 150
+max_cycle_micro = 4
+conv_tol = 1e-07
+conv_tol_grad = None
+orbital rotation max_stepsize = 0.02
+augmented hessian ah_max_cycle = 30
+augmented hessian ah_conv_tol = 1e-12
+augmented hessian ah_linear dependence = 1e-14
+augmented hessian ah_level shift = 0
+augmented hessian ah_start_tol = 2.5
+augmented hessian ah_start_cycle = 3
+augmented hessian ah_grad_trust_region = 3
+kf_trust_region = 3
+kf_interval = 4
+ci_response_space = 4
+ci_grad_trust_region = 3
+with_dep4 0
+natorb = False
+canonicalization = True
+sorting_mo_energy = False
+chkfile = /panfs/roc/scratch/graha682/D180/201712_ccpVDZ_NEVPT2_m06_180_10c12h24/tmpSbukSm
+max_memory 4000 MB (current use 3022 MB)
+internal_rotation = False
+******** <class 'pyscf.fci.direct_spin1.FCISolver'> flags ********
+max. cycles = 50
+conv_tol = 1e-08
+davidson only = False
+linear dependence = 1e-10
+level shift = 0.001
+max iter space = 12
+max_memory 4000 MB
+nroots = 1
+pspace_size = 400
+spin = None
+CASCI E = -388.283894879156  S^2 = 0.0000000
+Set conv_tol_grad to 0.000316228
+macro iter 1 (6 JK  1 micro), CASSCF E = -388.283896729118  dE = -1.849962e-06  S^2 = 0.0000000
+               |grad[o]|=3.81e-05  |grad[c]|= 0.000431506923473  |ddm|=7.88e-05
+macro iter 2 (21 JK  4 micro), CASSCF E = -388.284546692961  dE = -0.00064996384  S^2 = 0.0000000
+               |grad[o]|=5.09e-05  |grad[c]|= 0.00727734246543  |ddm|=0.00296
+macro iter 3 (21 JK  4 micro), CASSCF E = -388.286181213684  dE = -0.0016345207  S^2 = 0.0000000
+               |grad[o]|=0.0026  |grad[c]|= 0.00978384147146  |ddm|=0.00355
+macro iter 4 (21 JK  4 micro), CASSCF E = -388.286850889443  dE = -0.00066967576  S^2 = 0.0000000
+               |grad[o]|=0.00279  |grad[c]|= 0.00799288326149  |ddm|=0.00626
+macro iter 5 (7 JK  2 micro), CASSCF E = -388.286922093469  dE = -7.1204025e-05  S^2 = 0.0000000
+               |grad[o]|=0.00214  |grad[c]|= 0.00632723674898  |ddm|=0.00132
+macro iter 6 (20 JK  4 micro), CASSCF E = -388.287035984308  dE = -0.00011389084  S^2 = 0.0000000
+               |grad[o]|=0.00198  |grad[c]|= 0.00404217691128  |ddm|=0.000909
+macro iter 7 (20 JK  4 micro), CASSCF E = -388.287081900436  dE = -4.5916128e-05  S^2 = 0.0000000
+               |grad[o]|=0.00342  |grad[c]|= 0.0010868060475  |ddm|=0.00176
+macro iter 8 (23 JK  4 micro), CASSCF E = -388.287083706315  dE = -1.8058792e-06  S^2 = 0.0000000
+               |grad[o]|=0.000611  |grad[c]|= 0.000164054228694  |ddm|=0.000147
+macro iter 9 (17 JK  4 micro), CASSCF E = -388.287083903216  dE = -1.9690162e-07  S^2 = 0.0000000
+               |grad[o]|=0.000392  |grad[c]|= 0.00267572422152  |ddm|=0.00139
+macro iter 10 (24 JK  4 micro), CASSCF E = -388.287084881686  dE = -9.7846936e-07  S^2 = 0.0000000
+               |grad[o]|=0.000725  |grad[c]|= 4.15396252291e-05  |ddm|=5.33e-05
+macro iter 11 (5 JK  1 micro), CASSCF E = -388.287084885823  dE = -4.1371777e-09  S^2 = 0.0000000
+               |grad[o]|=4.02e-05  |grad[c]|= 1.33173519847e-06  |ddm|=3.94e-07
+1-step CASSCF converged in 11 macro (185 JK 36 micro) steps
+CASSCF canonicalization
+CASSCF energy = -388.287084885823
+Hartree-Fock Energy:  -388.28389129933919
+CAS Correlation:       -0.00319358648380
+CAS Energy:          -388.28708488582299
+Sr    (-1)',   E = -0.00000000031761
+Si    (+1)',   E = -0.00000000532658
+Sijrs (0)  ,   E = -1.35648969667135
+Sijr  (+1) ,   E = -0.00934967038905
+Srsi  (-1) ,   E = -0.08346741953459
+Srs   (-2) ,   E = -0.01523081668433
+Sij   (+2) ,   E = -0.00066324888457
+Sir   (0)' ,   E = -0.01441756685008
+Nevpt2 Energy = -1.479618424658158
+NEVPT2 =   -1.479618424658158
+Total NEVPT2 = -389.766703310481148
+
+============================== Supermolecular DFT ==============================
+  subiter:   1      |ddm|: 3.146134e+00
+  subiter:   2      |ddm|: 2.898401e-01
+  subiter:   3      |ddm|: 1.670215e-01
+  subiter:   4      |ddm|: 1.795541e-02
+  subiter:   5      |ddm|: 4.985870e-03
+  subiter:   6      |ddm|: 1.525469e-03
+  subiter:   7      |ddm|: 3.232253e-04
+  subiter:   8      |ddm|: 9.625395e-05
+  subiter:   9      |ddm|: 2.764914e-05
+  subiter:  10      |ddm|: 1.163456e-05
+  subiter:  11      |ddm|: 2.254529e-06
+  subiter:  12      |ddm|: 1.310804e-06
+  subiter:  13      |ddm|: 2.231188e-07
+  subiter:  14      |ddm|: 1.041426e-07
+  subiter:  15      |ddm|: 3.187701e-08
+  subiter:  16      |ddm|: 5.251843e-09
+
+
+******** <class 'pyscf.dft.rks.RKS'> flags ********
+method = RKS
+initial guess = atom
+damping factor = 0
+level shift factor = 0.0
+DIIS = <class 'pyscf.scf.diis.CDIIS'>
+DIIS start cycle = 1
+DIIS space = 8
+SCF tol = 1e-08
+SCF gradient tol = 1e-08
+max. SCF cycles = 100
+direct_scf = True
+direct_scf_tol = 1e-13
+chkfile to save SCF result = /panfs/roc/scratch/graha682/D180/201712_ccpVDZ_NEVPT2_m06_180_10c12h24/tmpT6G4j8
+max_memory 4000 MB (current use 3020 MB)
+XC functionals = m06
+small_rho_cutoff = 1e-20
+radial grids: Treutler-Ahlrichs (JCP 102, 346 (M4)) radial grids
+becke partition: Becke, JCP, 88, 2547 (1988)
+pruning grids: <function nwchem_prune at 0x1827578>
+grids dens level: 4
+symmetrized grids: False
+atomic radii adjust function: <function treutler_atomic_radii_adjust at 0x1827410>
+init E= -471.322627002219
+  HOMO = -0.250848349737937  LUMO = 0.0298638446358905
+cycle= 1 E= -471.322627002217  delta_E= 2.05e-12  |g|= 2.07e-09  |ddm|= 6.85e-09
+  HOMO = -0.2508483499041  LUMO = 0.0298638445159363
+Extra cycle  E= -471.322627002213  delta_E= 3.87e-12  |g|= 2.01e-09  |ddm|= 4.07e-09
+converged SCF energy = -471.322627002213
+Supermolecular DFT   -471.32262700222145
+
+============================== Embedding Energies ==============================
+Subsystem DFT              -390.84254259483214
+Interaction                 -80.23753301766146
+DFT-in-DFT                 -471.08007561249360
+Supermolecular DFT         -471.32262700222145
+Difference                   -0.24255138972785
+Corrected DFT-in-DFT       -471.32262700222145
+WF-in-DFT                  -470.00423632814261
+Corrected WF-in-DFT        -470.24678771787046
+================================================================================
+TIMING STATISTICS:
+     overlap integrals      0.03s   ( 0.00%)
+    initial subsystems      0.21s   ( 0.01%)
+           2e matrices   1207.77s   (42.85%)
+      tot. embed. of 1   1333.05s   (47.30%)
+      tot. embed. of 2      0.09s   ( 0.00%)
+       freeze and thaw   1333.16s   (47.30%)
+                   cas    771.39s   (27.37%)
+                nevpt2     24.38s   ( 0.87%)
+  interaction energies    687.48s   (24.39%)
+                 TOTAL   2818.30s
+================================================================================
+
+********************************************************************************
+*                              END OF CALCULATION                              *
+********************************************************************************

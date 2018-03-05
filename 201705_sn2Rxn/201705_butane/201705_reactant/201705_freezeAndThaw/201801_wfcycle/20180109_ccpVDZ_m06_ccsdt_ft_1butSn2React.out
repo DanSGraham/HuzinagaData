@@ -1,0 +1,2750 @@
+********************************************************************************
+*                         FREEZE-AND-THAW CALCULATION                          *
+********************************************************************************
+
+================================== Input File ==================================
+
+
+subsystem
+C                  0.74345800    0.66525400    0.00000100
+H                  0.75917800    1.30099000   -0.88423600
+H                  0.75918100    1.30098600    0.88424000
+Cl                 2.29447400   -0.24767500   -0.00000300
+charge -1
+end
+
+subsystem
+C                 -0.44163200   -0.26055200    0.00000000
+H                 -0.39317700   -0.91474400   -0.87593000
+H                 -0.39317500   -0.91474700    0.87592800
+C                 -1.74853900    0.51173600    0.00000300
+H                 -1.78059900    1.17041100    0.87438300
+H                 -1.78060000    1.17041500   -0.87437400
+C                 -2.95182400   -0.40708300    0.00000200
+H                 -2.94830500   -1.05409800   -0.87975500
+H                 -2.94830300   -1.05410200    0.87975600
+H                 -3.88904200    0.14923700    0.00000400
+charge +1
+end
+
+wfembed
+ cycles 100
+ conv 1e-6
+end
+
+embed
+ huzinaga
+ cycles 300
+ conv 1e-8
+ method m06
+end
+
+basis cc-pVDZ
+method ccsd(t)
+grid 4
+conv 1e-9
+grad 1e-8
+maxiter 300
+================================== End Input ===================================
+tot grids = 286654
+
+                      Getting subsystem overlap integrals                       
+
+                          Initial subsystem densities                           
+Guessing initial subsystem densities
+Initial guess from superpostion of atomic densties.
+Guessing initial subsystem densities
+Initial guess from superpostion of atomic densties.
+
+========================== Starting WFT-in-DFT Cycles ==========================
+
+=========================== Starting Freeze-and-Thaw ===========================
+ iter:   1:1        |ddm|: 4.876731e+00     Tr[DP]  6.803296e-01
+ iter:   1:2        |ddm|: 3.082452e+00     Tr[DP]  1.128726e-01
+ iter:   2:1        |ddm|: 9.155814e+00     Tr[DP]  2.228678e-01
+ iter:   2:2        |ddm|: 1.173623e+00     Tr[DP]  1.484962e-01
+ iter:   3:1        |ddm|: 9.879159e+00     Tr[DP]  3.253292e-01
+ iter:   3:2        |ddm|: 7.338381e-01     Tr[DP]  1.822374e-01
+ iter:   4:1        |ddm|: 8.964821e-01     Tr[DP]  3.203125e-01
+ iter:   4:2        |ddm|: 2.437614e-01     Tr[DP]  2.149904e-01
+ iter:   5:1        |ddm|: 7.500704e-01     Tr[DP]  3.233389e-01
+ iter:   5:2        |ddm|: 1.592422e-01     Tr[DP]  2.429806e-01
+ iter:   6:1        |ddm|: 3.576140e-01     Tr[DP]  3.169262e-01
+ iter:   6:2        |ddm|: 1.002776e-01     Tr[DP]  2.636751e-01
+ iter:   7:1        |ddm|: 5.554201e-01     Tr[DP]  3.166636e-01
+ iter:   7:2        |ddm|: 1.853663e-01     Tr[DP]  2.663018e-01
+ iter:   8:1        |ddm|: 2.481480e-01     Tr[DP]  3.062749e-01
+ iter:   8:2        |ddm|: 6.582049e-02     Tr[DP]  2.753101e-01
+ iter:   9:1        |ddm|: 1.375472e-01     Tr[DP]  2.973723e-01
+ iter:   9:2        |ddm|: 3.836769e-02     Tr[DP]  2.791270e-01
+ iter:  10:1        |ddm|: 7.979601e-02     Tr[DP]  2.917753e-01
+ iter:  10:2        |ddm|: 2.302920e-02     Tr[DP]  2.811537e-01
+ iter:  11:1        |ddm|: 1.036076e-01     Tr[DP]  2.859747e-01
+ iter:  11:2        |ddm|: 3.423525e-02     Tr[DP]  2.795713e-01
+ iter:  12:1        |ddm|: 2.683552e-02     Tr[DP]  2.850620e-01
+ iter:  12:2        |ddm|: 9.797202e-03     Tr[DP]  2.811706e-01
+ iter:  13:1        |ddm|: 1.374662e-02     Tr[DP]  2.843290e-01
+ iter:  13:2        |ddm|: 5.928028e-03     Tr[DP]  2.822014e-01
+ iter:  14:1        |ddm|: 7.238827e-03     Tr[DP]  2.835100e-01
+ iter:  14:2        |ddm|: 2.301871e-03     Tr[DP]  2.823979e-01
+ iter:  15:1        |ddm|: 5.341754e-03     Tr[DP]  2.830787e-01
+ iter:  15:2        |ddm|: 1.671580e-03     Tr[DP]  2.824577e-01
+ iter:  16:1        |ddm|: 3.203457e-03     Tr[DP]  2.828491e-01
+ iter:  16:2        |ddm|: 1.019841e-03     Tr[DP]  2.824990e-01
+ iter:  17:1        |ddm|: 1.643551e-03     Tr[DP]  2.827342e-01
+ iter:  17:2        |ddm|: 5.363999e-04     Tr[DP]  2.825360e-01
+ iter:  18:1        |ddm|: 8.500962e-04     Tr[DP]  2.826725e-01
+ iter:  18:2        |ddm|: 2.845721e-04     Tr[DP]  2.825607e-01
+ iter:  19:1        |ddm|: 4.076464e-04     Tr[DP]  2.826415e-01
+ iter:  19:2        |ddm|: 1.415245e-04     Tr[DP]  2.825792e-01
+ iter:  20:1        |ddm|: 2.583179e-04     Tr[DP]  2.826199e-01
+ iter:  20:2        |ddm|: 8.636125e-05     Tr[DP]  2.825855e-01
+ iter:  21:1        |ddm|: 1.201523e-04     Tr[DP]  2.826105e-01
+ iter:  21:2        |ddm|: 4.118052e-05     Tr[DP]  2.825915e-01
+ iter:  22:1        |ddm|: 6.736036e-05     Tr[DP]  2.826042e-01
+ iter:  22:2        |ddm|: 2.176933e-05     Tr[DP]  2.825939e-01
+ iter:  23:1        |ddm|: 4.150428e-05     Tr[DP]  2.826026e-01
+ iter:  23:2        |ddm|: 1.728992e-05     Tr[DP]  2.825969e-01
+ iter:  24:1        |ddm|: 2.561111e-05     Tr[DP]  2.825998e-01
+ iter:  24:2        |ddm|: 8.015454e-06     Tr[DP]  2.825969e-01
+ iter:  25:1        |ddm|: 3.434886e-05     Tr[DP]  2.825978e-01
+ iter:  25:2        |ddm|: 1.207445e-05     Tr[DP]  2.825962e-01
+ iter:  26:1        |ddm|: 1.782989e-05     Tr[DP]  2.825971e-01
+ iter:  26:2        |ddm|: 6.092590e-06     Tr[DP]  2.825961e-01
+ iter:  27:1        |ddm|: 3.048606e-05     Tr[DP]  2.825958e-01
+ iter:  27:2        |ddm|: 1.116472e-05     Tr[DP]  2.825952e-01
+ iter:  28:1        |ddm|: 5.498481e-06     Tr[DP]  2.825961e-01
+ iter:  28:2        |ddm|: 2.374028e-06     Tr[DP]  2.825956e-01
+ iter:  29:1        |ddm|: 4.838150e-06     Tr[DP]  2.825958e-01
+ iter:  29:2        |ddm|: 1.810687e-06     Tr[DP]  2.825955e-01
+ iter:  30:1        |ddm|: 2.977389e-06     Tr[DP]  2.825957e-01
+ iter:  30:2        |ddm|: 1.075526e-06     Tr[DP]  2.825955e-01
+ iter:  31:1        |ddm|: 8.794573e-07     Tr[DP]  2.825957e-01
+ iter:  31:2        |ddm|: 3.891362e-07     Tr[DP]  2.825956e-01
+ iter:  32:1        |ddm|: 3.709975e-07     Tr[DP]  2.825957e-01
+ iter:  32:2        |ddm|: 1.404093e-07     Tr[DP]  2.825956e-01
+ iter:  33:1        |ddm|: 3.688682e-07     Tr[DP]  2.825956e-01
+ iter:  33:2        |ddm|: 1.910135e-07     Tr[DP]  2.825956e-01
+ iter:  34:1        |ddm|: 1.417987e-06     Tr[DP]  2.825956e-01
+ iter:  34:2        |ddm|: 7.257355e-07     Tr[DP]  2.825956e-01
+ iter:  35:1        |ddm|: 5.839868e-07     Tr[DP]  2.825956e-01
+ iter:  35:2        |ddm|: 2.365618e-07     Tr[DP]  2.825956e-01
+ iter:  36:1        |ddm|: 2.404132e-07     Tr[DP]  2.825956e-01
+ iter:  36:2        |ddm|: 1.002392e-07     Tr[DP]  2.825956e-01
+ iter:  37:1        |ddm|: 1.133285e-07     Tr[DP]  2.825956e-01
+ iter:  37:2        |ddm|: 4.606538e-08     Tr[DP]  2.825956e-01
+ iter:  38:1        |ddm|: 5.913063e-08     Tr[DP]  2.825956e-01
+ iter:  38:2        |ddm|: 2.350097e-08     Tr[DP]  2.825956e-01
+ iter:  39:1        |ddm|: 3.309230e-08     Tr[DP]  2.825956e-01
+ iter:  39:2        |ddm|: 1.477998e-08     Tr[DP]  2.825956e-01
+ iter:  40:1        |ddm|: 9.307749e-09     Tr[DP]  2.825956e-01
+ iter:  40:2        |ddm|: 1.091445e-08     Tr[DP]  2.825956e-01
+ iter:  41:1        |ddm|: 4.080654e-08     Tr[DP]  2.825956e-01
+ iter:  41:2        |ddm|: 2.829286e-08     Tr[DP]  2.825956e-01
+ iter:  42:1        |ddm|: 2.595667e-08     Tr[DP]  2.825956e-01
+ iter:  42:2        |ddm|: 1.722859e-08     Tr[DP]  2.825956e-01
+ iter:  43:1        |ddm|: 1.384302e-08     Tr[DP]  2.825956e-01
+ iter:  43:2        |ddm|: 7.009991e-09     Tr[DP]  2.825956e-01
+ iter:  44:1        |ddm|: 7.238405e-09     Tr[DP]  2.825956e-01
+ iter:  44:2        |ddm|: 3.059799e-09     Tr[DP]  2.825956e-01
+ iter:  45:1        |ddm|: 4.225134e-09     Tr[DP]  2.825956e-01
+ iter:  45:2        |ddm|: 1.717265e-09     Tr[DP]  2.825956e-01
+                           Freeze-and-Thaw converged!                           
+
+=================== Subsystem 1 at higher mean-field method ====================
+  subiter:   1      |ddm|: 2.031206e-01
+  subiter:   2      |ddm|: 5.721339e-02
+  subiter:   3      |ddm|: 1.190225e-02
+  subiter:   4      |ddm|: 5.380746e-03
+  subiter:   5      |ddm|: 1.692605e-03
+  subiter:   6      |ddm|: 3.969094e-04
+  subiter:   7      |ddm|: 1.030573e-04
+  subiter:   8      |ddm|: 2.369364e-05
+  subiter:   9      |ddm|: 8.969184e-06
+  subiter:  10      |ddm|: 2.739315e-06
+  subiter:  11      |ddm|: 6.653512e-07
+  subiter:  12      |ddm|: 3.457228e-08
+  subiter:  13      |ddm|: 3.445505e-08
+  subiter:  14      |ddm|: 6.449324e-08
+  subiter:  15      |ddm|: 9.913971e-09
+  subiter:  16      |ddm|: 6.543397e-09
+  subiter:  17      |ddm|: 9.962833e-09
+  subiter:  18      |ddm|: 4.943218e-09
+  subiter:  19      |ddm|: 4.273486e-09
+  subiter:  20      |ddm|: 5.354158e-09
+  subiter:  21      |ddm|: 9.259487e-10
+
+
+******** <class 'pyscf.scf.hf.RHF'> flags ********
+method = RHF
+initial guess = minao
+damping factor = 0
+level shift factor = 0
+DIIS = <class 'pyscf.scf.diis.CDIIS'>
+DIIS start cycle = 1
+DIIS space = 8
+SCF tol = 1e-09
+SCF gradient tol = None
+max. SCF cycles = 300
+direct_scf = True
+direct_scf_tol = 1e-13
+chkfile to save SCF result = /panfs/roc/scratch/graha682/201801_wfcycle/20180109_ccpVDZ_m06_ccsdt_ft_1butSn2React/tmplHKzC0
+max_memory 4000 MB (current use 384 MB)
+Set gradient conv threshold to 3.16228e-05
+init E= -506.039326590089
+  HOMO = -0.396367927084436  LUMO = 0.222651772950746
+cycle= 1 E= -506.039326590089  delta_E=    0  |g|= 9.49e-10  |ddm|= 3.61e-09
+  HOMO = -0.396367927149159  LUMO = 0.222651772970879
+Extra cycle  E= -506.039326590089  delta_E= 4.55e-13  |g|= 4.77e-10  |ddm|= 1.79e-09
+converged SCF energy = -506.039326590089
+
+
+******** <class 'pyscf.dft.rks.RKS'> flags ********
+method = RKS
+initial guess = atom
+damping factor = 0
+level shift factor = 0.0
+DIIS = <class 'pyscf.scf.diis.CDIIS'>
+DIIS start cycle = 1
+DIIS space = 8
+SCF tol = 1e-09
+SCF gradient tol = 1e-08
+max. SCF cycles = 1
+direct_scf = True
+direct_scf_tol = 1e-13
+chkfile to save SCF result = /panfs/roc/scratch/graha682/201801_wfcycle/20180109_ccpVDZ_m06_ccsdt_ft_1butSn2React/tmpdGk7NS
+max_memory 4000 MB (current use 385 MB)
+XC functionals = m06
+small_rho_cutoff = 1e-20
+radial grids: Treutler-Ahlrichs (JCP 102, 346 (M4)) radial grids
+becke partition: Becke, JCP, 88, 2547 (1988)
+pruning grids: <function nwchem_prune at 0x17a65f0>
+grids dens level: 4
+symmetrized grids: False
+atomic radii adjust function: <function treutler_atomic_radii_adjust at 0x17a6488>
+init E= -506.992121248862
+  HOMO = -0.269364994261876  LUMO = 0.0905936057196084
+cycle= 1 E= -506.992121248862  delta_E=    0  |g|= 2.4e-09  |ddm|= 4.77e-09
+  HOMO = -0.269364993898453  LUMO = 0.0905936064067782
+Extra cycle  E= -506.992121248862  delta_E= 3.41e-13  |g|= 3.04e-09  |ddm|= 4.78e-09
+converged SCF energy = -506.992121248862
+ iter:  46:1        |ddm|: 2.426106e-01     Tr[DP]  2.920708e-01
+
+==================== Doing CCSD Calculation on Subsystem 1 =====================
+
+******** <class 'pyscf.cc.ccsd.CCSD'> flags ********
+CCSD nocc = 13, nvir = 29
+max_cycle = 50
+direct = 0
+conv_tol = 1e-07
+conv_tol_normt = 1e-05
+diis_space = 6
+diis_start_cycle = 0
+diis_start_energy_diff = 1e+09
+max_memory 4000 MB (current use 368 MB)
+Build MO integrals with incore ao2mo
+Init t2, MP2 energy = -0.283852483980552
+cycle = 1  E(CCSD) = -0.3017991881539  dE = -0.301799188  norm(t1,t2) = 0.0614414
+cycle = 2  E(CCSD) = -0.307546411298074  dE = -0.00574722314  norm(t1,t2) = 0.0187191
+cycle = 3  E(CCSD) = -0.308813562684973  dE = -0.00126715139  norm(t1,t2) = 0.00812929
+cycle = 4  E(CCSD) = -0.309677457754562  dE = -0.00086389507  norm(t1,t2) = 0.00352927
+cycle = 5  E(CCSD) = -0.309689463042317  dE = -1.20052878e-05  norm(t1,t2) = 0.000780531
+cycle = 6  E(CCSD) = -0.309656427217112  dE = 3.30358252e-05  norm(t1,t2) = 0.000255009
+cycle = 7  E(CCSD) = -0.309659093349351  dE = -2.66613224e-06  norm(t1,t2) = 4.14337e-05
+cycle = 8  E(CCSD) = -0.30965921321797  dE = -1.19868619e-07  norm(t1,t2) = 1.19433e-05
+cycle = 9  E(CCSD) = -0.30965907285331  dE = 1.4036466e-07  norm(t1,t2) = 4.34524e-06
+cycle = 10  E(CCSD) = -0.30965897251428  dE = 1.0033903e-07  norm(t1,t2) = 1.98698e-06
+cycle = 11  E(CCSD) = -0.30965898236928  dE = -9.8550002e-09  norm(t1,t2) = 5.02524e-07
+CCSD converged
+E(CCSD) = -506.348985572458  E_corr = -0.3096589823692802
+Build MO integrals with incore ao2mo
+cycle = 1  norm(lambda1,lambda2) = 0.0149814
+cycle = 2  norm(lambda1,lambda2) = 0.00261432
+cycle = 3  norm(lambda1,lambda2) = 0.00102542
+cycle = 4  norm(lambda1,lambda2) = 0.000397524
+cycle = 5  norm(lambda1,lambda2) = 0.000128208
+cycle = 6  norm(lambda1,lambda2) = 3.37759e-05
+cycle = 7  norm(lambda1,lambda2) = 5.84511e-06
+Hartree-Fock Energy:  -506.03932659008876
+CCSD Correlation:       -0.30965898236928
+CCSD Energy:          -506.34898557245805
+
+=================== Doing CCSD(T) Calculation on Subsystem 1 ===================
+Build MO integrals with incore ao2mo
+CCSD(T) correction = -0.00657838095156866
+Build MO integrals with incore ao2mo
+istep = 0  norm(lambda1,lambda2) = 0.0252976
+istep = 1  norm(lambda1,lambda2) = 0.00560177
+istep = 2  norm(lambda1,lambda2) = 0.00185745
+istep = 3  norm(lambda1,lambda2) = 0.000745557
+istep = 4  norm(lambda1,lambda2) = 0.000351765
+istep = 5  norm(lambda1,lambda2) = 4.4801e-05
+istep = 6  norm(lambda1,lambda2) = 9.86109e-06
+istep = 7  norm(lambda1,lambda2) = 2.73588e-06
+istep = 8  norm(lambda1,lambda2) = 5.9046e-07
+istep = 9  norm(lambda1,lambda2) = 1.93518e-07
+istep = 10  norm(lambda1,lambda2) = 7.21251e-08
+istep = 11  norm(lambda1,lambda2) = 4.29986e-08
+istep = 12  norm(lambda1,lambda2) = 3.14602e-08
+istep = 13  norm(lambda1,lambda2) = 2.72608e-08
+istep = 14  norm(lambda1,lambda2) = 2.44583e-08
+istep = 15  norm(lambda1,lambda2) = 1.37227e-08
+istep = 16  norm(lambda1,lambda2) = 1.84522e-08
+istep = 17  norm(lambda1,lambda2) = 1.40893e-08
+istep = 18  norm(lambda1,lambda2) = 1.16582e-08
+istep = 19  norm(lambda1,lambda2) = 9.99674e-09
+Hartree-Fock Energy:  -506.03932659008876
+CCSD(T) Correlation:       -0.31623736332085
+CCSD(T) Energy:          -506.35556395340961
+
+========================= Density Matrix Purification ==========================
+ iter:   1       |idem_diff|: 1.000000000000     
+ iter:   2       |idem_diff|: 0.008168124387     
+ iter:   3       |idem_diff|: 0.000027604835     
+ iter:   4       |idem_diff|: 0.000000000754     
+Density Purified!
+
+============================== Supermolecular DFT ==============================
+  subiter:   1      |ddm|: 7.732424e+01
+  subiter:   2      |ddm|: 7.884806e+01
+  subiter:   3      |ddm|: 2.199669e+01
+  subiter:   4      |ddm|: 2.341672e+01
+  subiter:   5      |ddm|: 1.861178e+01
+  subiter:   6      |ddm|: 1.011648e+01
+  subiter:   7      |ddm|: 9.345755e+00
+  subiter:   8      |ddm|: 5.054038e-01
+  subiter:   9      |ddm|: 1.195131e-01
+  subiter:  10      |ddm|: 5.420455e-02
+  subiter:  11      |ddm|: 1.063111e-01
+  subiter:  12      |ddm|: 2.728334e-02
+  subiter:  13      |ddm|: 1.386547e-02
+  subiter:  14      |ddm|: 5.204313e-03
+  subiter:  15      |ddm|: 9.789886e-04
+  subiter:  16      |ddm|: 3.213862e-04
+  subiter:  17      |ddm|: 7.408759e-05
+  subiter:  18      |ddm|: 1.666076e-05
+  subiter:  19      |ddm|: 3.863374e-06
+  subiter:  20      |ddm|: 1.609494e-06
+  subiter:  21      |ddm|: 2.163446e-07
+  subiter:  22      |ddm|: 7.859844e-08
+  subiter:  23      |ddm|: 3.135795e-08
+  subiter:  24      |ddm|: 5.433416e-09
+  subiter:  25      |ddm|: 4.253144e-09
+  subiter:  26      |ddm|: 4.750609e-09
+  subiter:  27      |ddm|: 4.025605e-09
+  subiter:  28      |ddm|: 5.524280e-09
+  subiter:  29      |ddm|: 1.490402e-09
+  subiter:  30      |ddm|: 1.569087e-09
+  subiter:  31      |ddm|: 1.137477e-09
+  subiter:  32      |ddm|: 1.341971e-09
+  subiter:  33      |ddm|: 6.074040e-10
+
+
+******** <class 'pyscf.dft.rks.RKS'> flags ********
+method = RKS
+initial guess = atom
+damping factor = 0
+level shift factor = 0.0
+DIIS = <class 'pyscf.scf.diis.CDIIS'>
+DIIS start cycle = 1
+DIIS space = 8
+SCF tol = 1e-09
+SCF gradient tol = 1e-08
+max. SCF cycles = 300
+direct_scf = True
+direct_scf_tol = 1e-13
+chkfile to save SCF result = /panfs/roc/scratch/graha682/201801_wfcycle/20180109_ccpVDZ_m06_ccsdt_ft_1butSn2React/tmpR1WuDG
+max_memory 4000 MB (current use 530 MB)
+XC functionals = m06
+small_rho_cutoff = 1e-20
+radial grids: Treutler-Ahlrichs (JCP 102, 346 (M4)) radial grids
+becke partition: Becke, JCP, 88, 2547 (1988)
+pruning grids: <function nwchem_prune at 0x17a65f0>
+grids dens level: 4
+symmetrized grids: False
+atomic radii adjust function: <function treutler_atomic_radii_adjust at 0x17a6488>
+init E= -617.903564443661
+  HOMO = -0.299147267180467  LUMO = 0.0372922979668746
+cycle= 1 E= -617.90356444366  delta_E= 1.36e-12  |g|= 2.2e-09  |ddm|= 3.12e-09
+  HOMO = -0.29914726719293  LUMO = 0.0372922982678273
+Extra cycle  E= -617.903564443661  delta_E= -1.14e-12  |g|= 2.98e-09  |ddm|= 4.2e-09
+converged SCF energy = -617.903564443661
+Supermolecular DFT   -617.90356444366080
+WF-in-DFT Cycle Errors            11.23993237589569
+
+============================== Embedding Energies ==============================
+Subsystem DFT               -56.23234072627514
+Interaction                -111.94844126914325
+DFT-in-DFT                 -168.18078199541839
+Supermolecular DFT         -617.90356444366080
+Difference                 -449.72278244824241
+Corrected DFT-in-DFT       -617.90356444366080
+WF-in-DFT                  -618.30400522255286
+Corrected WF-in-DFT        -1068.02678767079533
+
+=========================== Starting Freeze-and-Thaw ===========================
+ iter:   1:2        |ddm|: 4.117099e+00     Tr[DP]  7.765392e-01
+ iter:   2:2        |ddm|: 0.000000e+00     Tr[DP]  7.765392e-01
+                           Freeze-and-Thaw converged!                           
+
+=================== Subsystem 1 at higher mean-field method ====================
+  subiter:   1      |ddm|: 8.008063e+00
+  subiter:   2      |ddm|: 1.659246e+01
+  subiter:   3      |ddm|: 8.639337e+00
+  subiter:   4      |ddm|: 5.794858e+00
+  subiter:   5      |ddm|: 3.130097e-01
+  subiter:   6      |ddm|: 1.372337e+00
+  subiter:   7      |ddm|: 3.722125e-01
+  subiter:   8      |ddm|: 4.792044e-01
+  subiter:   9      |ddm|: 5.144224e-01
+  subiter:  10      |ddm|: 7.678024e-02
+  subiter:  11      |ddm|: 1.743619e-01
+  subiter:  12      |ddm|: 1.616587e-01
+  subiter:  13      |ddm|: 1.840147e-01
+  subiter:  14      |ddm|: 1.783382e-01
+  subiter:  15      |ddm|: 3.311272e-02
+  subiter:  16      |ddm|: 2.381641e-02
+  subiter:  17      |ddm|: 2.427046e-01
+  subiter:  18      |ddm|: 4.447904e-02
+  subiter:  19      |ddm|: 2.119515e-01
+  subiter:  20      |ddm|: 3.688307e-02
+  subiter:  21      |ddm|: 7.898057e-02
+  subiter:  22      |ddm|: 5.367284e-02
+  subiter:  23      |ddm|: 8.634745e-02
+  subiter:  24      |ddm|: 5.713151e-02
+  subiter:  25      |ddm|: 5.955735e-03
+  subiter:  26      |ddm|: 8.354209e-03
+  subiter:  27      |ddm|: 1.378113e-02
+  subiter:  28      |ddm|: 9.407558e-03
+  subiter:  29      |ddm|: 9.274036e-04
+  subiter:  30      |ddm|: 9.086572e-04
+  subiter:  31      |ddm|: 1.956764e-03
+  subiter:  32      |ddm|: 1.417589e-04
+  subiter:  33      |ddm|: 1.568451e-04
+  subiter:  34      |ddm|: 1.551357e-04
+  subiter:  35      |ddm|: 2.854833e-05
+  subiter:  36      |ddm|: 3.578226e-05
+  subiter:  37      |ddm|: 3.506353e-05
+  subiter:  38      |ddm|: 1.896195e-05
+  subiter:  39      |ddm|: 2.952867e-05
+  subiter:  40      |ddm|: 1.606113e-05
+  subiter:  41      |ddm|: 2.075426e-06
+  subiter:  42      |ddm|: 8.341701e-07
+  subiter:  43      |ddm|: 1.602685e-07
+  subiter:  44      |ddm|: 5.683960e-08
+  subiter:  45      |ddm|: 4.369702e-08
+  subiter:  46      |ddm|: 1.155125e-07
+  subiter:  47      |ddm|: 2.126404e-07
+  subiter:  48      |ddm|: 1.135880e-07
+  subiter:  49      |ddm|: 4.324908e-08
+  subiter:  50      |ddm|: 3.474775e-08
+  subiter:  51      |ddm|: 3.329668e-08
+  subiter:  52      |ddm|: 3.291452e-08
+  subiter:  53      |ddm|: 3.825929e-08
+  subiter:  54      |ddm|: 3.122940e-08
+  subiter:  55      |ddm|: 2.589398e-08
+  subiter:  56      |ddm|: 2.427574e-08
+  subiter:  57      |ddm|: 2.301742e-08
+  subiter:  58      |ddm|: 2.177420e-08
+  subiter:  59      |ddm|: 2.037348e-08
+  subiter:  60      |ddm|: 1.856502e-08
+  subiter:  61      |ddm|: 1.724413e-08
+  subiter:  62      |ddm|: 1.618121e-08
+  subiter:  63      |ddm|: 1.515499e-08
+  subiter:  64      |ddm|: 1.415065e-08
+  subiter:  65      |ddm|: 1.317521e-08
+  subiter:  66      |ddm|: 1.225827e-08
+  subiter:  67      |ddm|: 1.146492e-08
+  subiter:  68      |ddm|: 1.073124e-08
+  subiter:  69      |ddm|: 1.003494e-08
+  subiter:  70      |ddm|: 9.379900e-09
+  subiter:  71      |ddm|: 8.769782e-09
+  subiter:  72      |ddm|: 8.206975e-09
+  subiter:  73      |ddm|: 7.689954e-09
+  subiter:  74      |ddm|: 7.207537e-09
+  subiter:  75      |ddm|: 6.756520e-09
+  subiter:  76      |ddm|: 6.336727e-09
+  subiter:  77      |ddm|: 5.947225e-09
+  subiter:  78      |ddm|: 5.585851e-09
+  subiter:  79      |ddm|: 5.250143e-09
+  subiter:  80      |ddm|: 4.937505e-09
+  subiter:  81      |ddm|: 4.646397e-09
+  subiter:  82      |ddm|: 4.375756e-09
+  subiter:  83      |ddm|: 4.124068e-09
+  subiter:  84      |ddm|: 3.889987e-09
+  subiter:  85      |ddm|: 3.672120e-09
+  subiter:  86      |ddm|: 3.469131e-09
+  subiter:  87      |ddm|: 3.280169e-09
+  subiter:  88      |ddm|: 3.104156e-09
+  subiter:  89      |ddm|: 2.940207e-09
+  subiter:  90      |ddm|: 2.787335e-09
+  subiter:  91      |ddm|: 2.644779e-09
+  subiter:  92      |ddm|: 2.511877e-09
+  subiter:  93      |ddm|: 2.387691e-09
+  subiter:  94      |ddm|: 2.271800e-09
+  subiter:  95      |ddm|: 2.163431e-09
+  subiter:  96      |ddm|: 2.062185e-09
+  subiter:  97      |ddm|: 1.967354e-09
+  subiter:  98      |ddm|: 1.878511e-09
+  subiter:  99      |ddm|: 1.795418e-09
+  subiter: 100      |ddm|: 1.717415e-09
+  subiter: 101      |ddm|: 1.644152e-09
+  subiter: 102      |ddm|: 1.575339e-09
+  subiter: 103      |ddm|: 1.510607e-09
+  subiter: 104      |ddm|: 1.449665e-09
+  subiter: 105      |ddm|: 1.392150e-09
+  subiter: 106      |ddm|: 1.337842e-09
+  subiter: 107      |ddm|: 1.286731e-09
+  subiter: 108      |ddm|: 1.238269e-09
+  subiter: 109      |ddm|: 1.192370e-09
+  subiter: 110      |ddm|: 1.148965e-09
+  subiter: 111      |ddm|: 1.107712e-09
+  subiter: 112      |ddm|: 1.068588e-09
+  subiter: 113      |ddm|: 1.031230e-09
+  subiter: 114      |ddm|: 9.957651e-10
+
+
+******** <class 'pyscf.scf.hf.RHF'> flags ********
+method = RHF
+initial guess = minao
+damping factor = 0
+level shift factor = 0
+DIIS = <class 'pyscf.scf.diis.CDIIS'>
+DIIS start cycle = 1
+DIIS space = 8
+SCF tol = 1e-09
+SCF gradient tol = None
+max. SCF cycles = 300
+direct_scf = True
+direct_scf_tol = 1e-13
+chkfile to save SCF result = /panfs/roc/scratch/graha682/201801_wfcycle/20180109_ccpVDZ_m06_ccsdt_ft_1butSn2React/tmpxSdeIC
+max_memory 4000 MB (current use 543 MB)
+Set gradient conv threshold to 3.16228e-05
+init E= -346.858929839128
+  HOMO = -0.288000556138803  LUMO = 0.0515811589709652
+cycle= 1 E= -346.858929839129  delta_E= -9.09e-13  |g|= 8.33e-10  |ddm|= 3.27e-09
+  HOMO = -0.288000556137961  LUMO = 0.0515811589751648
+Extra cycle  E= -346.858929839129  delta_E= 2.27e-13  |g|= 7.46e-10  |ddm|= 2.91e-09
+converged SCF energy = -346.858929839129
+
+
+******** <class 'pyscf.dft.rks.RKS'> flags ********
+method = RKS
+initial guess = atom
+damping factor = 0
+level shift factor = 0.0
+DIIS = <class 'pyscf.scf.diis.CDIIS'>
+DIIS start cycle = 1
+DIIS space = 8
+SCF tol = 1e-09
+SCF gradient tol = 1e-08
+max. SCF cycles = 1
+direct_scf = True
+direct_scf_tol = 1e-13
+chkfile to save SCF result = /panfs/roc/scratch/graha682/201801_wfcycle/20180109_ccpVDZ_m06_ccsdt_ft_1butSn2React/tmpdGk7NS
+max_memory 4000 MB (current use 543 MB)
+XC functionals = m06
+small_rho_cutoff = 1e-20
+radial grids: Treutler-Ahlrichs (JCP 102, 346 (M4)) radial grids
+becke partition: Becke, JCP, 88, 2547 (1988)
+pruning grids: <function nwchem_prune at 0x17a65f0>
+grids dens level: 4
+symmetrized grids: False
+atomic radii adjust function: <function treutler_atomic_radii_adjust at 0x17a6488>
+init E= -153.946144105686
+  HOMO = -0.278064643007195  LUMO = 0.0772615473030962
+cycle= 1 E= -252.140743467031  delta_E= -98.2  |g|= 19.3  |ddm|= 8.21
+  HOMO = -2.06232974399186  LUMO = -1.87292328961349
+Extra cycle  E= -333.049581748857  delta_E= -80.9  |g|= 4.51  |ddm|= 18.4
+SCF not converged.
+SCF energy = -333.049581748857 after 1 cycles
+ iter:   3:1        |ddm|: 1.523997e+01     Tr[DP]  1.487085e+00
+
+==================== Doing CCSD Calculation on Subsystem 1 =====================
+
+******** <class 'pyscf.cc.ccsd.CCSD'> flags ********
+CCSD nocc = 13, nvir = 29
+max_cycle = 50
+direct = 0
+conv_tol = 1e-07
+conv_tol_normt = 1e-05
+diis_space = 6
+diis_start_cycle = 0
+diis_start_energy_diff = 1e+09
+max_memory 4000 MB (current use 541 MB)
+Build MO integrals with incore ao2mo
+Init t2, MP2 energy = -0.253136611780575
+cycle = 1  E(CCSD) = -0.261062362020865  dE = -0.261062362  norm(t1,t2) = 0.204249
+cycle = 2  E(CCSD) = -0.291033111937857  dE = -0.0299707499  norm(t1,t2) = 0.141335
+cycle = 3  E(CCSD) = -0.278058566881937  dE = 0.0129745451  norm(t1,t2) = 0.144559
+cycle = 4  E(CCSD) = -0.289324590042199  dE = -0.0112660232  norm(t1,t2) = 0.138537
+cycle = 5  E(CCSD) = -0.295642783732788  dE = -0.00631819369  norm(t1,t2) = 0.0576083
+cycle = 6  E(CCSD) = -0.298030597367328  dE = -0.00238781363  norm(t1,t2) = 0.0448028
+cycle = 7  E(CCSD) = -0.29991199573116  dE = -0.00188139836  norm(t1,t2) = 0.0340314
+cycle = 8  E(CCSD) = -0.301316899174016  dE = -0.00140490344  norm(t1,t2) = 0.0254164
+cycle = 9  E(CCSD) = -0.302888242251683  dE = -0.00157134308  norm(t1,t2) = 0.020242
+cycle = 10  E(CCSD) = -0.303889054214103  dE = -0.00100081196  norm(t1,t2) = 0.0156428
+cycle = 11  E(CCSD) = -0.304501142558495  dE = -0.000612088344  norm(t1,t2) = 0.0127938
+cycle = 12  E(CCSD) = -0.304539861096807  dE = -3.87185383e-05  norm(t1,t2) = 0.0103707
+cycle = 13  E(CCSD) = -0.304597772083469  dE = -5.79109867e-05  norm(t1,t2) = 0.00878578
+cycle = 14  E(CCSD) = -0.304845899448323  dE = -0.000248127365  norm(t1,t2) = 0.00660512
+cycle = 15  E(CCSD) = -0.304819946926838  dE = 2.59525215e-05  norm(t1,t2) = 0.00481806
+cycle = 16  E(CCSD) = -0.30504919809592  dE = -0.000229251169  norm(t1,t2) = 0.00370441
+cycle = 17  E(CCSD) = -0.305122506626566  dE = -7.33085306e-05  norm(t1,t2) = 0.00243718
+cycle = 18  E(CCSD) = -0.305279154291483  dE = -0.000156647665  norm(t1,t2) = 0.00190142
+cycle = 19  E(CCSD) = -0.305395748708278  dE = -0.000116594417  norm(t1,t2) = 0.00134408
+cycle = 20  E(CCSD) = -0.305462483388888  dE = -6.67346806e-05  norm(t1,t2) = 0.00106084
+cycle = 21  E(CCSD) = -0.305500918242637  dE = -3.84348537e-05  norm(t1,t2) = 0.000677966
+cycle = 22  E(CCSD) = -0.30551151339238  dE = -1.05951497e-05  norm(t1,t2) = 0.000545487
+cycle = 23  E(CCSD) = -0.305501867676986  dE = 9.64571539e-06  norm(t1,t2) = 0.000460029
+cycle = 24  E(CCSD) = -0.305514421990384  dE = -1.25543134e-05  norm(t1,t2) = 0.000372395
+cycle = 25  E(CCSD) = -0.305506939097376  dE = 7.48289301e-06  norm(t1,t2) = 0.000308688
+cycle = 26  E(CCSD) = -0.305515853352375  dE = -8.914255e-06  norm(t1,t2) = 0.000265935
+cycle = 27  E(CCSD) = -0.305521340883935  dE = -5.48753156e-06  norm(t1,t2) = 0.000195827
+cycle = 28  E(CCSD) = -0.305532215222556  dE = -1.08743386e-05  norm(t1,t2) = 0.000157191
+cycle = 29  E(CCSD) = -0.305541202773363  dE = -8.98755081e-06  norm(t1,t2) = 0.000102258
+cycle = 30  E(CCSD) = -0.305546838566339  dE = -5.63579298e-06  norm(t1,t2) = 6.99545e-05
+cycle = 31  E(CCSD) = -0.305546184362588  dE = 6.54203751e-07  norm(t1,t2) = 4.76533e-05
+cycle = 32  E(CCSD) = -0.305548950203226  dE = -2.76584064e-06  norm(t1,t2) = 3.92036e-05
+cycle = 33  E(CCSD) = -0.305548131473726  dE = 8.187295e-07  norm(t1,t2) = 2.84081e-05
+cycle = 34  E(CCSD) = -0.305548446506049  dE = -3.15032322e-07  norm(t1,t2) = 2.37815e-05
+cycle = 35  E(CCSD) = -0.305547939459543  dE = 5.07046506e-07  norm(t1,t2) = 1.94592e-05
+cycle = 36  E(CCSD) = -0.305547953263723  dE = -1.38041804e-08  norm(t1,t2) = 1.59561e-05
+cycle = 37  E(CCSD) = -0.305548254495664  dE = -3.01231941e-07  norm(t1,t2) = 1.40036e-05
+cycle = 38  E(CCSD) = -0.305549229418229  dE = -9.74922566e-07  norm(t1,t2) = 1.12686e-05
+cycle = 39  E(CCSD) = -0.305549620571731  dE = -3.91153502e-07  norm(t1,t2) = 8.23789e-06
+cycle = 40  E(CCSD) = -0.30555020312234  dE = -5.8255061e-07  norm(t1,t2) = 5.461e-06
+cycle = 41  E(CCSD) = -0.305550253350662  dE = -5.02283216e-08  norm(t1,t2) = 3.36279e-06
+CCSD converged
+E(CCSD) = -347.1644800924796  E_corr = -0.305550253350662
+Build MO integrals with incore ao2mo
+cycle = 1  norm(lambda1,lambda2) = 0.319684
+cycle = 2  norm(lambda1,lambda2) = 0.131744
+cycle = 3  norm(lambda1,lambda2) = 0.07781
+cycle = 4  norm(lambda1,lambda2) = 0.0603128
+cycle = 5  norm(lambda1,lambda2) = 0.0401361
+cycle = 6  norm(lambda1,lambda2) = 0.0238817
+cycle = 7  norm(lambda1,lambda2) = 0.0200576
+cycle = 8  norm(lambda1,lambda2) = 0.0137175
+cycle = 9  norm(lambda1,lambda2) = 0.0110047
+cycle = 10  norm(lambda1,lambda2) = 0.00899981
+cycle = 11  norm(lambda1,lambda2) = 0.00657213
+cycle = 12  norm(lambda1,lambda2) = 0.00554131
+cycle = 13  norm(lambda1,lambda2) = 0.00459488
+cycle = 14  norm(lambda1,lambda2) = 0.0036595
+cycle = 15  norm(lambda1,lambda2) = 0.0027004
+cycle = 16  norm(lambda1,lambda2) = 0.00195871
+cycle = 17  norm(lambda1,lambda2) = 0.0013844
+cycle = 18  norm(lambda1,lambda2) = 0.000991584
+cycle = 19  norm(lambda1,lambda2) = 0.000749231
+cycle = 20  norm(lambda1,lambda2) = 0.000522619
+cycle = 21  norm(lambda1,lambda2) = 0.000413536
+cycle = 22  norm(lambda1,lambda2) = 0.000334833
+cycle = 23  norm(lambda1,lambda2) = 0.000261711
+cycle = 24  norm(lambda1,lambda2) = 0.00022413
+cycle = 25  norm(lambda1,lambda2) = 0.000179251
+cycle = 26  norm(lambda1,lambda2) = 0.000138512
+cycle = 27  norm(lambda1,lambda2) = 0.00011028
+cycle = 28  norm(lambda1,lambda2) = 8.35952e-05
+cycle = 29  norm(lambda1,lambda2) = 6.20589e-05
+cycle = 30  norm(lambda1,lambda2) = 4.57706e-05
+cycle = 31  norm(lambda1,lambda2) = 3.36488e-05
+cycle = 32  norm(lambda1,lambda2) = 2.55553e-05
+cycle = 33  norm(lambda1,lambda2) = 1.96225e-05
+cycle = 34  norm(lambda1,lambda2) = 1.50625e-05
+cycle = 35  norm(lambda1,lambda2) = 1.15725e-05
+cycle = 36  norm(lambda1,lambda2) = 9.36514e-06
+Hartree-Fock Energy:  -346.85892983912890
+CCSD Correlation:       -0.30555025335066
+CCSD Energy:          -347.16448009247955
+
+=================== Doing CCSD(T) Calculation on Subsystem 1 ===================
+Build MO integrals with incore ao2mo
+CCSD(T) correction = -0.0386910718875694
+Build MO integrals with incore ao2mo
+istep = 0  norm(lambda1,lambda2) = 0.315445
+istep = 1  norm(lambda1,lambda2) = 0.177582
+istep = 2  norm(lambda1,lambda2) = 0.197649
+istep = 3  norm(lambda1,lambda2) = 0.189193
+istep = 4  norm(lambda1,lambda2) = 0.0661616
+istep = 5  norm(lambda1,lambda2) = 0.0554148
+istep = 6  norm(lambda1,lambda2) = 0.0400988
+istep = 7  norm(lambda1,lambda2) = 0.0315674
+istep = 8  norm(lambda1,lambda2) = 0.0237706
+istep = 9  norm(lambda1,lambda2) = 0.020156
+istep = 10  norm(lambda1,lambda2) = 0.0158044
+istep = 11  norm(lambda1,lambda2) = 0.0107025
+istep = 12  norm(lambda1,lambda2) = 0.00807117
+istep = 13  norm(lambda1,lambda2) = 0.00619131
+istep = 14  norm(lambda1,lambda2) = 0.00437809
+istep = 15  norm(lambda1,lambda2) = 0.00327919
+istep = 16  norm(lambda1,lambda2) = 0.00249958
+istep = 17  norm(lambda1,lambda2) = 0.00184252
+istep = 18  norm(lambda1,lambda2) = 0.00144308
+istep = 19  norm(lambda1,lambda2) = 0.00109433
+istep = 20  norm(lambda1,lambda2) = 0.000944816
+istep = 21  norm(lambda1,lambda2) = 0.000700919
+istep = 22  norm(lambda1,lambda2) = 0.00053494
+istep = 23  norm(lambda1,lambda2) = 0.000413236
+istep = 24  norm(lambda1,lambda2) = 0.000323583
+istep = 25  norm(lambda1,lambda2) = 0.000260014
+istep = 26  norm(lambda1,lambda2) = 0.000174393
+istep = 27  norm(lambda1,lambda2) = 0.000123233
+istep = 28  norm(lambda1,lambda2) = 8.68178e-05
+istep = 29  norm(lambda1,lambda2) = 7.25357e-05
+istep = 30  norm(lambda1,lambda2) = 5.91087e-05
+istep = 31  norm(lambda1,lambda2) = 4.65854e-05
+istep = 32  norm(lambda1,lambda2) = 3.76873e-05
+istep = 33  norm(lambda1,lambda2) = 2.87802e-05
+istep = 34  norm(lambda1,lambda2) = 2.12356e-05
+istep = 35  norm(lambda1,lambda2) = 1.53902e-05
+istep = 36  norm(lambda1,lambda2) = 8.62226e-06
+istep = 37  norm(lambda1,lambda2) = 6.48764e-06
+istep = 38  norm(lambda1,lambda2) = 5.27645e-06
+istep = 39  norm(lambda1,lambda2) = 4.27816e-06
+istep = 40  norm(lambda1,lambda2) = 3.3023e-06
+istep = 41  norm(lambda1,lambda2) = 2.50257e-06
+istep = 42  norm(lambda1,lambda2) = 1.7807e-06
+istep = 43  norm(lambda1,lambda2) = 1.29405e-06
+istep = 44  norm(lambda1,lambda2) = 1.01587e-06
+istep = 45  norm(lambda1,lambda2) = 7.04441e-07
+istep = 46  norm(lambda1,lambda2) = 5.56988e-07
+istep = 47  norm(lambda1,lambda2) = 4.54778e-07
+istep = 48  norm(lambda1,lambda2) = 3.47841e-07
+istep = 49  norm(lambda1,lambda2) = 3.08027e-07
+Hartree-Fock Energy:  -346.85892983912890
+CCSD(T) Correlation:       -0.34424132523823
+CCSD(T) Energy:          -347.20317116436712
+
+========================= Density Matrix Purification ==========================
+ iter:   1       |idem_diff|: 1.000000000000     
+ iter:   2       |idem_diff|: 1.047165370331     
+ iter:   3       |idem_diff|: 0.817168249826     
+ iter:   4       |idem_diff|: 0.700840653204     
+ iter:   5       |idem_diff|: 0.594510944026     
+ iter:   6       |idem_diff|: 0.419066297788     
+ iter:   7       |idem_diff|: 0.196107085141     
+ iter:   8       |idem_diff|: 0.039648048964     
+ iter:   9       |idem_diff|: 0.001538104161     
+ iter:  10       |idem_diff|: 0.000002346194     
+ iter:  11       |idem_diff|: 0.000000000006     
+Density Purified!
+WF-in-DFT Cycle Errors             6.70281864891530
+
+============================== Embedding Energies ==============================
+Subsystem DFT              -154.94455711785025
+Interaction                 -15.83103434372248
+DFT-in-DFT                 -170.77559146157273
+Supermolecular DFT         -617.90356444366080
+Difference                 -447.12797298208807
+Corrected DFT-in-DFT       -617.90356444366080
+WF-in-DFT                  -363.03420550808960
+Corrected WF-in-DFT        -810.16217849017767
+
+=========================== Starting Freeze-and-Thaw ===========================
+ iter:   1:2        |ddm|: 5.365346e-01     Tr[DP]  7.651204e-01
+ iter:   2:2        |ddm|: 0.000000e+00     Tr[DP]  7.651204e-01
+                           Freeze-and-Thaw converged!                           
+
+=================== Subsystem 1 at higher mean-field method ====================
+  subiter:   1      |ddm|: 8.005274e+00
+  subiter:   2      |ddm|: 1.650410e+01
+  subiter:   3      |ddm|: 8.931169e+00
+  subiter:   4      |ddm|: 5.784745e+00
+  subiter:   5      |ddm|: 3.605649e-01
+  subiter:   6      |ddm|: 1.571283e+00
+  subiter:   7      |ddm|: 4.268374e-01
+  subiter:   8      |ddm|: 5.254247e-01
+  subiter:   9      |ddm|: 3.889722e-01
+  subiter:  10      |ddm|: 6.213885e-01
+  subiter:  11      |ddm|: 1.045085e-01
+  subiter:  12      |ddm|: 3.226370e-01
+  subiter:  13      |ddm|: 1.122147e-01
+  subiter:  14      |ddm|: 6.042313e-02
+  subiter:  15      |ddm|: 5.256825e-02
+  subiter:  16      |ddm|: 9.037787e-02
+  subiter:  17      |ddm|: 9.519693e-02
+  subiter:  18      |ddm|: 1.185896e-01
+  subiter:  19      |ddm|: 4.545388e-02
+  subiter:  20      |ddm|: 2.865107e-02
+  subiter:  21      |ddm|: 3.070244e-02
+  subiter:  22      |ddm|: 5.374490e-03
+  subiter:  23      |ddm|: 6.833805e-03
+  subiter:  24      |ddm|: 1.636066e-03
+  subiter:  25      |ddm|: 1.292221e-03
+  subiter:  26      |ddm|: 4.380581e-04
+  subiter:  27      |ddm|: 5.762134e-04
+  subiter:  28      |ddm|: 3.518859e-04
+  subiter:  29      |ddm|: 2.925838e-04
+  subiter:  30      |ddm|: 3.495899e-04
+  subiter:  31      |ddm|: 5.342715e-05
+  subiter:  32      |ddm|: 2.764588e-05
+  subiter:  33      |ddm|: 2.518975e-05
+  subiter:  34      |ddm|: 2.892281e-05
+  subiter:  35      |ddm|: 1.530271e-05
+  subiter:  36      |ddm|: 8.359755e-06
+  subiter:  37      |ddm|: 8.241580e-07
+  subiter:  38      |ddm|: 3.511918e-06
+  subiter:  39      |ddm|: 2.066522e-06
+  subiter:  40      |ddm|: 2.755628e-05
+  subiter:  41      |ddm|: 1.086293e-05
+  subiter:  42      |ddm|: 1.044249e-05
+  subiter:  43      |ddm|: 7.647697e-06
+  subiter:  44      |ddm|: 1.165666e-06
+  subiter:  45      |ddm|: 6.444510e-07
+  subiter:  46      |ddm|: 1.006821e-06
+  subiter:  47      |ddm|: 4.330910e-07
+  subiter:  48      |ddm|: 8.342368e-07
+  subiter:  49      |ddm|: 1.287756e-06
+  subiter:  50      |ddm|: 1.105615e-06
+  subiter:  51      |ddm|: 2.465809e-07
+  subiter:  52      |ddm|: 1.972804e-07
+  subiter:  53      |ddm|: 1.762211e-07
+  subiter:  54      |ddm|: 1.457658e-07
+  subiter:  55      |ddm|: 1.557787e-07
+  subiter:  56      |ddm|: 9.472488e-08
+  subiter:  57      |ddm|: 1.230655e-07
+  subiter:  58      |ddm|: 1.093043e-07
+  subiter:  59      |ddm|: 1.009657e-07
+  subiter:  60      |ddm|: 9.130404e-08
+  subiter:  61      |ddm|: 8.456798e-08
+  subiter:  62      |ddm|: 7.737824e-08
+  subiter:  63      |ddm|: 8.540507e-08
+  subiter:  64      |ddm|: 8.019718e-08
+  subiter:  65      |ddm|: 7.603897e-08
+  subiter:  66      |ddm|: 7.249258e-08
+  subiter:  67      |ddm|: 6.988952e-08
+  subiter:  68      |ddm|: 6.801859e-08
+  subiter:  69      |ddm|: 6.684759e-08
+  subiter:  70      |ddm|: 6.415754e-08
+  subiter:  71      |ddm|: 6.184826e-08
+  subiter:  72      |ddm|: 5.982069e-08
+  subiter:  73      |ddm|: 5.801976e-08
+  subiter:  74      |ddm|: 5.632781e-08
+  subiter:  75      |ddm|: 5.464153e-08
+  subiter:  76      |ddm|: 5.286550e-08
+  subiter:  77      |ddm|: 5.122461e-08
+  subiter:  78      |ddm|: 4.967988e-08
+  subiter:  79      |ddm|: 4.820259e-08
+  subiter:  80      |ddm|: 4.676794e-08
+  subiter:  81      |ddm|: 4.536649e-08
+  subiter:  82      |ddm|: 4.400432e-08
+  subiter:  83      |ddm|: 4.270153e-08
+  subiter:  84      |ddm|: 4.144669e-08
+  subiter:  85      |ddm|: 4.023266e-08
+  subiter:  86      |ddm|: 3.905559e-08
+  subiter:  87      |ddm|: 3.791511e-08
+  subiter:  88      |ddm|: 3.681199e-08
+  subiter:  89      |ddm|: 3.574608e-08
+  subiter:  90      |ddm|: 3.471429e-08
+  subiter:  91      |ddm|: 3.371465e-08
+  subiter:  92      |ddm|: 3.274591e-08
+  subiter:  93      |ddm|: 3.180750e-08
+  subiter:  94      |ddm|: 3.089838e-08
+  subiter:  95      |ddm|: 3.001752e-08
+  subiter:  96      |ddm|: 2.916367e-08
+  subiter:  97      |ddm|: 2.833588e-08
+  subiter:  98      |ddm|: 2.753320e-08
+  subiter:  99      |ddm|: 2.675476e-08
+  subiter: 100      |ddm|: 2.599998e-08
+  subiter: 101      |ddm|: 2.526782e-08
+  subiter: 102      |ddm|: 2.455759e-08
+  subiter: 103      |ddm|: 2.386845e-08
+  subiter: 104      |ddm|: 2.319983e-08
+  subiter: 105      |ddm|: 2.255102e-08
+  subiter: 106      |ddm|: 2.192139e-08
+  subiter: 107      |ddm|: 2.131023e-08
+  subiter: 108      |ddm|: 2.071706e-08
+  subiter: 109      |ddm|: 2.014124e-08
+  subiter: 110      |ddm|: 1.958228e-08
+  subiter: 111      |ddm|: 1.903955e-08
+  subiter: 112      |ddm|: 1.851253e-08
+  subiter: 113      |ddm|: 1.800085e-08
+  subiter: 114      |ddm|: 1.750401e-08
+  subiter: 115      |ddm|: 1.702145e-08
+  subiter: 116      |ddm|: 1.655286e-08
+  subiter: 117      |ddm|: 1.609772e-08
+  subiter: 118      |ddm|: 1.565559e-08
+  subiter: 119      |ddm|: 1.522616e-08
+  subiter: 120      |ddm|: 1.480894e-08
+  subiter: 121      |ddm|: 1.440378e-08
+  subiter: 122      |ddm|: 1.400998e-08
+  subiter: 123      |ddm|: 1.362737e-08
+  subiter: 124      |ddm|: 1.325576e-08
+  subiter: 125      |ddm|: 1.289470e-08
+  subiter: 126      |ddm|: 1.254380e-08
+  subiter: 127      |ddm|: 1.220276e-08
+  subiter: 128      |ddm|: 1.187140e-08
+  subiter: 129      |ddm|: 1.154943e-08
+  subiter: 130      |ddm|: 1.123647e-08
+  subiter: 131      |ddm|: 1.093232e-08
+  subiter: 132      |ddm|: 1.063667e-08
+  subiter: 133      |ddm|: 1.034931e-08
+  subiter: 134      |ddm|: 1.007008e-08
+  subiter: 135      |ddm|: 9.798562e-09
+  subiter: 136      |ddm|: 9.534690e-09
+  subiter: 137      |ddm|: 9.278141e-09
+  subiter: 138      |ddm|: 9.028742e-09
+  subiter: 139      |ddm|: 8.786246e-09
+  subiter: 140      |ddm|: 8.550581e-09
+  subiter: 141      |ddm|: 8.321486e-09
+  subiter: 142      |ddm|: 8.098666e-09
+  subiter: 143      |ddm|: 7.881926e-09
+  subiter: 144      |ddm|: 7.671406e-09
+  subiter: 145      |ddm|: 7.466622e-09
+  subiter: 146      |ddm|: 7.267468e-09
+  subiter: 147      |ddm|: 7.073765e-09
+  subiter: 148      |ddm|: 6.885415e-09
+  subiter: 149      |ddm|: 6.702325e-09
+  subiter: 150      |ddm|: 6.524172e-09
+  subiter: 151      |ddm|: 6.350869e-09
+  subiter: 152      |ddm|: 6.182527e-09
+  subiter: 153      |ddm|: 6.018636e-09
+  subiter: 154      |ddm|: 5.859251e-09
+  subiter: 155      |ddm|: 5.704268e-09
+  subiter: 156      |ddm|: 5.553535e-09
+  subiter: 157      |ddm|: 5.406963e-09
+  subiter: 158      |ddm|: 5.264146e-09
+  subiter: 159      |ddm|: 5.125437e-09
+  subiter: 160      |ddm|: 4.990486e-09
+  subiter: 161      |ddm|: 4.859176e-09
+  subiter: 162      |ddm|: 4.731426e-09
+  subiter: 163      |ddm|: 4.607132e-09
+  subiter: 164      |ddm|: 4.486291e-09
+  subiter: 165      |ddm|: 4.368747e-09
+  subiter: 166      |ddm|: 4.254211e-09
+  subiter: 167      |ddm|: 4.142907e-09
+  subiter: 168      |ddm|: 4.034488e-09
+  subiter: 169      |ddm|: 3.929228e-09
+  subiter: 170      |ddm|: 3.826572e-09
+  subiter: 171      |ddm|: 3.726824e-09
+  subiter: 172      |ddm|: 3.629622e-09
+  subiter: 173      |ddm|: 3.535264e-09
+  subiter: 174      |ddm|: 3.443296e-09
+  subiter: 175      |ddm|: 3.353772e-09
+  subiter: 176      |ddm|: 3.266721e-09
+  subiter: 177      |ddm|: 3.181885e-09
+  subiter: 178      |ddm|: 3.099491e-09
+  subiter: 179      |ddm|: 3.019029e-09
+  subiter: 180      |ddm|: 2.940969e-09
+  subiter: 181      |ddm|: 2.864901e-09
+  subiter: 182      |ddm|: 2.790838e-09
+  subiter: 183      |ddm|: 2.718875e-09
+  subiter: 184      |ddm|: 2.648759e-09
+  subiter: 185      |ddm|: 2.580452e-09
+  subiter: 186      |ddm|: 2.514088e-09
+  subiter: 187      |ddm|: 2.449315e-09
+  subiter: 188      |ddm|: 2.386376e-09
+  subiter: 189      |ddm|: 2.325078e-09
+  subiter: 190      |ddm|: 2.265371e-09
+  subiter: 191      |ddm|: 2.207328e-09
+  subiter: 192      |ddm|: 2.150668e-09
+  subiter: 193      |ddm|: 2.095599e-09
+  subiter: 194      |ddm|: 2.041980e-09
+  subiter: 195      |ddm|: 1.989814e-09
+  subiter: 196      |ddm|: 1.938973e-09
+  subiter: 197      |ddm|: 1.889529e-09
+  subiter: 198      |ddm|: 1.841325e-09
+  subiter: 199      |ddm|: 1.794472e-09
+  subiter: 200      |ddm|: 1.748728e-09
+  subiter: 201      |ddm|: 1.704280e-09
+  subiter: 202      |ddm|: 1.660943e-09
+  subiter: 203      |ddm|: 1.618729e-09
+  subiter: 204      |ddm|: 1.577645e-09
+  subiter: 205      |ddm|: 1.537628e-09
+  subiter: 206      |ddm|: 1.498690e-09
+  subiter: 207      |ddm|: 1.460749e-09
+  subiter: 208      |ddm|: 1.423800e-09
+  subiter: 209      |ddm|: 1.387777e-09
+  subiter: 210      |ddm|: 1.352688e-09
+  subiter: 211      |ddm|: 1.318631e-09
+  subiter: 212      |ddm|: 1.285387e-09
+  subiter: 213      |ddm|: 1.252895e-09
+  subiter: 214      |ddm|: 1.221278e-09
+  subiter: 215      |ddm|: 1.190639e-09
+  subiter: 216      |ddm|: 1.160680e-09
+  subiter: 217      |ddm|: 1.131549e-09
+  subiter: 218      |ddm|: 1.103081e-09
+  subiter: 219      |ddm|: 1.075397e-09
+  subiter: 220      |ddm|: 1.048457e-09
+  subiter: 221      |ddm|: 1.022143e-09
+  subiter: 222      |ddm|: 9.965854e-10
+
+
+******** <class 'pyscf.scf.hf.RHF'> flags ********
+method = RHF
+initial guess = minao
+damping factor = 0
+level shift factor = 0
+DIIS = <class 'pyscf.scf.diis.CDIIS'>
+DIIS start cycle = 1
+DIIS space = 8
+SCF tol = 1e-09
+SCF gradient tol = None
+max. SCF cycles = 300
+direct_scf = True
+direct_scf_tol = 1e-13
+chkfile to save SCF result = /panfs/roc/scratch/graha682/201801_wfcycle/20180109_ccpVDZ_m06_ccsdt_ft_1butSn2React/tmpUoeyrG
+max_memory 4000 MB (current use 567 MB)
+Set gradient conv threshold to 3.16228e-05
+init E= -343.632536288321
+  HOMO = -0.225427195091696  LUMO = 0.119094439839613
+cycle= 1 E= -343.632536288321  delta_E= -4.55e-13  |g|= 8.12e-10  |ddm|= 3.33e-09
+  HOMO = -0.225427195077244  LUMO = 0.119094439812155
+Extra cycle  E= -343.632536288321  delta_E=    0  |g|= 7.43e-10  |ddm|= 3.04e-09
+converged SCF energy = -343.632536288321
+
+
+******** <class 'pyscf.dft.rks.RKS'> flags ********
+method = RKS
+initial guess = atom
+damping factor = 0
+level shift factor = 0.0
+DIIS = <class 'pyscf.scf.diis.CDIIS'>
+DIIS start cycle = 1
+DIIS space = 8
+SCF tol = 1e-09
+SCF gradient tol = 1e-08
+max. SCF cycles = 1
+direct_scf = True
+direct_scf_tol = 1e-13
+chkfile to save SCF result = /panfs/roc/scratch/graha682/201801_wfcycle/20180109_ccpVDZ_m06_ccsdt_ft_1butSn2React/tmpdGk7NS
+max_memory 4000 MB (current use 567 MB)
+XC functionals = m06
+small_rho_cutoff = 1e-20
+radial grids: Treutler-Ahlrichs (JCP 102, 346 (M4)) radial grids
+becke partition: Becke, JCP, 88, 2547 (1988)
+pruning grids: <function nwchem_prune at 0x17a65f0>
+grids dens level: 4
+symmetrized grids: False
+atomic radii adjust function: <function treutler_atomic_radii_adjust at 0x17a6488>
+init E= -150.878740537044
+  HOMO = -0.277968227350127  LUMO = 0.074198974328791
+cycle= 1 E= -251.321945830295  delta_E= -100  |g|= 19.1  |ddm|= 8.19
+  HOMO = -1.90220244718791  LUMO = -1.73462222775648
+Extra cycle  E= -329.248031304598  delta_E= -77.9  |g|= 4.51  |ddm|= 18.4
+SCF not converged.
+SCF energy = -329.248031304598 after 1 cycles
+ iter:   3:1        |ddm|: 1.531317e+01     Tr[DP]  1.489865e+00
+
+==================== Doing CCSD Calculation on Subsystem 1 =====================
+
+******** <class 'pyscf.cc.ccsd.CCSD'> flags ********
+CCSD nocc = 13, nvir = 29
+max_cycle = 50
+direct = 0
+conv_tol = 1e-07
+conv_tol_normt = 1e-05
+diis_space = 6
+diis_start_cycle = 0
+diis_start_energy_diff = 1e+09
+max_memory 4000 MB (current use 569 MB)
+Build MO integrals with incore ao2mo
+Init t2, MP2 energy = -0.278060306140085
+cycle = 1  E(CCSD) = -0.292154897888244  dE = -0.292154898  norm(t1,t2) = 0.209155
+cycle = 2  E(CCSD) = -0.322392615776562  dE = -0.0302377179  norm(t1,t2) = 0.134938
+cycle = 3  E(CCSD) = -0.317204670487423  dE = 0.00518794529  norm(t1,t2) = 0.108987
+cycle = 4  E(CCSD) = -0.325479416270095  dE = -0.00827474578  norm(t1,t2) = 0.0960777
+cycle = 5  E(CCSD) = -0.335945272442721  dE = -0.0104658562  norm(t1,t2) = 0.0526544
+cycle = 6  E(CCSD) = -0.337176964354187  dE = -0.00123169191  norm(t1,t2) = 0.035201
+cycle = 7  E(CCSD) = -0.339548783351698  dE = -0.002371819  norm(t1,t2) = 0.026476
+cycle = 8  E(CCSD) = -0.341052317817457  dE = -0.00150353447  norm(t1,t2) = 0.0176519
+cycle = 9  E(CCSD) = -0.341591645875  dE = -0.000539328058  norm(t1,t2) = 0.0134844
+cycle = 10  E(CCSD) = -0.342080354820596  dE = -0.000488708946  norm(t1,t2) = 0.00999047
+cycle = 11  E(CCSD) = -0.34215141545155  dE = -7.1060631e-05  norm(t1,t2) = 0.00578993
+cycle = 12  E(CCSD) = -0.342216159130552  dE = -6.4743679e-05  norm(t1,t2) = 0.00387488
+cycle = 13  E(CCSD) = -0.342297277527623  dE = -8.11183971e-05  norm(t1,t2) = 0.00233488
+cycle = 14  E(CCSD) = -0.34231248778517  dE = -1.52102575e-05  norm(t1,t2) = 0.00138992
+cycle = 15  E(CCSD) = -0.342347845210899  dE = -3.53574257e-05  norm(t1,t2) = 0.000853071
+cycle = 16  E(CCSD) = -0.342340756200991  dE = 7.08900991e-06  norm(t1,t2) = 0.000545403
+cycle = 17  E(CCSD) = -0.342335739242893  dE = 5.0169581e-06  norm(t1,t2) = 0.000369973
+cycle = 18  E(CCSD) = -0.342329858339952  dE = 5.88090294e-06  norm(t1,t2) = 0.000269266
+cycle = 19  E(CCSD) = -0.342322187478746  dE = 7.67086121e-06  norm(t1,t2) = 0.000183568
+cycle = 20  E(CCSD) = -0.342322185474378  dE = 2.00436823e-09  norm(t1,t2) = 0.000128859
+cycle = 21  E(CCSD) = -0.342323436462216  dE = -1.25098784e-06  norm(t1,t2) = 9.77659e-05
+cycle = 22  E(CCSD) = -0.34232224473441  dE = 1.19172781e-06  norm(t1,t2) = 7.23987e-05
+cycle = 23  E(CCSD) = -0.34232397557854  dE = -1.73084413e-06  norm(t1,t2) = 4.67716e-05
+cycle = 24  E(CCSD) = -0.342323406891475  dE = 5.68687066e-07  norm(t1,t2) = 3.17562e-05
+cycle = 25  E(CCSD) = -0.342323295938065  dE = 1.1095341e-07  norm(t1,t2) = 2.33568e-05
+cycle = 26  E(CCSD) = -0.342322863834129  dE = 4.32103935e-07  norm(t1,t2) = 1.64112e-05
+cycle = 27  E(CCSD) = -0.342322462637735  dE = 4.01196394e-07  norm(t1,t2) = 1.13936e-05
+cycle = 28  E(CCSD) = -0.34232236457435  dE = 9.8063385e-08  norm(t1,t2) = 7.96604e-06
+CCSD converged
+E(CCSD) = -343.9748586528957  E_corr = -0.3423223645743497
+Build MO integrals with incore ao2mo
+cycle = 1  norm(lambda1,lambda2) = 0.248706
+cycle = 2  norm(lambda1,lambda2) = 0.0837464
+cycle = 3  norm(lambda1,lambda2) = 0.0419536
+cycle = 4  norm(lambda1,lambda2) = 0.0327958
+cycle = 5  norm(lambda1,lambda2) = 0.0213357
+cycle = 6  norm(lambda1,lambda2) = 0.0133904
+cycle = 7  norm(lambda1,lambda2) = 0.0114232
+cycle = 8  norm(lambda1,lambda2) = 0.00781546
+cycle = 9  norm(lambda1,lambda2) = 0.00596744
+cycle = 10  norm(lambda1,lambda2) = 0.00445318
+cycle = 11  norm(lambda1,lambda2) = 0.00230098
+cycle = 12  norm(lambda1,lambda2) = 0.00169161
+cycle = 13  norm(lambda1,lambda2) = 0.00101931
+cycle = 14  norm(lambda1,lambda2) = 0.000598803
+cycle = 15  norm(lambda1,lambda2) = 0.000423878
+cycle = 16  norm(lambda1,lambda2) = 0.000266509
+cycle = 17  norm(lambda1,lambda2) = 0.000189215
+cycle = 18  norm(lambda1,lambda2) = 0.000144116
+cycle = 19  norm(lambda1,lambda2) = 0.000114074
+cycle = 20  norm(lambda1,lambda2) = 8.68913e-05
+cycle = 21  norm(lambda1,lambda2) = 6.37965e-05
+cycle = 22  norm(lambda1,lambda2) = 5.44606e-05
+cycle = 23  norm(lambda1,lambda2) = 3.76485e-05
+cycle = 24  norm(lambda1,lambda2) = 2.91446e-05
+cycle = 25  norm(lambda1,lambda2) = 1.97079e-05
+cycle = 26  norm(lambda1,lambda2) = 1.34805e-05
+cycle = 27  norm(lambda1,lambda2) = 1.00787e-05
+cycle = 28  norm(lambda1,lambda2) = 6.81406e-06
+Hartree-Fock Energy:  -343.63253628832138
+CCSD Correlation:       -0.34232236457435
+CCSD Energy:          -343.97485865289570
+
+=================== Doing CCSD(T) Calculation on Subsystem 1 ===================
+Build MO integrals with incore ao2mo
+CCSD(T) correction = -0.0305947972267909
+Build MO integrals with incore ao2mo
+istep = 0  norm(lambda1,lambda2) = 0.212974
+istep = 1  norm(lambda1,lambda2) = 0.085434
+istep = 2  norm(lambda1,lambda2) = 0.0846626
+istep = 3  norm(lambda1,lambda2) = 0.0664732
+istep = 4  norm(lambda1,lambda2) = 0.0322494
+istep = 5  norm(lambda1,lambda2) = 0.0200787
+istep = 6  norm(lambda1,lambda2) = 0.014518
+istep = 7  norm(lambda1,lambda2) = 0.00916119
+istep = 8  norm(lambda1,lambda2) = 0.00711893
+istep = 9  norm(lambda1,lambda2) = 0.00547027
+istep = 10  norm(lambda1,lambda2) = 0.00298897
+istep = 11  norm(lambda1,lambda2) = 0.00226846
+istep = 12  norm(lambda1,lambda2) = 0.00145164
+istep = 13  norm(lambda1,lambda2) = 0.0010234
+istep = 14  norm(lambda1,lambda2) = 0.00061274
+istep = 15  norm(lambda1,lambda2) = 0.000451914
+istep = 16  norm(lambda1,lambda2) = 0.000354904
+istep = 17  norm(lambda1,lambda2) = 0.000244928
+istep = 18  norm(lambda1,lambda2) = 0.000161932
+istep = 19  norm(lambda1,lambda2) = 0.000111089
+istep = 20  norm(lambda1,lambda2) = 7.62701e-05
+istep = 21  norm(lambda1,lambda2) = 5.63302e-05
+istep = 22  norm(lambda1,lambda2) = 3.63501e-05
+istep = 23  norm(lambda1,lambda2) = 2.64849e-05
+istep = 24  norm(lambda1,lambda2) = 1.95578e-05
+istep = 25  norm(lambda1,lambda2) = 1.38179e-05
+istep = 26  norm(lambda1,lambda2) = 1.10102e-05
+istep = 27  norm(lambda1,lambda2) = 7.54178e-06
+istep = 28  norm(lambda1,lambda2) = 5.65928e-06
+istep = 29  norm(lambda1,lambda2) = 3.47088e-06
+istep = 30  norm(lambda1,lambda2) = 2.45127e-06
+istep = 31  norm(lambda1,lambda2) = 1.73963e-06
+istep = 32  norm(lambda1,lambda2) = 1.0406e-06
+istep = 33  norm(lambda1,lambda2) = 8.31789e-07
+istep = 34  norm(lambda1,lambda2) = 5.42365e-07
+istep = 35  norm(lambda1,lambda2) = 4.08278e-07
+istep = 36  norm(lambda1,lambda2) = 2.64822e-07
+istep = 37  norm(lambda1,lambda2) = 2.15126e-07
+istep = 38  norm(lambda1,lambda2) = 1.6606e-07
+istep = 39  norm(lambda1,lambda2) = 1.55675e-07
+istep = 40  norm(lambda1,lambda2) = 1.46595e-07
+istep = 41  norm(lambda1,lambda2) = 1.39514e-07
+istep = 42  norm(lambda1,lambda2) = 1.14929e-07
+istep = 43  norm(lambda1,lambda2) = 1.26141e-07
+istep = 44  norm(lambda1,lambda2) = 1.16785e-07
+istep = 45  norm(lambda1,lambda2) = 1.11153e-07
+istep = 46  norm(lambda1,lambda2) = 1.05847e-07
+istep = 47  norm(lambda1,lambda2) = 1.00971e-07
+istep = 48  norm(lambda1,lambda2) = 9.64999e-08
+istep = 49  norm(lambda1,lambda2) = 9.54278e-08
+Hartree-Fock Energy:  -343.63253628832138
+CCSD(T) Correlation:       -0.37291716180114
+CCSD(T) Energy:          -344.00545345012250
+
+========================= Density Matrix Purification ==========================
+ iter:   1       |idem_diff|: 1.000000000000     
+ iter:   2       |idem_diff|: 0.123782497111     
+ iter:   3       |idem_diff|: 0.101810361434     
+ iter:   4       |idem_diff|: 0.089273371003     
+ iter:   5       |idem_diff|: 0.066972776506     
+ iter:   6       |idem_diff|: 0.035760256548     
+ iter:   7       |idem_diff|: 0.009422807419     
+ iter:   8       |idem_diff|: 0.000608640736     
+ iter:   9       |idem_diff|: 0.000002475235     
+ iter:  10       |idem_diff|: 0.000000000041     
+ iter:  11       |idem_diff|: 0.000000000000     
+Density Purified!
+WF-in-DFT Cycle Errors             2.65589985475036
+
+============================== Embedding Energies ==============================
+Subsystem DFT              -151.39050345532971
+Interaction                 -19.63194346233846
+DFT-in-DFT                 -171.02244691766816
+Supermolecular DFT         -617.90356444366080
+Difference                 -446.88111752599264
+Corrected DFT-in-DFT       -617.90356444366080
+WF-in-DFT                  -363.63739691246099
+Corrected WF-in-DFT        -810.51851443845362
+
+=========================== Starting Freeze-and-Thaw ===========================
+ iter:   1:2        |ddm|: 3.083713e-01     Tr[DP]  7.717082e-01
+ iter:   2:2        |ddm|: 0.000000e+00     Tr[DP]  7.717082e-01
+                           Freeze-and-Thaw converged!                           
+
+=================== Subsystem 1 at higher mean-field method ====================
+  subiter:   1      |ddm|: 8.004986e+00
+  subiter:   2      |ddm|: 1.646313e+01
+  subiter:   3      |ddm|: 8.974337e+00
+  subiter:   4      |ddm|: 5.922069e+00
+  subiter:   5      |ddm|: 3.259494e-01
+  subiter:   6      |ddm|: 1.639476e+00
+  subiter:   7      |ddm|: 3.159670e-01
+  subiter:   8      |ddm|: 6.413275e-01
+  subiter:   9      |ddm|: 4.440856e-01
+  subiter:  10      |ddm|: 3.097153e-01
+  subiter:  11      |ddm|: 2.470280e-01
+  subiter:  12      |ddm|: 2.690915e-01
+  subiter:  13      |ddm|: 8.560802e-02
+  subiter:  14      |ddm|: 1.162089e-01
+  subiter:  15      |ddm|: 9.087353e-02
+  subiter:  16      |ddm|: 1.365547e-01
+  subiter:  17      |ddm|: 3.512040e-02
+  subiter:  18      |ddm|: 2.185283e-01
+  subiter:  19      |ddm|: 2.951044e-02
+  subiter:  20      |ddm|: 9.842990e-02
+  subiter:  21      |ddm|: 5.764473e-02
+  subiter:  22      |ddm|: 5.495859e-02
+  subiter:  23      |ddm|: 1.175814e-02
+  subiter:  24      |ddm|: 5.439189e-02
+  subiter:  25      |ddm|: 1.823107e-02
+  subiter:  26      |ddm|: 9.161446e-03
+  subiter:  27      |ddm|: 3.790307e-03
+  subiter:  28      |ddm|: 1.303216e-03
+  subiter:  29      |ddm|: 6.125462e-03
+  subiter:  30      |ddm|: 3.847183e-04
+  subiter:  31      |ddm|: 6.243610e-04
+  subiter:  32      |ddm|: 6.742286e-04
+  subiter:  33      |ddm|: 1.043287e-03
+  subiter:  34      |ddm|: 3.146435e-04
+  subiter:  35      |ddm|: 2.260134e-04
+  subiter:  36      |ddm|: 1.274130e-04
+  subiter:  37      |ddm|: 4.883993e-06
+  subiter:  38      |ddm|: 1.567930e-05
+  subiter:  39      |ddm|: 1.303579e-05
+  subiter:  40      |ddm|: 3.204122e-06
+  subiter:  41      |ddm|: 3.015671e-06
+  subiter:  42      |ddm|: 1.373681e-06
+  subiter:  43      |ddm|: 6.072272e-07
+  subiter:  44      |ddm|: 8.325123e-07
+  subiter:  45      |ddm|: 6.480785e-07
+  subiter:  46      |ddm|: 2.847834e-07
+  subiter:  47      |ddm|: 8.637133e-07
+  subiter:  48      |ddm|: 2.843113e-07
+  subiter:  49      |ddm|: 1.561434e-07
+  subiter:  50      |ddm|: 1.064594e-07
+  subiter:  51      |ddm|: 6.354612e-08
+  subiter:  52      |ddm|: 5.898466e-08
+  subiter:  53      |ddm|: 6.696261e-08
+  subiter:  54      |ddm|: 6.985334e-08
+  subiter:  55      |ddm|: 4.164968e-08
+  subiter:  56      |ddm|: 3.066279e-08
+  subiter:  57      |ddm|: 2.527445e-08
+  subiter:  58      |ddm|: 2.258796e-08
+  subiter:  59      |ddm|: 2.297353e-08
+  subiter:  60      |ddm|: 2.692370e-08
+  subiter:  61      |ddm|: 2.184995e-08
+  subiter:  62      |ddm|: 1.979259e-08
+  subiter:  63      |ddm|: 1.843235e-08
+  subiter:  64      |ddm|: 1.774824e-08
+  subiter:  65      |ddm|: 1.771377e-08
+  subiter:  66      |ddm|: 1.720173e-08
+  subiter:  67      |ddm|: 1.598525e-08
+  subiter:  68      |ddm|: 1.529152e-08
+  subiter:  69      |ddm|: 1.477294e-08
+  subiter:  70      |ddm|: 1.438026e-08
+  subiter:  71      |ddm|: 1.402280e-08
+  subiter:  72      |ddm|: 1.357797e-08
+  subiter:  73      |ddm|: 1.312955e-08
+  subiter:  74      |ddm|: 1.278784e-08
+  subiter:  75      |ddm|: 1.248802e-08
+  subiter:  76      |ddm|: 1.221208e-08
+  subiter:  77      |ddm|: 1.194454e-08
+  subiter:  78      |ddm|: 1.168100e-08
+  subiter:  79      |ddm|: 1.143771e-08
+  subiter:  80      |ddm|: 1.121927e-08
+  subiter:  81      |ddm|: 1.101382e-08
+  subiter:  82      |ddm|: 1.081761e-08
+  subiter:  83      |ddm|: 1.062911e-08
+  subiter:  84      |ddm|: 1.044862e-08
+  subiter:  85      |ddm|: 1.027740e-08
+  subiter:  86      |ddm|: 1.011418e-08
+  subiter:  87      |ddm|: 9.956797e-09
+  subiter:  88      |ddm|: 9.804622e-09
+  subiter:  89      |ddm|: 9.657104e-09
+  subiter:  90      |ddm|: 9.514090e-09
+  subiter:  91      |ddm|: 9.375530e-09
+  subiter:  92      |ddm|: 9.240671e-09
+  subiter:  93      |ddm|: 9.109110e-09
+  subiter:  94      |ddm|: 8.980600e-09
+  subiter:  95      |ddm|: 8.854861e-09
+  subiter:  96      |ddm|: 8.731985e-09
+  subiter:  97      |ddm|: 8.611438e-09
+  subiter:  98      |ddm|: 8.493242e-09
+  subiter:  99      |ddm|: 8.377234e-09
+  subiter: 100      |ddm|: 8.263279e-09
+  subiter: 101      |ddm|: 8.151248e-09
+  subiter: 102      |ddm|: 8.040977e-09
+  subiter: 103      |ddm|: 7.932590e-09
+  subiter: 104      |ddm|: 7.825911e-09
+  subiter: 105      |ddm|: 7.720846e-09
+  subiter: 106      |ddm|: 7.617267e-09
+  subiter: 107      |ddm|: 7.515323e-09
+  subiter: 108      |ddm|: 7.414898e-09
+  subiter: 109      |ddm|: 7.315881e-09
+  subiter: 110      |ddm|: 7.218206e-09
+  subiter: 111      |ddm|: 7.121926e-09
+  subiter: 112      |ddm|: 7.027019e-09
+  subiter: 113      |ddm|: 6.933326e-09
+  subiter: 114      |ddm|: 6.840973e-09
+  subiter: 115      |ddm|: 6.749902e-09
+  subiter: 116      |ddm|: 6.660072e-09
+  subiter: 117      |ddm|: 6.571387e-09
+  subiter: 118      |ddm|: 6.483982e-09
+  subiter: 119      |ddm|: 6.397737e-09
+  subiter: 120      |ddm|: 6.312558e-09
+  subiter: 121      |ddm|: 6.228620e-09
+  subiter: 122      |ddm|: 6.145745e-09
+  subiter: 123      |ddm|: 6.064095e-09
+  subiter: 124      |ddm|: 5.983432e-09
+  subiter: 125      |ddm|: 5.903830e-09
+  subiter: 126      |ddm|: 5.825334e-09
+  subiter: 127      |ddm|: 5.747830e-09
+  subiter: 128      |ddm|: 5.671443e-09
+  subiter: 129      |ddm|: 5.595970e-09
+  subiter: 130      |ddm|: 5.521576e-09
+  subiter: 131      |ddm|: 5.448114e-09
+  subiter: 132      |ddm|: 5.375635e-09
+  subiter: 133      |ddm|: 5.304260e-09
+  subiter: 134      |ddm|: 5.233649e-09
+  subiter: 135      |ddm|: 5.164026e-09
+  subiter: 136      |ddm|: 5.095343e-09
+  subiter: 137      |ddm|: 5.027657e-09
+  subiter: 138      |ddm|: 4.960820e-09
+  subiter: 139      |ddm|: 4.894806e-09
+  subiter: 140      |ddm|: 4.829726e-09
+  subiter: 141      |ddm|: 4.765564e-09
+  subiter: 142      |ddm|: 4.702200e-09
+  subiter: 143      |ddm|: 4.639635e-09
+  subiter: 144      |ddm|: 4.577957e-09
+  subiter: 145      |ddm|: 4.517110e-09
+  subiter: 146      |ddm|: 4.457021e-09
+  subiter: 147      |ddm|: 4.397756e-09
+  subiter: 148      |ddm|: 4.339306e-09
+  subiter: 149      |ddm|: 4.281608e-09
+  subiter: 150      |ddm|: 4.224805e-09
+  subiter: 151      |ddm|: 4.168600e-09
+  subiter: 152      |ddm|: 4.113256e-09
+  subiter: 153      |ddm|: 4.058542e-09
+  subiter: 154      |ddm|: 4.004650e-09
+  subiter: 155      |ddm|: 3.951474e-09
+  subiter: 156      |ddm|: 3.898928e-09
+  subiter: 157      |ddm|: 3.847159e-09
+  subiter: 158      |ddm|: 3.796080e-09
+  subiter: 159      |ddm|: 3.745646e-09
+  subiter: 160      |ddm|: 3.695891e-09
+  subiter: 161      |ddm|: 3.646767e-09
+  subiter: 162      |ddm|: 3.598370e-09
+  subiter: 163      |ddm|: 3.550575e-09
+  subiter: 164      |ddm|: 3.503381e-09
+  subiter: 165      |ddm|: 3.456972e-09
+  subiter: 166      |ddm|: 3.410988e-09
+  subiter: 167      |ddm|: 3.365816e-09
+  subiter: 168      |ddm|: 3.321072e-09
+  subiter: 169      |ddm|: 3.276933e-09
+  subiter: 170      |ddm|: 3.233509e-09
+  subiter: 171      |ddm|: 3.190535e-09
+  subiter: 172      |ddm|: 3.148230e-09
+  subiter: 173      |ddm|: 3.106395e-09
+  subiter: 174      |ddm|: 3.065174e-09
+  subiter: 175      |ddm|: 3.024471e-09
+  subiter: 176      |ddm|: 2.984444e-09
+  subiter: 177      |ddm|: 2.944783e-09
+  subiter: 178      |ddm|: 2.905728e-09
+  subiter: 179      |ddm|: 2.867203e-09
+  subiter: 180      |ddm|: 2.829200e-09
+  subiter: 181      |ddm|: 2.791642e-09
+  subiter: 182      |ddm|: 2.754595e-09
+  subiter: 183      |ddm|: 2.718123e-09
+  subiter: 184      |ddm|: 2.682078e-09
+  subiter: 185      |ddm|: 2.646460e-09
+  subiter: 186      |ddm|: 2.611376e-09
+  subiter: 187      |ddm|: 2.576810e-09
+  subiter: 188      |ddm|: 2.542653e-09
+  subiter: 189      |ddm|: 2.508885e-09
+  subiter: 190      |ddm|: 2.475588e-09
+  subiter: 191      |ddm|: 2.442878e-09
+  subiter: 192      |ddm|: 2.410495e-09
+  subiter: 193      |ddm|: 2.378558e-09
+  subiter: 194      |ddm|: 2.346958e-09
+  subiter: 195      |ddm|: 2.315930e-09
+  subiter: 196      |ddm|: 2.285241e-09
+  subiter: 197      |ddm|: 2.254908e-09
+  subiter: 198      |ddm|: 2.224943e-09
+  subiter: 199      |ddm|: 2.195528e-09
+  subiter: 200      |ddm|: 2.166462e-09
+  subiter: 201      |ddm|: 2.137768e-09
+  subiter: 202      |ddm|: 2.109449e-09
+  subiter: 203      |ddm|: 2.081551e-09
+  subiter: 204      |ddm|: 2.054025e-09
+  subiter: 205      |ddm|: 2.026726e-09
+  subiter: 206      |ddm|: 1.999900e-09
+  subiter: 207      |ddm|: 1.973409e-09
+  subiter: 208      |ddm|: 1.947265e-09
+  subiter: 209      |ddm|: 1.921445e-09
+  subiter: 210      |ddm|: 1.896012e-09
+  subiter: 211      |ddm|: 1.870955e-09
+  subiter: 212      |ddm|: 1.846164e-09
+  subiter: 213      |ddm|: 1.821699e-09
+  subiter: 214      |ddm|: 1.797524e-09
+  subiter: 215      |ddm|: 1.773797e-09
+  subiter: 216      |ddm|: 1.750339e-09
+  subiter: 217      |ddm|: 1.727139e-09
+  subiter: 218      |ddm|: 1.704285e-09
+  subiter: 219      |ddm|: 1.681708e-09
+  subiter: 220      |ddm|: 1.659512e-09
+  subiter: 221      |ddm|: 1.637500e-09
+  subiter: 222      |ddm|: 1.615785e-09
+  subiter: 223      |ddm|: 1.594361e-09
+  subiter: 224      |ddm|: 1.573366e-09
+  subiter: 225      |ddm|: 1.552574e-09
+  subiter: 226      |ddm|: 1.531964e-09
+  subiter: 227      |ddm|: 1.511655e-09
+  subiter: 228      |ddm|: 1.491750e-09
+  subiter: 229      |ddm|: 1.472042e-09
+  subiter: 230      |ddm|: 1.452380e-09
+  subiter: 231      |ddm|: 1.433200e-09
+  subiter: 232      |ddm|: 1.414267e-09
+  subiter: 233      |ddm|: 1.395619e-09
+  subiter: 234      |ddm|: 1.377053e-09
+  subiter: 235      |ddm|: 1.358878e-09
+  subiter: 236      |ddm|: 1.340944e-09
+  subiter: 237      |ddm|: 1.323206e-09
+  subiter: 238      |ddm|: 1.305678e-09
+  subiter: 239      |ddm|: 1.288396e-09
+  subiter: 240      |ddm|: 1.271412e-09
+  subiter: 241      |ddm|: 1.254487e-09
+  subiter: 242      |ddm|: 1.237978e-09
+  subiter: 243      |ddm|: 1.221519e-09
+  subiter: 244      |ddm|: 1.205362e-09
+  subiter: 245      |ddm|: 1.189415e-09
+  subiter: 246      |ddm|: 1.173665e-09
+  subiter: 247      |ddm|: 1.158190e-09
+  subiter: 248      |ddm|: 1.142887e-09
+  subiter: 249      |ddm|: 1.127736e-09
+  subiter: 250      |ddm|: 1.112854e-09
+  subiter: 251      |ddm|: 1.098119e-09
+  subiter: 252      |ddm|: 1.083577e-09
+  subiter: 253      |ddm|: 1.069322e-09
+  subiter: 254      |ddm|: 1.055145e-09
+  subiter: 255      |ddm|: 1.041227e-09
+  subiter: 256      |ddm|: 1.027432e-09
+  subiter: 257      |ddm|: 1.013901e-09
+  subiter: 258      |ddm|: 1.000435e-09
+  subiter: 259      |ddm|: 9.872398e-10
+
+
+******** <class 'pyscf.scf.hf.RHF'> flags ********
+method = RHF
+initial guess = minao
+damping factor = 0
+level shift factor = 0
+DIIS = <class 'pyscf.scf.diis.CDIIS'>
+DIIS start cycle = 1
+DIIS space = 8
+SCF tol = 1e-09
+SCF gradient tol = None
+max. SCF cycles = 300
+direct_scf = True
+direct_scf_tol = 1e-13
+chkfile to save SCF result = /panfs/roc/scratch/graha682/201801_wfcycle/20180109_ccpVDZ_m06_ccsdt_ft_1butSn2React/tmpvrtSdv
+max_memory 4000 MB (current use 620 MB)
+Set gradient conv threshold to 3.16228e-05
+init E= -344.561233945838
+  HOMO = -0.2377590690933  LUMO = 0.0973732149731909
+cycle= 1 E= -344.561233945837  delta_E= 3.41e-13  |g|= 8.72e-10  |ddm|= 3.37e-09
+  HOMO = -0.237759069078178  LUMO = 0.0973732149592497
+Extra cycle  E= -344.561233945838  delta_E= -5.68e-13  |g|= 8.32e-10  |ddm|= 3.22e-09
+converged SCF energy = -344.561233945838
+
+
+******** <class 'pyscf.dft.rks.RKS'> flags ********
+method = RKS
+initial guess = atom
+damping factor = 0
+level shift factor = 0.0
+DIIS = <class 'pyscf.scf.diis.CDIIS'>
+DIIS start cycle = 1
+DIIS space = 8
+SCF tol = 1e-09
+SCF gradient tol = 1e-08
+max. SCF cycles = 1
+direct_scf = True
+direct_scf_tol = 1e-13
+chkfile to save SCF result = /panfs/roc/scratch/graha682/201801_wfcycle/20180109_ccpVDZ_m06_ccsdt_ft_1butSn2React/tmpdGk7NS
+max_memory 4000 MB (current use 620 MB)
+XC functionals = m06
+small_rho_cutoff = 1e-20
+radial grids: Treutler-Ahlrichs (JCP 102, 346 (M4)) radial grids
+becke partition: Becke, JCP, 88, 2547 (1988)
+pruning grids: <function nwchem_prune at 0x17a65f0>
+grids dens level: 4
+symmetrized grids: False
+atomic radii adjust function: <function treutler_atomic_radii_adjust at 0x17a6488>
+init E= -152.407103396943
+  HOMO = -0.277978413949218  LUMO = 0.0765404231797307
+cycle= 1 E= -251.980075696951  delta_E= -99.6  |g|= 19.1  |ddm|=  8.2
+  HOMO = -1.95870451677328  LUMO = -1.78008517645926
+Extra cycle  E= -330.279863405269  delta_E= -78.3  |g|= 4.51  |ddm|= 18.3
+SCF not converged.
+SCF energy = -330.279863405269 after 1 cycles
+ iter:   3:1        |ddm|: 1.536812e+01     Tr[DP]  1.475180e+00
+
+==================== Doing CCSD Calculation on Subsystem 1 =====================
+
+******** <class 'pyscf.cc.ccsd.CCSD'> flags ********
+CCSD nocc = 13, nvir = 29
+max_cycle = 50
+direct = 0
+conv_tol = 1e-07
+conv_tol_normt = 1e-05
+diis_space = 6
+diis_start_cycle = 0
+diis_start_energy_diff = 1e+09
+max_memory 4000 MB (current use 620 MB)
+Build MO integrals with incore ao2mo
+Init t2, MP2 energy = -0.280966668695666
+cycle = 1  E(CCSD) = -0.292770907961154  dE = -0.292770908  norm(t1,t2) = 0.218449
+cycle = 2  E(CCSD) = -0.325612589077398  dE = -0.0328416811  norm(t1,t2) = 0.145089
+cycle = 3  E(CCSD) = -0.317604163257928  dE = 0.00800842582  norm(t1,t2) = 0.120383
+cycle = 4  E(CCSD) = -0.327216894979004  dE = -0.00961273172  norm(t1,t2) = 0.109727
+cycle = 5  E(CCSD) = -0.337691359655818  dE = -0.0104744647  norm(t1,t2) = 0.053432
+cycle = 6  E(CCSD) = -0.339156613507744  dE = -0.00146525385  norm(t1,t2) = 0.0371978
+cycle = 7  E(CCSD) = -0.34115300958466  dE = -0.00199639608  norm(t1,t2) = 0.0262147
+cycle = 8  E(CCSD) = -0.342527256146985  dE = -0.00137424656  norm(t1,t2) = 0.0179363
+cycle = 9  E(CCSD) = -0.343138956126356  dE = -0.000611699979  norm(t1,t2) = 0.0137687
+cycle = 10  E(CCSD) = -0.343522778813754  dE = -0.000383822687  norm(t1,t2) = 0.0105029
+cycle = 11  E(CCSD) = -0.343645074162443  dE = -0.000122295349  norm(t1,t2) = 0.00654886
+cycle = 12  E(CCSD) = -0.343709196557487  dE = -6.4122395e-05  norm(t1,t2) = 0.00459549
+cycle = 13  E(CCSD) = -0.343783446615922  dE = -7.42500584e-05  norm(t1,t2) = 0.00302564
+cycle = 14  E(CCSD) = -0.343811800630899  dE = -2.8354015e-05  norm(t1,t2) = 0.00199185
+cycle = 15  E(CCSD) = -0.343856418364976  dE = -4.46177341e-05  norm(t1,t2) = 0.00135662
+cycle = 16  E(CCSD) = -0.343870051136323  dE = -1.36327713e-05  norm(t1,t2) = 0.00091073
+cycle = 17  E(CCSD) = -0.343872025175655  dE = -1.97403933e-06  norm(t1,t2) = 0.000681827
+cycle = 18  E(CCSD) = -0.343884217985316  dE = -1.21928097e-05  norm(t1,t2) = 0.000518414
+cycle = 19  E(CCSD) = -0.343887853919038  dE = -3.63593372e-06  norm(t1,t2) = 0.00036735
+cycle = 20  E(CCSD) = -0.34389181656802  dE = -3.96264898e-06  norm(t1,t2) = 0.000256283
+cycle = 21  E(CCSD) = -0.343898015512742  dE = -6.19894472e-06  norm(t1,t2) = 0.0001945
+cycle = 22  E(CCSD) = -0.343897590064948  dE = 4.25447794e-07  norm(t1,t2) = 0.000141165
+cycle = 23  E(CCSD) = -0.343898197561064  dE = -6.07496116e-07  norm(t1,t2) = 8.93872e-05
+cycle = 24  E(CCSD) = -0.343897899924565  dE = 2.976365e-07  norm(t1,t2) = 5.95401e-05
+cycle = 25  E(CCSD) = -0.343896511605974  dE = 1.38831859e-06  norm(t1,t2) = 4.43126e-05
+cycle = 26  E(CCSD) = -0.343895694066379  dE = 8.17539594e-07  norm(t1,t2) = 2.86067e-05
+cycle = 27  E(CCSD) = -0.343895236169334  dE = 4.57897045e-07  norm(t1,t2) = 1.93152e-05
+cycle = 28  E(CCSD) = -0.343894925163069  dE = 3.11006266e-07  norm(t1,t2) = 1.41316e-05
+cycle = 29  E(CCSD) = -0.343894888278272  dE = 3.68847972e-08  norm(t1,t2) = 1.11492e-05
+cycle = 30  E(CCSD) = -0.343895005829123  dE = -1.17550852e-07  norm(t1,t2) = 8.87226e-06
+cycle = 31  E(CCSD) = -0.343894987713158  dE = 1.81159658e-08  norm(t1,t2) = 6.37112e-06
+CCSD converged
+E(CCSD) = -344.9051289335511  E_corr = -0.3438949877131575
+Build MO integrals with incore ao2mo
+cycle = 1  norm(lambda1,lambda2) = 0.260917
+cycle = 2  norm(lambda1,lambda2) = 0.0845452
+cycle = 3  norm(lambda1,lambda2) = 0.0434616
+cycle = 4  norm(lambda1,lambda2) = 0.0335114
+cycle = 5  norm(lambda1,lambda2) = 0.0215067
+cycle = 6  norm(lambda1,lambda2) = 0.0134985
+cycle = 7  norm(lambda1,lambda2) = 0.0111634
+cycle = 8  norm(lambda1,lambda2) = 0.00751072
+cycle = 9  norm(lambda1,lambda2) = 0.00579175
+cycle = 10  norm(lambda1,lambda2) = 0.00448753
+cycle = 11  norm(lambda1,lambda2) = 0.00276961
+cycle = 12  norm(lambda1,lambda2) = 0.00218778
+cycle = 13  norm(lambda1,lambda2) = 0.00143618
+cycle = 14  norm(lambda1,lambda2) = 0.000973421
+cycle = 15  norm(lambda1,lambda2) = 0.000713755
+cycle = 16  norm(lambda1,lambda2) = 0.000476961
+cycle = 17  norm(lambda1,lambda2) = 0.000353638
+cycle = 18  norm(lambda1,lambda2) = 0.000274655
+cycle = 19  norm(lambda1,lambda2) = 0.000210727
+cycle = 20  norm(lambda1,lambda2) = 0.000161141
+cycle = 21  norm(lambda1,lambda2) = 0.000122623
+cycle = 22  norm(lambda1,lambda2) = 0.000106418
+cycle = 23  norm(lambda1,lambda2) = 7.70238e-05
+cycle = 24  norm(lambda1,lambda2) = 6.34437e-05
+cycle = 25  norm(lambda1,lambda2) = 4.67982e-05
+cycle = 26  norm(lambda1,lambda2) = 3.50232e-05
+cycle = 27  norm(lambda1,lambda2) = 2.81502e-05
+cycle = 28  norm(lambda1,lambda2) = 1.99593e-05
+cycle = 29  norm(lambda1,lambda2) = 1.487e-05
+cycle = 30  norm(lambda1,lambda2) = 1.09177e-05
+cycle = 31  norm(lambda1,lambda2) = 7.78034e-06
+Hartree-Fock Energy:  -344.56123394583790
+CCSD Correlation:       -0.34389498771316
+CCSD Energy:          -344.90512893355105
+
+=================== Doing CCSD(T) Calculation on Subsystem 1 ===================
+Build MO integrals with incore ao2mo
+CCSD(T) correction = -0.0316100762065185
+Build MO integrals with incore ao2mo
+istep = 0  norm(lambda1,lambda2) = 0.229067
+istep = 1  norm(lambda1,lambda2) = 0.0981581
+istep = 2  norm(lambda1,lambda2) = 0.0987733
+istep = 3  norm(lambda1,lambda2) = 0.0795652
+istep = 4  norm(lambda1,lambda2) = 0.0334457
+istep = 5  norm(lambda1,lambda2) = 0.0213486
+istep = 6  norm(lambda1,lambda2) = 0.015597
+istep = 7  norm(lambda1,lambda2) = 0.0103066
+istep = 8  norm(lambda1,lambda2) = 0.00810513
+istep = 9  norm(lambda1,lambda2) = 0.00636021
+istep = 10  norm(lambda1,lambda2) = 0.00370448
+istep = 11  norm(lambda1,lambda2) = 0.0029299
+istep = 12  norm(lambda1,lambda2) = 0.0021074
+istep = 13  norm(lambda1,lambda2) = 0.00158041
+istep = 14  norm(lambda1,lambda2) = 0.000991739
+istep = 15  norm(lambda1,lambda2) = 0.000705244
+istep = 16  norm(lambda1,lambda2) = 0.000534921
+istep = 17  norm(lambda1,lambda2) = 0.000369836
+istep = 18  norm(lambda1,lambda2) = 0.000252577
+istep = 19  norm(lambda1,lambda2) = 0.000185406
+istep = 20  norm(lambda1,lambda2) = 0.00013766
+istep = 21  norm(lambda1,lambda2) = 0.00010391
+istep = 22  norm(lambda1,lambda2) = 7.07544e-05
+istep = 23  norm(lambda1,lambda2) = 5.39674e-05
+istep = 24  norm(lambda1,lambda2) = 4.09256e-05
+istep = 25  norm(lambda1,lambda2) = 2.89594e-05
+istep = 26  norm(lambda1,lambda2) = 2.20278e-05
+istep = 27  norm(lambda1,lambda2) = 1.3277e-05
+istep = 28  norm(lambda1,lambda2) = 9.39977e-06
+istep = 29  norm(lambda1,lambda2) = 5.59276e-06
+istep = 30  norm(lambda1,lambda2) = 3.92121e-06
+istep = 31  norm(lambda1,lambda2) = 2.84452e-06
+istep = 32  norm(lambda1,lambda2) = 1.79799e-06
+istep = 33  norm(lambda1,lambda2) = 1.44793e-06
+istep = 34  norm(lambda1,lambda2) = 9.90301e-07
+istep = 35  norm(lambda1,lambda2) = 7.75883e-07
+istep = 36  norm(lambda1,lambda2) = 4.88616e-07
+istep = 37  norm(lambda1,lambda2) = 3.37261e-07
+istep = 38  norm(lambda1,lambda2) = 2.46193e-07
+istep = 39  norm(lambda1,lambda2) = 1.95524e-07
+istep = 40  norm(lambda1,lambda2) = 1.5815e-07
+istep = 41  norm(lambda1,lambda2) = 1.50079e-07
+istep = 42  norm(lambda1,lambda2) = 1.38683e-07
+istep = 43  norm(lambda1,lambda2) = 1.23729e-07
+istep = 44  norm(lambda1,lambda2) = 1.01201e-07
+istep = 45  norm(lambda1,lambda2) = 1.15686e-07
+istep = 46  norm(lambda1,lambda2) = 1.07203e-07
+istep = 47  norm(lambda1,lambda2) = 1.00811e-07
+istep = 48  norm(lambda1,lambda2) = 9.49482e-08
+istep = 49  norm(lambda1,lambda2) = 8.97324e-08
+Hartree-Fock Energy:  -344.56123394583790
+CCSD(T) Correlation:       -0.37550506391968
+CCSD(T) Energy:          -344.93673900975756
+
+========================= Density Matrix Purification ==========================
+ iter:   1       |idem_diff|: 1.000000000000     
+ iter:   2       |idem_diff|: 0.258001479854     
+ iter:   3       |idem_diff|: 0.236134936905     
+ iter:   4       |idem_diff|: 0.212235989976     
+ iter:   5       |idem_diff|: 0.168069926328     
+ iter:   6       |idem_diff|: 0.101635216394     
+ iter:   7       |idem_diff|: 0.035111090985     
+ iter:   8       |idem_diff|: 0.003918058769     
+ iter:   9       |idem_diff|: 0.000047008695     
+ iter:  10       |idem_diff|: 0.000000006733     
+Density Purified!
+WF-in-DFT Cycle Errors             1.32076621982610
+
+============================== Embedding Energies ==============================
+Subsystem DFT              -152.01683159481499
+Interaction                 -18.78119713788985
+DFT-in-DFT                 -170.79802873270484
+Supermolecular DFT         -617.90356444366080
+Difference                 -447.10553571095596
+Corrected DFT-in-DFT       -617.90356444366080
+WF-in-DFT                  -363.71793614764738
+Corrected WF-in-DFT        -810.82347185860340
+
+=========================== Starting Freeze-and-Thaw ===========================
+ iter:   1:2        |ddm|: 1.341375e-01     Tr[DP]  7.731264e-01
+ iter:   2:2        |ddm|: 0.000000e+00     Tr[DP]  7.731264e-01
+                           Freeze-and-Thaw converged!                           
+
+=================== Subsystem 1 at higher mean-field method ====================
+  subiter:   1      |ddm|: 7.996709e+00
+  subiter:   2      |ddm|: 1.646627e+01
+  subiter:   3      |ddm|: 8.953426e+00
+  subiter:   4      |ddm|: 5.883944e+00
+  subiter:   5      |ddm|: 3.071499e-01
+  subiter:   6      |ddm|: 1.640443e+00
+  subiter:   7      |ddm|: 3.084491e-01
+  subiter:   8      |ddm|: 5.986761e-01
+  subiter:   9      |ddm|: 5.115035e-01
+  subiter:  10      |ddm|: 3.638799e-01
+  subiter:  11      |ddm|: 1.848461e-01
+  subiter:  12      |ddm|: 3.422737e-01
+  subiter:  13      |ddm|: 8.422035e-02
+  subiter:  14      |ddm|: 1.246231e-01
+  subiter:  15      |ddm|: 1.098857e-01
+  subiter:  16      |ddm|: 2.291204e-01
+  subiter:  17      |ddm|: 2.264420e-02
+  subiter:  18      |ddm|: 3.219727e-01
+  subiter:  19      |ddm|: 6.298574e-02
+  subiter:  20      |ddm|: 1.174764e-01
+  subiter:  21      |ddm|: 3.756061e-02
+  subiter:  22      |ddm|: 9.333982e-02
+  subiter:  23      |ddm|: 9.499701e-02
+  subiter:  24      |ddm|: 5.374587e-02
+  subiter:  25      |ddm|: 4.400515e-02
+  subiter:  26      |ddm|: 6.946855e-03
+  subiter:  27      |ddm|: 4.869525e-03
+  subiter:  28      |ddm|: 5.137878e-03
+  subiter:  29      |ddm|: 2.331740e-03
+  subiter:  30      |ddm|: 1.695785e-03
+  subiter:  31      |ddm|: 1.346324e-03
+  subiter:  32      |ddm|: 3.283297e-03
+  subiter:  33      |ddm|: 2.350578e-04
+  subiter:  34      |ddm|: 2.872661e-04
+  subiter:  35      |ddm|: 1.134276e-04
+  subiter:  36      |ddm|: 6.168555e-05
+  subiter:  37      |ddm|: 2.982716e-05
+  subiter:  38      |ddm|: 2.661913e-05
+  subiter:  39      |ddm|: 2.614711e-05
+  subiter:  40      |ddm|: 2.741545e-05
+  subiter:  41      |ddm|: 7.045026e-06
+  subiter:  42      |ddm|: 4.455545e-06
+  subiter:  43      |ddm|: 2.031457e-06
+  subiter:  44      |ddm|: 8.531302e-07
+  subiter:  45      |ddm|: 8.984660e-07
+  subiter:  46      |ddm|: 1.783588e-07
+  subiter:  47      |ddm|: 6.218500e-07
+  subiter:  48      |ddm|: 3.918465e-07
+  subiter:  49      |ddm|: 3.237074e-07
+  subiter:  50      |ddm|: 1.533706e-07
+  subiter:  51      |ddm|: 1.245505e-07
+  subiter:  52      |ddm|: 1.533593e-07
+  subiter:  53      |ddm|: 1.602332e-07
+  subiter:  54      |ddm|: 1.071599e-07
+  subiter:  55      |ddm|: 1.216440e-07
+  subiter:  56      |ddm|: 1.002430e-07
+  subiter:  57      |ddm|: 1.069430e-07
+  subiter:  58      |ddm|: 1.096686e-07
+  subiter:  59      |ddm|: 1.035696e-07
+  subiter:  60      |ddm|: 9.682179e-08
+  subiter:  61      |ddm|: 9.574342e-08
+  subiter:  62      |ddm|: 9.298816e-08
+  subiter:  63      |ddm|: 9.264029e-08
+  subiter:  64      |ddm|: 9.067443e-08
+  subiter:  65      |ddm|: 8.794260e-08
+  subiter:  66      |ddm|: 8.571119e-08
+  subiter:  67      |ddm|: 8.418893e-08
+  subiter:  68      |ddm|: 8.261190e-08
+  subiter:  69      |ddm|: 8.116675e-08
+  subiter:  70      |ddm|: 7.950528e-08
+  subiter:  71      |ddm|: 7.787730e-08
+  subiter:  72      |ddm|: 7.641589e-08
+  subiter:  73      |ddm|: 7.506829e-08
+  subiter:  74      |ddm|: 7.373667e-08
+  subiter:  75      |ddm|: 7.243042e-08
+  subiter:  76      |ddm|: 7.113531e-08
+  subiter:  77      |ddm|: 6.989062e-08
+  subiter:  78      |ddm|: 6.870018e-08
+  subiter:  79      |ddm|: 6.754589e-08
+  subiter:  80      |ddm|: 6.641574e-08
+  subiter:  81      |ddm|: 6.531180e-08
+  subiter:  82      |ddm|: 6.423483e-08
+  subiter:  83      |ddm|: 6.318822e-08
+  subiter:  84      |ddm|: 6.216882e-08
+  subiter:  85      |ddm|: 6.117281e-08
+  subiter:  86      |ddm|: 6.019852e-08
+  subiter:  87      |ddm|: 5.924581e-08
+  subiter:  88      |ddm|: 5.831435e-08
+  subiter:  89      |ddm|: 5.740342e-08
+  subiter:  90      |ddm|: 5.651173e-08
+  subiter:  91      |ddm|: 5.563823e-08
+  subiter:  92      |ddm|: 5.478220e-08
+  subiter:  93      |ddm|: 5.394317e-08
+  subiter:  94      |ddm|: 5.312063e-08
+  subiter:  95      |ddm|: 5.231379e-08
+  subiter:  96      |ddm|: 5.152222e-08
+  subiter:  97      |ddm|: 5.074530e-08
+  subiter:  98      |ddm|: 4.998263e-08
+  subiter:  99      |ddm|: 4.923373e-08
+  subiter: 100      |ddm|: 4.849822e-08
+  subiter: 101      |ddm|: 4.777571e-08
+  subiter: 102      |ddm|: 4.706570e-08
+  subiter: 103      |ddm|: 4.636799e-08
+  subiter: 104      |ddm|: 4.568209e-08
+  subiter: 105      |ddm|: 4.500785e-08
+  subiter: 106      |ddm|: 4.434486e-08
+  subiter: 107      |ddm|: 4.369279e-08
+  subiter: 108      |ddm|: 4.305153e-08
+  subiter: 109      |ddm|: 4.242070e-08
+  subiter: 110      |ddm|: 4.180009e-08
+  subiter: 111      |ddm|: 4.118948e-08
+  subiter: 112      |ddm|: 4.058858e-08
+  subiter: 113      |ddm|: 3.999738e-08
+  subiter: 114      |ddm|: 3.941536e-08
+  subiter: 115      |ddm|: 3.884250e-08
+  subiter: 116      |ddm|: 3.827862e-08
+  subiter: 117      |ddm|: 3.772348e-08
+  subiter: 118      |ddm|: 3.717695e-08
+  subiter: 119      |ddm|: 3.663882e-08
+  subiter: 120      |ddm|: 3.610894e-08
+  subiter: 121      |ddm|: 3.558722e-08
+  subiter: 122      |ddm|: 3.507342e-08
+  subiter: 123      |ddm|: 3.456735e-08
+  subiter: 124      |ddm|: 3.406898e-08
+  subiter: 125      |ddm|: 3.357815e-08
+  subiter: 126      |ddm|: 3.309465e-08
+  subiter: 127      |ddm|: 3.261845e-08
+  subiter: 128      |ddm|: 3.214934e-08
+  subiter: 129      |ddm|: 3.168726e-08
+  subiter: 130      |ddm|: 3.123203e-08
+  subiter: 131      |ddm|: 3.078356e-08
+  subiter: 132      |ddm|: 3.034173e-08
+  subiter: 133      |ddm|: 2.990629e-08
+  subiter: 134      |ddm|: 2.947746e-08
+  subiter: 135      |ddm|: 2.905484e-08
+  subiter: 136      |ddm|: 2.863855e-08
+  subiter: 137      |ddm|: 2.822819e-08
+  subiter: 138      |ddm|: 2.782399e-08
+  subiter: 139      |ddm|: 2.742578e-08
+  subiter: 140      |ddm|: 2.703329e-08
+  subiter: 141      |ddm|: 2.664652e-08
+  subiter: 142      |ddm|: 2.626538e-08
+  subiter: 143      |ddm|: 2.588988e-08
+  subiter: 144      |ddm|: 2.551971e-08
+  subiter: 145      |ddm|: 2.515499e-08
+  subiter: 146      |ddm|: 2.479560e-08
+  subiter: 147      |ddm|: 2.444136e-08
+  subiter: 148      |ddm|: 2.409232e-08
+  subiter: 149      |ddm|: 2.374822e-08
+  subiter: 150      |ddm|: 2.340927e-08
+  subiter: 151      |ddm|: 2.307506e-08
+  subiter: 152      |ddm|: 2.274572e-08
+  subiter: 153      |ddm|: 2.242112e-08
+  subiter: 154      |ddm|: 2.210126e-08
+  subiter: 155      |ddm|: 2.178595e-08
+  subiter: 156      |ddm|: 2.147523e-08
+  subiter: 157      |ddm|: 2.116897e-08
+  subiter: 158      |ddm|: 2.086712e-08
+  subiter: 159      |ddm|: 2.056967e-08
+  subiter: 160      |ddm|: 2.027635e-08
+  subiter: 161      |ddm|: 1.998735e-08
+  subiter: 162      |ddm|: 1.970247e-08
+  subiter: 163      |ddm|: 1.942167e-08
+  subiter: 164      |ddm|: 1.914503e-08
+  subiter: 165      |ddm|: 1.887214e-08
+  subiter: 166      |ddm|: 1.860336e-08
+  subiter: 167      |ddm|: 1.833830e-08
+  subiter: 168      |ddm|: 1.807718e-08
+  subiter: 169      |ddm|: 1.781962e-08
+  subiter: 170      |ddm|: 1.756576e-08
+  subiter: 171      |ddm|: 1.731567e-08
+  subiter: 172      |ddm|: 1.706909e-08
+  subiter: 173      |ddm|: 1.682611e-08
+  subiter: 174      |ddm|: 1.658642e-08
+  subiter: 175      |ddm|: 1.635034e-08
+  subiter: 176      |ddm|: 1.611759e-08
+  subiter: 177      |ddm|: 1.588811e-08
+  subiter: 178      |ddm|: 1.566196e-08
+  subiter: 179      |ddm|: 1.543898e-08
+  subiter: 180      |ddm|: 1.521933e-08
+  subiter: 181      |ddm|: 1.500268e-08
+  subiter: 182      |ddm|: 1.478915e-08
+  subiter: 183      |ddm|: 1.457871e-08
+  subiter: 184      |ddm|: 1.437126e-08
+  subiter: 185      |ddm|: 1.416672e-08
+  subiter: 186      |ddm|: 1.396508e-08
+  subiter: 187      |ddm|: 1.376652e-08
+  subiter: 188      |ddm|: 1.357059e-08
+  subiter: 189      |ddm|: 1.337748e-08
+  subiter: 190      |ddm|: 1.318722e-08
+  subiter: 191      |ddm|: 1.299958e-08
+  subiter: 192      |ddm|: 1.281468e-08
+  subiter: 193      |ddm|: 1.263233e-08
+  subiter: 194      |ddm|: 1.245267e-08
+  subiter: 195      |ddm|: 1.227554e-08
+  subiter: 196      |ddm|: 1.210087e-08
+  subiter: 197      |ddm|: 1.192885e-08
+  subiter: 198      |ddm|: 1.175911e-08
+  subiter: 199      |ddm|: 1.159185e-08
+  subiter: 200      |ddm|: 1.142702e-08
+  subiter: 201      |ddm|: 1.126450e-08
+  subiter: 202      |ddm|: 1.110431e-08
+  subiter: 203      |ddm|: 1.094636e-08
+  subiter: 204      |ddm|: 1.079071e-08
+  subiter: 205      |ddm|: 1.063724e-08
+  subiter: 206      |ddm|: 1.048598e-08
+  subiter: 207      |ddm|: 1.033682e-08
+  subiter: 208      |ddm|: 1.018982e-08
+  subiter: 209      |ddm|: 1.004494e-08
+  subiter: 210      |ddm|: 9.902119e-09
+  subiter: 211      |ddm|: 9.761342e-09
+  subiter: 212      |ddm|: 9.622568e-09
+  subiter: 213      |ddm|: 9.485743e-09
+  subiter: 214      |ddm|: 9.350821e-09
+  subiter: 215      |ddm|: 9.217885e-09
+  subiter: 216      |ddm|: 9.086801e-09
+  subiter: 217      |ddm|: 8.957616e-09
+  subiter: 218      |ddm|: 8.830212e-09
+  subiter: 219      |ddm|: 8.704666e-09
+  subiter: 220      |ddm|: 8.581008e-09
+  subiter: 221      |ddm|: 8.458922e-09
+  subiter: 222      |ddm|: 8.338738e-09
+  subiter: 223      |ddm|: 8.220163e-09
+  subiter: 224      |ddm|: 8.103274e-09
+  subiter: 225      |ddm|: 7.988183e-09
+  subiter: 226      |ddm|: 7.874499e-09
+  subiter: 227      |ddm|: 7.762591e-09
+  subiter: 228      |ddm|: 7.652199e-09
+  subiter: 229      |ddm|: 7.543431e-09
+  subiter: 230      |ddm|: 7.436213e-09
+  subiter: 231      |ddm|: 7.330444e-09
+  subiter: 232      |ddm|: 7.226296e-09
+  subiter: 233      |ddm|: 7.123606e-09
+  subiter: 234      |ddm|: 7.022296e-09
+  subiter: 235      |ddm|: 6.922477e-09
+  subiter: 236      |ddm|: 6.824022e-09
+  subiter: 237      |ddm|: 6.727078e-09
+  subiter: 238      |ddm|: 6.631431e-09
+  subiter: 239      |ddm|: 6.537166e-09
+  subiter: 240      |ddm|: 6.444268e-09
+  subiter: 241      |ddm|: 6.352649e-09
+  subiter: 242      |ddm|: 6.262379e-09
+  subiter: 243      |ddm|: 6.173337e-09
+  subiter: 244      |ddm|: 6.085617e-09
+  subiter: 245      |ddm|: 5.999056e-09
+  subiter: 246      |ddm|: 5.913813e-09
+  subiter: 247      |ddm|: 5.829747e-09
+  subiter: 248      |ddm|: 5.746879e-09
+  subiter: 249      |ddm|: 5.665237e-09
+  subiter: 250      |ddm|: 5.584694e-09
+  subiter: 251      |ddm|: 5.505355e-09
+  subiter: 252      |ddm|: 5.427071e-09
+  subiter: 253      |ddm|: 5.349995e-09
+  subiter: 254      |ddm|: 5.273914e-09
+  subiter: 255      |ddm|: 5.198920e-09
+  subiter: 256      |ddm|: 5.125059e-09
+  subiter: 257      |ddm|: 5.052223e-09
+  subiter: 258      |ddm|: 4.980443e-09
+  subiter: 259      |ddm|: 4.909578e-09
+  subiter: 260      |ddm|: 4.839857e-09
+  subiter: 261      |ddm|: 4.771139e-09
+  subiter: 262      |ddm|: 4.703231e-09
+  subiter: 263      |ddm|: 4.636398e-09
+  subiter: 264      |ddm|: 4.570513e-09
+  subiter: 265      |ddm|: 4.505606e-09
+  subiter: 266      |ddm|: 4.441512e-09
+  subiter: 267      |ddm|: 4.378396e-09
+  subiter: 268      |ddm|: 4.316241e-09
+  subiter: 269      |ddm|: 4.254845e-09
+  subiter: 270      |ddm|: 4.194343e-09
+  subiter: 271      |ddm|: 4.134755e-09
+  subiter: 272      |ddm|: 4.075960e-09
+  subiter: 273      |ddm|: 4.018035e-09
+  subiter: 274      |ddm|: 3.960961e-09
+  subiter: 275      |ddm|: 3.904726e-09
+  subiter: 276      |ddm|: 3.849180e-09
+  subiter: 277      |ddm|: 3.794478e-09
+  subiter: 278      |ddm|: 3.740600e-09
+  subiter: 279      |ddm|: 3.687408e-09
+  subiter: 280      |ddm|: 3.635008e-09
+  subiter: 281      |ddm|: 3.583258e-09
+  subiter: 282      |ddm|: 3.532433e-09
+  subiter: 283      |ddm|: 3.482233e-09
+  subiter: 284      |ddm|: 3.432660e-09
+  subiter: 285      |ddm|: 3.383920e-09
+  subiter: 286      |ddm|: 3.335823e-09
+  subiter: 287      |ddm|: 3.288449e-09
+  subiter: 288      |ddm|: 3.241718e-09
+  subiter: 289      |ddm|: 3.195612e-09
+  subiter: 290      |ddm|: 3.150241e-09
+  subiter: 291      |ddm|: 3.105481e-09
+  subiter: 292      |ddm|: 3.061331e-09
+  subiter: 293      |ddm|: 3.017818e-09
+  subiter: 294      |ddm|: 2.974900e-09
+  subiter: 295      |ddm|: 2.932641e-09
+  subiter: 296      |ddm|: 2.890998e-09
+  subiter: 297      |ddm|: 2.849909e-09
+  subiter: 298      |ddm|: 2.809426e-09
+  subiter: 299      |ddm|: 2.769523e-09
+  subiter: 300      |ddm|: 2.730120e-09
+
+
+******** <class 'pyscf.scf.hf.RHF'> flags ********
+method = RHF
+initial guess = minao
+damping factor = 0
+level shift factor = 0
+DIIS = <class 'pyscf.scf.diis.CDIIS'>
+DIIS start cycle = 1
+DIIS space = 8
+SCF tol = 1e-09
+SCF gradient tol = None
+max. SCF cycles = 300
+direct_scf = True
+direct_scf_tol = 1e-13
+chkfile to save SCF result = /panfs/roc/scratch/graha682/201801_wfcycle/20180109_ccpVDZ_m06_ccsdt_ft_1butSn2React/tmprQoLwW
+max_memory 4000 MB (current use 636 MB)
+Set gradient conv threshold to 3.16228e-05
+init E= -343.229417187815
+  HOMO = -0.196526537526443  LUMO = 0.156067075125862
+cycle= 1 E= -343.229417187813  delta_E= 1.25e-12  |g|= 2.37e-09  |ddm|= 9.31e-09
+  HOMO = -0.196526537575198  LUMO = 0.156067075237208
+Extra cycle  E= -343.229417187814  delta_E= -4.55e-13  |g|= 2.25e-09  |ddm|= 8.85e-09
+converged SCF energy = -343.229417187814
+
+
+******** <class 'pyscf.dft.rks.RKS'> flags ********
+method = RKS
+initial guess = atom
+damping factor = 0
+level shift factor = 0.0
+DIIS = <class 'pyscf.scf.diis.CDIIS'>
+DIIS start cycle = 1
+DIIS space = 8
+SCF tol = 1e-09
+SCF gradient tol = 1e-08
+max. SCF cycles = 1
+direct_scf = True
+direct_scf_tol = 1e-13
+chkfile to save SCF result = /panfs/roc/scratch/graha682/201801_wfcycle/20180109_ccpVDZ_m06_ccsdt_ft_1butSn2React/tmpdGk7NS
+max_memory 4000 MB (current use 636 MB)
+XC functionals = m06
+small_rho_cutoff = 1e-20
+radial grids: Treutler-Ahlrichs (JCP 102, 346 (M4)) radial grids
+becke partition: Becke, JCP, 88, 2547 (1988)
+pruning grids: <function nwchem_prune at 0x17a65f0>
+grids dens level: 4
+symmetrized grids: False
+atomic radii adjust function: <function treutler_atomic_radii_adjust at 0x17a6488>
+init E= -150.568002109032
+  HOMO = -0.277966981388849  LUMO = 0.0763424797743943
+cycle= 1 E= -250.876783386104  delta_E= -100  |g|= 19.1  |ddm|= 8.21
+  HOMO = -1.90008125366584  LUMO = -1.72353750157664
+Extra cycle  E= -328.869197658182  delta_E=  -78  |g|=  4.5  |ddm|= 18.3
+SCF not converged.
+SCF energy = -328.869197658182 after 1 cycles
+ iter:   3:1        |ddm|: 1.529864e+01     Tr[DP]  1.504333e+00
+
+==================== Doing CCSD Calculation on Subsystem 1 =====================
+
+******** <class 'pyscf.cc.ccsd.CCSD'> flags ********
+CCSD nocc = 13, nvir = 29
+max_cycle = 50
+direct = 0
+conv_tol = 1e-07
+conv_tol_normt = 1e-05
+diis_space = 6
+diis_start_cycle = 0
+diis_start_energy_diff = 1e+09
+max_memory 4000 MB (current use 637 MB)
+Build MO integrals with incore ao2mo
+Init t2, MP2 energy = -0.274124244882128
+cycle = 1  E(CCSD) = -0.285336205950978  dE = -0.285336206  norm(t1,t2) = 0.208344
+cycle = 2  E(CCSD) = -0.316857478578971  dE = -0.0315212726  norm(t1,t2) = 0.138801
+cycle = 3  E(CCSD) = -0.307940484580476  dE = 0.008916994  norm(t1,t2) = 0.119176
+cycle = 4  E(CCSD) = -0.317383795776848  dE = -0.0094433112  norm(t1,t2) = 0.110232
+cycle = 5  E(CCSD) = -0.325839726651416  dE = -0.00845593087  norm(t1,t2) = 0.0510557
+cycle = 6  E(CCSD) = -0.32758287893828  dE = -0.00174315229  norm(t1,t2) = 0.0381908
+cycle = 7  E(CCSD) = -0.330527757102556  dE = -0.00294487816  norm(t1,t2) = 0.0300864
+cycle = 8  E(CCSD) = -0.332167917140647  dE = -0.00164016004  norm(t1,t2) = 0.0233317
+cycle = 9  E(CCSD) = -0.333513101327023  dE = -0.00134518419  norm(t1,t2) = 0.019099
+cycle = 10  E(CCSD) = -0.334938108961899  dE = -0.00142500763  norm(t1,t2) = 0.0149907
+cycle = 11  E(CCSD) = -0.335180848927549  dE = -0.000242739966  norm(t1,t2) = 0.0102792
+cycle = 12  E(CCSD) = -0.335283070758459  dE = -0.000102221831  norm(t1,t2) = 0.00668021
+cycle = 13  E(CCSD) = -0.335465871852035  dE = -0.000182801094  norm(t1,t2) = 0.0042061
+cycle = 14  E(CCSD) = -0.335506465915042  dE = -4.0594063e-05  norm(t1,t2) = 0.00291766
+cycle = 15  E(CCSD) = -0.33557611960227  dE = -6.96536872e-05  norm(t1,t2) = 0.00191518
+cycle = 16  E(CCSD) = -0.335594981788679  dE = -1.88621864e-05  norm(t1,t2) = 0.00123449
+cycle = 17  E(CCSD) = -0.335590795247057  dE = 4.18654162e-06  norm(t1,t2) = 0.000886464
+cycle = 18  E(CCSD) = -0.335595689569008  dE = -4.89432195e-06  norm(t1,t2) = 0.000688387
+cycle = 19  E(CCSD) = -0.335594000762279  dE = 1.68880673e-06  norm(t1,t2) = 0.000529485
+cycle = 20  E(CCSD) = -0.335592477443203  dE = 1.52331908e-06  norm(t1,t2) = 0.000368637
+cycle = 21  E(CCSD) = -0.335607730925325  dE = -1.52534821e-05  norm(t1,t2) = 0.000302513
+cycle = 22  E(CCSD) = -0.335606647097403  dE = 1.08382792e-06  norm(t1,t2) = 0.000243175
+cycle = 23  E(CCSD) = -0.335619869482864  dE = -1.32223855e-05  norm(t1,t2) = 0.000202634
+cycle = 24  E(CCSD) = -0.335623203206965  dE = -3.3337241e-06  norm(t1,t2) = 0.000144302
+cycle = 25  E(CCSD) = -0.335626025849762  dE = -2.8226428e-06  norm(t1,t2) = 0.000117373
+cycle = 26  E(CCSD) = -0.335629884791422  dE = -3.85894166e-06  norm(t1,t2) = 9.43415e-05
+cycle = 27  E(CCSD) = -0.335632344893733  dE = -2.46010231e-06  norm(t1,t2) = 6.97414e-05
+cycle = 28  E(CCSD) = -0.335632871711384  dE = -5.26817651e-07  norm(t1,t2) = 5.68908e-05
+cycle = 29  E(CCSD) = -0.335635618651797  dE = -2.74694041e-06  norm(t1,t2) = 4.50027e-05
+cycle = 30  E(CCSD) = -0.335636258085974  dE = -6.39434177e-07  norm(t1,t2) = 3.28882e-05
+cycle = 31  E(CCSD) = -0.335638096622177  dE = -1.8385362e-06  norm(t1,t2) = 2.66051e-05
+cycle = 32  E(CCSD) = -0.335639119542488  dE = -1.02292031e-06  norm(t1,t2) = 1.90536e-05
+cycle = 33  E(CCSD) = -0.335639521855941  dE = -4.02313453e-07  norm(t1,t2) = 1.46266e-05
+cycle = 34  E(CCSD) = -0.335640040781554  dE = -5.18925614e-07  norm(t1,t2) = 1.17692e-05
+cycle = 35  E(CCSD) = -0.335640651796746  dE = -6.11015192e-07  norm(t1,t2) = 9.59e-06
+cycle = 36  E(CCSD) = -0.335640630775009  dE = 2.1021737e-08  norm(t1,t2) = 6.78462e-06
+CCSD converged
+E(CCSD) = -343.5650578185889  E_corr = -0.335640630775009
+Build MO integrals with incore ao2mo
+cycle = 1  norm(lambda1,lambda2) = 0.304748
+cycle = 2  norm(lambda1,lambda2) = 0.115005
+cycle = 3  norm(lambda1,lambda2) = 0.0572715
+cycle = 4  norm(lambda1,lambda2) = 0.0489755
+cycle = 5  norm(lambda1,lambda2) = 0.0276634
+cycle = 6  norm(lambda1,lambda2) = 0.0182302
+cycle = 7  norm(lambda1,lambda2) = 0.0157887
+cycle = 8  norm(lambda1,lambda2) = 0.0115056
+cycle = 9  norm(lambda1,lambda2) = 0.010014
+cycle = 10  norm(lambda1,lambda2) = 0.00811564
+cycle = 11  norm(lambda1,lambda2) = 0.00476112
+cycle = 12  norm(lambda1,lambda2) = 0.00364521
+cycle = 13  norm(lambda1,lambda2) = 0.00238765
+cycle = 14  norm(lambda1,lambda2) = 0.00159866
+cycle = 15  norm(lambda1,lambda2) = 0.00104511
+cycle = 16  norm(lambda1,lambda2) = 0.000755975
+cycle = 17  norm(lambda1,lambda2) = 0.000560538
+cycle = 18  norm(lambda1,lambda2) = 0.000417119
+cycle = 19  norm(lambda1,lambda2) = 0.000336839
+cycle = 20  norm(lambda1,lambda2) = 0.000250316
+cycle = 21  norm(lambda1,lambda2) = 0.000182903
+cycle = 22  norm(lambda1,lambda2) = 0.000152701
+cycle = 23  norm(lambda1,lambda2) = 0.000108813
+cycle = 24  norm(lambda1,lambda2) = 8.46587e-05
+cycle = 25  norm(lambda1,lambda2) = 6.12936e-05
+cycle = 26  norm(lambda1,lambda2) = 4.66825e-05
+cycle = 27  norm(lambda1,lambda2) = 3.58212e-05
+cycle = 28  norm(lambda1,lambda2) = 2.58812e-05
+cycle = 29  norm(lambda1,lambda2) = 1.99022e-05
+cycle = 30  norm(lambda1,lambda2) = 1.26674e-05
+cycle = 31  norm(lambda1,lambda2) = 9.48299e-06
+Hartree-Fock Energy:  -343.22941718781385
+CCSD Correlation:       -0.33564063077501
+CCSD Energy:          -343.56505781858885
+
+=================== Doing CCSD(T) Calculation on Subsystem 1 ===================
+Build MO integrals with incore ao2mo
+CCSD(T) correction = -0.0349339409706939
+Build MO integrals with incore ao2mo
+istep = 0  norm(lambda1,lambda2) = 0.257664
+istep = 1  norm(lambda1,lambda2) = 0.103903
+istep = 2  norm(lambda1,lambda2) = 0.103668
+istep = 3  norm(lambda1,lambda2) = 0.0894694
+istep = 4  norm(lambda1,lambda2) = 0.0444716
+istep = 5  norm(lambda1,lambda2) = 0.0326788
+istep = 6  norm(lambda1,lambda2) = 0.0251742
+istep = 7  norm(lambda1,lambda2) = 0.0174503
+istep = 8  norm(lambda1,lambda2) = 0.0135422
+istep = 9  norm(lambda1,lambda2) = 0.0101751
+istep = 10  norm(lambda1,lambda2) = 0.00578823
+istep = 11  norm(lambda1,lambda2) = 0.00453667
+istep = 12  norm(lambda1,lambda2) = 0.00279736
+istep = 13  norm(lambda1,lambda2) = 0.00212871
+istep = 14  norm(lambda1,lambda2) = 0.00141707
+istep = 15  norm(lambda1,lambda2) = 0.00114893
+istep = 16  norm(lambda1,lambda2) = 0.000925004
+istep = 17  norm(lambda1,lambda2) = 0.000650848
+istep = 18  norm(lambda1,lambda2) = 0.000484205
+istep = 19  norm(lambda1,lambda2) = 0.000306879
+istep = 20  norm(lambda1,lambda2) = 0.000211533
+istep = 21  norm(lambda1,lambda2) = 0.000154795
+istep = 22  norm(lambda1,lambda2) = 0.000112381
+istep = 23  norm(lambda1,lambda2) = 8.65297e-05
+istep = 24  norm(lambda1,lambda2) = 6.81554e-05
+istep = 25  norm(lambda1,lambda2) = 5.50722e-05
+istep = 26  norm(lambda1,lambda2) = 4.46679e-05
+istep = 27  norm(lambda1,lambda2) = 2.968e-05
+istep = 28  norm(lambda1,lambda2) = 2.30578e-05
+istep = 29  norm(lambda1,lambda2) = 1.63312e-05
+istep = 30  norm(lambda1,lambda2) = 1.31081e-05
+istep = 31  norm(lambda1,lambda2) = 9.71692e-06
+istep = 32  norm(lambda1,lambda2) = 6.76767e-06
+istep = 33  norm(lambda1,lambda2) = 5.44727e-06
+istep = 34  norm(lambda1,lambda2) = 3.55573e-06
+istep = 35  norm(lambda1,lambda2) = 2.75491e-06
+istep = 36  norm(lambda1,lambda2) = 1.97543e-06
+istep = 37  norm(lambda1,lambda2) = 1.49621e-06
+istep = 38  norm(lambda1,lambda2) = 1.13014e-06
+istep = 39  norm(lambda1,lambda2) = 7.94497e-07
+istep = 40  norm(lambda1,lambda2) = 5.73964e-07
+istep = 41  norm(lambda1,lambda2) = 3.88e-07
+istep = 42  norm(lambda1,lambda2) = 3.27362e-07
+istep = 43  norm(lambda1,lambda2) = 2.59764e-07
+istep = 44  norm(lambda1,lambda2) = 2.2834e-07
+istep = 45  norm(lambda1,lambda2) = 2.08525e-07
+istep = 46  norm(lambda1,lambda2) = 1.84821e-07
+istep = 47  norm(lambda1,lambda2) = 1.71048e-07
+istep = 48  norm(lambda1,lambda2) = 1.4672e-07
+istep = 49  norm(lambda1,lambda2) = 1.66976e-07
+Hartree-Fock Energy:  -343.22941718781385
+CCSD(T) Correlation:       -0.37057457174570
+CCSD(T) Energy:          -343.59999175955954
+
+========================= Density Matrix Purification ==========================
+ iter:   1       |idem_diff|: 1.000000000000     
+ iter:   2       |idem_diff|: 0.480533083875     
+ iter:   3       |idem_diff|: 0.414550387570     
+ iter:   4       |idem_diff|: 0.370385957512     
+ iter:   5       |idem_diff|: 0.326060108732     
+ iter:   6       |idem_diff|: 0.250706262587     
+ iter:   7       |idem_diff|: 0.141048090269     
+ iter:   8       |idem_diff|: 0.041294119138     
+ iter:   9       |idem_diff|: 0.003278137153     
+ iter:  10       |idem_diff|: 0.000020031314     
+ iter:  11       |idem_diff|: 0.000000000746     
+Density Purified!
+WF-in-DFT Cycle Errors             2.72207571961434
+
+============================== Embedding Energies ==============================
+Subsystem DFT              -151.24487513471050
+Interaction                 -21.64090862297522
+DFT-in-DFT                 -172.88578375768572
+Supermolecular DFT         -617.90356444366080
+Difference                 -445.01778068597508
+Corrected DFT-in-DFT       -617.90356444366080
+WF-in-DFT                  -365.24090038253473
+Corrected WF-in-DFT        -810.25868106850976
+
+=========================== Starting Freeze-and-Thaw ===========================
+ iter:   1:2        |ddm|: 1.703222e-01     Tr[DP]  7.736207e-01
+ iter:   2:2        |ddm|: 0.000000e+00     Tr[DP]  7.736207e-01
+                           Freeze-and-Thaw converged!                           
+
+=================== Subsystem 1 at higher mean-field method ====================
+  subiter:   1      |ddm|: 8.004448e+00
+  subiter:   2      |ddm|: 1.629409e+01
+  subiter:   3      |ddm|: 9.241530e+00
+  subiter:   4      |ddm|: 5.841865e+00
+  subiter:   5      |ddm|: 2.982351e-01
+  subiter:   6      |ddm|: 1.651035e+00
+  subiter:   7      |ddm|: 2.514054e-01
+  subiter:   8      |ddm|: 5.323773e-01
+  subiter:   9      |ddm|: 3.038864e-01
+  subiter:  10      |ddm|: 2.620272e-01
+  subiter:  11      |ddm|: 3.405751e-01
+  subiter:  12      |ddm|: 2.051338e-01
+  subiter:  13      |ddm|: 1.254993e-01
+  subiter:  14      |ddm|: 1.539805e-01
+  subiter:  15      |ddm|: 8.255340e-02
+  subiter:  16      |ddm|: 1.720467e-01
+  subiter:  17      |ddm|: 2.429387e-01
+  subiter:  18      |ddm|: 6.453494e-02
+  subiter:  19      |ddm|: 3.022614e-01
+  subiter:  20      |ddm|: 3.377040e-02
+  subiter:  21      |ddm|: 1.808119e-01
+  subiter:  22      |ddm|: 1.134279e-01
+  subiter:  23      |ddm|: 1.149116e-01
+  subiter:  24      |ddm|: 5.262107e-02
+  subiter:  25      |ddm|: 5.454098e-02
+  subiter:  26      |ddm|: 8.233470e-03
+  subiter:  27      |ddm|: 1.143954e-02
+  subiter:  28      |ddm|: 3.696991e-02
+  subiter:  29      |ddm|: 2.771490e-02
+  subiter:  30      |ddm|: 5.059395e-03
+  subiter:  31      |ddm|: 2.876166e-03
+  subiter:  32      |ddm|: 4.115044e-03
+  subiter:  33      |ddm|: 3.446275e-03
+  subiter:  34      |ddm|: 1.036356e-03
+  subiter:  35      |ddm|: 1.830389e-03
+  subiter:  36      |ddm|: 7.796168e-04
+  subiter:  37      |ddm|: 1.194731e-03
+  subiter:  38      |ddm|: 8.237223e-04
+  subiter:  39      |ddm|: 5.263866e-04
+  subiter:  40      |ddm|: 3.177742e-04
+  subiter:  41      |ddm|: 1.529621e-03
+  subiter:  42      |ddm|: 3.707992e-04
+  subiter:  43      |ddm|: 3.777649e-04
+  subiter:  44      |ddm|: 1.655870e-04
+  subiter:  45      |ddm|: 1.103409e-05
+  subiter:  46      |ddm|: 2.299341e-05
+  subiter:  47      |ddm|: 6.596723e-06
+  subiter:  48      |ddm|: 4.529688e-06
+  subiter:  49      |ddm|: 2.025480e-06
+  subiter:  50      |ddm|: 1.084902e-06
+  subiter:  51      |ddm|: 5.969109e-07
+  subiter:  52      |ddm|: 3.985852e-07
+  subiter:  53      |ddm|: 3.343163e-07
+  subiter:  54      |ddm|: 8.411753e-07
+  subiter:  55      |ddm|: 4.222368e-07
+  subiter:  56      |ddm|: 2.051457e-07
+  subiter:  57      |ddm|: 7.600305e-08
+  subiter:  58      |ddm|: 4.758470e-08
+  subiter:  59      |ddm|: 5.119606e-08
+  subiter:  60      |ddm|: 4.493841e-08
+  subiter:  61      |ddm|: 1.026885e-07
+  subiter:  62      |ddm|: 6.002026e-08
+  subiter:  63      |ddm|: 4.085094e-08
+  subiter:  64      |ddm|: 3.598812e-08
+  subiter:  65      |ddm|: 3.946394e-08
+  subiter:  66      |ddm|: 3.952241e-08
+  subiter:  67      |ddm|: 4.634516e-08
+  subiter:  68      |ddm|: 3.873478e-08
+  subiter:  69      |ddm|: 3.559081e-08
+  subiter:  70      |ddm|: 3.506207e-08
+  subiter:  71      |ddm|: 3.534195e-08
+  subiter:  72      |ddm|: 3.495975e-08
+  subiter:  73      |ddm|: 3.443023e-08
+  subiter:  74      |ddm|: 3.269711e-08
+  subiter:  75      |ddm|: 3.187505e-08
+  subiter:  76      |ddm|: 3.143494e-08
+  subiter:  77      |ddm|: 3.099162e-08
+  subiter:  78      |ddm|: 3.041060e-08
+  subiter:  79      |ddm|: 2.978306e-08
+  subiter:  80      |ddm|: 2.912838e-08
+  subiter:  81      |ddm|: 2.864209e-08
+  subiter:  82      |ddm|: 2.820188e-08
+  subiter:  83      |ddm|: 2.775309e-08
+  subiter:  84      |ddm|: 2.729558e-08
+  subiter:  85      |ddm|: 2.685151e-08
+  subiter:  86      |ddm|: 2.643170e-08
+  subiter:  87      |ddm|: 2.604507e-08
+  subiter:  88      |ddm|: 2.566972e-08
+  subiter:  89      |ddm|: 2.530046e-08
+  subiter:  90      |ddm|: 2.494018e-08
+  subiter:  91      |ddm|: 2.459223e-08
+  subiter:  92      |ddm|: 2.425679e-08
+  subiter:  93      |ddm|: 2.393213e-08
+  subiter:  94      |ddm|: 2.361506e-08
+  subiter:  95      |ddm|: 2.330516e-08
+  subiter:  96      |ddm|: 2.300280e-08
+  subiter:  97      |ddm|: 2.270806e-08
+  subiter:  98      |ddm|: 2.242014e-08
+  subiter:  99      |ddm|: 2.213845e-08
+  subiter: 100      |ddm|: 2.186249e-08
+  subiter: 101      |ddm|: 2.159193e-08
+  subiter: 102      |ddm|: 2.132660e-08
+  subiter: 103      |ddm|: 2.106628e-08
+  subiter: 104      |ddm|: 2.081088e-08
+  subiter: 105      |ddm|: 2.055977e-08
+  subiter: 106      |ddm|: 2.031288e-08
+  subiter: 107      |ddm|: 2.007026e-08
+  subiter: 108      |ddm|: 1.983141e-08
+  subiter: 109      |ddm|: 1.959648e-08
+  subiter: 110      |ddm|: 1.936504e-08
+  subiter: 111      |ddm|: 1.913714e-08
+  subiter: 112      |ddm|: 1.891263e-08
+  subiter: 113      |ddm|: 1.869127e-08
+  subiter: 114      |ddm|: 1.847320e-08
+  subiter: 115      |ddm|: 1.825812e-08
+  subiter: 116      |ddm|: 1.804604e-08
+  subiter: 117      |ddm|: 1.783681e-08
+  subiter: 118      |ddm|: 1.763044e-08
+  subiter: 119      |ddm|: 1.742682e-08
+  subiter: 120      |ddm|: 1.722588e-08
+  subiter: 121      |ddm|: 1.702754e-08
+  subiter: 122      |ddm|: 1.683171e-08
+  subiter: 123      |ddm|: 1.663851e-08
+  subiter: 124      |ddm|: 1.644762e-08
+  subiter: 125      |ddm|: 1.625914e-08
+  subiter: 126      |ddm|: 1.607312e-08
+  subiter: 127      |ddm|: 1.588925e-08
+  subiter: 128      |ddm|: 1.570776e-08
+  subiter: 129      |ddm|: 1.552844e-08
+  subiter: 130      |ddm|: 1.535140e-08
+  subiter: 131      |ddm|: 1.517656e-08
+  subiter: 132      |ddm|: 1.500361e-08
+  subiter: 133      |ddm|: 1.483296e-08
+  subiter: 134      |ddm|: 1.466426e-08
+  subiter: 135      |ddm|: 1.449758e-08
+  subiter: 136      |ddm|: 1.433286e-08
+  subiter: 137      |ddm|: 1.417010e-08
+  subiter: 138      |ddm|: 1.400936e-08
+  subiter: 139      |ddm|: 1.385041e-08
+  subiter: 140      |ddm|: 1.369339e-08
+  subiter: 141      |ddm|: 1.353830e-08
+  subiter: 142      |ddm|: 1.338489e-08
+  subiter: 143      |ddm|: 1.323338e-08
+  subiter: 144      |ddm|: 1.308364e-08
+  subiter: 145      |ddm|: 1.293553e-08
+  subiter: 146      |ddm|: 1.278930e-08
+  subiter: 147      |ddm|: 1.264458e-08
+  subiter: 148      |ddm|: 1.250178e-08
+  subiter: 149      |ddm|: 1.236040e-08
+  subiter: 150      |ddm|: 1.222078e-08
+  subiter: 151      |ddm|: 1.208286e-08
+  subiter: 152      |ddm|: 1.194641e-08
+  subiter: 153      |ddm|: 1.181167e-08
+  subiter: 154      |ddm|: 1.167830e-08
+  subiter: 155      |ddm|: 1.154659e-08
+  subiter: 156      |ddm|: 1.141642e-08
+  subiter: 157      |ddm|: 1.128763e-08
+  subiter: 158      |ddm|: 1.116042e-08
+  subiter: 159      |ddm|: 1.103456e-08
+  subiter: 160      |ddm|: 1.091028e-08
+  subiter: 161      |ddm|: 1.078732e-08
+  subiter: 162      |ddm|: 1.066584e-08
+  subiter: 163      |ddm|: 1.054571e-08
+  subiter: 164      |ddm|: 1.042690e-08
+  subiter: 165      |ddm|: 1.030958e-08
+  subiter: 166      |ddm|: 1.019356e-08
+  subiter: 167      |ddm|: 1.007888e-08
+  subiter: 168      |ddm|: 9.965392e-09
+  subiter: 169      |ddm|: 9.853277e-09
+  subiter: 170      |ddm|: 9.742551e-09
+  subiter: 171      |ddm|: 9.632950e-09
+  subiter: 172      |ddm|: 9.524586e-09
+  subiter: 173      |ddm|: 9.417478e-09
+  subiter: 174      |ddm|: 9.311687e-09
+  subiter: 175      |ddm|: 9.207003e-09
+  subiter: 176      |ddm|: 9.103541e-09
+  subiter: 177      |ddm|: 9.001155e-09
+  subiter: 178      |ddm|: 8.900114e-09
+  subiter: 179      |ddm|: 8.800130e-09
+  subiter: 180      |ddm|: 8.701263e-09
+  subiter: 181      |ddm|: 8.603608e-09
+  subiter: 182      |ddm|: 8.506887e-09
+  subiter: 183      |ddm|: 8.411448e-09
+  subiter: 184      |ddm|: 8.316937e-09
+  subiter: 185      |ddm|: 8.223622e-09
+  subiter: 186      |ddm|: 8.131270e-09
+  subiter: 187      |ddm|: 8.039967e-09
+  subiter: 188      |ddm|: 7.949764e-09
+  subiter: 189      |ddm|: 7.860516e-09
+  subiter: 190      |ddm|: 7.772418e-09
+  subiter: 191      |ddm|: 7.685212e-09
+  subiter: 192      |ddm|: 7.598945e-09
+  subiter: 193      |ddm|: 7.513772e-09
+  subiter: 194      |ddm|: 7.429562e-09
+  subiter: 195      |ddm|: 7.346198e-09
+  subiter: 196      |ddm|: 7.263680e-09
+  subiter: 197      |ddm|: 7.182356e-09
+  subiter: 198      |ddm|: 7.101843e-09
+  subiter: 199      |ddm|: 7.022194e-09
+  subiter: 200      |ddm|: 6.943437e-09
+  subiter: 201      |ddm|: 6.865697e-09
+  subiter: 202      |ddm|: 6.788811e-09
+  subiter: 203      |ddm|: 6.712590e-09
+  subiter: 204      |ddm|: 6.637317e-09
+  subiter: 205      |ddm|: 6.562990e-09
+  subiter: 206      |ddm|: 6.489494e-09
+  subiter: 207      |ddm|: 6.416725e-09
+  subiter: 208      |ddm|: 6.344817e-09
+  subiter: 209      |ddm|: 6.273710e-09
+  subiter: 210      |ddm|: 6.203540e-09
+  subiter: 211      |ddm|: 6.133965e-09
+  subiter: 212      |ddm|: 6.065210e-09
+  subiter: 213      |ddm|: 5.997363e-09
+  subiter: 214      |ddm|: 5.930221e-09
+  subiter: 215      |ddm|: 5.863834e-09
+  subiter: 216      |ddm|: 5.798138e-09
+  subiter: 217      |ddm|: 5.733273e-09
+  subiter: 218      |ddm|: 5.669023e-09
+  subiter: 219      |ddm|: 5.605602e-09
+  subiter: 220      |ddm|: 5.542841e-09
+  subiter: 221      |ddm|: 5.480783e-09
+  subiter: 222      |ddm|: 5.419439e-09
+  subiter: 223      |ddm|: 5.358779e-09
+  subiter: 224      |ddm|: 5.298825e-09
+  subiter: 225      |ddm|: 5.239444e-09
+  subiter: 226      |ddm|: 5.180771e-09
+  subiter: 227      |ddm|: 5.122852e-09
+  subiter: 228      |ddm|: 5.065544e-09
+  subiter: 229      |ddm|: 5.008833e-09
+  subiter: 230      |ddm|: 4.952760e-09
+  subiter: 231      |ddm|: 4.897418e-09
+  subiter: 232      |ddm|: 4.842615e-09
+  subiter: 233      |ddm|: 4.788431e-09
+  subiter: 234      |ddm|: 4.734783e-09
+  subiter: 235      |ddm|: 4.681878e-09
+  subiter: 236      |ddm|: 4.629524e-09
+  subiter: 237      |ddm|: 4.577707e-09
+  subiter: 238      |ddm|: 4.526470e-09
+  subiter: 239      |ddm|: 4.475925e-09
+  subiter: 240      |ddm|: 4.425803e-09
+  subiter: 241      |ddm|: 4.376287e-09
+  subiter: 242      |ddm|: 4.327402e-09
+  subiter: 243      |ddm|: 4.279054e-09
+  subiter: 244      |ddm|: 4.231178e-09
+  subiter: 245      |ddm|: 4.183784e-09
+  subiter: 246      |ddm|: 4.137088e-09
+  subiter: 247      |ddm|: 4.090754e-09
+  subiter: 248      |ddm|: 4.045016e-09
+  subiter: 249      |ddm|: 3.999750e-09
+  subiter: 250      |ddm|: 3.955042e-09
+  subiter: 251      |ddm|: 3.910845e-09
+  subiter: 252      |ddm|: 3.867120e-09
+  subiter: 253      |ddm|: 3.823962e-09
+  subiter: 254      |ddm|: 3.781217e-09
+  subiter: 255      |ddm|: 3.738908e-09
+  subiter: 256      |ddm|: 3.697153e-09
+  subiter: 257      |ddm|: 3.655781e-09
+  subiter: 258      |ddm|: 3.614943e-09
+  subiter: 259      |ddm|: 3.574557e-09
+  subiter: 260      |ddm|: 3.534537e-09
+  subiter: 261      |ddm|: 3.495039e-09
+  subiter: 262      |ddm|: 3.455976e-09
+  subiter: 263      |ddm|: 3.417383e-09
+  subiter: 264      |ddm|: 3.379171e-09
+  subiter: 265      |ddm|: 3.341395e-09
+  subiter: 266      |ddm|: 3.304047e-09
+  subiter: 267      |ddm|: 3.267168e-09
+  subiter: 268      |ddm|: 3.230625e-09
+  subiter: 269      |ddm|: 3.194566e-09
+  subiter: 270      |ddm|: 3.158806e-09
+  subiter: 271      |ddm|: 3.123574e-09
+  subiter: 272      |ddm|: 3.088668e-09
+  subiter: 273      |ddm|: 3.054143e-09
+  subiter: 274      |ddm|: 3.020030e-09
+  subiter: 275      |ddm|: 2.986256e-09
+  subiter: 276      |ddm|: 2.952921e-09
+  subiter: 277      |ddm|: 2.919939e-09
+  subiter: 278      |ddm|: 2.887245e-09
+  subiter: 279      |ddm|: 2.855038e-09
+  subiter: 280      |ddm|: 2.823173e-09
+  subiter: 281      |ddm|: 2.791580e-09
+  subiter: 282      |ddm|: 2.760424e-09
+  subiter: 283      |ddm|: 2.729557e-09
+  subiter: 284      |ddm|: 2.699130e-09
+  subiter: 285      |ddm|: 2.668869e-09
+  subiter: 286      |ddm|: 2.639124e-09
+  subiter: 287      |ddm|: 2.609632e-09
+  subiter: 288      |ddm|: 2.580496e-09
+  subiter: 289      |ddm|: 2.551715e-09
+  subiter: 290      |ddm|: 2.523188e-09
+  subiter: 291      |ddm|: 2.495087e-09
+  subiter: 292      |ddm|: 2.467126e-09
+  subiter: 293      |ddm|: 2.439601e-09
+  subiter: 294      |ddm|: 2.412300e-09
+  subiter: 295      |ddm|: 2.385347e-09
+  subiter: 296      |ddm|: 2.358640e-09
+  subiter: 297      |ddm|: 2.332351e-09
+  subiter: 298      |ddm|: 2.306337e-09
+  subiter: 299      |ddm|: 2.280604e-09
+  subiter: 300      |ddm|: 2.255075e-09
+
+
+******** <class 'pyscf.scf.hf.RHF'> flags ********
+method = RHF
+initial guess = minao
+damping factor = 0
+level shift factor = 0
+DIIS = <class 'pyscf.scf.diis.CDIIS'>
+DIIS start cycle = 1
+DIIS space = 8
+SCF tol = 1e-09
+SCF gradient tol = None
+max. SCF cycles = 300
+direct_scf = True
+direct_scf_tol = 1e-13
+chkfile to save SCF result = /panfs/roc/scratch/graha682/201801_wfcycle/20180109_ccpVDZ_m06_ccsdt_ft_1butSn2React/tmp1M08SM
+max_memory 4000 MB (current use 637 MB)
+Set gradient conv threshold to 3.16228e-05
+init E= -337.240419613467
+  HOMO = -0.0419342292009107  LUMO = 0.30926149385849
+cycle= 1 E= -337.240419613466  delta_E= 3.41e-13  |g|= 1.8e-09  |ddm|= 7.73e-09
+  HOMO = -0.0419342292267566  LUMO = 0.309261493937378
+Extra cycle  E= -337.240419613467  delta_E= -3.41e-13  |g|= 1.73e-09  |ddm|= 7.43e-09
+converged SCF energy = -337.240419613467
+
+
+******** <class 'pyscf.dft.rks.RKS'> flags ********
+method = RKS
+initial guess = atom
+damping factor = 0
+level shift factor = 0.0
+DIIS = <class 'pyscf.scf.diis.CDIIS'>
+DIIS start cycle = 1
+DIIS space = 8
+SCF tol = 1e-09
+SCF gradient tol = 1e-08
+max. SCF cycles = 1
+direct_scf = True
+direct_scf_tol = 1e-13
+chkfile to save SCF result = /panfs/roc/scratch/graha682/201801_wfcycle/20180109_ccpVDZ_m06_ccsdt_ft_1butSn2React/tmpdGk7NS
+max_memory 4000 MB (current use 637 MB)
+XC functionals = m06
+small_rho_cutoff = 1e-20
+radial grids: Treutler-Ahlrichs (JCP 102, 346 (M4)) radial grids
+becke partition: Becke, JCP, 88, 2547 (1988)
+pruning grids: <function nwchem_prune at 0x17a65f0>
+grids dens level: 4
+symmetrized grids: False
+atomic radii adjust function: <function treutler_atomic_radii_adjust at 0x17a6488>
+init E= -144.830499680677
+  HOMO = -0.277991787218415  LUMO = 0.0769521391184537
+cycle= 1 E= -245.619217572975  delta_E= -101  |g|=   19  |ddm|=  8.2
+  HOMO = -1.66593653751201  LUMO = -1.47950435902975
+Extra cycle  E= -322.582793177971  delta_E=  -77  |g|= 4.54  |ddm|= 18.2
+SCF not converged.
+SCF energy = -322.582793177971 after 1 cycles
+ iter:   3:1        |ddm|: 1.555111e+01     Tr[DP]  1.541596e+00
+
+==================== Doing CCSD Calculation on Subsystem 1 =====================
+
+******** <class 'pyscf.cc.ccsd.CCSD'> flags ********
+CCSD nocc = 13, nvir = 29
+max_cycle = 50
+direct = 0
+conv_tol = 1e-07
+conv_tol_normt = 1e-05
+diis_space = 6
+diis_start_cycle = 0
+diis_start_energy_diff = 1e+09
+max_memory 4000 MB (current use 633 MB)
+Build MO integrals with incore ao2mo
+Init t2, MP2 energy = -0.284445778091659
+cycle = 1  E(CCSD) = -0.288686918547332  dE = -0.288686919  norm(t1,t2) = 0.232564
+cycle = 2  E(CCSD) = -0.328363065135884  dE = -0.0396761466  norm(t1,t2) = 0.175214
+cycle = 3  E(CCSD) = -0.309186179562676  dE = 0.0191768856  norm(t1,t2) = 0.167306
+cycle = 4  E(CCSD) = -0.324227353677117  dE = -0.0150411741  norm(t1,t2) = 0.174439
+cycle = 5  E(CCSD) = -0.331380925004141  dE = -0.00715357133  norm(t1,t2) = 0.0555307
+cycle = 6  E(CCSD) = -0.334806934152931  dE = -0.00342600915  norm(t1,t2) = 0.0468385
+cycle = 7  E(CCSD) = -0.337413286121512  dE = -0.00260635197  norm(t1,t2) = 0.0344736
+cycle = 8  E(CCSD) = -0.338793716897577  dE = -0.00138043078  norm(t1,t2) = 0.0325265
+cycle = 9  E(CCSD) = -0.340511943573349  dE = -0.00171822668  norm(t1,t2) = 0.0287754
+cycle = 10  E(CCSD) = -0.342347587517443  dE = -0.00183564394  norm(t1,t2) = 0.0215777
+cycle = 11  E(CCSD) = -0.343267055575558  dE = -0.000919468058  norm(t1,t2) = 0.0191983
+cycle = 12  E(CCSD) = -0.3434063035332  dE = -0.000139247958  norm(t1,t2) = 0.0145261
+cycle = 13  E(CCSD) = -0.343676378972948  dE = -0.00027007544  norm(t1,t2) = 0.00988819
+cycle = 14  E(CCSD) = -0.344139734427074  dE = -0.000463355454  norm(t1,t2) = 0.00574203
+cycle = 15  E(CCSD) = -0.344114478532938  dE = 2.52558941e-05  norm(t1,t2) = 0.00659174
+cycle = 16  E(CCSD) = -0.3441689579159  dE = -5.4479383e-05  norm(t1,t2) = 0.00354778
+cycle = 17  E(CCSD) = -0.344259016530894  dE = -9.0058615e-05  norm(t1,t2) = 0.00227648
+cycle = 18  E(CCSD) = -0.344413357787284  dE = -0.000154341256  norm(t1,t2) = 0.00166823
+cycle = 19  E(CCSD) = -0.344422387495214  dE = -9.02970793e-06  norm(t1,t2) = 0.00108472
+cycle = 20  E(CCSD) = -0.344568771545597  dE = -0.00014638405  norm(t1,t2) = 0.000916179
+cycle = 21  E(CCSD) = -0.344565927818604  dE = 2.84372699e-06  norm(t1,t2) = 0.000413468
+cycle = 22  E(CCSD) = -0.344591427403073  dE = -2.54995845e-05  norm(t1,t2) = 0.00034288
+cycle = 23  E(CCSD) = -0.344607280918535  dE = -1.58535155e-05  norm(t1,t2) = 0.000208794
+cycle = 24  E(CCSD) = -0.344617664050228  dE = -1.03831317e-05  norm(t1,t2) = 0.000134706
+cycle = 25  E(CCSD) = -0.344619842630015  dE = -2.17857979e-06  norm(t1,t2) = 8.57221e-05
+cycle = 26  E(CCSD) = -0.344625638332364  dE = -5.79570235e-06  norm(t1,t2) = 6.55987e-05
+cycle = 27  E(CCSD) = -0.344624619413534  dE = 1.01891883e-06  norm(t1,t2) = 4.58864e-05
+cycle = 28  E(CCSD) = -0.344626567286927  dE = -1.94787339e-06  norm(t1,t2) = 3.52373e-05
+cycle = 29  E(CCSD) = -0.344625363944813  dE = 1.20334211e-06  norm(t1,t2) = 2.64161e-05
+cycle = 30  E(CCSD) = -0.344625439493997  dE = -7.55491841e-08  norm(t1,t2) = 2.15767e-05
+cycle = 31  E(CCSD) = -0.344624878758799  dE = 5.60735198e-07  norm(t1,t2) = 1.63936e-05
+cycle = 32  E(CCSD) = -0.344624757688025  dE = 1.21070775e-07  norm(t1,t2) = 1.28632e-05
+cycle = 33  E(CCSD) = -0.344624400887963  dE = 3.56800062e-07  norm(t1,t2) = 9.2309e-06
+cycle = 34  E(CCSD) = -0.344624648136599  dE = -2.47248637e-07  norm(t1,t2) = 6.75433e-06
+cycle = 35  E(CCSD) = -0.344624574523157  dE = 7.36134429e-08  norm(t1,t2) = 5.24412e-06
+CCSD converged
+E(CCSD) = -337.5850441879897  E_corr = -0.3446245745231566
+Build MO integrals with incore ao2mo
+cycle = 1  norm(lambda1,lambda2) = 0.467264
+cycle = 2  norm(lambda1,lambda2) = 0.16858
+cycle = 3  norm(lambda1,lambda2) = 0.0834492
+cycle = 4  norm(lambda1,lambda2) = 0.0761009
+cycle = 5  norm(lambda1,lambda2) = 0.0409085
+cycle = 6  norm(lambda1,lambda2) = 0.0281516
+cycle = 7  norm(lambda1,lambda2) = 0.0239254
+cycle = 8  norm(lambda1,lambda2) = 0.0193216
+cycle = 9  norm(lambda1,lambda2) = 0.0170089
+cycle = 10  norm(lambda1,lambda2) = 0.0142873
+cycle = 11  norm(lambda1,lambda2) = 0.0105145
+cycle = 12  norm(lambda1,lambda2) = 0.00835399
+cycle = 13  norm(lambda1,lambda2) = 0.00587023
+cycle = 14  norm(lambda1,lambda2) = 0.00434936
+cycle = 15  norm(lambda1,lambda2) = 0.00231186
+cycle = 16  norm(lambda1,lambda2) = 0.00155351
+cycle = 17  norm(lambda1,lambda2) = 0.00108436
+cycle = 18  norm(lambda1,lambda2) = 0.000787105
+cycle = 19  norm(lambda1,lambda2) = 0.000634877
+cycle = 20  norm(lambda1,lambda2) = 0.0004303
+cycle = 21  norm(lambda1,lambda2) = 0.000290605
+cycle = 22  norm(lambda1,lambda2) = 0.000218854
+cycle = 23  norm(lambda1,lambda2) = 0.000170986
+cycle = 24  norm(lambda1,lambda2) = 0.000135981
+cycle = 25  norm(lambda1,lambda2) = 0.000103763
+cycle = 26  norm(lambda1,lambda2) = 8.24123e-05
+cycle = 27  norm(lambda1,lambda2) = 5.90995e-05
+cycle = 28  norm(lambda1,lambda2) = 4.34728e-05
+cycle = 29  norm(lambda1,lambda2) = 3.45948e-05
+cycle = 30  norm(lambda1,lambda2) = 1.99728e-05
+cycle = 31  norm(lambda1,lambda2) = 1.33938e-05
+cycle = 32  norm(lambda1,lambda2) = 9.58268e-06
+Hartree-Fock Energy:  -337.24041961346654
+CCSD Correlation:       -0.34462457452316
+CCSD Energy:          -337.58504418798969
+
+=================== Doing CCSD(T) Calculation on Subsystem 1 ===================
+Build MO integrals with incore ao2mo
+CCSD(T) correction = -0.0496126262924074
+Build MO integrals with incore ao2mo
+istep = 0  norm(lambda1,lambda2) = 0.409701
+istep = 1  norm(lambda1,lambda2) = 0.177231
+istep = 2  norm(lambda1,lambda2) = 0.194627
+istep = 3  norm(lambda1,lambda2) = 0.191676
+istep = 4  norm(lambda1,lambda2) = 0.0801874
+istep = 5  norm(lambda1,lambda2) = 0.0662891
+istep = 6  norm(lambda1,lambda2) = 0.0486971
+istep = 7  norm(lambda1,lambda2) = 0.0368998
+istep = 8  norm(lambda1,lambda2) = 0.0257853
+istep = 9  norm(lambda1,lambda2) = 0.0186666
+istep = 10  norm(lambda1,lambda2) = 0.0123231
+istep = 11  norm(lambda1,lambda2) = 0.00843227
+istep = 12  norm(lambda1,lambda2) = 0.00528446
+istep = 13  norm(lambda1,lambda2) = 0.003832
+istep = 14  norm(lambda1,lambda2) = 0.00269989
+istep = 15  norm(lambda1,lambda2) = 0.0021499
+istep = 16  norm(lambda1,lambda2) = 0.00174683
+istep = 17  norm(lambda1,lambda2) = 0.00117123
+istep = 18  norm(lambda1,lambda2) = 0.000862921
+istep = 19  norm(lambda1,lambda2) = 0.000524142
+istep = 20  norm(lambda1,lambda2) = 0.000388401
+istep = 21  norm(lambda1,lambda2) = 0.000287268
+istep = 22  norm(lambda1,lambda2) = 0.000225888
+istep = 23  norm(lambda1,lambda2) = 0.000181904
+istep = 24  norm(lambda1,lambda2) = 0.000146303
+istep = 25  norm(lambda1,lambda2) = 0.000126149
+istep = 26  norm(lambda1,lambda2) = 9.64366e-05
+istep = 27  norm(lambda1,lambda2) = 6.39372e-05
+istep = 28  norm(lambda1,lambda2) = 4.6227e-05
+istep = 29  norm(lambda1,lambda2) = 3.34945e-05
+istep = 30  norm(lambda1,lambda2) = 2.59498e-05
+istep = 31  norm(lambda1,lambda2) = 1.82927e-05
+istep = 32  norm(lambda1,lambda2) = 1.33548e-05
+istep = 33  norm(lambda1,lambda2) = 9.62796e-06
+istep = 34  norm(lambda1,lambda2) = 7.00035e-06
+istep = 35  norm(lambda1,lambda2) = 5.49127e-06
+istep = 36  norm(lambda1,lambda2) = 4.4533e-06
+istep = 37  norm(lambda1,lambda2) = 3.16578e-06
+istep = 38  norm(lambda1,lambda2) = 2.56756e-06
+istep = 39  norm(lambda1,lambda2) = 1.88859e-06
+istep = 40  norm(lambda1,lambda2) = 1.38927e-06
+istep = 41  norm(lambda1,lambda2) = 1.0497e-06
+istep = 42  norm(lambda1,lambda2) = 8.69795e-07
+istep = 43  norm(lambda1,lambda2) = 6.34115e-07
+istep = 44  norm(lambda1,lambda2) = 4.99865e-07
+istep = 45  norm(lambda1,lambda2) = 3.69853e-07
+istep = 46  norm(lambda1,lambda2) = 2.9976e-07
+istep = 47  norm(lambda1,lambda2) = 2.52541e-07
+istep = 48  norm(lambda1,lambda2) = 2.32322e-07
+istep = 49  norm(lambda1,lambda2) = 2.1686e-07
+Hartree-Fock Energy:  -337.24041961346654
+CCSD(T) Correlation:       -0.39423720081556
+CCSD(T) Energy:          -337.63465681428210
+
+========================= Density Matrix Purification ==========================
+ iter:   1       |idem_diff|: 1.000000000000     
+ iter:   2       |idem_diff|: 0.624429129249     
+ iter:   3       |idem_diff|: 0.576756864704     
+ iter:   4       |idem_diff|: 0.512095461002     
+ iter:   5       |idem_diff|: 143.302375288441     
+ iter:   6       |idem_diff|: 18748441110643.886718750000     
+ iter:   7       |idem_diff|: 41574808880440138467359286096994922525588717568.000000000000     
+ iter:   8       |idem_diff|: 453341583030803329640896763757437798014575877504727428288004054374147507536691700879247083035293461529803266463775421857603646287143678919997128704.000000000000     
+Density Purified!
+WF-in-DFT Cycle Errors                          inf
+
+============================== Embedding Energies ==============================
+Subsystem DFT                              nan
+Interaction                                nan
+DFT-in-DFT                                 nan
+Supermolecular DFT         -617.90356444366080
+Difference                                 nan
+Corrected DFT-in-DFT                       nan
+WF-in-DFT                                  nan
+Corrected WF-in-DFT                        nan
+
+=========================== Starting Freeze-and-Thaw ===========================
+ iter:   1:2        |ddm|: 2.068607e+02     Tr[DP] -1.311547e+224
+ iter:   2:2        |ddm|: 0.000000e+00     Tr[DP] -1.311547e+224
+                           Freeze-and-Thaw converged!                           
+
+=================== Subsystem 1 at higher mean-field method ====================

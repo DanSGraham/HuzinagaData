@@ -1,0 +1,49 @@
+
+#Optimized with g09 using M06 and aug-cc-pVTZ
+#1-chloro-1-flourobutane
+
+#Subsystem A
+subsystem
+C         -0.70127        0.76529        0.05266
+H         -1.31711        1.31874        0.71511
+H         -0.80712        0.97237       -0.98081
+Cl        -2.13077       -0.93681       -0.04134
+F          0.28559        2.66926       -0.12831
+C          0.53997        0.11422        0.58185
+H          1.10719        0.92692        1.01255
+H          0.26964       -0.58058        1.36669
+charge -2
+end
+
+#Subsystem B
+subsystem
+C          1.36767       -0.58306       -0.48968
+H          0.76840       -1.35142       -0.96544
+H          1.62436        0.14697       -1.24975
+C          2.64288       -1.20342        0.07261
+H          3.27197       -0.44982        0.53612
+H          2.41540       -1.95266        0.82545
+H          3.22446       -1.68633       -0.70699
+charge +1
+end
+
+wfembed
+ cycles 100
+ conv 1e-6
+end
+
+embed
+ huzinaga
+ cycles 300
+ conv 1e-9
+ method m06
+end
+
+basis cc-pVDZ
+method ccsd(t)
+grid 4
+conv 1e-9
+grad 1e-8
+maxiter 300
+#shift 1.0
+#damp 1.0

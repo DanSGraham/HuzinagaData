@@ -1,0 +1,186 @@
+********************************************************************************
+*                              PySCF CALCULATION                               *
+********************************************************************************
+
+================================== Input File ==================================
+g
+atoms
+H    0.0000   0.0000    0.0000
+H    0.0000   0.0000    0.7400
+end
+basis aug-cc-pVDZ
+
+scf
+ method ccsd(t)
+ grid 4
+ conv 1e-8
+ grad 1e-8
+ maxiter 100
+ #shift 1.0
+ damp 1.0
+end
+================================== End Input ===================================
+#INFO: **** input file is /home/goodpast/graha682/code/python/pyscf_wrapper/run_pySCF.py ****
+#!/usr/bin/env python
+
+def main():
+    '''Python wrapper to read a pySCF input file
+    and run the corresponding calculations.'''
+
+    from argparse import ArgumentParser, RawDescriptionHelpFormatter
+    from textwrap import dedent
+    from read_input import read_input, pstr
+    import sys
+    from simple_timer import timer
+    from scf import do_scf
+    from geomopt import do_geomopt
+    from vfreq import vibrations
+
+    # generate a parser to read the input files
+    parser = ArgumentParser(description=dedent(main.__doc__),
+                            formatter_class=RawDescriptionHelpFormatter)
+    parser.add_argument('input_files', nargs='*', default=sys.stdin,
+                        help='The pySCF input files.')
+    args = parser.parse_args()
+
+    # Cycle through all input files
+    for files in args.input_files:
+
+        # print header
+        pstr ("", delim="*", addline=False)
+        pstr ("PySCF CALCULATION", delim="*", fill=False, addline=False)
+        pstr ("", delim="*", addline=False)
+
+        # get input data
+        inp = read_input(files)
+
+        # start timer
+        inp.timer = timer()
+
+        # do single point energy
+        inp = do_scf(inp)
+
+        # do geomotry optimization
+        if inp.geomopt: inp = do_geomopt(inp)
+
+        if inp.vfreq: vibrations(inp)
+
+        # end timer
+        inp.timer.close()
+
+        # print footer
+        pstr("", delim="*")
+        pstr("END OF CALCULATION", delim="*", fill=False, addline=False)
+        pstr("", delim="*", addline=False)
+
+if __name__=='__main__':
+    main()
+#INFO: ******************** input file end ********************
+
+
+System: ('Linux', 'cn0627', '2.6.32-696.10.1.el6.x86_64', '#1 SMP Tue Aug 22 18:51:35 UTC 2017', 'x86_64', 'x86_64')  Threads 24
+Python 2.7.6 | 64-bit | (default, Sep 15 2014, 17:36:10) 
+[GCC 4.1.2 20080704 (Red Hat 4.1.2-54)]
+numpy 1.10.4  scipy 0.17.0
+Date: Thu Sep 14 11:33:24 2017
+PySCF version 1.4a
+PySCF path  /home/goodpast/graha682/code/python/pyscf/pyscf
+GIT ORIG_HEAD 5844907ed185652a67f3c2f412250b44554b1b91
+GIT HEAD      ref: refs/heads/master
+GIT master branch  5a6e4032c6cb310076977bf244a460aa6dd0f9f2
+
+[INPUT] VERBOSE 4
+[INPUT] num atoms = 2
+[INPUT] num electrons = 2
+[INPUT] charge = 0
+[INPUT] spin (= nelec alpha-beta = 2S) = 0
+[INPUT] symmetry False subgroup None
+[INPUT]  1 H      0.000000000000   0.000000000000   0.000000000000 AA    0.000000000000   0.000000000000   0.000000000000 Bohr
+[INPUT]  2 H      0.000000000000   0.000000000000   0.740000000000 AA    0.000000000000   0.000000000000   1.398397332178 Bohr
+[INPUT] ---------------- BASIS SET ---------------- 
+[INPUT] l, kappa, [nprim/nctr], expnt,             c_1 c_2 ...
+[INPUT] H
+[INPUT] 0    0    [3    /1   ]  13.01             0.019685
+                                1.962             0.137977
+                                0.4446            0.478148
+[INPUT] 0    0    [1    /1   ]  0.122                1
+[INPUT] 0    0    [1    /1   ]  0.02974              1
+[INPUT] 1    0    [1    /1   ]  0.727                1
+[INPUT] 1    0    [1    /1   ]  0.141                1
+nuclear repulsion = 0.715104339081081
+number of shells = 10
+number of NR pGTOs = 22
+number of NR cGTOs = 18
+basis = {'H': [[0, [13.01, 0.019685], [1.962, 0.137977], [0.4446, 0.478148]], [0, [0.122, 1.0]], [0, [0.02974, 1.0]], [1, [0.727, 1.0]], [1, [0.141, 1.0]]]}
+ecp = {}
+CPU time:         0.85
+
+
+******** <class 'pyscf.scf.hf.RHF'> flags ********
+method = RHF
+initial guess = atom
+damping factor = 0
+level shift factor = 0
+DIIS = <class 'pyscf.scf.diis.CDIIS'>
+DIIS start cycle = 1
+DIIS space = 8
+SCF tol = 1e-08
+SCF gradient tol = 1e-08
+max. SCF cycles = 100
+direct_scf = True
+direct_scf_tol = 1e-13
+chkfile to save SCF result = /panfs/roc/scratch/graha682/201708_CCSDT/20170825_augccpVDZ_ccsdt_h2/tmpS7SyCI
+max_memory 4000 MB (current use 46 MB)
+Initial guess from superpostion of atomic densties.
+init E= -0.837192218026214
+  HOMO = -0.638665926582566  LUMO = 0.0410801298350338
+cycle= 1 E= -1.1253019571659  delta_E= -0.288  |g|= 0.0692  |ddm|= 0.667
+  HOMO = -0.60642093515716  LUMO = 0.0599742876983715
+cycle= 2 E= -1.12861126848881  delta_E= -0.00331  |g|= 0.0143  |ddm|= 0.0698
+  HOMO = -0.592758818558089  LUMO = 0.0614644631582429
+cycle= 3 E= -1.12877751730703  delta_E= -0.000166  |g|= 0.00101  |ddm|= 0.0187
+  HOMO = -0.592767153446503  LUMO = 0.0614911511144792
+cycle= 4 E= -1.12877827339227  delta_E= -7.56e-07  |g|= 6.5e-05  |ddm|= 0.00161
+  HOMO = -0.59279162574386  LUMO = 0.061494432463168
+cycle= 5 E= -1.12877827532879  delta_E= -1.94e-09  |g|= 5.64e-06  |ddm|= 0.000117
+  HOMO = -0.592790146461127  LUMO = 0.0614938127839606
+cycle= 6 E= -1.12877827534955  delta_E= -2.08e-11  |g|= 3.93e-07  |ddm|= 7.9e-06
+  HOMO = -0.592790204837533  LUMO = 0.0614938388766847
+cycle= 7 E= -1.12877827534965  delta_E= -9.97e-14  |g|= 7.73e-09  |ddm|= 8.13e-07
+  HOMO = -0.592790201807184  LUMO = 0.0614938402248445
+Extra cycle  E= -1.12877827534965  delta_E= -4.44e-16  |g|= 7.73e-09  |ddm|= 7.71e-09
+converged SCF energy = -1.12877827534965
+
+******** <class 'pyscf.cc.rccsd.RCCSD'> flags ********
+CCSD nocc = 1, nvir = 17
+max_cycle = 100
+direct = 0
+conv_tol = 1e-07
+conv_tol_normt = 1e-05
+diis_space = 6
+diis_start_cycle = 0
+diis_start_energy_diff = 1e+09
+max_memory 4000 MB (current use 83 MB)
+Init t2, MP2 energy = -0.0272821534688588
+istep = 0  E(CCSD) = -0.0333414875207307  dE = -0.0333414875  norm(t1,t2) = 0.0293686
+istep = 1  E(CCSD) = -0.0349968574282209  dE = -0.00165536991  norm(t1,t2) = 0.0103318
+istep = 2  E(CCSD) = -0.0355179345571899  dE = -0.000521077129  norm(t1,t2) = 0.00400521
+istep = 3  E(CCSD) = -0.0358157557439478  dE = -0.000297821187  norm(t1,t2) = 0.00164348
+istep = 4  E(CCSD) = -0.0358044668262589  dE = 1.12889177e-05  norm(t1,t2) = 0.000131053
+istep = 5  E(CCSD) = -0.0358047113620366  dE = -2.44535778e-07  norm(t1,t2) = 8.42625e-06
+istep = 6  E(CCSD) = -0.0358047001564881  dE = 1.12055485e-08  norm(t1,t2) = 1.41956e-06
+CCSD converged
+E(CCSD) = -1.164582975506134  E_corr = -0.03580470015648809
+CCSD(T) correction = 8.12614143018694e-21
+Total CCSD(T) =   -1.164582975506134
+================================================================================
+TIMING STATISTICS:
+                    hf      0.13s   (27.86%)
+                  ccsd      0.25s   (55.02%)
+               ccsd(t)      0.08s   (17.07%)
+                 TOTAL      0.46s
+================================================================================
+
+********************************************************************************
+*                              END OF CALCULATION                              *
+********************************************************************************

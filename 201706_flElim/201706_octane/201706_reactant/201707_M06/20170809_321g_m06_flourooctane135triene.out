@@ -1,0 +1,242 @@
+********************************************************************************
+*                              PySCF CALCULATION                               *
+********************************************************************************
+
+================================== Input File ==================================
+
+atoms
+C         -3.72401        0.30490        0.00000
+H         -4.62500        0.90369        0.00000
+C         -2.48669        0.78623        0.00000
+H         -2.39448        1.86629        0.00000
+C         -1.28737       -0.00178        0.00000
+H         -1.40023       -1.08205        0.00000
+C         -0.05210        0.52335        0.00000
+H          0.05924        1.60640        0.00000
+C          1.15147       -0.24994        0.00000
+H          1.04118       -1.33299        0.00000
+C          2.38726        0.27283        0.00000
+H          2.50078        1.35554        0.00000
+F         -3.97266       -1.00253       -0.00000
+C          3.59428       -0.50752        0.00000
+H          3.46932       -1.58774        0.00000
+C          4.82114        0.00952        0.00000
+H          5.70364       -0.61446        0.00000
+H          4.97555        1.08260        0.00000
+end
+
+basis 3-21g
+scf
+ method ks
+ xc m06
+ grid 4
+ conv 1e-8
+ grad 1e-8
+ maxiter 100
+ shift 1.0
+ damp 1.0
+end
+================================== End Input ===================================
+#INFO: **** input file is /home/goodpast/shared/repositories/pyscf_wrapper/run_pySCF.py ****
+#!/usr/bin/env python
+
+def main():
+    '''Python wrapper to read a pySCF input file
+    and run the corresponding calculations.'''
+
+    from argparse import ArgumentParser, RawDescriptionHelpFormatter
+    from textwrap import dedent
+    from read_input import read_input, pstr
+    import sys
+    from simple_timer import timer
+    from scf import do_scf
+    from geomopt import do_geomopt
+    from vfreq import vibrations
+
+    # generate a parser to read the input files
+    parser = ArgumentParser(description=dedent(main.__doc__),
+                            formatter_class=RawDescriptionHelpFormatter)
+    parser.add_argument('input_files', nargs='*', default=sys.stdin,
+                        help='The pySCF input files.')
+    args = parser.parse_args()
+
+    # Cycle through all input files
+    for files in args.input_files:
+
+        # print header
+        pstr ("", delim="*", addline=False)
+        pstr ("PySCF CALCULATION", delim="*", fill=False, addline=False)
+        pstr ("", delim="*", addline=False)
+
+        # get input data
+        inp = read_input(files)
+
+        # start timer
+        inp.timer = timer()
+
+        # do single point energy
+        inp = do_scf(inp)
+
+        # do geomotry optimization
+        if inp.geomopt: inp = do_geomopt(inp)
+
+        if inp.vfreq: vibrations(inp)
+
+        # end timer
+        inp.timer.close()
+
+        # print footer
+        pstr("", delim="*")
+        pstr("END OF CALCULATION", delim="*", fill=False, addline=False)
+        pstr("", delim="*", addline=False)
+
+if __name__=='__main__':
+    main()
+#INFO: ******************** input file end ********************
+
+
+System: ('Linux', 'cn0617', '2.6.32-696.6.3.el6.x86_64', '#1 SMP Wed Jul 12 14:17:22 UTC 2017', 'x86_64', 'x86_64')  Threads 24
+Python 2.7.6 | 64-bit | (default, Sep 15 2014, 17:36:10) 
+[GCC 4.1.2 20080704 (Red Hat 4.1.2-54)]
+numpy 1.10.4  scipy 0.17.0
+Date: Fri Aug 18 14:25:10 2017
+PySCF version 1.4a
+PySCF path  /home/goodpast/graha682/code/python/pyscf/pyscf
+GIT ORIG_HEAD 94b2c398b04426124a84f8d60968bbe95f5efd88
+GIT HEAD      ref: refs/heads/master
+GIT master branch  9330ea3bfcc413f76711ba39e39d531f72dcda29
+
+[INPUT] VERBOSE 4
+[INPUT] num atoms = 18
+[INPUT] num electrons = 66
+[INPUT] charge = 0
+[INPUT] spin (= nelec alpha-beta = 2S) = 0
+[INPUT] symmetry False subgroup None
+[INPUT]  1 C     -3.724010000000   0.304900000000   0.000000000000 AA   -7.037358985142   0.576177495380   0.000000000000 Bohr
+[INPUT]  2 H     -4.625000000000   0.903690000000   0.000000000000 AA   -8.739983326113   1.707726601508   0.000000000000 Bohr
+[INPUT]  3 C     -2.486690000000   0.786230000000   0.000000000000 AA   -4.699163056695   1.485759370917   0.000000000000 Bohr
+[INPUT]  4 H     -2.394480000000   1.866290000000   0.000000000000 AA   -4.524911410749   3.526776969015   0.000000000000 Bohr
+[INPUT]  5 C     -1.287370000000  -0.001780000000   0.000000000000 AA   -2.432776720981  -0.003363712502   0.000000000000 Bohr
+[INPUT]  6 H     -1.400230000000  -1.082050000000   0.000000000000 AA   -2.646051211400  -2.044778153086   0.000000000000 Bohr
+[INPUT]  7 C     -0.052100000000   0.523350000000   0.000000000000 AA   -0.098454731090   0.988988167291   0.000000000000 Bohr
+[INPUT]  8 H      0.059240000000   1.606400000000   0.000000000000 AA    0.111947375619   3.035656046501   0.000000000000 Bohr
+[INPUT]  9 C      1.151470000000  -0.249940000000   0.000000000000 AA    2.175962940653  -0.472318147574   0.000000000000 Bohr
+[INPUT] 10 H      1.041180000000  -1.332990000000   0.000000000000 AA    1.967545046375  -2.518986026784   0.000000000000 Bohr
+[INPUT] 11 C      2.387260000000   0.272830000000   0.000000000000 AA    4.511267588129   0.515573978565   0.000000000000 Bohr
+[INPUT] 12 H      2.500780000000   1.355540000000   0.000000000000 AA    4.725789297790   2.561599350893   0.000000000000 Bohr
+[INPUT] 13 F     -3.972660000000  -1.002530000000   0.000000000000 AA   -7.507239386015  -1.894507131660   0.000000000000 Bohr
+[INPUT] 14 C      3.594280000000  -0.507520000000   0.000000000000 AA    6.792204815002  -0.959073802739   0.000000000000 Bohr
+[INPUT] 15 H      3.469320000000  -1.587740000000   0.000000000000 AA    6.556064638476  -3.000393757017   0.000000000000 Bohr
+[INPUT] 16 C      4.821140000000   0.009520000000   0.000000000000 AA    9.110634208186   0.017990192706   0.000000000000 Bohr
+[INPUT] 17 H      5.703640000000  -0.614460000000   0.000000000000 AA   10.778317513114  -1.161161114500   0.000000000000 Bohr
+[INPUT] 18 H      4.975550000000   1.082600000000   0.000000000000 AA    9.402426819080   2.045817502454   0.000000000000 Bohr
+[INPUT] ---------------- BASIS SET ---------------- 
+[INPUT] l, kappa, [nprim/nctr], expnt,             c_1 c_2 ...
+[INPUT] H
+[INPUT] 0    0    [2    /1   ]  5.447178          0.156285
+                                0.824547          0.904691
+[INPUT] 0    0    [1    /1   ]  0.183192             1
+[INPUT] C
+[INPUT] 0    0    [3    /1   ]  172.256           0.0617669
+                                25.9109           0.358794
+                                5.53335           0.700713
+[INPUT] 0    0    [2    /1   ]  3.66498           -0.395897
+                                0.770545          1.21584
+[INPUT] 0    0    [1    /1   ]  0.195857             1
+[INPUT] 1    0    [2    /1   ]  3.66498           0.23646
+                                0.770545          0.860619
+[INPUT] 1    0    [1    /1   ]  0.195857             1
+[INPUT] F
+[INPUT] 0    0    [3    /1   ]  413.801           0.0585483
+                                62.2446           0.349308
+                                13.434            0.709632
+[INPUT] 0    0    [2    /1   ]  9.77759           -0.407327
+                                2.08617           1.22314
+[INPUT] 0    0    [1    /1   ]  0.482383             1
+[INPUT] 1    0    [2    /1   ]  9.77759           0.24668
+                                2.08617           0.852321
+[INPUT] 1    0    [1    /1   ]  0.482383             1
+nuclear repulsion = 367.612829309459
+number of shells = 63
+number of NR pGTOs = 162
+number of NR cGTOs = 99
+basis = {'H': [[0, [5.447178, 0.156285], [0.824547, 0.904691]], [0, [0.183192, 1.0]]], 'C': [[0, [172.256, 0.0617669], [25.9109, 0.358794], [5.53335, 0.700713]], [0, [3.66498, -0.395897], [0.770545, 1.21584]], [0, [0.195857, 1.0]], [1, [3.66498, 0.23646], [0.770545, 0.860619]], [1, [0.195857, 1.0]]], 'F': [[0, [413.801, 0.0585483], [62.2446, 0.349308], [13.434, 0.709632]], [0, [9.77759, -0.407327], [2.08617, 1.22314]], [0, [0.482383, 1.0]], [1, [9.77759, 0.24668], [2.08617, 0.852321]], [1, [0.482383, 1.0]]]}
+ecp = {}
+CPU time:         0.63
+tot grids = 399648
+
+
+******** <class 'pyscf.dft.rks.RKS'> flags ********
+method = RKS
+initial guess = atom
+damping factor = 0
+level shift factor = 0
+DIIS = <class 'pyscf.scf.diis.CDIIS'>
+DIIS start cycle = 1
+DIIS space = 8
+SCF tol = 1e-08
+SCF gradient tol = 1e-08
+max. SCF cycles = 100
+direct_scf = True
+direct_scf_tol = 1e-13
+chkfile to save SCF result = /panfs/roc/scratch/graha682/20170809_321g_m06_flourooctane135triene/tmpwexu16
+max_memory 4000 MB (current use 83 MB)
+XC functionals = m06
+small_rho_cutoff = 1e-20
+radial grids: Treutler-Ahlrichs (JCP 102, 346 (M4)) radial grids
+becke partition: Becke, JCP, 88, 2547 (1988)
+pruning grids: <function nwchem_prune at 0x162a488>
+grids dens level: 4
+symmetrized grids: False
+atomic radii adjust function: <function treutler_atomic_radii_adjust at 0x162a320>
+Initial guess from superpostion of atomic densties.
+init E= -410.138181624148
+  HOMO = -0.32657513431096  LUMO = -0.216689755216646
+cycle= 1 E= -407.382884327211  delta_E= 2.76  |g|= 0.939  |ddm|= 4.62
+  HOMO = -0.100940376645876  LUMO = 0.0367926361854777
+cycle= 2 E= -407.352040641993  delta_E= 0.0308  |g|= 0.96  |ddm|= 2.09
+  HOMO = -0.197800280570169  LUMO = -0.0470130691212855
+cycle= 3 E= -407.598724464995  delta_E= -0.247  |g|= 0.256  |ddm|= 1.39
+  HOMO = -0.208058639321717  LUMO = -0.054157205302901
+cycle= 4 E= -407.617873019641  delta_E= -0.0191  |g|= 0.0363  |ddm|= 0.338
+  HOMO = -0.208810303130048  LUMO = -0.0525663776277439
+cycle= 5 E= -407.618084090321  delta_E= -0.000211  |g|= 0.0248  |ddm|= 0.0622
+  HOMO = -0.208476262795342  LUMO = -0.0517387084096672
+cycle= 6 E= -407.618240566764  delta_E= -0.000156  |g|= 0.00482  |ddm|= 0.0303
+  HOMO = -0.208684546182069  LUMO = -0.0518264144308003
+cycle= 7 E= -407.618247153697  delta_E= -6.59e-06  |g|= 0.00183  |ddm|= 0.00807
+  HOMO = -0.208762549547318  LUMO = -0.0518391565373039
+cycle= 8 E= -407.61824802251  delta_E= -8.69e-07  |g|= 0.000493  |ddm|= 0.00268
+  HOMO = -0.208766351108889  LUMO = -0.0518258403117138
+cycle= 9 E= -407.618248065579  delta_E= -4.31e-08  |g|= 0.00019  |ddm|= 0.000664
+  HOMO = -0.208764995469524  LUMO = -0.0518178691038808
+cycle= 10 E= -407.618248073657  delta_E= -8.08e-09  |g|= 3.82e-05  |ddm|= 0.000258
+  HOMO = -0.208765924775789  LUMO = -0.0518180941004465
+cycle= 11 E= -407.618248073968  delta_E= -3.11e-10  |g|= 1.78e-05  |ddm|= 5.81e-05
+  HOMO = -0.208766364860868  LUMO = -0.0518178937640071
+cycle= 12 E= -407.618248074043  delta_E= -7.53e-11  |g|= 2.33e-06  |ddm|= 2.42e-05
+  HOMO = -0.20876642663299  LUMO = -0.0518178545801
+cycle= 13 E= -407.618248074044  delta_E= -1.25e-12  |g|= 1.53e-06  |ddm|= 5.07e-06
+  HOMO = -0.208766394174162  LUMO = -0.051817794795365
+cycle= 14 E= -407.618248074044  delta_E= -1.14e-13  |g|= 3.91e-07  |ddm|= 2.22e-06
+  HOMO = -0.208766382109022  LUMO = -0.0518177763750704
+cycle= 15 E= -407.618248074043  delta_E= 1.71e-12  |g|= 2.13e-07  |ddm|= 6.95e-07
+  HOMO = -0.208766387030304  LUMO = -0.0518177801356048
+cycle= 16 E= -407.618248074043  delta_E= -6.82e-13  |g|= 6.1e-08  |ddm|= 2.56e-07
+  HOMO = -0.208766390146954  LUMO = -0.0518177825480012
+cycle= 17 E= -407.618248074044  delta_E= -1.14e-12  |g|= 1.19e-08  |ddm|= 7.37e-08
+  HOMO = -0.208766390203206  LUMO = -0.0518177826045322
+cycle= 18 E= -407.618248074045  delta_E= -6.82e-13  |g|= 8.3e-09  |ddm|= 6.85e-09
+  HOMO = -0.20876638934971  LUMO = -0.0518177817984891
+Extra cycle  E= -407.618248074045  delta_E= 2.27e-13  |g|= 8.3e-09  |ddm|= 2.2e-08
+converged SCF energy = -407.618248074045
+================================================================================
+TIMING STATISTICS:
+                 grids      0.43s   ( 0.61%)
+                    ks     70.24s   (100.00%)
+                 TOTAL     70.24s
+================================================================================
+
+********************************************************************************
+*                              END OF CALCULATION                              *
+********************************************************************************

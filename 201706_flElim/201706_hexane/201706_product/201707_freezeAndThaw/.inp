@@ -1,0 +1,40 @@
+#Optimized g09 M06 aug-cc-pVTZ
+#1flouro-hexene
+
+#Subsystem A
+subsystem
+C          3.15317       -0.23738        0.00019
+H          3.51666       -1.25785        0.00029
+H          3.89561        0.55157        0.00044
+C          1.87142        0.03164       -0.00008
+C          0.64137        0.29082       -0.00038
+C         -0.64897        0.56587       -0.00003
+H         -0.96465        1.60768        0.00017
+charge -1
+end
+
+#Subsystem B
+subsystem
+C         -1.69321       -0.42887       -0.00005
+H         -1.37362       -1.46581       -0.00038
+C         -2.98979       -0.12900        0.00018
+H         -3.32626        0.90149        0.00047
+H         -3.75168       -0.89552        0.00006
+charge +1
+end
+
+embed
+ huzinaga
+ cycles 300
+ conv 1e-6
+ method m06
+end
+
+basis cc-pVTZ
+method ccsd(t)
+grid 4
+conv 1e-8
+grad 1e-8
+maxiter 100
+shift 1.0
+damp 1.0

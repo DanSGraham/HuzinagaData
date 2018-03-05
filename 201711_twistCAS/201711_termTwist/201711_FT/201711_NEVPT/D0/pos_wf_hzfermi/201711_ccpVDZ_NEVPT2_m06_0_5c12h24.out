@@ -1,0 +1,802 @@
+********************************************************************************
+*                         FREEZE-AND-THAW CALCULATION                          *
+********************************************************************************
+
+================================== Input File ==================================
+subsystem
+C         -6.81481       -0.41548        0.09427
+C         -5.56147        0.43724        0.09293
+H         -7.73235        0.19145        0.14286
+H         -6.82758       -1.10435        0.95610
+H         -6.87608       -1.03602       -0.81602
+C         -4.28367       -0.38105        0.02769
+H         -5.53674        1.07534        0.99707
+H         -5.58393        1.14193       -0.76040
+C         -3.01934        0.45821        0.02466
+H         -4.30287       -1.02140       -0.87709
+H         -4.25513       -1.08694        0.88206
+C         -1.74266       -0.35996       -0.03904
+H         -3.00073        1.09895        0.92897
+H         -3.04751        1.16305       -0.83038
+charge +1
+end
+
+subsystem
+C         -0.47847        0.47976       -0.04293
+H         -1.76110       -1.00126       -0.94291
+H         -1.71376       -1.06425        0.81636
+C          0.79802       -0.33884       -0.10519
+H         -0.46016        1.12166        0.86050
+H         -0.50661        1.18343       -0.89888
+C          2.06201        0.50110       -0.10952
+H          0.77977       -0.98112       -1.00834
+H          0.82667       -1.04194        0.75104
+C          3.33732       -0.31885       -0.17142
+H          2.08070        1.14303        0.79380
+H          2.03456        1.20444       -0.96582
+C          4.60273        0.52974       -0.16842
+H          3.32338       -0.95585       -1.07806
+H          3.36999       -1.02442        0.68131
+C          5.85144       -0.28251       -0.26720
+H          4.63440        1.15499        0.74374
+H          4.55410        1.23655       -1.02099
+C          6.83934       -0.29091        0.62655
+H          6.79249        0.32749        1.53124
+H          7.73182       -0.91026        0.49647
+H          5.93403       -0.92517       -1.15692
+charge -1
+end
+
+embed
+ huzinaga
+ huzfermi
+ cycles 300
+ conv 1e-8
+ method m06
+end
+
+basis cc-pVDZ
+method cas[2,2]/nevpt2
+grid 4
+conv 1e-8
+grad 1e-8
+maxiter 100
+================================== End Input ===================================
+tot grids = 725328
+
+                      Getting subsystem overlap integrals                       
+
+                          Initial subsystem densities                           
+Guessing initial subsystem densities
+Initial guess from superpostion of atomic densties.
+Guessing initial subsystem densities
+Initial guess from superpostion of atomic densties.
+
+=========================== Starting Freeze-and-Thaw ===========================
+ iter:   1:1        |ddm|: 4.496597e+00     Tr[DP]  6.424961e-01
+ iter:   1:2        |ddm|: 5.017334e+00     Tr[DP]  3.297424e-01
+ iter:   2:1        |ddm|: 3.161649e+00     Tr[DP]  1.474958e-01
+ iter:   2:2        |ddm|: 3.561731e+00     Tr[DP]  2.567610e-01
+ iter:   3:1        |ddm|: 1.915262e+00     Tr[DP]  1.643402e-01
+ iter:   3:2        |ddm|: 2.297702e+00     Tr[DP]  1.554801e-01
+ iter:   4:1        |ddm|: 5.418165e-01     Tr[DP]  1.428942e-01
+ iter:   4:2        |ddm|: 3.738778e-01     Tr[DP]  1.599537e-01
+ iter:   5:1        |ddm|: 7.705640e-02     Tr[DP]  1.477554e-01
+ iter:   5:2        |ddm|: 1.419304e-01     Tr[DP]  1.543391e-01
+ iter:   6:1        |ddm|: 3.462009e-02     Tr[DP]  1.487869e-01
+ iter:   6:2        |ddm|: 6.364881e-02     Tr[DP]  1.510183e-01
+ iter:   7:1        |ddm|: 1.012179e-02     Tr[DP]  1.484830e-01
+ iter:   7:2        |ddm|: 3.119233e-02     Tr[DP]  1.498806e-01
+ iter:   8:1        |ddm|: 5.059554e-03     Tr[DP]  1.484049e-01
+ iter:   8:2        |ddm|: 1.840358e-02     Tr[DP]  1.493575e-01
+ iter:   9:1        |ddm|: 3.788463e-03     Tr[DP]  1.484621e-01
+ iter:   9:2        |ddm|: 1.063841e-02     Tr[DP]  1.489121e-01
+ iter:  10:1        |ddm|: 1.854209e-03     Tr[DP]  1.484553e-01
+ iter:  10:2        |ddm|: 5.313304e-03     Tr[DP]  1.486860e-01
+ iter:  11:1        |ddm|: 8.656435e-04     Tr[DP]  1.484458e-01
+ iter:  11:2        |ddm|: 3.317118e-03     Tr[DP]  1.485858e-01
+ iter:  12:1        |ddm|: 5.845501e-04     Tr[DP]  1.484544e-01
+ iter:  12:2        |ddm|: 1.513545e-03     Tr[DP]  1.485241e-01
+ iter:  13:1        |ddm|: 2.768301e-04     Tr[DP]  1.484565e-01
+ iter:  13:2        |ddm|: 8.040042e-04     Tr[DP]  1.484906e-01
+ iter:  14:1        |ddm|: 1.427742e-04     Tr[DP]  1.484573e-01
+ iter:  14:2        |ddm|: 3.796089e-04     Tr[DP]  1.484741e-01
+ iter:  15:1        |ddm|: 7.098682e-05     Tr[DP]  1.484566e-01
+ iter:  15:2        |ddm|: 2.421493e-04     Tr[DP]  1.484662e-01
+ iter:  16:1        |ddm|: 4.839339e-05     Tr[DP]  1.484570e-01
+ iter:  16:2        |ddm|: 1.030194e-04     Tr[DP]  1.484617e-01
+ iter:  17:1        |ddm|: 2.801501e-05     Tr[DP]  1.484571e-01
+ iter:  17:2        |ddm|: 5.895975e-05     Tr[DP]  1.484594e-01
+ iter:  18:1        |ddm|: 2.179709e-05     Tr[DP]  1.484570e-01
+ iter:  18:2        |ddm|: 3.829275e-05     Tr[DP]  1.484583e-01
+ iter:  19:1        |ddm|: 1.848084e-05     Tr[DP]  1.484570e-01
+ iter:  19:2        |ddm|: 2.266380e-05     Tr[DP]  1.484576e-01
+ iter:  20:1        |ddm|: 1.884323e-05     Tr[DP]  1.484570e-01
+ iter:  20:2        |ddm|: 2.573089e-05     Tr[DP]  1.484574e-01
+ iter:  21:1        |ddm|: 1.682431e-05     Tr[DP]  1.484570e-01
+ iter:  21:2        |ddm|: 2.282187e-05     Tr[DP]  1.484572e-01
+ iter:  22:1        |ddm|: 1.487429e-05     Tr[DP]  1.484570e-01
+ iter:  22:2        |ddm|: 1.987007e-05     Tr[DP]  1.484571e-01
+ iter:  23:1        |ddm|: 1.737619e-05     Tr[DP]  1.484570e-01
+ iter:  23:2        |ddm|: 2.362840e-05     Tr[DP]  1.484570e-01
+ iter:  24:1        |ddm|: 1.424107e-05     Tr[DP]  1.484570e-01
+ iter:  24:2        |ddm|: 1.976018e-05     Tr[DP]  1.484570e-01
+ iter:  25:1        |ddm|: 1.295513e-05     Tr[DP]  1.484570e-01
+ iter:  25:2        |ddm|: 1.780303e-05     Tr[DP]  1.484570e-01
+ iter:  26:1        |ddm|: 1.166917e-05     Tr[DP]  1.484570e-01
+ iter:  26:2        |ddm|: 1.494239e-05     Tr[DP]  1.484570e-01
+ iter:  27:1        |ddm|: 1.084027e-05     Tr[DP]  1.484570e-01
+ iter:  27:2        |ddm|: 1.155162e-05     Tr[DP]  1.484570e-01
+ iter:  28:1        |ddm|: 8.835006e-06     Tr[DP]  1.484570e-01
+ iter:  28:2        |ddm|: 1.123511e-05     Tr[DP]  1.484570e-01
+ iter:  29:1        |ddm|: 8.120103e-06     Tr[DP]  1.484570e-01
+ iter:  29:2        |ddm|: 8.625842e-06     Tr[DP]  1.484570e-01
+ iter:  30:1        |ddm|: 6.648482e-06     Tr[DP]  1.484570e-01
+ iter:  30:2        |ddm|: 8.540755e-06     Tr[DP]  1.484570e-01
+ iter:  31:1        |ddm|: 6.173145e-06     Tr[DP]  1.484570e-01
+ iter:  31:2        |ddm|: 8.622864e-06     Tr[DP]  1.484570e-01
+ iter:  32:1        |ddm|: 7.412664e-06     Tr[DP]  1.484570e-01
+ iter:  32:2        |ddm|: 1.066234e-05     Tr[DP]  1.484570e-01
+ iter:  33:1        |ddm|: 1.161316e-05     Tr[DP]  1.484570e-01
+ iter:  33:2        |ddm|: 1.537255e-05     Tr[DP]  1.484570e-01
+ iter:  34:1        |ddm|: 9.179641e-06     Tr[DP]  1.484570e-01
+ iter:  34:2        |ddm|: 1.334475e-05     Tr[DP]  1.484570e-01
+ iter:  35:1        |ddm|: 8.017185e-06     Tr[DP]  1.484570e-01
+ iter:  35:2        |ddm|: 1.175602e-05     Tr[DP]  1.484570e-01
+ iter:  36:1        |ddm|: 7.272901e-06     Tr[DP]  1.484570e-01
+ iter:  36:2        |ddm|: 9.787428e-06     Tr[DP]  1.484570e-01
+ iter:  37:1        |ddm|: 7.354179e-06     Tr[DP]  1.484570e-01
+ iter:  37:2        |ddm|: 6.794022e-06     Tr[DP]  1.484570e-01
+ iter:  38:1        |ddm|: 5.192133e-06     Tr[DP]  1.484570e-01
+ iter:  38:2        |ddm|: 7.556287e-06     Tr[DP]  1.484570e-01
+ iter:  39:1        |ddm|: 4.822871e-06     Tr[DP]  1.484570e-01
+ iter:  39:2        |ddm|: 6.989334e-06     Tr[DP]  1.484570e-01
+ iter:  40:1        |ddm|: 4.484064e-06     Tr[DP]  1.484570e-01
+ iter:  40:2        |ddm|: 6.084562e-06     Tr[DP]  1.484570e-01
+ iter:  41:1        |ddm|: 4.341572e-06     Tr[DP]  1.484570e-01
+ iter:  41:2        |ddm|: 6.685712e-06     Tr[DP]  1.484570e-01
+ iter:  42:1        |ddm|: 4.638266e-06     Tr[DP]  1.484570e-01
+ iter:  42:2        |ddm|: 7.172462e-06     Tr[DP]  1.484570e-01
+ iter:  43:1        |ddm|: 5.765491e-06     Tr[DP]  1.484570e-01
+ iter:  43:2        |ddm|: 4.000305e-06     Tr[DP]  1.484570e-01
+ iter:  44:1        |ddm|: 1.387719e-05     Tr[DP]  1.484570e-01
+ iter:  44:2        |ddm|: 1.585225e-05     Tr[DP]  1.484570e-01
+ iter:  45:1        |ddm|: 7.222691e-06     Tr[DP]  1.484570e-01
+ iter:  45:2        |ddm|: 6.906044e-06     Tr[DP]  1.484570e-01
+ iter:  46:1        |ddm|: 4.726050e-06     Tr[DP]  1.484570e-01
+ iter:  46:2        |ddm|: 6.286698e-06     Tr[DP]  1.484570e-01
+ iter:  47:1        |ddm|: 4.206195e-06     Tr[DP]  1.484570e-01
+ iter:  47:2        |ddm|: 5.518181e-06     Tr[DP]  1.484570e-01
+ iter:  48:1        |ddm|: 3.792853e-06     Tr[DP]  1.484570e-01
+ iter:  48:2        |ddm|: 4.702876e-06     Tr[DP]  1.484570e-01
+ iter:  49:1        |ddm|: 3.692738e-06     Tr[DP]  1.484570e-01
+ iter:  49:2        |ddm|: 5.848138e-06     Tr[DP]  1.484570e-01
+ iter:  50:1        |ddm|: 3.591612e-06     Tr[DP]  1.484570e-01
+ iter:  50:2        |ddm|: 4.238062e-06     Tr[DP]  1.484570e-01
+ iter:  51:1        |ddm|: 3.497996e-06     Tr[DP]  1.484570e-01
+ iter:  51:2        |ddm|: 2.940102e-06     Tr[DP]  1.484570e-01
+ iter:  52:1        |ddm|: 2.271289e-06     Tr[DP]  1.484570e-01
+ iter:  52:2        |ddm|: 3.373369e-06     Tr[DP]  1.484570e-01
+ iter:  53:1        |ddm|: 2.322517e-06     Tr[DP]  1.484570e-01
+ iter:  53:2        |ddm|: 3.599102e-06     Tr[DP]  1.484570e-01
+ iter:  54:1        |ddm|: 2.485868e-06     Tr[DP]  1.484570e-01
+ iter:  54:2        |ddm|: 3.862605e-06     Tr[DP]  1.484570e-01
+ iter:  55:1        |ddm|: 2.450414e-06     Tr[DP]  1.484570e-01
+ iter:  55:2        |ddm|: 3.587754e-06     Tr[DP]  1.484570e-01
+ iter:  56:1        |ddm|: 2.689920e-06     Tr[DP]  1.484570e-01
+ iter:  56:2        |ddm|: 4.160406e-06     Tr[DP]  1.484570e-01
+ iter:  57:1        |ddm|: 7.450615e-06     Tr[DP]  1.484570e-01
+ iter:  57:2        |ddm|: 9.204060e-06     Tr[DP]  1.484570e-01
+ iter:  58:1        |ddm|: 4.906352e-06     Tr[DP]  1.484570e-01
+ iter:  58:2        |ddm|: 4.536431e-06     Tr[DP]  1.484570e-01
+ iter:  59:1        |ddm|: 3.261205e-06     Tr[DP]  1.484570e-01
+ iter:  59:2        |ddm|: 4.324681e-06     Tr[DP]  1.484570e-01
+ iter:  60:1        |ddm|: 2.995981e-06     Tr[DP]  1.484570e-01
+ iter:  60:2        |ddm|: 4.536692e-06     Tr[DP]  1.484570e-01
+ iter:  61:1        |ddm|: 2.895091e-06     Tr[DP]  1.484570e-01
+ iter:  61:2        |ddm|: 3.875160e-06     Tr[DP]  1.484570e-01
+ iter:  62:1        |ddm|: 2.735070e-06     Tr[DP]  1.484570e-01
+ iter:  62:2        |ddm|: 3.065997e-06     Tr[DP]  1.484570e-01
+ iter:  63:1        |ddm|: 2.205382e-06     Tr[DP]  1.484570e-01
+ iter:  63:2        |ddm|: 3.057156e-06     Tr[DP]  1.484570e-01
+ iter:  64:1        |ddm|: 2.398705e-06     Tr[DP]  1.484570e-01
+ iter:  64:2        |ddm|: 2.061670e-06     Tr[DP]  1.484570e-01
+ iter:  65:1        |ddm|: 1.605286e-06     Tr[DP]  1.484570e-01
+ iter:  65:2        |ddm|: 2.102337e-06     Tr[DP]  1.484570e-01
+ iter:  66:1        |ddm|: 1.633310e-06     Tr[DP]  1.484570e-01
+ iter:  66:2        |ddm|: 2.587588e-06     Tr[DP]  1.484570e-01
+ iter:  67:1        |ddm|: 1.951714e-06     Tr[DP]  1.484570e-01
+ iter:  67:2        |ddm|: 2.996525e-06     Tr[DP]  1.484570e-01
+ iter:  68:1        |ddm|: 2.463983e-06     Tr[DP]  1.484570e-01
+ iter:  68:2        |ddm|: 3.670586e-06     Tr[DP]  1.484570e-01
+ iter:  69:1        |ddm|: 2.446671e-06     Tr[DP]  1.484570e-01
+ iter:  69:2        |ddm|: 3.598187e-06     Tr[DP]  1.484570e-01
+ iter:  70:1        |ddm|: 2.370457e-06     Tr[DP]  1.484570e-01
+ iter:  70:2        |ddm|: 3.470545e-06     Tr[DP]  1.484570e-01
+ iter:  71:1        |ddm|: 2.229779e-06     Tr[DP]  1.484570e-01
+ iter:  71:2        |ddm|: 3.044278e-06     Tr[DP]  1.484570e-01
+ iter:  72:1        |ddm|: 2.058246e-06     Tr[DP]  1.484570e-01
+ iter:  72:2        |ddm|: 2.949963e-06     Tr[DP]  1.484570e-01
+ iter:  73:1        |ddm|: 1.953316e-06     Tr[DP]  1.484570e-01
+ iter:  73:2        |ddm|: 2.744474e-06     Tr[DP]  1.484570e-01
+ iter:  74:1        |ddm|: 1.899812e-06     Tr[DP]  1.484570e-01
+ iter:  74:2        |ddm|: 2.848092e-06     Tr[DP]  1.484570e-01
+ iter:  75:1        |ddm|: 1.934622e-06     Tr[DP]  1.484570e-01
+ iter:  75:2        |ddm|: 2.030641e-06     Tr[DP]  1.484570e-01
+ iter:  76:1        |ddm|: 1.839410e-06     Tr[DP]  1.484570e-01
+ iter:  76:2        |ddm|: 1.371727e-06     Tr[DP]  1.484570e-01
+ iter:  77:1        |ddm|: 1.144653e-06     Tr[DP]  1.484570e-01
+ iter:  77:2        |ddm|: 1.790619e-06     Tr[DP]  1.484570e-01
+ iter:  78:1        |ddm|: 1.181739e-06     Tr[DP]  1.484570e-01
+ iter:  78:2        |ddm|: 1.689282e-06     Tr[DP]  1.484570e-01
+ iter:  79:1        |ddm|: 1.165328e-06     Tr[DP]  1.484570e-01
+ iter:  79:2        |ddm|: 1.684836e-06     Tr[DP]  1.484570e-01
+ iter:  80:1        |ddm|: 1.145131e-06     Tr[DP]  1.484570e-01
+ iter:  80:2        |ddm|: 1.617907e-06     Tr[DP]  1.484570e-01
+ iter:  81:1        |ddm|: 1.182985e-06     Tr[DP]  1.484570e-01
+ iter:  81:2        |ddm|: 1.791629e-06     Tr[DP]  1.484570e-01
+ iter:  82:1        |ddm|: 2.488966e-06     Tr[DP]  1.484570e-01
+ iter:  82:2        |ddm|: 3.358241e-06     Tr[DP]  1.484570e-01
+ iter:  83:1        |ddm|: 1.882135e-06     Tr[DP]  1.484570e-01
+ iter:  83:2        |ddm|: 2.015861e-06     Tr[DP]  1.484570e-01
+ iter:  84:1        |ddm|: 1.434108e-06     Tr[DP]  1.484570e-01
+ iter:  84:2        |ddm|: 1.877400e-06     Tr[DP]  1.484570e-01
+ iter:  85:1        |ddm|: 1.286917e-06     Tr[DP]  1.484570e-01
+ iter:  85:2        |ddm|: 1.731000e-06     Tr[DP]  1.484570e-01
+ iter:  86:1        |ddm|: 1.184755e-06     Tr[DP]  1.484570e-01
+ iter:  86:2        |ddm|: 1.577420e-06     Tr[DP]  1.484570e-01
+ iter:  87:1        |ddm|: 1.126443e-06     Tr[DP]  1.484570e-01
+ iter:  87:2        |ddm|: 1.271675e-06     Tr[DP]  1.484570e-01
+ iter:  88:1        |ddm|: 9.359209e-07     Tr[DP]  1.484570e-01
+ iter:  88:2        |ddm|: 1.199159e-06     Tr[DP]  1.484570e-01
+ iter:  89:1        |ddm|: 9.531219e-07     Tr[DP]  1.484570e-01
+ iter:  89:2        |ddm|: 8.651229e-07     Tr[DP]  1.484570e-01
+ iter:  90:1        |ddm|: 6.842055e-07     Tr[DP]  1.484570e-01
+ iter:  90:2        |ddm|: 1.020128e-06     Tr[DP]  1.484570e-01
+ iter:  91:1        |ddm|: 6.959590e-07     Tr[DP]  1.484570e-01
+ iter:  91:2        |ddm|: 9.535902e-07     Tr[DP]  1.484570e-01
+ iter:  92:1        |ddm|: 7.306267e-07     Tr[DP]  1.484570e-01
+ iter:  92:2        |ddm|: 1.113828e-06     Tr[DP]  1.484570e-01
+ iter:  93:1        |ddm|: 9.319788e-07     Tr[DP]  1.484570e-01
+ iter:  93:2        |ddm|: 1.399155e-06     Tr[DP]  1.484570e-01
+ iter:  94:1        |ddm|: 1.031500e-06     Tr[DP]  1.484570e-01
+ iter:  94:2        |ddm|: 1.522661e-06     Tr[DP]  1.484570e-01
+ iter:  95:1        |ddm|: 9.992779e-07     Tr[DP]  1.484570e-01
+ iter:  95:2        |ddm|: 1.433704e-06     Tr[DP]  1.484570e-01
+ iter:  96:1        |ddm|: 9.362687e-07     Tr[DP]  1.484570e-01
+ iter:  96:2        |ddm|: 1.255634e-06     Tr[DP]  1.484570e-01
+ iter:  97:1        |ddm|: 8.529028e-07     Tr[DP]  1.484570e-01
+ iter:  97:2        |ddm|: 1.160342e-06     Tr[DP]  1.484570e-01
+ iter:  98:1        |ddm|: 7.920234e-07     Tr[DP]  1.484570e-01
+ iter:  98:2        |ddm|: 1.103067e-06     Tr[DP]  1.484570e-01
+ iter:  99:1        |ddm|: 7.524004e-07     Tr[DP]  1.484570e-01
+ iter:  99:2        |ddm|: 1.062343e-06     Tr[DP]  1.484570e-01
+ iter: 100:1        |ddm|: 1.129139e-06     Tr[DP]  1.484570e-01
+ iter: 100:2        |ddm|: 5.270054e-07     Tr[DP]  1.484570e-01
+ iter: 101:1        |ddm|: 5.604395e-07     Tr[DP]  1.484570e-01
+ iter: 101:2        |ddm|: 8.974118e-07     Tr[DP]  1.484570e-01
+ iter: 102:1        |ddm|: 5.598773e-07     Tr[DP]  1.484570e-01
+ iter: 102:2        |ddm|: 8.034993e-07     Tr[DP]  1.484570e-01
+ iter: 103:1        |ddm|: 5.528042e-07     Tr[DP]  1.484570e-01
+ iter: 103:2        |ddm|: 7.936906e-07     Tr[DP]  1.484570e-01
+ iter: 104:1        |ddm|: 5.567144e-07     Tr[DP]  1.484570e-01
+ iter: 104:2        |ddm|: 8.199673e-07     Tr[DP]  1.484570e-01
+ iter: 105:1        |ddm|: 5.904589e-07     Tr[DP]  1.484570e-01
+ iter: 105:2        |ddm|: 8.897447e-07     Tr[DP]  1.484570e-01
+ iter: 106:1        |ddm|: 6.448833e-07     Tr[DP]  1.484570e-01
+ iter: 106:2        |ddm|: 9.728275e-07     Tr[DP]  1.484570e-01
+ iter: 107:1        |ddm|: 6.607000e-07     Tr[DP]  1.484570e-01
+ iter: 107:2        |ddm|: 9.626247e-07     Tr[DP]  1.484570e-01
+ iter: 108:1        |ddm|: 6.234186e-07     Tr[DP]  1.484570e-01
+ iter: 108:2        |ddm|: 8.003676e-07     Tr[DP]  1.484570e-01
+ iter: 109:1        |ddm|: 5.526492e-07     Tr[DP]  1.484570e-01
+ iter: 109:2        |ddm|: 7.444358e-07     Tr[DP]  1.484570e-01
+ iter: 110:1        |ddm|: 5.106475e-07     Tr[DP]  1.484570e-01
+ iter: 110:2        |ddm|: 6.889804e-07     Tr[DP]  1.484570e-01
+ iter: 111:1        |ddm|: 4.950873e-07     Tr[DP]  1.484570e-01
+ iter: 111:2        |ddm|: 5.386809e-07     Tr[DP]  1.484570e-01
+ iter: 112:1        |ddm|: 4.493190e-07     Tr[DP]  1.484570e-01
+ iter: 112:2        |ddm|: 4.057580e-07     Tr[DP]  1.484570e-01
+ iter: 113:1        |ddm|: 3.212963e-07     Tr[DP]  1.484570e-01
+ iter: 113:2        |ddm|: 4.718622e-07     Tr[DP]  1.484570e-01
+ iter: 114:1        |ddm|: 3.248953e-07     Tr[DP]  1.484570e-01
+ iter: 114:2        |ddm|: 4.371441e-07     Tr[DP]  1.484570e-01
+ iter: 115:1        |ddm|: 3.095091e-07     Tr[DP]  1.484570e-01
+ iter: 115:2        |ddm|: 4.215404e-07     Tr[DP]  1.484570e-01
+ iter: 116:1        |ddm|: 2.980243e-07     Tr[DP]  1.484570e-01
+ iter: 116:2        |ddm|: 4.104658e-07     Tr[DP]  1.484570e-01
+ iter: 117:1        |ddm|: 3.653604e-07     Tr[DP]  1.484570e-01
+ iter: 117:2        |ddm|: 5.568799e-07     Tr[DP]  1.484570e-01
+ iter: 118:1        |ddm|: 5.954561e-07     Tr[DP]  1.484570e-01
+ iter: 118:2        |ddm|: 8.356730e-07     Tr[DP]  1.484570e-01
+ iter: 119:1        |ddm|: 4.941055e-07     Tr[DP]  1.484570e-01
+ iter: 119:2        |ddm|: 5.111864e-07     Tr[DP]  1.484570e-01
+ iter: 120:1        |ddm|: 3.719272e-07     Tr[DP]  1.484570e-01
+ iter: 120:2        |ddm|: 4.901265e-07     Tr[DP]  1.484570e-01
+ iter: 121:1        |ddm|: 3.388028e-07     Tr[DP]  1.484570e-01
+ iter: 121:2        |ddm|: 4.577592e-07     Tr[DP]  1.484570e-01
+ iter: 122:1        |ddm|: 3.155809e-07     Tr[DP]  1.484570e-01
+ iter: 122:2        |ddm|: 4.203353e-07     Tr[DP]  1.484570e-01
+ iter: 123:1        |ddm|: 2.964357e-07     Tr[DP]  1.484570e-01
+ iter: 123:2        |ddm|: 3.568957e-07     Tr[DP]  1.484570e-01
+ iter: 124:1        |ddm|: 2.617218e-07     Tr[DP]  1.484570e-01
+ iter: 124:2        |ddm|: 3.171721e-07     Tr[DP]  1.484570e-01
+ iter: 125:1        |ddm|: 2.819178e-07     Tr[DP]  1.484570e-01
+ iter: 125:2        |ddm|: 2.038905e-07     Tr[DP]  1.484570e-01
+ iter: 126:1        |ddm|: 1.981113e-07     Tr[DP]  1.484570e-01
+ iter: 126:2        |ddm|: 3.183789e-07     Tr[DP]  1.484570e-01
+ iter: 127:1        |ddm|: 2.097533e-07     Tr[DP]  1.484570e-01
+ iter: 127:2        |ddm|: 2.959663e-07     Tr[DP]  1.484570e-01
+ iter: 128:1        |ddm|: 2.321396e-07     Tr[DP]  1.484570e-01
+ iter: 128:2        |ddm|: 3.522709e-07     Tr[DP]  1.484570e-01
+ iter: 129:1        |ddm|: 3.054193e-07     Tr[DP]  1.484570e-01
+ iter: 129:2        |ddm|: 4.518841e-07     Tr[DP]  1.484570e-01
+ iter: 130:1        |ddm|: 2.919305e-07     Tr[DP]  1.484570e-01
+ iter: 130:2        |ddm|: 4.111211e-07     Tr[DP]  1.484570e-01
+ iter: 131:1        |ddm|: 2.709419e-07     Tr[DP]  1.484570e-01
+ iter: 131:2        |ddm|: 3.684828e-07     Tr[DP]  1.484570e-01
+ iter: 132:1        |ddm|: 2.493799e-07     Tr[DP]  1.484570e-01
+ iter: 132:2        |ddm|: 3.438743e-07     Tr[DP]  1.484570e-01
+ iter: 133:1        |ddm|: 2.329377e-07     Tr[DP]  1.484570e-01
+ iter: 133:2        |ddm|: 3.171742e-07     Tr[DP]  1.484570e-01
+ iter: 134:1        |ddm|: 2.169749e-07     Tr[DP]  1.484570e-01
+ iter: 134:2        |ddm|: 2.942628e-07     Tr[DP]  1.484570e-01
+ iter: 135:1        |ddm|: 2.036613e-07     Tr[DP]  1.484570e-01
+ iter: 135:2        |ddm|: 2.363125e-07     Tr[DP]  1.484570e-01
+ iter: 136:1        |ddm|: 1.714024e-07     Tr[DP]  1.484570e-01
+ iter: 136:2        |ddm|: 2.441527e-07     Tr[DP]  1.484570e-01
+ iter: 137:1        |ddm|: 1.683322e-07     Tr[DP]  1.484570e-01
+ iter: 137:2        |ddm|: 2.406998e-07     Tr[DP]  1.484570e-01
+ iter: 138:1        |ddm|: 1.651995e-07     Tr[DP]  1.484570e-01
+ iter: 138:2        |ddm|: 2.337232e-07     Tr[DP]  1.484570e-01
+ iter: 139:1        |ddm|: 1.606350e-07     Tr[DP]  1.484570e-01
+ iter: 139:2        |ddm|: 2.256747e-07     Tr[DP]  1.484570e-01
+ iter: 140:1        |ddm|: 1.554271e-07     Tr[DP]  1.484570e-01
+ iter: 140:2        |ddm|: 2.174019e-07     Tr[DP]  1.484570e-01
+ iter: 141:1        |ddm|: 1.500602e-07     Tr[DP]  1.484570e-01
+ iter: 141:2        |ddm|: 2.093859e-07     Tr[DP]  1.484570e-01
+ iter: 142:1        |ddm|: 1.448801e-07     Tr[DP]  1.484570e-01
+ iter: 142:2        |ddm|: 2.027216e-07     Tr[DP]  1.484570e-01
+ iter: 143:1        |ddm|: 1.400749e-07     Tr[DP]  1.484570e-01
+ iter: 143:2        |ddm|: 1.962467e-07     Tr[DP]  1.484570e-01
+ iter: 144:1        |ddm|: 1.353665e-07     Tr[DP]  1.484570e-01
+ iter: 144:2        |ddm|: 1.897625e-07     Tr[DP]  1.484570e-01
+ iter: 145:1        |ddm|: 1.307643e-07     Tr[DP]  1.484570e-01
+ iter: 145:2        |ddm|: 1.833753e-07     Tr[DP]  1.484570e-01
+ iter: 146:1        |ddm|: 1.263018e-07     Tr[DP]  1.484570e-01
+ iter: 146:2        |ddm|: 1.771746e-07     Tr[DP]  1.484570e-01
+ iter: 147:1        |ddm|: 1.220089e-07     Tr[DP]  1.484570e-01
+ iter: 147:2        |ddm|: 1.711982e-07     Tr[DP]  1.484570e-01
+ iter: 148:1        |ddm|: 1.178985e-07     Tr[DP]  1.484570e-01
+ iter: 148:2        |ddm|: 1.654695e-07     Tr[DP]  1.484570e-01
+ iter: 149:1        |ddm|: 1.139568e-07     Tr[DP]  1.484570e-01
+ iter: 149:2        |ddm|: 1.599669e-07     Tr[DP]  1.484570e-01
+ iter: 150:1        |ddm|: 1.101474e-07     Tr[DP]  1.484570e-01
+ iter: 150:2        |ddm|: 1.546547e-07     Tr[DP]  1.484570e-01
+ iter: 151:1        |ddm|: 1.064537e-07     Tr[DP]  1.484570e-01
+ iter: 151:2        |ddm|: 1.495131e-07     Tr[DP]  1.484570e-01
+ iter: 152:1        |ddm|: 1.028736e-07     Tr[DP]  1.484570e-01
+ iter: 152:2        |ddm|: 1.445342e-07     Tr[DP]  1.484570e-01
+ iter: 153:1        |ddm|: 9.940842e-08     Tr[DP]  1.484570e-01
+ iter: 153:2        |ddm|: 1.397150e-07     Tr[DP]  1.484570e-01
+ iter: 154:1        |ddm|: 9.605947e-08     Tr[DP]  1.484570e-01
+ iter: 154:2        |ddm|: 1.350533e-07     Tr[DP]  1.484570e-01
+ iter: 155:1        |ddm|: 9.282652e-08     Tr[DP]  1.484570e-01
+ iter: 155:2        |ddm|: 1.305451e-07     Tr[DP]  1.484570e-01
+ iter: 156:1        |ddm|: 8.970707e-08     Tr[DP]  1.484570e-01
+ iter: 156:2        |ddm|: 1.261887e-07     Tr[DP]  1.484570e-01
+ iter: 157:1        |ddm|: 8.669615e-08     Tr[DP]  1.484570e-01
+ iter: 157:2        |ddm|: 1.219801e-07     Tr[DP]  1.484570e-01
+ iter: 158:1        |ddm|: 8.378827e-08     Tr[DP]  1.484570e-01
+ iter: 158:2        |ddm|: 1.179139e-07     Tr[DP]  1.484570e-01
+ iter: 159:1        |ddm|: 8.097867e-08     Tr[DP]  1.484570e-01
+ iter: 159:2        |ddm|: 1.139840e-07     Tr[DP]  1.484570e-01
+ iter: 160:1        |ddm|: 7.826328e-08     Tr[DP]  1.484570e-01
+ iter: 160:2        |ddm|: 1.101850e-07     Tr[DP]  1.484570e-01
+ iter: 161:1        |ddm|: 7.563890e-08     Tr[DP]  1.484570e-01
+ iter: 161:2        |ddm|: 1.065121e-07     Tr[DP]  1.484570e-01
+ iter: 162:1        |ddm|: 7.310264e-08     Tr[DP]  1.484570e-01
+ iter: 162:2        |ddm|: 1.029612e-07     Tr[DP]  1.484570e-01
+ iter: 163:1        |ddm|: 7.065201e-08     Tr[DP]  1.484570e-01
+ iter: 163:2        |ddm|: 9.952813e-08     Tr[DP]  1.484570e-01
+ iter: 164:1        |ddm|: 6.828434e-08     Tr[DP]  1.484570e-01
+ iter: 164:2        |ddm|: 9.620928e-08     Tr[DP]  1.484570e-01
+ iter: 165:1        |ddm|: 6.599690e-08     Tr[DP]  1.484570e-01
+ iter: 165:2        |ddm|: 9.300140e-08     Tr[DP]  1.484570e-01
+ iter: 166:1        |ddm|: 6.378688e-08     Tr[DP]  1.484570e-01
+ iter: 166:2        |ddm|: 8.990062e-08     Tr[DP]  1.484570e-01
+ iter: 167:1        |ddm|: 6.165142e-08     Tr[DP]  1.484570e-01
+ iter: 167:2        |ddm|: 8.690348e-08     Tr[DP]  1.484570e-01
+ iter: 168:1        |ddm|: 5.958789e-08     Tr[DP]  1.484570e-01
+ iter: 168:2        |ddm|: 8.400622e-08     Tr[DP]  1.484570e-01
+ iter: 169:1        |ddm|: 5.759371e-08     Tr[DP]  1.484570e-01
+ iter: 169:2        |ddm|: 8.120560e-08     Tr[DP]  1.484570e-01
+ iter: 170:1        |ddm|: 5.566656e-08     Tr[DP]  1.484570e-01
+ iter: 170:2        |ddm|: 7.849846e-08     Tr[DP]  1.484570e-01
+ iter: 171:1        |ddm|: 5.380417e-08     Tr[DP]  1.484570e-01
+ iter: 171:2        |ddm|: 7.588135e-08     Tr[DP]  1.484570e-01
+ iter: 172:1        |ddm|: 5.200439e-08     Tr[DP]  1.484570e-01
+ iter: 172:2        |ddm|: 7.335150e-08     Tr[DP]  1.484570e-01
+ iter: 173:1        |ddm|: 5.026510e-08     Tr[DP]  1.484570e-01
+ iter: 173:2        |ddm|: 7.090586e-08     Tr[DP]  1.484570e-01
+ iter: 174:1        |ddm|: 4.858432e-08     Tr[DP]  1.484570e-01
+ iter: 174:2        |ddm|: 6.854187e-08     Tr[DP]  1.484570e-01
+ iter: 175:1        |ddm|: 4.695999e-08     Tr[DP]  1.484570e-01
+ iter: 175:2        |ddm|: 6.625676e-08     Tr[DP]  1.484570e-01
+ iter: 176:1        |ddm|: 4.539020e-08     Tr[DP]  1.484570e-01
+ iter: 176:2        |ddm|: 6.404772e-08     Tr[DP]  1.484570e-01
+ iter: 177:1        |ddm|: 4.387308e-08     Tr[DP]  1.484570e-01
+ iter: 177:2        |ddm|: 6.191241e-08     Tr[DP]  1.484570e-01
+ iter: 178:1        |ddm|: 4.240685e-08     Tr[DP]  1.484570e-01
+ iter: 178:2        |ddm|: 5.984832e-08     Tr[DP]  1.484570e-01
+ iter: 179:1        |ddm|: 4.098979e-08     Tr[DP]  1.484570e-01
+ iter: 179:2        |ddm|: 5.785308e-08     Tr[DP]  1.484570e-01
+ iter: 180:1        |ddm|: 3.962019e-08     Tr[DP]  1.484570e-01
+ iter: 180:2        |ddm|: 5.592433e-08     Tr[DP]  1.484570e-01
+ iter: 181:1        |ddm|: 3.829650e-08     Tr[DP]  1.484570e-01
+ iter: 181:2        |ddm|: 5.405980e-08     Tr[DP]  1.484570e-01
+ iter: 182:1        |ddm|: 3.701723e-08     Tr[DP]  1.484570e-01
+ iter: 182:2        |ddm|: 5.225749e-08     Tr[DP]  1.484570e-01
+ iter: 183:1        |ddm|: 3.578078e-08     Tr[DP]  1.484570e-01
+ iter: 183:2        |ddm|: 5.051524e-08     Tr[DP]  1.484570e-01
+ iter: 184:1        |ddm|: 3.458572e-08     Tr[DP]  1.484570e-01
+ iter: 184:2        |ddm|: 4.883106e-08     Tr[DP]  1.484570e-01
+ iter: 185:1        |ddm|: 3.343072e-08     Tr[DP]  1.484570e-01
+ iter: 185:2        |ddm|: 4.720302e-08     Tr[DP]  1.484570e-01
+ iter: 186:1        |ddm|: 3.231437e-08     Tr[DP]  1.484570e-01
+ iter: 186:2        |ddm|: 4.562929e-08     Tr[DP]  1.484570e-01
+ iter: 187:1        |ddm|: 3.123539e-08     Tr[DP]  1.484570e-01
+ iter: 187:2        |ddm|: 4.410812e-08     Tr[DP]  1.484570e-01
+ iter: 188:1        |ddm|: 3.019249e-08     Tr[DP]  1.484570e-01
+ iter: 188:2        |ddm|: 4.263754e-08     Tr[DP]  1.484570e-01
+ iter: 189:1        |ddm|: 2.918450e-08     Tr[DP]  1.484570e-01
+ iter: 189:2        |ddm|: 4.121609e-08     Tr[DP]  1.484570e-01
+ iter: 190:1        |ddm|: 2.821020e-08     Tr[DP]  1.484570e-01
+ iter: 190:2        |ddm|: 3.984190e-08     Tr[DP]  1.484570e-01
+ iter: 191:1        |ddm|: 2.726851e-08     Tr[DP]  1.484570e-01
+ iter: 191:2        |ddm|: 3.851360e-08     Tr[DP]  1.484570e-01
+ iter: 192:1        |ddm|: 2.635831e-08     Tr[DP]  1.484570e-01
+ iter: 192:2        |ddm|: 3.722957e-08     Tr[DP]  1.484570e-01
+ iter: 193:1        |ddm|: 2.547852e-08     Tr[DP]  1.484570e-01
+ iter: 193:2        |ddm|: 3.598824e-08     Tr[DP]  1.484570e-01
+ iter: 194:1        |ddm|: 2.462816e-08     Tr[DP]  1.484570e-01
+ iter: 194:2        |ddm|: 3.478840e-08     Tr[DP]  1.484570e-01
+ iter: 195:1        |ddm|: 2.380625e-08     Tr[DP]  1.484570e-01
+ iter: 195:2        |ddm|: 3.362852e-08     Tr[DP]  1.484570e-01
+ iter: 196:1        |ddm|: 2.301177e-08     Tr[DP]  1.484570e-01
+ iter: 196:2        |ddm|: 3.250742e-08     Tr[DP]  1.484570e-01
+ iter: 197:1        |ddm|: 2.224385e-08     Tr[DP]  1.484570e-01
+ iter: 197:2        |ddm|: 3.142359e-08     Tr[DP]  1.484570e-01
+ iter: 198:1        |ddm|: 2.150161e-08     Tr[DP]  1.484570e-01
+ iter: 198:2        |ddm|: 3.037594e-08     Tr[DP]  1.484570e-01
+ iter: 199:1        |ddm|: 2.078418e-08     Tr[DP]  1.484570e-01
+ iter: 199:2        |ddm|: 2.936323e-08     Tr[DP]  1.484570e-01
+ iter: 200:1        |ddm|: 2.009068e-08     Tr[DP]  1.484570e-01
+ iter: 200:2        |ddm|: 2.838434e-08     Tr[DP]  1.484570e-01
+ iter: 201:1        |ddm|: 1.942034e-08     Tr[DP]  1.484570e-01
+ iter: 201:2        |ddm|: 2.743803e-08     Tr[DP]  1.484570e-01
+ iter: 202:1        |ddm|: 1.877244e-08     Tr[DP]  1.484570e-01
+ iter: 202:2        |ddm|: 2.652322e-08     Tr[DP]  1.484570e-01
+ iter: 203:1        |ddm|: 1.814613e-08     Tr[DP]  1.484570e-01
+ iter: 203:2        |ddm|: 2.563901e-08     Tr[DP]  1.484570e-01
+ iter: 204:1        |ddm|: 1.754074e-08     Tr[DP]  1.484570e-01
+ iter: 204:2        |ddm|: 2.478414e-08     Tr[DP]  1.484570e-01
+ iter: 205:1        |ddm|: 1.695559e-08     Tr[DP]  1.484570e-01
+ iter: 205:2        |ddm|: 2.395785e-08     Tr[DP]  1.484570e-01
+ iter: 206:1        |ddm|: 1.638995e-08     Tr[DP]  1.484570e-01
+ iter: 206:2        |ddm|: 2.315904e-08     Tr[DP]  1.484570e-01
+ iter: 207:1        |ddm|: 1.584322e-08     Tr[DP]  1.484570e-01
+ iter: 207:2        |ddm|: 2.238687e-08     Tr[DP]  1.484570e-01
+ iter: 208:1        |ddm|: 1.531472e-08     Tr[DP]  1.484570e-01
+ iter: 208:2        |ddm|: 2.164058e-08     Tr[DP]  1.484570e-01
+ iter: 209:1        |ddm|: 1.480386e-08     Tr[DP]  1.484570e-01
+ iter: 209:2        |ddm|: 2.091902e-08     Tr[DP]  1.484570e-01
+ iter: 210:1        |ddm|: 1.431008e-08     Tr[DP]  1.484570e-01
+ iter: 210:2        |ddm|: 2.022162e-08     Tr[DP]  1.484570e-01
+ iter: 211:1        |ddm|: 1.383274e-08     Tr[DP]  1.484570e-01
+ iter: 211:2        |ddm|: 1.954742e-08     Tr[DP]  1.484570e-01
+ iter: 212:1        |ddm|: 1.337138e-08     Tr[DP]  1.484570e-01
+ iter: 212:2        |ddm|: 1.889579e-08     Tr[DP]  1.484570e-01
+ iter: 213:1        |ddm|: 1.292539e-08     Tr[DP]  1.484570e-01
+ iter: 213:2        |ddm|: 1.826580e-08     Tr[DP]  1.484570e-01
+ iter: 214:1        |ddm|: 1.249428e-08     Tr[DP]  1.484570e-01
+ iter: 214:2        |ddm|: 1.765673e-08     Tr[DP]  1.484570e-01
+ iter: 215:1        |ddm|: 1.207759e-08     Tr[DP]  1.484570e-01
+ iter: 215:2        |ddm|: 1.706810e-08     Tr[DP]  1.484570e-01
+ iter: 216:1        |ddm|: 1.167477e-08     Tr[DP]  1.484570e-01
+ iter: 216:2        |ddm|: 1.649899e-08     Tr[DP]  1.484570e-01
+ iter: 217:1        |ddm|: 1.128541e-08     Tr[DP]  1.484570e-01
+ iter: 217:2        |ddm|: 1.594901e-08     Tr[DP]  1.484570e-01
+ iter: 218:1        |ddm|: 1.090905e-08     Tr[DP]  1.484570e-01
+ iter: 218:2        |ddm|: 1.541720e-08     Tr[DP]  1.484570e-01
+ iter: 219:1        |ddm|: 1.054522e-08     Tr[DP]  1.484570e-01
+ iter: 219:2        |ddm|: 1.490313e-08     Tr[DP]  1.484570e-01
+ iter: 220:1        |ddm|: 1.019354e-08     Tr[DP]  1.484570e-01
+ iter: 220:2        |ddm|: 1.440638e-08     Tr[DP]  1.484570e-01
+ iter: 221:1        |ddm|: 9.853608e-09     Tr[DP]  1.484570e-01
+ iter: 221:2        |ddm|: 1.392605e-08     Tr[DP]  1.484570e-01
+ iter: 222:1        |ddm|: 9.524974e-09     Tr[DP]  1.484570e-01
+ iter: 222:2        |ddm|: 1.346177e-08     Tr[DP]  1.484570e-01
+ iter: 223:1        |ddm|: 9.207351e-09     Tr[DP]  1.484570e-01
+ iter: 223:2        |ddm|: 1.301290e-08     Tr[DP]  1.484570e-01
+ iter: 224:1        |ddm|: 8.900311e-09     Tr[DP]  1.484570e-01
+ iter: 224:2        |ddm|: 1.257904e-08     Tr[DP]  1.484570e-01
+ iter: 225:1        |ddm|: 8.603503e-09     Tr[DP]  1.484570e-01
+ iter: 225:2        |ddm|: 1.215972e-08     Tr[DP]  1.484570e-01
+ iter: 226:1        |ddm|: 8.316602e-09     Tr[DP]  1.484570e-01
+ iter: 226:2        |ddm|: 1.175423e-08     Tr[DP]  1.484570e-01
+ iter: 227:1        |ddm|: 8.039267e-09     Tr[DP]  1.484570e-01
+ iter: 227:2        |ddm|: 1.136238e-08     Tr[DP]  1.484570e-01
+ iter: 228:1        |ddm|: 7.771202e-09     Tr[DP]  1.484570e-01
+ iter: 228:2        |ddm|: 1.098359e-08     Tr[DP]  1.484570e-01
+ iter: 229:1        |ddm|: 7.512030e-09     Tr[DP]  1.484570e-01
+ iter: 229:2        |ddm|: 1.061731e-08     Tr[DP]  1.484570e-01
+ iter: 230:1        |ddm|: 7.261527e-09     Tr[DP]  1.484570e-01
+ iter: 230:2        |ddm|: 1.026338e-08     Tr[DP]  1.484570e-01
+ iter: 231:1        |ddm|: 7.019427e-09     Tr[DP]  1.484570e-01
+ iter: 231:2        |ddm|: 9.921189e-09     Tr[DP]  1.484570e-01
+ iter: 232:1        |ddm|: 6.785339e-09     Tr[DP]  1.484570e-01
+ iter: 232:2        |ddm|: 9.590385e-09     Tr[DP]  1.484570e-01
+ iter: 233:1        |ddm|: 6.559069e-09     Tr[DP]  1.484570e-01
+ iter: 233:2        |ddm|: 9.270638e-09     Tr[DP]  1.484570e-01
+ iter: 234:1        |ddm|: 6.340366e-09     Tr[DP]  1.484570e-01
+ iter: 234:2        |ddm|: 8.961570e-09     Tr[DP]  1.484570e-01
+ iter: 235:1        |ddm|: 6.128971e-09     Tr[DP]  1.484570e-01
+ iter: 235:2        |ddm|: 8.662849e-09     Tr[DP]  1.484570e-01
+ iter: 236:1        |ddm|: 5.924598e-09     Tr[DP]  1.484570e-01
+ iter: 236:2        |ddm|: 8.373956e-09     Tr[DP]  1.484570e-01
+ iter: 237:1        |ddm|: 5.727032e-09     Tr[DP]  1.484570e-01
+ iter: 237:2        |ddm|: 8.094839e-09     Tr[DP]  1.484570e-01
+ iter: 238:1        |ddm|: 5.536063e-09     Tr[DP]  1.484570e-01
+ iter: 238:2        |ddm|: 7.824933e-09     Tr[DP]  1.484570e-01
+ iter: 239:1        |ddm|: 5.351500e-09     Tr[DP]  1.484570e-01
+ iter: 239:2        |ddm|: 7.564071e-09     Tr[DP]  1.484570e-01
+ iter: 240:1        |ddm|: 5.173044e-09     Tr[DP]  1.484570e-01
+ iter: 240:2        |ddm|: 7.311810e-09     Tr[DP]  1.484570e-01
+ iter: 241:1        |ddm|: 5.000539e-09     Tr[DP]  1.484570e-01
+ iter: 241:2        |ddm|: 7.068117e-09     Tr[DP]  1.484570e-01
+ iter: 242:1        |ddm|: 4.833812e-09     Tr[DP]  1.484570e-01
+ iter: 242:2        |ddm|: 6.832458e-09     Tr[DP]  1.484570e-01
+ iter: 243:1        |ddm|: 4.672647e-09     Tr[DP]  1.484570e-01
+ iter: 243:2        |ddm|: 6.604644e-09     Tr[DP]  1.484570e-01
+ iter: 244:1        |ddm|: 4.516839e-09     Tr[DP]  1.484570e-01
+ iter: 244:2        |ddm|: 6.384502e-09     Tr[DP]  1.484570e-01
+ iter: 245:1        |ddm|: 4.366246e-09     Tr[DP]  1.484570e-01
+ iter: 245:2        |ddm|: 6.171550e-09     Tr[DP]  1.484570e-01
+ iter: 246:1        |ddm|: 4.220663e-09     Tr[DP]  1.484570e-01
+ iter: 246:2        |ddm|: 5.965821e-09     Tr[DP]  1.484570e-01
+ iter: 247:1        |ddm|: 4.079949e-09     Tr[DP]  1.484570e-01
+ iter: 247:2        |ddm|: 5.766864e-09     Tr[DP]  1.484570e-01
+                           Freeze-and-Thaw converged!                           
+
+=================== Subsystem 1 at higher mean-field method ====================
+  subiter:   1      |ddm|: 4.190031e-01
+  subiter:   2      |ddm|: 6.619344e-02
+  subiter:   3      |ddm|: 1.425221e-02
+  subiter:   4      |ddm|: 7.935250e-03
+  subiter:   5      |ddm|: 2.484633e-03
+  subiter:   6      |ddm|: 5.552454e-04
+  subiter:   7      |ddm|: 1.998779e-04
+  subiter:   8      |ddm|: 3.705109e-05
+  subiter:   9      |ddm|: 1.105657e-05
+  subiter:  10      |ddm|: 4.469680e-06
+  subiter:  11      |ddm|: 8.108050e-07
+  subiter:  12      |ddm|: 2.610306e-07
+  subiter:  13      |ddm|: 3.524537e-08
+  subiter:  14      |ddm|: 1.664912e-08
+  subiter:  15      |ddm|: 5.362152e-09
+
+
+******** <class 'pyscf.scf.hf.RHF'> flags ********
+method = RHF
+initial guess = minao
+damping factor = 0
+level shift factor = 0
+DIIS = <class 'pyscf.scf.diis.CDIIS'>
+DIIS start cycle = 1
+DIIS space = 8
+SCF tol = 1e-09
+SCF gradient tol = None
+max. SCF cycles = 100
+direct_scf = True
+direct_scf_tol = 1e-13
+chkfile to save SCF result = /panfs/roc/scratch/graha682/pos_wf_hzfermi/201711_ccpVDZ_NEVPT2_m06_0_5c12h24/tmpG7a_qN
+max_memory 4000 MB (current use 649 MB)
+Set gradient conv threshold to 3.16228e-05
+init E= -185.448461646216
+  HOMO = -0.468509502643614  LUMO = 0.173406477605746
+cycle= 1 E= -185.448461646215  delta_E= 7.39e-13  |g|= 1.6e-09  |ddm|= 7.38e-09
+  HOMO = -0.468509502758719  LUMO = 0.173406477562399
+Extra cycle  E= -185.448461646215  delta_E= -2.27e-13  |g|= 6.41e-10  |ddm|= 2.79e-09
+converged SCF energy = -185.448461646215
+
+
+******** <class 'pyscf.dft.rks.RKS'> flags ********
+method = RKS
+initial guess = atom
+damping factor = 0
+level shift factor = 0.0
+DIIS = <class 'pyscf.scf.diis.CDIIS'>
+DIIS start cycle = 1
+DIIS space = 8
+SCF tol = 1e-08
+SCF gradient tol = 1e-08
+max. SCF cycles = 1
+direct_scf = True
+direct_scf_tol = 1e-13
+chkfile to save SCF result = /panfs/roc/scratch/graha682/pos_wf_hzfermi/201711_ccpVDZ_NEVPT2_m06_0_5c12h24/tmpBmdKkB
+max_memory 4000 MB (current use 649 MB)
+XC functionals = m06
+small_rho_cutoff = 1e-20
+radial grids: Treutler-Ahlrichs (JCP 102, 346 (M4)) radial grids
+becke partition: Becke, JCP, 88, 2547 (1988)
+pruning grids: <function nwchem_prune at 0x178f6e0>
+grids dens level: 4
+symmetrized grids: False
+atomic radii adjust function: <function treutler_atomic_radii_adjust at 0x178f578>
+init E= -186.67071122278
+  HOMO = -0.340901172236341  LUMO = 0.0580776966189577
+cycle= 1 E= -186.67071122278  delta_E= -1.14e-13  |g|= 8.16e-10  |ddm|= 3.94e-09
+  HOMO = -0.340901172236351  LUMO = 0.0580776966189604
+Extra cycle  E= -186.67071122278  delta_E= 5.68e-14  |g|= 3.85e-10  |ddm|= 1.66e-09
+converged SCF energy = -186.67071122278
+ iter: 248:1        |ddm|: 4.760262e-01     Tr[DP]  2.061047e-01
+
+******** <class 'pyscf.mcscf.mc1step.CASSCF'> flags ********
+CAS (1e+1e, 2o), ncore = 18, nvir = 95
+max_cycle_macro = 50
+max_cycle_micro = 4
+conv_tol = 1e-07
+conv_tol_grad = None
+orbital rotation max_stepsize = 0.02
+augmented hessian ah_max_cycle = 30
+augmented hessian ah_conv_tol = 1e-12
+augmented hessian ah_linear dependence = 1e-14
+augmented hessian ah_level shift = 0
+augmented hessian ah_start_tol = 2.5
+augmented hessian ah_start_cycle = 3
+augmented hessian ah_grad_trust_region = 3
+kf_trust_region = 3
+kf_interval = 4
+ci_response_space = 4
+ci_grad_trust_region = 3
+with_dep4 0
+natorb = False
+canonicalization = True
+sorting_mo_energy = False
+chkfile = /panfs/roc/scratch/graha682/pos_wf_hzfermi/201711_ccpVDZ_NEVPT2_m06_0_5c12h24/tmpG7a_qN
+max_memory 4000 MB (current use 656 MB)
+internal_rotation = False
+******** <class 'pyscf.fci.direct_spin1.FCISolver'> flags ********
+max. cycles = 50
+conv_tol = 1e-08
+davidson only = False
+linear dependence = 1e-10
+level shift = 0.001
+max iter space = 12
+max_memory 4000 MB
+nroots = 1
+pspace_size = 400
+spin = None
+CASCI E = -185.448483646581  S^2 = 0.0000000
+Set conv_tol_grad to 0.000316228
+macro iter 1 (6 JK  1 micro), CASSCF E = -185.44849466526  dE = -1.1018679e-05  S^2 = 0.0000000
+               |grad[o]|=9.28e-05  |grad[c]|= 0.00104130354127  |ddm|=0.000219
+macro iter 2 (7 JK  2 micro), CASSCF E = -185.448514225089  dE = -1.9559829e-05  S^2 = 0.0000000
+               |grad[o]|=0.000128  |grad[c]|= 0.000939317604684  |ddm|=0.00116
+macro iter 3 (7 JK  2 micro), CASSCF E = -185.448561240097  dE = -4.7015009e-05  S^2 = 0.0000000
+               |grad[o]|=0.000199  |grad[c]|= 0.00175718265381  |ddm|=0.00187
+macro iter 4 (7 JK  2 micro), CASSCF E = -185.448670592164  dE = -0.00010935207  S^2 = 0.0000000
+               |grad[o]|=0.000377  |grad[c]|= 0.00185421338929  |ddm|=0.000278
+macro iter 5 (7 JK  2 micro), CASSCF E = -185.448893508312  dE = -0.00022291615  S^2 = 0.0000000
+               |grad[o]|=0.000763  |grad[c]|= 0.00231538825997  |ddm|=0.00124
+macro iter 6 (12 JK  3 micro), CASSCF E = -185.449867024394  dE = -0.00097351608  S^2 = 0.0000000
+               |grad[o]|=0.00141  |grad[c]|= 0.0100888260848  |ddm|=0.0116
+macro iter 7 (7 JK  2 micro), CASSCF E = -185.450611590065  dE = -0.00074456567  S^2 = 0.0000000
+               |grad[o]|=0.0036  |grad[c]|= 0.00507371354869  |ddm|=0.00132
+macro iter 8 (21 JK  4 micro), CASSCF E = -185.456876350484  dE = -0.0062647604  S^2 = 0.0000000
+               |grad[o]|=0.00515  |grad[c]|= 0.0414004786505  |ddm|=0.00888
+macro iter 9 (21 JK  4 micro), CASSCF E = -185.463968841675  dE = -0.0070924912  S^2 = 0.0000000
+               |grad[o]|=0.014  |grad[c]|= 0.0190464952677  |ddm|=0.00738
+macro iter 10 (13 JK  4 micro), CASSCF E = -185.464435973945  dE = -0.00046713227  S^2 = 0.0000000
+               |grad[o]|=0.0103  |grad[c]|= 0.00471193660092  |ddm|=0.00188
+macro iter 11 (9 JK  3 micro), CASSCF E = -185.464440426584  dE = -4.4526386e-06  S^2 = 0.0000000
+               |grad[o]|=0.00105  |grad[c]|= 7.26498095773e-05  |ddm|=0.000603
+macro iter 12 (3 JK  1 micro), CASSCF E = -185.464440428313  dE = -1.72966e-09  S^2 = 0.0000000
+               |grad[o]|=3.65e-05  |grad[c]|= 9.43852372598e-06  |ddm|=1.67e-05
+1-step CASSCF converged in 12 macro (120 JK 30 micro) steps
+CASSCF canonicalization
+CASSCF energy = -185.464440428313
+Hartree-Fock Energy:  -185.44846164621515
+CAS Correlation:       -0.01597878209827
+CAS Energy:          -185.46444042831342
+Sr    (-1)',   E = -0.00000000001493
+Si    (+1)',   E = 0.00000000000437
+Sijrs (0)  ,   E = -0.57444386384829
+Sijr  (+1) ,   E = -0.00471279497433
+Srsi  (-1) ,   E = -0.02750029969893
+Srs   (-2) ,   E = -0.00948499556166
+Sij   (+2) ,   E = -0.00024253333212
+Sir   (0)' ,   E = -0.01576597680111
+Nevpt2 Energy = -0.632150464227003
+NEVPT2 =   -0.632150464227003
+Total NEVPT2 = -186.096590892540434
+
+============================== Supermolecular DFT ==============================
+  subiter:   1      |ddm|: 3.946196e+00
+  subiter:   2      |ddm|: 8.819468e-01
+  subiter:   3      |ddm|: 4.927717e-01
+  subiter:   4      |ddm|: 4.794890e-02
+  subiter:   5      |ddm|: 1.922879e-02
+  subiter:   6      |ddm|: 3.731756e-03
+  subiter:   7      |ddm|: 8.256630e-04
+  subiter:   8      |ddm|: 3.021311e-04
+  subiter:   9      |ddm|: 9.249533e-05
+  subiter:  10      |ddm|: 4.009524e-05
+  subiter:  11      |ddm|: 1.192463e-05
+  subiter:  12      |ddm|: 3.743480e-06
+  subiter:  13      |ddm|: 1.609609e-06
+  subiter:  14      |ddm|: 5.922963e-07
+  subiter:  15      |ddm|: 1.541688e-07
+  subiter:  16      |ddm|: 9.629957e-08
+  subiter:  17      |ddm|: 4.764048e-08
+  subiter:  18      |ddm|: 2.777906e-09
+
+
+******** <class 'pyscf.dft.rks.RKS'> flags ********
+method = RKS
+initial guess = atom
+damping factor = 0
+level shift factor = 0.0
+DIIS = <class 'pyscf.scf.diis.CDIIS'>
+DIIS start cycle = 1
+DIIS space = 8
+SCF tol = 1e-08
+SCF gradient tol = 1e-08
+max. SCF cycles = 100
+direct_scf = True
+direct_scf_tol = 1e-13
+chkfile to save SCF result = /panfs/roc/scratch/graha682/pos_wf_hzfermi/201711_ccpVDZ_NEVPT2_m06_0_5c12h24/tmpfZtZ43
+max_memory 4000 MB (current use 669 MB)
+XC functionals = m06
+small_rho_cutoff = 1e-20
+radial grids: Treutler-Ahlrichs (JCP 102, 346 (M4)) radial grids
+becke partition: Becke, JCP, 88, 2547 (1988)
+pruning grids: <function nwchem_prune at 0x178f6e0>
+grids dens level: 4
+symmetrized grids: False
+atomic radii adjust function: <function treutler_atomic_radii_adjust at 0x178f578>
+init E= -471.321327838525
+  HOMO = -0.2659193402421  LUMO = 0.0236355315900051
+cycle= 1 E= -471.321327838525  delta_E= -4.55e-13  |g|= 5.95e-09  |ddm|= 8.64e-09
+  HOMO = -0.265919340340834  LUMO = 0.0236355313591695
+Extra cycle  E= -471.321327838523  delta_E= 2.5e-12  |g|= 1.03e-08  |ddm|= 1.29e-08
+converged SCF energy = -471.321327838523
+Supermolecular DFT   -471.32132783852558
+
+============================== Embedding Energies ==============================
+Subsystem DFT              -186.67071122277974
+Interaction                -284.13283219074793
+DFT-in-DFT                 -470.80354341352768
+Supermolecular DFT         -471.32132783852558
+Difference                   -0.51778442499790
+Corrected DFT-in-DFT       -471.32132783852558
+WF-in-DFT                  -470.22942308328834
+Corrected WF-in-DFT        -470.74720750828624
+================================================================================
+TIMING STATISTICS:
+     overlap integrals      0.06s   ( 0.00%)
+    initial subsystems      0.46s   ( 0.01%)
+           2e matrices   7272.49s   (90.76%)
+      tot. embed. of 1   7302.64s   (91.14%)
+      tot. embed. of 2      1.80s   ( 0.02%)
+       freeze and thaw   7304.47s   (91.16%)
+                   cas      8.95s   ( 0.11%)
+                nevpt2      0.57s   ( 0.01%)
+  interaction energies    695.68s   ( 8.68%)
+                 TOTAL   8012.98s
+================================================================================
+
+********************************************************************************
+*                              END OF CALCULATION                              *
+********************************************************************************
