@@ -317,7 +317,7 @@ def main(filename):
                 molCASfull_cubename = filename.split(".")[0] + "_fullCAS.cube"
                 cubegen.density(inp.mol[0], molCASfull_cubename, casdmao)
     
-                For inner orbitals 
+                # For inner orbitals 
                 ncore = mcSCF.ncore
                 ncas = mcSCF.ncas
                 nocc = ncore + ncas
@@ -326,7 +326,7 @@ def main(filename):
                     mo_occ[ncore + i] = 2.0
                     den = scf.hf.make_rdm1(mcSCF.mo_coeff, mo_occ)
                     mo_occ.fill(0)
-                cubegen.density(inp.mol[0], molCAS_cubename, mcSCF
+                cubegen.density(inp.mol[0], molCAS_cubename, mcSCF)
                 inp.timer.end("Generate Cube file")
     
         if inp.method == 'fci':
