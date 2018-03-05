@@ -5,5 +5,4 @@ import numpy
 
 setup(
     ext_modules = cythonize("*.pyx"),
-    include_dirs=[numpy.get_include()]
 )
