@@ -1,0 +1,171 @@
+********************************************************************************
+*                              PySCF CALCULATION                               *
+********************************************************************************
+
+================================== Input File ==================================
+atoms
+F    0.0000   0.0000    0.0000
+end
+charge -1
+basis 3-21g
+
+scf
+ method ks
+ xc m062x
+ grid 4
+ conv 1e-8
+ grad 1e-8
+ maxiter 100
+ #shift 1.0
+ damp 1.0
+end
+================================== End Input ===================================
+#INFO: **** input file is /home/goodpast/shared/repositories/pyscf_wrapper/run_pySCF.py ****
+#!/usr/bin/env python
+
+def main():
+    '''Python wrapper to read a pySCF input file
+    and run the corresponding calculations.'''
+
+    from argparse import ArgumentParser, RawDescriptionHelpFormatter
+    from textwrap import dedent
+    from read_input import read_input, pstr
+    import sys
+    from simple_timer import timer
+    from scf import do_scf
+    from geomopt import do_geomopt
+    from vfreq import vibrations
+
+    # generate a parser to read the input files
+    parser = ArgumentParser(description=dedent(main.__doc__),
+                            formatter_class=RawDescriptionHelpFormatter)
+    parser.add_argument('input_files', nargs='*', default=sys.stdin,
+                        help='The pySCF input files.')
+    args = parser.parse_args()
+
+    # Cycle through all input files
+    for files in args.input_files:
+
+        # print header
+        pstr ("", delim="*", addline=False)
+        pstr ("PySCF CALCULATION", delim="*", fill=False, addline=False)
+        pstr ("", delim="*", addline=False)
+
+        # get input data
+        inp = read_input(files)
+
+        # start timer
+        inp.timer = timer()
+
+        # do single point energy
+        inp = do_scf(inp)
+
+        # do geomotry optimization
+        if inp.geomopt: inp = do_geomopt(inp)
+
+        if inp.vfreq: vibrations(inp)
+
+        # end timer
+        inp.timer.close()
+
+        # print footer
+        pstr("", delim="*")
+        pstr("END OF CALCULATION", delim="*", fill=False, addline=False)
+        pstr("", delim="*", addline=False)
+
+if __name__=='__main__':
+    main()
+#INFO: ******************** input file end ********************
+
+
+System: ('Linux', 'cn0658', '2.6.32-696.6.3.el6.x86_64', '#1 SMP Wed Jul 12 14:17:22 UTC 2017', 'x86_64', 'x86_64')  Threads 24
+Python 2.7.6 | 64-bit | (default, Sep 15 2014, 17:36:10) 
+[GCC 4.1.2 20080704 (Red Hat 4.1.2-54)]
+numpy 1.10.4  scipy 0.17.0
+Date: Tue Sep  5 15:46:37 2017
+PySCF version 1.4a
+PySCF path  /home/goodpast/graha682/code/python/pyscf/pyscf
+GIT ORIG_HEAD 9330ea3bfcc413f76711ba39e39d531f72dcda29
+GIT HEAD      ref: refs/heads/master
+GIT master branch  5a6e4032c6cb310076977bf244a460aa6dd0f9f2
+
+[INPUT] VERBOSE 4
+[INPUT] num atoms = 1
+[INPUT] num electrons = 10
+[INPUT] charge = -1
+[INPUT] spin (= nelec alpha-beta = 2S) = 0
+[INPUT] symmetry False subgroup None
+[INPUT]  1 F      0.000000000000   0.000000000000   0.000000000000 AA    0.000000000000   0.000000000000   0.000000000000 Bohr
+[INPUT] ---------------- BASIS SET ---------------- 
+[INPUT] l, kappa, [nprim/nctr], expnt,             c_1 c_2 ...
+[INPUT] F
+[INPUT] 0    0    [3    /1   ]  413.801           0.0585483
+                                62.2446           0.349308
+                                13.434            0.709632
+[INPUT] 0    0    [2    /1   ]  9.77759           -0.407327
+                                2.08617           1.22314
+[INPUT] 0    0    [1    /1   ]  0.482383             1
+[INPUT] 1    0    [2    /1   ]  9.77759           0.24668
+                                2.08617           0.852321
+[INPUT] 1    0    [1    /1   ]  0.482383             1
+nuclear repulsion = 0
+number of shells = 5
+number of NR pGTOs = 15
+number of NR cGTOs = 9
+basis = {'F': [[0, [413.801, 0.0585483], [62.2446, 0.349308], [13.434, 0.709632]], [0, [9.77759, -0.407327], [2.08617, 1.22314]], [0, [0.482383, 1.0]], [1, [9.77759, 0.24668], [2.08617, 0.852321]], [1, [0.482383, 1.0]]]}
+ecp = {}
+CPU time:         0.54
+None
+tot grids = 29412
+
+
+******** <class 'pyscf.dft.rks.RKS'> flags ********
+method = RKS
+initial guess = atom
+damping factor = 0
+level shift factor = 0
+DIIS = <class 'pyscf.scf.diis.CDIIS'>
+DIIS start cycle = 1
+DIIS space = 8
+SCF tol = 1e-08
+SCF gradient tol = 1e-08
+max. SCF cycles = 100
+direct_scf = True
+direct_scf_tol = 1e-13
+chkfile to save SCF result = /panfs/roc/scratch/graha682/201709_flourine/201709_321g_m062x_flourine/tmpdNVtnl
+max_memory 4000 MB (current use 52 MB)
+XC functionals = m062x
+small_rho_cutoff = 1e-20
+radial grids: Treutler-Ahlrichs (JCP 102, 346 (M4)) radial grids
+becke partition: Becke, JCP, 88, 2547 (1988)
+pruning grids: <function nwchem_prune at 0x19585f0>
+grids dens level: 4
+symmetrized grids: False
+atomic radii adjust function: <function treutler_atomic_radii_adjust at 0x1958488>
+Initial guess from superpostion of atomic densties.
+init E= -98.9734965448558
+  HOMO = -0.468699320113632  LUMO = 1.88469584086169
+cycle= 1 E= -99.0545409224747  delta_E= -0.081  |g|= 0.795  |ddm|= 0.388
+  HOMO = 0.284173605632939  LUMO = 2.681860624562
+cycle= 2 E= -99.0896200169189  delta_E= -0.0351  |g|= 0.569  |ddm|= 0.53
+  HOMO = 0.160206493948371  LUMO = 2.52643520621118
+cycle= 3 E= -99.1241567743171  delta_E= -0.0345  |g|= 0.00665  |ddm|= 0.224
+  HOMO = 0.15978839430793  LUMO = 2.52592952518523
+cycle= 4 E= -99.1241615657313  delta_E= -4.79e-06  |g|= 0.00081  |ddm|= 0.00296
+  HOMO = 0.159862311033528  LUMO = 2.52603065357295
+cycle= 5 E= -99.1241616272647  delta_E= -6.15e-08  |g|= 0.00011  |ddm|= 0.000326
+  HOMO = 0.159853834010966  LUMO = 2.52601959792982
+cycle= 6 E= -99.1241616285618  delta_E= -1.3e-09  |g|= 4.47e-09  |ddm|= 4.3e-05
+  HOMO = 0.159853835211069  LUMO = 2.52601959696637
+Extra cycle  E= -99.1241616285618  delta_E=    0  |g|= 4.47e-09  |ddm|= 2.38e-09
+converged SCF energy = -99.1241616285618
+================================================================================
+TIMING STATISTICS:
+                 grids      0.01s   ( 1.08%)
+                    ks      0.61s   (99.99%)
+                 TOTAL      0.61s
+================================================================================
+
+********************************************************************************
+*                              END OF CALCULATION                              *
+********************************************************************************

@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "/home/goodpast/graha682/code/python/freeze_and_thaw/cython/cmain.py", line 6, in <module>
+    main.main(sys.argv[1])
+  File "main.pyx", line 138, in main.main (main.c:4660)
+    Fock, inp.mSCF[a], Dnew, eproj, err = do_embedding(a, inp,
+  File "scf.pyx", line 158, in scf.do_embedding (scf.c:5394)
+    cycles, conv, Fock=FAA, hcore=hcore, sigma=inp.mol[A].smearsig)
+AttributeError: 'Mole' object has no attribute 'smearsig'
+<class 'pyscf.gto.mole.Mole'> does not have attributes  smearsig
+=>> PBS: job killed: walltime 259240 exceeded limit 259200
+<class 'pyscf.gto.mole.Mole'> does not have attributes  smearsig
+=>> PBS: job killed: walltime 345603 exceeded limit 345600
+/var/spool/torque/mom_priv/jobs/5158272.mesabim3.msi.umn.edu.SC: line 27: 24019 Killed                  python /home/goodpast/graha682/code/python/freeze_and_thaw/cython/cmain.py /panfs/roc/groups/13/goodpast/graha682/201706_MOF5/201802_FT/mof5_node_bh2.inp > /panfs/roc/groups/13/goodpast/graha682/201706_MOF5/201802_FT/mof5_node_bh2.out
+/var/spool/torque/mom_priv/jobs/5160031.mesabim3.msi.umn.edu.SC: line 27: 27614 Killed                  python /home/goodpast/graha682/code/python/freeze_and_thaw/cython/cmain.py /panfs/roc/groups/13/goodpast/graha682/201706_MOF5/201802_FT/mof5_node_bh2.inp > /panfs/roc/groups/13/goodpast/graha682/201706_MOF5/201802_FT/mof5_node_bh2.out

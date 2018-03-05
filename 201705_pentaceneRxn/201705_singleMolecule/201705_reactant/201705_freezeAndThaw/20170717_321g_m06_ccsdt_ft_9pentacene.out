@@ -1,0 +1,388 @@
+********************************************************************************
+*                         FREEZE-AND-THAW CALCULATION                          *
+********************************************************************************
+
+================================== Input File ==================================
+
+
+subsystem
+C         -6.10190       -0.71539        0.00000
+C         -6.10190        0.71539        0.00000
+H         -7.05444       -1.25120        0.00000
+H         -7.05444        1.25120        0.00000
+C         -4.92832        1.40706        0.00000
+C         -3.66829        0.72437        0.00000
+C         -3.66829       -0.72437        0.00000
+C         -4.92833       -1.40706        0.00000
+H         -4.92272        2.50120        0.00000
+H         -4.92272       -2.50120        0.00000
+C         -2.46131        1.40464        0.00000
+C         -1.22302        0.72525        0.00000
+C         -1.22302       -0.72525        0.00000
+C         -2.46131       -1.40464        0.00000
+H         -2.46202        2.50003        0.00000
+H         -2.46202       -2.50003        0.00000
+C          0.00000        1.40515        0.00000
+C          1.22302        0.72525        0.00000
+C          1.22302       -0.72525        0.00000
+C          0.00000       -1.40515        0.00000
+H          0.00000        2.50041        0.00000
+H          0.00000       -2.50041        0.00000
+C          2.46131        1.40464        0.00000
+C          2.46131       -1.40464        0.00000
+H          2.46202        2.50003        0.00000
+H          2.46202       -2.50003        0.00000
+C          3.66829       -0.72437        0.00000
+C          3.66829        0.72437        0.00000
+end
+
+subsystem
+C          6.10190        0.71539        0.00000
+C          6.10190       -0.71539        0.00000
+C          4.92832        1.40706        0.00000
+C          4.92833       -1.40706        0.00000
+H          4.92272        2.50120        0.00000
+H          4.92272       -2.50120        0.00000
+H          7.05444        1.25120        0.00000
+H          7.05444       -1.25120        0.00000
+end
+
+embed
+ huzinaga
+ cycles 300
+ conv 1e-6
+ method m06
+end
+
+basis 3-21g
+method ccsd(t)
+grid 4
+conv 1e-8
+grad 1e-8
+maxiter 100
+================================== End Input ===================================
+tot grids = 844128
+
+                      Getting subsystem overlap integrals                       
+
+                          Initial subsystem densities                           
+Guessing initial subsystem densities
+Initial guess from superpostion of atomic densties.
+Guessing initial subsystem densities
+Initial guess from superpostion of atomic densties.
+
+=========================== Starting Freeze-and-Thaw ===========================
+ iter:   1:1        |ddm|: 6.702251e+00     Tr[DP]  6.550719e-01
+ iter:   1:2        |ddm|: 4.051940e+00     Tr[DP]  7.262254e-01
+ iter:   2:1        |ddm|: 5.805267e+00     Tr[DP]  5.767546e-01
+ iter:   2:2        |ddm|: 1.927766e+00     Tr[DP]  6.826820e-01
+ iter:   3:1        |ddm|: 5.327042e+00     Tr[DP]  5.586768e-01
+ iter:   3:2        |ddm|: 9.974128e-01     Tr[DP]  5.827328e-01
+ iter:   4:1        |ddm|: 2.519871e+00     Tr[DP]  5.362061e-01
+ iter:   4:2        |ddm|: 4.542350e-01     Tr[DP]  5.593100e-01
+ iter:   5:1        |ddm|: 5.936771e-01     Tr[DP]  5.442498e-01
+ iter:   5:2        |ddm|: 2.085257e-01     Tr[DP]  5.538053e-01
+ iter:   6:1        |ddm|: 1.984765e-01     Tr[DP]  5.440070e-01
+ iter:   6:2        |ddm|: 5.173633e-02     Tr[DP]  5.495598e-01
+ iter:   7:1        |ddm|: 6.285378e-02     Tr[DP]  5.436721e-01
+ iter:   7:2        |ddm|: 3.894122e-02     Tr[DP]  5.472251e-01
+ iter:   8:1        |ddm|: 6.393215e-02     Tr[DP]  5.437310e-01
+ iter:   8:2        |ddm|: 2.158442e-02     Tr[DP]  5.457882e-01
+ iter:   9:1        |ddm|: 1.664500e-02     Tr[DP]  5.443598e-01
+ iter:   9:2        |ddm|: 7.043288e-03     Tr[DP]  5.453225e-01
+ iter:  10:1        |ddm|: 1.295881e-02     Tr[DP]  5.443955e-01
+ iter:  10:2        |ddm|: 4.876283e-03     Tr[DP]  5.449750e-01
+ iter:  11:1        |ddm|: 4.818810e-03     Tr[DP]  5.445703e-01
+ iter:  11:2        |ddm|: 2.446840e-03     Tr[DP]  5.448568e-01
+ iter:  12:1        |ddm|: 1.670112e-03     Tr[DP]  5.446192e-01
+ iter:  12:2        |ddm|: 9.680340e-04     Tr[DP]  5.447618e-01
+ iter:  13:1        |ddm|: 8.765622e-04     Tr[DP]  5.446354e-01
+ iter:  13:2        |ddm|: 5.990777e-04     Tr[DP]  5.447131e-01
+ iter:  14:1        |ddm|: 5.970100e-04     Tr[DP]  5.446365e-01
+ iter:  14:2        |ddm|: 3.595162e-04     Tr[DP]  5.446872e-01
+ iter:  15:1        |ddm|: 4.327826e-04     Tr[DP]  5.446489e-01
+ iter:  15:2        |ddm|: 2.104634e-04     Tr[DP]  5.446765e-01
+ iter:  16:1        |ddm|: 3.448665e-04     Tr[DP]  5.446534e-01
+ iter:  16:2        |ddm|: 1.016743e-04     Tr[DP]  5.446663e-01
+ iter:  17:1        |ddm|: 2.079229e-04     Tr[DP]  5.446544e-01
+ iter:  17:2        |ddm|: 5.712025e-05     Tr[DP]  5.446613e-01
+ iter:  18:1        |ddm|: 9.749055e-05     Tr[DP]  5.446551e-01
+ iter:  18:2        |ddm|: 4.474465e-05     Tr[DP]  5.446597e-01
+ iter:  19:1        |ddm|: 2.931406e-05     Tr[DP]  5.446562e-01
+ iter:  19:2        |ddm|: 1.600503e-05     Tr[DP]  5.446586e-01
+ iter:  20:1        |ddm|: 1.653750e-05     Tr[DP]  5.446561e-01
+ iter:  20:2        |ddm|: 1.337599e-05     Tr[DP]  5.446579e-01
+ iter:  21:1        |ddm|: 5.135198e-06     Tr[DP]  5.446564e-01
+ iter:  21:2        |ddm|: 6.750746e-06     Tr[DP]  5.446574e-01
+ iter:  22:1        |ddm|: 2.013021e-06     Tr[DP]  5.446566e-01
+ iter:  22:2        |ddm|: 3.276777e-06     Tr[DP]  5.446571e-01
+ iter:  23:1        |ddm|: 1.428120e-06     Tr[DP]  5.446567e-01
+ iter:  23:2        |ddm|: 2.356841e-06     Tr[DP]  5.446569e-01
+ iter:  24:1        |ddm|: 5.847231e-07     Tr[DP]  5.446567e-01
+ iter:  24:2        |ddm|: 1.003401e-06     Tr[DP]  5.446569e-01
+ iter:  25:1        |ddm|: 4.158592e-07     Tr[DP]  5.446568e-01
+ iter:  25:2        |ddm|: 5.718755e-07     Tr[DP]  5.446568e-01
+                           Freeze-and-Thaw converged!                           
+
+=================== Subsystem 1 at higher mean-field method ====================
+  subiter:   1      |ddm|: 1.707322e+00
+  subiter:   2      |ddm|: 2.945835e-01
+  subiter:   3      |ddm|: 6.507430e-02
+  subiter:   4      |ddm|: 2.831598e-02
+  subiter:   5      |ddm|: 3.092421e-02
+  subiter:   6      |ddm|: 2.176805e-02
+  subiter:   7      |ddm|: 1.431998e-02
+  subiter:   8      |ddm|: 6.438134e-03
+  subiter:   9      |ddm|: 5.161250e-03
+  subiter:  10      |ddm|: 3.880507e-03
+  subiter:  11      |ddm|: 6.414291e-04
+  subiter:  12      |ddm|: 8.188995e-05
+  subiter:  13      |ddm|: 2.687501e-05
+  subiter:  14      |ddm|: 2.300207e-05
+  subiter:  15      |ddm|: 9.773147e-06
+  subiter:  16      |ddm|: 1.919602e-06
+  subiter:  17      |ddm|: 6.095596e-07
+  subiter:  18      |ddm|: 1.171366e-07
+  subiter:  19      |ddm|: 7.763151e-08
+  subiter:  20      |ddm|: 3.079416e-07
+  subiter:  21      |ddm|: 1.231291e-07
+  subiter:  22      |ddm|: 5.252489e-08
+  subiter:  23      |ddm|: 1.527256e-07
+  subiter:  24      |ddm|: 7.263395e-08
+  subiter:  25      |ddm|: 6.871914e-08
+  subiter:  26      |ddm|: 6.876931e-08
+  subiter:  27      |ddm|: 3.973777e-08
+  subiter:  28      |ddm|: 3.124431e-08
+  subiter:  29      |ddm|: 2.895581e-08
+  subiter:  30      |ddm|: 4.433221e-08
+  subiter:  31      |ddm|: 4.076656e-08
+  subiter:  32      |ddm|: 3.713374e-08
+  subiter:  33      |ddm|: 3.294206e-08
+  subiter:  34      |ddm|: 3.194764e-08
+  subiter:  35      |ddm|: 3.211727e-08
+  subiter:  36      |ddm|: 3.273859e-08
+  subiter:  37      |ddm|: 3.108974e-08
+  subiter:  38      |ddm|: 2.968828e-08
+  subiter:  39      |ddm|: 2.859147e-08
+  subiter:  40      |ddm|: 2.794026e-08
+  subiter:  41      |ddm|: 2.733951e-08
+  subiter:  42      |ddm|: 2.662570e-08
+  subiter:  43      |ddm|: 2.571911e-08
+  subiter:  44      |ddm|: 2.491828e-08
+  subiter:  45      |ddm|: 2.420477e-08
+  subiter:  46      |ddm|: 2.354750e-08
+  subiter:  47      |ddm|: 2.288953e-08
+  subiter:  48      |ddm|: 2.222323e-08
+  subiter:  49      |ddm|: 2.156421e-08
+  subiter:  50      |ddm|: 2.094133e-08
+  subiter:  51      |ddm|: 2.034506e-08
+  subiter:  52      |ddm|: 1.976607e-08
+  subiter:  53      |ddm|: 1.919881e-08
+  subiter:  54      |ddm|: 1.864488e-08
+  subiter:  55      |ddm|: 1.810774e-08
+  subiter:  56      |ddm|: 1.758908e-08
+  subiter:  57      |ddm|: 1.708553e-08
+  subiter:  58      |ddm|: 1.659607e-08
+  subiter:  59      |ddm|: 1.612005e-08
+  subiter:  60      |ddm|: 1.565760e-08
+  subiter:  61      |ddm|: 1.520872e-08
+  subiter:  62      |ddm|: 1.477311e-08
+  subiter:  63      |ddm|: 1.434988e-08
+  subiter:  64      |ddm|: 1.393883e-08
+  subiter:  65      |ddm|: 1.353931e-08
+  subiter:  66      |ddm|: 1.315159e-08
+  subiter:  67      |ddm|: 1.277509e-08
+  subiter:  68      |ddm|: 1.240910e-08
+  subiter:  69      |ddm|: 1.205390e-08
+  subiter:  70      |ddm|: 1.170876e-08
+  subiter:  71      |ddm|: 1.137353e-08
+  subiter:  72      |ddm|: 1.104788e-08
+  subiter:  73      |ddm|: 1.073152e-08
+  subiter:  74      |ddm|: 1.042445e-08
+  subiter:  75      |ddm|: 1.012607e-08
+  subiter:  76      |ddm|: 9.836065e-09
+
+
+******** <class 'pyscf.scf.hf.RHF'> flags ********
+method = RHF
+initial guess = minao
+damping factor = 0
+level shift factor = 0
+DIIS = <class 'pyscf.scf.diis.CDIIS'>
+DIIS start cycle = 1
+DIIS space = 8
+SCF tol = 1e-09
+SCF gradient tol = None
+max. SCF cycles = 100
+direct_scf = True
+direct_scf_tol = 1e-13
+chkfile to save SCF result = /panfs/roc/scratch/graha682/201705_freezeAndThaw/20170717_321g_m06_ccsdt_ft_9pentacene/tmpnesntA
+max_memory 4000 MB (current use 2806 MB)
+Set gradient conv threshold to 3.16228e-05
+init E= -677.005483674968
+  HOMO = -0.0849054726365736  LUMO = 0.0983780663467417
+cycle= 1 E= -677.005483674966  delta_E= 1.82e-12  |g|= 5.96e-09  |ddm|= 3.26e-08
+  HOMO = -0.0849054726373183  LUMO = 0.098378066351544
+Extra cycle  E= -677.005483674968  delta_E= -1.14e-12  |g|= 5.96e-09  |ddm|= 2.94e-08
+converged SCF energy = -677.005483674968
+
+
+******** <class 'pyscf.dft.rks.RKS'> flags ********
+method = RKS
+initial guess = atom
+damping factor = 0
+level shift factor = 0.0
+DIIS = <class 'pyscf.scf.diis.CDIIS'>
+DIIS start cycle = 1
+DIIS space = 8
+SCF tol = 1e-08
+SCF gradient tol = 1e-08
+max. SCF cycles = 1
+direct_scf = True
+direct_scf_tol = 1e-13
+chkfile to save SCF result = /panfs/roc/scratch/graha682/201705_freezeAndThaw/20170717_321g_m06_ccsdt_ft_9pentacene/tmp9Qz9dt
+max_memory 4000 MB (current use 2807 MB)
+XC functionals = m06
+small_rho_cutoff = 1e-20
+radial grids: Treutler-Ahlrichs (JCP 102, 346 (M4)) radial grids
+becke partition: Becke, JCP, 88, 2547 (1988)
+pruning grids: <function nwchem_prune at 0x1784f50>
+grids dens level: 4
+symmetrized grids: False
+atomic radii adjust function: <function treutler_atomic_radii_adjust at 0x1784de8>
+init E= -681.300732724975
+  HOMO = -0.065717162579397  LUMO = -0.0108631393006375
+cycle= 1 E= -681.300732724976  delta_E= -6.82e-13  |g|= 1.1e-07  |ddm|= 2.92e-07
+SCF not converged.
+SCF energy = -681.300732724976 after 1 cycles
+ iter:  26:1        |ddm|: 1.978043e+00     Tr[DP]  6.204668e-01
+
+==================== Doing CCSD Calculation on Subsystem 1 =====================
+
+******** <class 'pyscf.cc.ccsd.CCSD'> flags ********
+CCSD nocc = 59, nvir = 123
+max_cycle = 50
+direct = 0
+conv_tol = 1e-07
+conv_tol_normt = 1e-05
+diis_space = 6
+diis_start_cycle = 0
+diis_start_energy_diff = 1e+09
+max_memory 4000 MB (current use 2814 MB)
+Init t2, MP2 energy = -1.56374392418345
+cycle = 1  E(CCSD) = -1.5612578025658  dE = -1.5612578  norm(t1,t2) = 0.230626
+cycle = 2  E(CCSD) = -1.62159576907894  dE = -0.0603379665  norm(t1,t2) = 0.0939205
+cycle = 3  E(CCSD) = -1.62256945397396  dE = -0.000973684895  norm(t1,t2) = 0.0588019
+cycle = 4  E(CCSD) = -1.62825867760481  dE = -0.00568922363  norm(t1,t2) = 0.0357499
+cycle = 5  E(CCSD) = -1.63456907660704  dE = -0.006310399  norm(t1,t2) = 0.0163117
+cycle = 6  E(CCSD) = -1.63491343043493  dE = -0.000344353828  norm(t1,t2) = 0.00593528
+cycle = 7  E(CCSD) = -1.63428789960265  dE = 0.000625530832  norm(t1,t2) = 0.00314603
+cycle = 8  E(CCSD) = -1.63428709477409  dE = 8.04828555e-07  norm(t1,t2) = 0.00141728
+cycle = 9  E(CCSD) = -1.6343019282554  dE = -1.48334813e-05  norm(t1,t2) = 0.000581763
+cycle = 10  E(CCSD) = -1.63430939532138  dE = -7.46706597e-06  norm(t1,t2) = 0.00031794
+cycle = 11  E(CCSD) = -1.63432777851374  dE = -1.83831924e-05  norm(t1,t2) = 0.000165794
+cycle = 12  E(CCSD) = -1.63433274136337  dE = -4.96284963e-06  norm(t1,t2) = 8.17887e-05
+cycle = 13  E(CCSD) = -1.63433533331824  dE = -2.59195487e-06  norm(t1,t2) = 4.24809e-05
+cycle = 14  E(CCSD) = -1.63433739422147  dE = -2.06090322e-06  norm(t1,t2) = 2.54126e-05
+cycle = 15  E(CCSD) = -1.63433780180612  dE = -4.07584653e-07  norm(t1,t2) = 1.1396e-05
+cycle = 16  E(CCSD) = -1.63433775735946  dE = 4.4446663e-08  norm(t1,t2) = 6.82345e-06
+CCSD converged
+E(CCSD) = -678.639821432327  E_corr = -1.634337757359459
+Hartree-Fock Energy:  -677.00548367496754
+CCSD Correlation:       -1.63433775735946
+CCSD Energy:          -678.63982143232704
+
+=================== Doing CCSD(T) Calculation on Subsystem 1 ===================
+CCSD(T) correction = -0.0808449798235729
+Hartree-Fock Energy:  -677.00548367496754
+CCSD(T) Correlation:       -1.71518273718303
+CCSD(T) Energy:          -678.72066641215054
+
+============================== Supermolecular DFT ==============================
+  subiter:   1      |ddm|: 4.972131e+00
+  subiter:   2      |ddm|: 1.826745e+01
+  subiter:   3      |ddm|: 1.788627e+01
+  subiter:   4      |ddm|: 1.056990e+00
+  subiter:   5      |ddm|: 2.162531e-01
+  subiter:   6      |ddm|: 1.486417e-01
+  subiter:   7      |ddm|: 1.377031e-01
+  subiter:   8      |ddm|: 5.499691e-02
+  subiter:   9      |ddm|: 1.554158e-01
+  subiter:  10      |ddm|: 1.184816e-02
+  subiter:  11      |ddm|: 5.892449e-03
+  subiter:  12      |ddm|: 1.792522e-03
+  subiter:  13      |ddm|: 1.026533e-03
+  subiter:  14      |ddm|: 3.884961e-04
+  subiter:  15      |ddm|: 2.382474e-04
+  subiter:  16      |ddm|: 1.761252e-04
+  subiter:  17      |ddm|: 6.347951e-05
+  subiter:  18      |ddm|: 3.134256e-05
+  subiter:  19      |ddm|: 2.079030e-05
+  subiter:  20      |ddm|: 9.932866e-06
+  subiter:  21      |ddm|: 6.693685e-06
+  subiter:  22      |ddm|: 6.818496e-06
+  subiter:  23      |ddm|: 8.619452e-07
+  subiter:  24      |ddm|: 3.444260e-07
+  subiter:  25      |ddm|: 3.610118e-07
+  subiter:  26      |ddm|: 4.594856e-08
+  subiter:  27      |ddm|: 2.268408e-08
+  subiter:  28      |ddm|: 7.885441e-09
+
+
+******** <class 'pyscf.dft.rks.RKS'> flags ********
+method = RKS
+initial guess = atom
+damping factor = 0
+level shift factor = 0.0
+DIIS = <class 'pyscf.scf.diis.CDIIS'>
+DIIS start cycle = 1
+DIIS space = 8
+SCF tol = 1e-08
+SCF gradient tol = 1e-08
+max. SCF cycles = 100
+direct_scf = True
+direct_scf_tol = 1e-13
+chkfile to save SCF result = /panfs/roc/scratch/graha682/201705_freezeAndThaw/20170717_321g_m06_ccsdt_ft_9pentacene/tmpzspEhb
+max_memory 4000 MB (current use 3646 MB)
+XC functionals = m06
+small_rho_cutoff = 1e-20
+radial grids: Treutler-Ahlrichs (JCP 102, 346 (M4)) radial grids
+becke partition: Becke, JCP, 88, 2547 (1988)
+pruning grids: <function nwchem_prune at 0x1784f50>
+grids dens level: 4
+symmetrized grids: False
+atomic radii adjust function: <function treutler_atomic_radii_adjust at 0x1784de8>
+init E= -841.733050212963
+  HOMO = -0.183864888479671  LUMO = -0.088064138716853
+cycle= 1 E= -841.733050212959  delta_E= 4.55e-12  |g|= 5.49e-09  |ddm|= 2.63e-08
+  HOMO = -0.183864888828898  LUMO = -0.0880641389993379
+Extra cycle  E= -841.73305021296  delta_E= -9.09e-13  |g|= 5.49e-09  |ddm|= 2.46e-08
+converged SCF energy = -841.73305021296
+Supermolecular DFT   -841.73305021295982
+
+============================== Embedding Energies ==============================
+Subsystem DFT              -681.30073272497589
+Interaction                -159.68332799511950
+DFT-in-DFT                 -840.98406072009539
+Supermolecular DFT         -841.73305021295982
+Difference                   -0.74898949286444
+Corrected DFT-in-DFT       -841.73305021295982
+WF-in-DFT                  -838.40399440727003
+Corrected WF-in-DFT        -839.15298390013447
+================================================================================
+TIMING STATISTICS:
+     overlap integrals      0.02s   ( 0.00%)
+    initial subsystems      0.12s   ( 0.00%)
+           2e matrices    526.89s   (12.09%)
+      tot. embed. of 1    646.04s   (14.82%)
+      tot. embed. of 2      0.03s   ( 0.00%)
+       freeze and thaw    646.08s   (14.82%)
+                  ccsd    636.36s   (14.60%)
+               ccsd(t)   2397.21s   (54.99%)
+  interaction energies    677.93s   (15.55%)
+                 TOTAL   4359.24s
+================================================================================
+
+********************************************************************************
+*                              END OF CALCULATION                              *
+********************************************************************************

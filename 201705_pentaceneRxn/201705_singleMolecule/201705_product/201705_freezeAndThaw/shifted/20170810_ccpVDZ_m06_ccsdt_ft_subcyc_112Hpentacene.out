@@ -1,0 +1,1494 @@
+********************************************************************************
+*                         FREEZE-AND-THAW CALCULATION                          *
+********************************************************************************
+
+================================== Input File ==================================
+
+
+subsystem
+H         -6.14320       -0.42882        1.47896
+H         -6.94784        1.25780       -0.13678
+H         -6.14344        0.42821       -1.47805
+H         -6.94782       -1.25782        0.13772
+C         -6.06342        0.65171       -0.38867
+C         -6.06331       -0.65177        0.38954
+end
+
+subsystem
+C          5.01452        1.40844        0.06965
+C          3.74783        0.72825        0.03662
+C          3.74781       -0.72826       -0.03650
+C          5.01450       -1.40847       -0.06940
+C          6.18395       -0.71776       -0.03517
+C          6.18396        0.71770        0.03554
+H          5.00950        2.50131        0.12325
+H          5.00947       -2.50135       -0.12302
+H          7.13782       -1.25071       -0.06108
+H          7.13783        1.25064        0.06155
+C          2.55138        1.40725        0.07138
+C          1.29777        0.73106        0.03806
+C          1.29775       -0.73103       -0.03827
+C          2.55136       -1.40724       -0.07140
+H          2.55309        2.50128        0.12614
+H          2.55308       -2.50128       -0.12616
+C          0.09625        1.40958        0.07457
+C         -1.15699        0.73454        0.04043
+C         -1.15701       -0.73448       -0.04089
+C          0.09623       -1.40953       -0.07494
+H          0.09852        2.50342        0.12979
+H          0.09851       -2.50338       -0.13014
+C         -2.35404        1.41539        0.06274
+C         -2.35406       -1.41533       -0.06331
+H         -2.34946        2.51033        0.09115
+H         -2.34952       -2.51027       -0.09197
+C         -4.79632        1.40806       -0.15852
+C         -4.79625       -1.40804        0.15864
+H         -4.78939        2.50044       -0.22958
+H         -4.78940       -2.50045        0.22926
+C         -3.61575       -0.74095        0.00677
+C         -3.61577        0.74099       -0.00705
+end
+
+embed
+ huzinaga
+ subcycles 3
+ cycles 300
+ conv 1e-6
+ method m06
+end
+
+basis cc-pVDZ
+method ccsd(t)
+grid 4
+conv 1e-8
+grad 1e-8
+maxiter 100
+damp 1.0
+================================== End Input ===================================
+tot grids = 876504
+
+                      Getting subsystem overlap integrals                       
+
+                          Initial subsystem densities                           
+Guessing initial subsystem densities
+Initial guess from superpostion of atomic densties.
+Guessing initial subsystem densities
+Initial guess from superpostion of atomic densties.
+
+=========================== Starting Freeze-and-Thaw ===========================
+  subiter:   1      |ddm|: 7.054594e+00
+  subiter:   2      |ddm|: 1.803139e+01
+  subiter:   3      |ddm|: 2.005347e+01
+ iter:   1:1        |ddm|: 5.611526e+00     Tr[DP]  1.011314e+00
+  subiter:   1      |ddm|: 1.038141e+01
+  subiter:   2      |ddm|: 6.410789e+00
+  subiter:   3      |ddm|: 9.110170e+00
+ iter:   1:2        |ddm|: 1.167989e+01     Tr[DP]  3.623482e-01
+  subiter:   1      |ddm|: 1.413364e+01
+  subiter:   2      |ddm|: 1.474993e+01
+  subiter:   3      |ddm|: 1.566669e+01
+ iter:   2:1        |ddm|: 1.530124e+01     Tr[DP]  3.800520e-01
+  subiter:   1      |ddm|: 3.120424e+01
+  subiter:   2      |ddm|: 4.018625e+01
+  subiter:   3      |ddm|: 4.586034e+02
+ iter:   2:2        |ddm|: 4.597010e+02     Tr[DP]  1.135726e+00
+  subiter:   1      |ddm|: 1.586126e+01
+  subiter:   2      |ddm|: 2.167593e+01
+  subiter:   3      |ddm|: 2.520454e+01
+ iter:   3:1        |ddm|: 2.036064e+01     Tr[DP]  4.323145e-01
+  subiter:   1      |ddm|: 4.595527e+02
+  subiter:   2      |ddm|: 2.139776e+03
+  subiter:   3      |ddm|: 2.141871e+03
+ iter:   3:2        |ddm|: 4.641279e+02     Tr[DP]  1.000321e-01
+  subiter:   1      |ddm|: 1.446653e+01
+  subiter:   2      |ddm|: 7.446316e+00
+  subiter:   3      |ddm|: 1.604289e+01
+ iter:   4:1        |ddm|: 1.737692e+01     Tr[DP]  9.975020e-02
+  subiter:   1      |ddm|: 7.287296e+01
+  subiter:   2      |ddm|: 5.868564e+02
+  subiter:   3      |ddm|: 5.863206e+02
+ iter:   4:2        |ddm|: 1.018090e+02     Tr[DP]  3.584791e-01
+  subiter:   1      |ddm|: 1.486506e+01
+  subiter:   2      |ddm|: 2.830963e+01
+  subiter:   3      |ddm|: 3.029240e+01
+ iter:   5:1        |ddm|: 1.838496e+01     Tr[DP]  4.587054e-01
+  subiter:   1      |ddm|: 8.846761e+01
+  subiter:   2      |ddm|: 6.501341e+02
+  subiter:   3      |ddm|: 6.540214e+02
+ iter:   5:2        |ddm|: 1.027359e+02     Tr[DP]  1.246153e+00
+  subiter:   1      |ddm|: 1.411920e+01
+  subiter:   2      |ddm|: 1.002436e+01
+  subiter:   3      |ddm|: 1.466467e+01
+ iter:   6:1        |ddm|: 1.791492e+01     Tr[DP]  2.360047e-01
+  subiter:   1      |ddm|: 6.413096e+01
+  subiter:   2      |ddm|: 1.235847e+03
+  subiter:   3      |ddm|: 1.264682e+03
+ iter:   6:2        |ddm|: 2.717181e+02     Tr[DP]  1.131484e+00
+  subiter:   1      |ddm|: 1.213026e+01
+  subiter:   2      |ddm|: 1.005614e+01
+  subiter:   3      |ddm|: 1.029132e+01
+ iter:   7:1        |ddm|: 1.224609e+01     Tr[DP]  8.491939e-01
+  subiter:   1      |ddm|: 2.615877e+02
+  subiter:   2      |ddm|: 1.117718e+03
+  subiter:   3      |ddm|: 1.127383e+03
+ iter:   7:2        |ddm|: 2.765858e+02     Tr[DP]  9.417631e-02
+  subiter:   1      |ddm|: 2.824899e+00
+  subiter:   2      |ddm|: 2.852920e+00
+  subiter:   3      |ddm|: 5.988416e+00
+ iter:   8:1        |ddm|: 5.905726e+00     Tr[DP] -3.475439e-02
+  subiter:   1      |ddm|: 2.104648e+02
+  subiter:   2      |ddm|: 9.899374e+02
+  subiter:   3      |ddm|: 9.804350e+02
+ iter:   8:2        |ddm|: 9.548041e+01     Tr[DP]  1.130936e+00
+  subiter:   1      |ddm|: 9.293393e+00
+  subiter:   2      |ddm|: 1.042784e+01
+  subiter:   3      |ddm|: 1.361592e+01
+ iter:   9:1        |ddm|: 1.167226e+01     Tr[DP] -2.807350e+00
+  subiter:   1      |ddm|: 5.811293e+02
+  subiter:   2      |ddm|: 1.285757e+03
+  subiter:   3      |ddm|: 1.188138e+03
+ iter:   9:2        |ddm|: 2.662462e+02     Tr[DP] -2.856430e+00
+  subiter:   1      |ddm|: 1.353085e+01
+  subiter:   2      |ddm|: 1.210624e+01
+  subiter:   3      |ddm|: 9.846648e+00
+ iter:  10:1        |ddm|: 1.218592e+01     Tr[DP]  1.036684e+00
+  subiter:   1      |ddm|: 5.383663e+02
+  subiter:   2      |ddm|: 1.048979e+03
+  subiter:   3      |ddm|: 1.010379e+03
+ iter:  10:2        |ddm|: 3.536240e+02     Tr[DP]  3.686599e-03
+  subiter:   1      |ddm|: 6.691826e+00
+  subiter:   2      |ddm|: 7.745999e+00
+  subiter:   3      |ddm|: 7.916429e+00
+ iter:  11:1        |ddm|: 6.856736e+00     Tr[DP]  2.827748e-01
+  subiter:   1      |ddm|: 4.092136e+02
+  subiter:   2      |ddm|: 8.097709e+02
+  subiter:   3      |ddm|: 8.866620e+02
+ iter:  11:2        |ddm|: 3.434206e+02     Tr[DP]  2.969942e-01
+  subiter:   1      |ddm|: 9.753284e+00
+  subiter:   2      |ddm|: 1.141535e+01
+  subiter:   3      |ddm|: 1.157993e+01
+ iter:  12:1        |ddm|: 1.013736e+01     Tr[DP]  9.590363e-02
+  subiter:   1      |ddm|: 5.974403e+02
+  subiter:   2      |ddm|: 9.339675e+02
+  subiter:   3      |ddm|: 1.034716e+03
+ iter:  12:2        |ddm|: 7.461354e+02     Tr[DP]  1.600814e-01
+  subiter:   1      |ddm|: 9.495481e+00
+  subiter:   2      |ddm|: 1.131791e+01
+  subiter:   3      |ddm|: 1.127273e+01
+ iter:  13:1        |ddm|: 9.485619e+00     Tr[DP]  2.626542e-01
+  subiter:   1      |ddm|: 7.950381e+02
+  subiter:   2      |ddm|: 2.052203e+03
+  subiter:   3      |ddm|: 2.047470e+03
+ iter:  13:2        |ddm|: 7.734858e+02     Tr[DP]  1.517233e+00
+  subiter:   1      |ddm|: 2.457040e+00
+  subiter:   2      |ddm|: 6.411341e+00
+  subiter:   3      |ddm|: 6.480227e+00
+ iter:  14:1        |ddm|: 2.707928e+00     Tr[DP]  4.738216e-01
+  subiter:   1      |ddm|: 4.072382e+02
+  subiter:   2      |ddm|: 5.513892e+02
+  subiter:   3      |ddm|: 5.372772e+02
+ iter:  14:2        |ddm|: 3.628740e+02     Tr[DP]  2.119092e-02
+  subiter:   1      |ddm|: 3.411695e+00
+  subiter:   2      |ddm|: 6.874681e+00
+  subiter:   3      |ddm|: 8.910275e+00
+ iter:  15:1        |ddm|: 6.642094e+00     Tr[DP]  1.784754e-03
+  subiter:   1      |ddm|: 4.056519e+02
+  subiter:   2      |ddm|: 1.003368e+03
+  subiter:   3      |ddm|: 9.947535e+02
+ iter:  15:2        |ddm|: 3.657550e+02     Tr[DP]  1.591332e-01
+  subiter:   1      |ddm|: 5.895025e+00
+  subiter:   2      |ddm|: 7.818010e+00
+  subiter:   3      |ddm|: 7.996680e+00
+ iter:  16:1        |ddm|: 6.115824e+00     Tr[DP]  4.911968e-01
+  subiter:   1      |ddm|: 1.683586e+02
+  subiter:   2      |ddm|: 2.723559e+02
+  subiter:   3      |ddm|: 2.748423e+02
+ iter:  16:2        |ddm|: 1.425982e+02     Tr[DP]  2.177975e+00
+  subiter:   1      |ddm|: 1.389844e+00
+  subiter:   2      |ddm|: 1.153293e+00
+  subiter:   3      |ddm|: 1.236351e+00
+ iter:  17:1        |ddm|: 1.491434e+00     Tr[DP]  1.286977e+00
+  subiter:   1      |ddm|: 1.595271e+02
+  subiter:   2      |ddm|: 1.394037e+03
+  subiter:   3      |ddm|: 1.412522e+03
+ iter:  17:2        |ddm|: 1.590600e+02     Tr[DP]  1.218489e-01
+  subiter:   1      |ddm|: 3.578949e+00
+  subiter:   2      |ddm|: 6.732788e+00
+  subiter:   3      |ddm|: 9.678831e+00
+ iter:  18:1        |ddm|: 7.865353e+00     Tr[DP]  1.045310e-02
+  subiter:   1      |ddm|: 3.664210e+02
+  subiter:   2      |ddm|: 4.951212e+02
+  subiter:   3      |ddm|: 4.874067e+02
+ iter:  18:2        |ddm|: 3.509343e+02     Tr[DP]  3.032589e-01
+  subiter:   1      |ddm|: 6.760477e+00
+  subiter:   2      |ddm|: 8.488706e+00
+  subiter:   3      |ddm|: 8.742536e+00
+ iter:  19:1        |ddm|: 6.755836e+00     Tr[DP]  1.541065e-01
+  subiter:   1      |ddm|: 3.826868e+02
+  subiter:   2      |ddm|: 1.080024e+03
+  subiter:   3      |ddm|: 1.088969e+03
+ iter:  19:2        |ddm|: 3.902093e+02     Tr[DP]  2.273090e+00
+  subiter:   1      |ddm|: 2.311639e+01
+  subiter:   2      |ddm|: 1.864167e+01
+  subiter:   3      |ddm|: 2.552302e+01
+ iter:  20:1        |ddm|: 2.905081e+01     Tr[DP] -2.950146e+00
+  subiter:   1      |ddm|: 2.470060e+02
+  subiter:   2      |ddm|: 1.090526e+03
+  subiter:   3      |ddm|: 1.148024e+03
+ iter:  20:2        |ddm|: 4.716675e+02     Tr[DP]  1.629253e-01
+  subiter:   1      |ddm|: 2.868707e+01
+  subiter:   2      |ddm|: 1.233104e+01
+  subiter:   3      |ddm|: 1.769777e+01
+ iter:  21:1        |ddm|: 3.029006e+01     Tr[DP]  4.467035e-01
+  subiter:   1      |ddm|: 4.572380e+02
+  subiter:   2      |ddm|: 1.681644e+03
+  subiter:   3      |ddm|: 1.682918e+03
+ iter:  21:2        |ddm|: 4.566029e+02     Tr[DP]  1.976397e-01
+  subiter:   1      |ddm|: 1.387279e+01
+  subiter:   2      |ddm|: 7.268681e+00
+  subiter:   3      |ddm|: 1.322796e+01
+ iter:  22:1        |ddm|: 1.762161e+01     Tr[DP]  1.602153e-01
+  subiter:   1      |ddm|: 2.033553e+02
+  subiter:   2      |ddm|: 1.335435e+03
+  subiter:   3      |ddm|: 1.359547e+03
+ iter:  22:2        |ddm|: 1.054465e+02     Tr[DP]  1.118371e+00
+  subiter:   1      |ddm|: 1.354805e+01
+  subiter:   2      |ddm|: 1.084394e+01
+  subiter:   3      |ddm|: 1.246541e+01
+ iter:  23:1        |ddm|: 1.482509e+01     Tr[DP]  7.317856e-01
+  subiter:   1      |ddm|: 2.043380e+02
+  subiter:   2      |ddm|: 5.425789e+02
+  subiter:   3      |ddm|: 5.787977e+02
+ iter:  23:2        |ddm|: 1.281841e+02     Tr[DP]  1.824672e-02
+  subiter:   1      |ddm|: 9.733943e+00
+  subiter:   2      |ddm|: 9.814060e+00
+  subiter:   3      |ddm|: 1.024421e+01
+ iter:  24:1        |ddm|: 9.892103e+00     Tr[DP]  7.645297e-01
+  subiter:   1      |ddm|: 2.187211e+02
+  subiter:   2      |ddm|: 2.749121e+02
+  subiter:   3      |ddm|: 2.150564e+02
+ iter:  24:2        |ddm|: 1.381066e+02     Tr[DP]  1.444319e+00
+  subiter:   1      |ddm|: 2.271605e+00
+  subiter:   2      |ddm|: 1.890293e+00
+  subiter:   3      |ddm|: 3.345302e+00
+ iter:  25:1        |ddm|: 3.341847e+00     Tr[DP]  5.670360e-01
+  subiter:   1      |ddm|: 4.119071e+02
+  subiter:   2      |ddm|: 9.745106e+02
+  subiter:   3      |ddm|: 9.913401e+02
+ iter:  25:2        |ddm|: 3.570464e+02     Tr[DP]  1.094181e+00
+  subiter:   1      |ddm|: 3.710082e+00
+  subiter:   2      |ddm|: 6.406294e+00
+  subiter:   3      |ddm|: 9.129363e+00
+ iter:  26:1        |ddm|: 7.210948e+00     Tr[DP]  1.744628e-01
+  subiter:   1      |ddm|: 5.089044e+02
+  subiter:   2      |ddm|: 1.405630e+03
+  subiter:   3      |ddm|: 1.519693e+03
+ iter:  26:2        |ddm|: 6.428873e+02     Tr[DP]  3.654925e+00
+  subiter:   1      |ddm|: 3.017700e+01
+  subiter:   2      |ddm|: 3.146830e+01
+  subiter:   3      |ddm|: 3.192509e+01
+ iter:  27:1        |ddm|: 3.088480e+01     Tr[DP] -3.639978e+00
+  subiter:   1      |ddm|: 4.898525e+02
+  subiter:   2      |ddm|: 1.618871e+03
+  subiter:   3      |ddm|: 1.763572e+03
+ iter:  27:2        |ddm|: 6.532792e+02     Tr[DP]  2.606021e-05
+  subiter:   1      |ddm|: 3.115276e+01
+  subiter:   2      |ddm|: 1.483613e+01
+  subiter:   3      |ddm|: 1.595092e+01
+ iter:  28:1        |ddm|: 3.037026e+01     Tr[DP]  6.562735e-05
+  subiter:   1      |ddm|: 3.780105e+02
+  subiter:   2      |ddm|: 1.430101e+03
+  subiter:   3      |ddm|: 1.435173e+03
+ iter:  28:2        |ddm|: 3.762366e+02     Tr[DP]  2.319012e-01
+  subiter:   1      |ddm|: 7.092766e+00
+  subiter:   2      |ddm|: 1.357870e+01
+  subiter:   3      |ddm|: 1.580539e+01
+ iter:  29:1        |ddm|: 1.075917e+01     Tr[DP]  2.581132e-01
+  subiter:   1      |ddm|: 1.202702e+02
+  subiter:   2      |ddm|: 8.701467e+02
+  subiter:   3      |ddm|: 8.861151e+02
+ iter:  29:2        |ddm|: 1.887424e+02     Tr[DP]  1.544062e-01
+  subiter:   1      |ddm|: 7.986292e+00
+  subiter:   2      |ddm|: 7.424012e+00
+  subiter:   3      |ddm|: 1.640101e+01
+ iter:  30:1        |ddm|: 1.622159e+01     Tr[DP]  4.374896e-01
+  subiter:   1      |ddm|: 1.556177e+02
+  subiter:   2      |ddm|: 1.806202e+03
+  subiter:   3      |ddm|: 1.859927e+03
+ iter:  30:2        |ddm|: 4.654890e+02     Tr[DP]  1.571086e+00
+  subiter:   1      |ddm|: 1.502026e+01
+  subiter:   2      |ddm|: 8.376614e+00
+  subiter:   3      |ddm|: 8.770349e+00
+ iter:  31:1        |ddm|: 1.513469e+01     Tr[DP]  7.961857e-01
+  subiter:   1      |ddm|: 4.373155e+02
+  subiter:   2      |ddm|: 1.577613e+03
+  subiter:   3      |ddm|: 1.603166e+03
+ iter:  31:2        |ddm|: 5.016450e+02     Tr[DP]  1.554357e-01
+  subiter:   1      |ddm|: 4.016058e+00
+  subiter:   2      |ddm|: 3.318720e+00
+  subiter:   3      |ddm|: 3.709959e+00
+ iter:  32:1        |ddm|: 4.276806e+00     Tr[DP]  1.503041e-01
+  subiter:   1      |ddm|: 3.562433e+02
+  subiter:   2      |ddm|: 7.573583e+02
+  subiter:   3      |ddm|: 8.050054e+02
+ iter:  32:2        |ddm|: 2.577189e+02     Tr[DP]  1.906703e+00
+  subiter:   1      |ddm|: 4.114415e+00
+  subiter:   2      |ddm|: 2.032094e+00
+  subiter:   3      |ddm|: 1.734711e+00
+ iter:  33:1        |ddm|: 4.075026e+00     Tr[DP]  3.258993e-01
+  subiter:   1      |ddm|: 1.966636e+02
+  subiter:   2      |ddm|: 7.353671e+02
+  subiter:   3      |ddm|: 7.778619e+02
+ iter:  33:2        |ddm|: 1.143205e+02     Tr[DP]  1.089374e-01
+  subiter:   1      |ddm|: 9.350659e-01
+  subiter:   2      |ddm|: 4.418485e-01
+  subiter:   3      |ddm|: 4.004003e-01
+ iter:  34:1        |ddm|: 1.012723e+00     Tr[DP]  1.108571e-01
+  subiter:   1      |ddm|: 3.970997e+02
+  subiter:   2      |ddm|: 8.752831e+02
+  subiter:   3      |ddm|: 8.531700e+02
+ iter:  34:2        |ddm|: 1.253930e+02     Tr[DP]  1.926937e+00
+  subiter:   1      |ddm|: 5.122451e+00
+  subiter:   2      |ddm|: 9.079478e+00
+  subiter:   3      |ddm|: 1.094605e+01
+ iter:  35:1        |ddm|: 7.965902e+00     Tr[DP]  5.015644e-01
+  subiter:   1      |ddm|: 1.871838e+02
+  subiter:   2      |ddm|: 7.324830e+02
+  subiter:   3      |ddm|: 7.530177e+02
+ iter:  35:2        |ddm|: 2.106859e+02     Tr[DP]  1.402501e+00
+  subiter:   1      |ddm|: 1.904328e+01
+  subiter:   2      |ddm|: 2.010208e+01
+  subiter:   3      |ddm|: 2.060696e+01
+ iter:  36:1        |ddm|: 1.959144e+01     Tr[DP] -8.814230e-01
+  subiter:   1      |ddm|: 2.505529e+02
+  subiter:   2      |ddm|: 1.765775e+03
+  subiter:   3      |ddm|: 1.769172e+03
+ iter:  36:2        |ddm|: 2.519453e+02     Tr[DP]  2.266601e-02
+  subiter:   1      |ddm|: 1.808177e+01
+  subiter:   2      |ddm|: 4.045360e+00
+  subiter:   3      |ddm|: 4.304591e+00
+ iter:  37:1        |ddm|: 1.796595e+01     Tr[DP]  2.067222e-02
+  subiter:   1      |ddm|: 1.151360e+02
+  subiter:   2      |ddm|: 1.340363e+02
+  subiter:   3      |ddm|: 1.388175e+02
+ iter:  37:2        |ddm|: 1.203952e+02     Tr[DP]  4.574283e-01
+  subiter:   1      |ddm|: 2.057351e+00
+  subiter:   2      |ddm|: 1.071839e+00
+  subiter:   3      |ddm|: 9.983767e-01
+ iter:  38:1        |ddm|: 2.004085e+00     Tr[DP]  1.561818e-01
+  subiter:   1      |ddm|: 1.258813e+02
+  subiter:   2      |ddm|: 4.472092e+02
+  subiter:   3      |ddm|: 4.724084e+02
+ iter:  38:2        |ddm|: 2.041179e+02     Tr[DP]  8.097765e-02
+  subiter:   1      |ddm|: 2.615360e+00
+  subiter:   2      |ddm|: 1.988715e+00
+  subiter:   3      |ddm|: 2.189642e+00
+ iter:  39:1        |ddm|: 2.732144e+00     Tr[DP]  3.719128e-01
+  subiter:   1      |ddm|: 2.253353e+02
+  subiter:   2      |ddm|: 1.272712e+03
+  subiter:   3      |ddm|: 1.355771e+03
+ iter:  39:2        |ddm|: 5.944342e+02     Tr[DP]  3.403559e-01
+  subiter:   1      |ddm|: 2.248693e+00
+  subiter:   2      |ddm|: 3.433013e+00
+  subiter:   3      |ddm|: 5.774732e+00
+ iter:  40:1        |ddm|: 5.080119e+00     Tr[DP]  3.071182e-01
+  subiter:   1      |ddm|: 6.425470e+02
+  subiter:   2      |ddm|: 1.235536e+03
+  subiter:   3      |ddm|: 1.473584e+03
+ iter:  40:2        |ddm|: 1.030883e+03     Tr[DP]  5.459915e+00
+  subiter:   1      |ddm|: 1.807502e+01
+  subiter:   2      |ddm|: 1.610966e+01
+  subiter:   3      |ddm|: 1.969539e+01
+ iter:  41:1        |ddm|: 2.226151e+01     Tr[DP] -1.507854e+00
+  subiter:   1      |ddm|: 8.358454e+02
+  subiter:   2      |ddm|: 2.279969e+03
+  subiter:   3      |ddm|: 2.334467e+03
+ iter:  41:2        |ddm|: 8.796696e+02     Tr[DP]  1.507437e-01
+  subiter:   1      |ddm|: 2.150464e+01
+  subiter:   2      |ddm|: 1.514722e+01
+  subiter:   3      |ddm|: 1.671392e+01
+ iter:  42:1        |ddm|: 2.258812e+01     Tr[DP]  7.928669e-02
+  subiter:   1      |ddm|: 2.184412e+02
+  subiter:   2      |ddm|: 1.234883e+03
+  subiter:   3      |ddm|: 1.228456e+03
+ iter:  42:2        |ddm|: 1.800078e+02     Tr[DP]  1.112794e+00
+  subiter:   1      |ddm|: 7.419930e+00
+  subiter:   2      |ddm|: 7.297935e+00
+  subiter:   3      |ddm|: 7.668159e+00
+ iter:  43:1        |ddm|: 7.610416e+00     Tr[DP]  5.066360e-01
+  subiter:   1      |ddm|: 7.612159e+01
+  subiter:   2      |ddm|: 1.855652e+02
+  subiter:   3      |ddm|: 1.789888e+02
+ iter:  43:2        |ddm|: 7.682983e+01     Tr[DP]  9.740056e-02
+  subiter:   1      |ddm|: 9.679071e+00
+  subiter:   2      |ddm|: 1.010543e+01
+  subiter:   3      |ddm|: 1.163174e+01
+ iter:  44:1        |ddm|: 9.532244e+00     Tr[DP] -2.253103e+00
+  subiter:   1      |ddm|: 8.876736e+01
+  subiter:   2      |ddm|: 5.353597e+02
+  subiter:   3      |ddm|: 5.501284e+02
+ iter:  44:2        |ddm|: 1.443776e+02     Tr[DP] -2.569283e+00
+  subiter:   1      |ddm|: 1.000786e+01
+  subiter:   2      |ddm|: 8.205135e+00
+  subiter:   3      |ddm|: 1.513086e+01
+ iter:  45:1        |ddm|: 1.611549e+01     Tr[DP]  6.357763e-01
+  subiter:   1      |ddm|: 1.977555e+02
+  subiter:   2      |ddm|: 5.745649e+02
+  subiter:   3      |ddm|: 5.818210e+02
+ iter:  45:2        |ddm|: 1.545841e+02     Tr[DP]  3.585563e-02
+  subiter:   1      |ddm|: 1.308884e+01
+  subiter:   2      |ddm|: 7.502919e+00
+  subiter:   3      |ddm|: 8.024881e+00
+ iter:  46:1        |ddm|: 1.280032e+01     Tr[DP]  4.370800e-01
+  subiter:   1      |ddm|: 2.451453e+02
+  subiter:   2      |ddm|: 5.619094e+02
+  subiter:   3      |ddm|: 6.943209e+02
+ iter:  46:2        |ddm|: 4.780983e+02     Tr[DP]  8.761933e-01
+  subiter:   1      |ddm|: 3.004733e+00
+  subiter:   2      |ddm|: 2.907996e+00
+  subiter:   3      |ddm|: 3.843623e+00
+ iter:  47:1        |ddm|: 3.756174e+00     Tr[DP]  5.331730e-01
+  subiter:   1      |ddm|: 4.740081e+02
+  subiter:   2      |ddm|: 8.794578e+02
+  subiter:   3      |ddm|: 8.911990e+02
+ iter:  47:2        |ddm|: 4.814287e+02     Tr[DP]  1.059535e+00
+  subiter:   1      |ddm|: 3.375363e+00
+  subiter:   2      |ddm|: 1.343143e+01
+  subiter:   3      |ddm|: 1.425514e+01
+ iter:  48:1        |ddm|: 6.637602e+00     Tr[DP]  1.117207e-01
+  subiter:   1      |ddm|: 1.269407e+02
+  subiter:   2      |ddm|: 4.520989e+02
+  subiter:   3      |ddm|: 5.633353e+02
+ iter:  48:2        |ddm|: 3.070881e+02     Tr[DP]  1.251098e+00
+  subiter:   1      |ddm|: 7.164431e+00
+  subiter:   2      |ddm|: 8.581343e+00
+  subiter:   3      |ddm|: 2.234237e+01
+ iter:  49:1        |ddm|: 2.169434e+01     Tr[DP] -4.503674e-01
+  subiter:   1      |ddm|: 3.419559e+02
+  subiter:   2      |ddm|: 1.083230e+03
+  subiter:   3      |ddm|: 1.096025e+03
+ iter:  49:2        |ddm|: 3.717242e+02     Tr[DP]  2.243880e-02
+  subiter:   1      |ddm|: 2.166713e+01
+  subiter:   2      |ddm|: 1.244151e+01
+  subiter:   3      |ddm|: 1.330887e+01
+ iter:  50:1        |ddm|: 2.287293e+01     Tr[DP]  6.215139e-01
+  subiter:   1      |ddm|: 2.999423e+02
+  subiter:   2      |ddm|: 8.299813e+02
+  subiter:   3      |ddm|: 8.455709e+02
+ iter:  50:2        |ddm|: 2.196851e+02     Tr[DP]  1.796694e+00
+  subiter:   1      |ddm|: 9.778699e+00
+  subiter:   2      |ddm|: 1.095742e+01
+  subiter:   3      |ddm|: 1.097621e+01
+ iter:  51:1        |ddm|: 9.743536e+00     Tr[DP]  5.995121e-01
+  subiter:   1      |ddm|: 2.248097e+02
+  subiter:   2      |ddm|: 2.942211e+03
+  subiter:   3      |ddm|: 3.006962e+03
+ iter:  51:2        |ddm|: 5.920936e+02     Tr[DP]  3.269202e+00
+  subiter:   1      |ddm|: 8.333909e+00
+  subiter:   2      |ddm|: 4.752785e+00
+  subiter:   3      |ddm|: 7.550562e+00
+ iter:  52:1        |ddm|: 1.179404e+01     Tr[DP] -7.194088e-01
+  subiter:   1      |ddm|: 6.564882e+02
+  subiter:   2      |ddm|: 1.953636e+03
+  subiter:   3      |ddm|: 1.961414e+03
+ iter:  52:2        |ddm|: 6.250120e+02     Tr[DP]  7.983132e-02
+  subiter:   1      |ddm|: 1.189477e+01
+  subiter:   2      |ddm|: 1.572999e+00
+  subiter:   3      |ddm|: 1.854326e+00
+ iter:  53:1        |ddm|: 1.201329e+01     Tr[DP]  1.753086e-01
+  subiter:   1      |ddm|: 3.739012e+02
+  subiter:   2      |ddm|: 1.345024e+03
+  subiter:   3      |ddm|: 1.344597e+03
+ iter:  53:2        |ddm|: 2.156670e+02     Tr[DP]  1.927130e-01
+  subiter:   1      |ddm|: 6.314397e+00
+  subiter:   2      |ddm|: 8.655217e+00
+  subiter:   3      |ddm|: 9.624191e+00
+ iter:  54:1        |ddm|: 7.664325e+00     Tr[DP]  4.929760e-02
+  subiter:   1      |ddm|: 1.379189e+02
+  subiter:   2      |ddm|: 1.016219e+03
+  subiter:   3      |ddm|: 1.930998e+03
+ iter:  54:2        |ddm|: 1.627912e+03     Tr[DP]  2.225317e-02
+  subiter:   1      |ddm|: 2.314707e+01
+  subiter:   2      |ddm|: 1.830648e+01
+  subiter:   3      |ddm|: 7.181394e+00
+ iter:  55:1        |ddm|: 1.176384e+01     Tr[DP]  1.061591e+00
+  subiter:   1      |ddm|: 1.761170e+03
+  subiter:   2      |ddm|: 2.729892e+03
+  subiter:   3      |ddm|: 2.705353e+03
+ iter:  55:2        |ddm|: 1.720317e+03     Tr[DP]  4.815680e+00
+  subiter:   1      |ddm|: 1.110686e+01
+  subiter:   2      |ddm|: 9.204142e+00
+  subiter:   3      |ddm|: 9.688345e+00
+ iter:  56:1        |ddm|: 1.134360e+01     Tr[DP]  8.139836e-01
+  subiter:   1      |ddm|: 5.907166e+02
+  subiter:   2      |ddm|: 2.585292e+03
+  subiter:   3      |ddm|: 2.583827e+03
+ iter:  56:2        |ddm|: 5.643142e+02     Tr[DP]  9.091012e-02
+  subiter:   1      |ddm|: 4.574785e+00
+  subiter:   2      |ddm|: 1.191638e+00
+  subiter:   3      |ddm|: 9.485977e-01
+ iter:  57:1        |ddm|: 4.592190e+00     Tr[DP]  1.097577e-01
+  subiter:   1      |ddm|: 5.219240e+02
+  subiter:   2      |ddm|: 1.767786e+03
+  subiter:   3      |ddm|: 1.817627e+03
+ iter:  57:2        |ddm|: 6.484264e+02     Tr[DP]  2.506615e-01
+  subiter:   1      |ddm|: 4.618642e+00
+  subiter:   2      |ddm|: 1.889654e+00
+  subiter:   3      |ddm|: 2.243185e+00
+ iter:  58:1        |ddm|: 4.643256e+00     Tr[DP]  2.698595e-01
+  subiter:   1      |ddm|: 6.198727e+02
+  subiter:   2      |ddm|: 3.170416e+03
+  subiter:   3      |ddm|: 3.173593e+03
+ iter:  58:2        |ddm|: 6.246019e+02     Tr[DP]  2.913026e+00
+  subiter:   1      |ddm|: 5.561312e+00
+  subiter:   2      |ddm|: 8.839699e+00
+  subiter:   3      |ddm|: 9.435087e+00
+ iter:  59:1        |ddm|: 6.242920e+00     Tr[DP]  6.296044e-01
+  subiter:   1      |ddm|: 3.562650e+02
+  subiter:   2      |ddm|: 9.046824e+02
+  subiter:   3      |ddm|: 8.787271e+02
+ iter:  59:2        |ddm|: 1.784904e+02     Tr[DP]  1.095572e-04
+  subiter:   1      |ddm|: 4.016777e+00
+  subiter:   2      |ddm|: 6.900402e+00
+  subiter:   3      |ddm|: 9.482361e+00
+ iter:  60:1        |ddm|: 7.272752e+00     Tr[DP]  8.281981e-05
+  subiter:   1      |ddm|: 2.419513e+02
+  subiter:   2      |ddm|: 6.921065e+02
+  subiter:   3      |ddm|: 8.475368e+02
+ iter:  60:2        |ddm|: 5.326740e+02     Tr[DP]  1.512990e-01
+  subiter:   1      |ddm|: 7.239299e+00
+  subiter:   2      |ddm|: 8.463087e+00
+  subiter:   3      |ddm|: 8.973717e+00
+ iter:  61:1        |ddm|: 7.257322e+00     Tr[DP]  2.251264e-01
+  subiter:   1      |ddm|: 7.936880e+02
+  subiter:   2      |ddm|: 1.611466e+03
+  subiter:   3      |ddm|: 1.523018e+03
+ iter:  61:2        |ddm|: 5.559021e+02     Tr[DP]  1.096253e-01
+  subiter:   1      |ddm|: 1.265933e+01
+  subiter:   2      |ddm|: 1.199136e+01
+  subiter:   3      |ddm|: 1.369458e+01
+ iter:  62:1        |ddm|: 1.426020e+01     Tr[DP]  4.203337e-01
+  subiter:   1      |ddm|: 3.664318e+02
+  subiter:   2      |ddm|: 6.923035e+02
+  subiter:   3      |ddm|: 6.265539e+02
+ iter:  62:2        |ddm|: 1.843425e+02     Tr[DP]  2.148302e+00
+  subiter:   1      |ddm|: 1.507890e+01
+  subiter:   2      |ddm|: 1.199518e+01
+  subiter:   3      |ddm|: 1.367350e+01
+ iter:  63:1        |ddm|: 1.629184e+01     Tr[DP]  7.924024e-01
+  subiter:   1      |ddm|: 1.603527e+02
+  subiter:   2      |ddm|: 7.592762e+02
+  subiter:   3      |ddm|: 8.238968e+02
+ iter:  63:2        |ddm|: 3.057491e+02     Tr[DP]  2.059274e-04
+  subiter:   1      |ddm|: 9.588611e+00
+  subiter:   2      |ddm|: 6.930871e+00
+  subiter:   3      |ddm|: 7.529500e+00
+ iter:  64:1        |ddm|: 9.975160e+00     Tr[DP]  2.088859e-04
+  subiter:   1      |ddm|: 3.256004e+02
+  subiter:   2      |ddm|: 1.274266e+03
+  subiter:   3      |ddm|: 1.311860e+03
+ iter:  64:2        |ddm|: 3.696719e+02     Tr[DP]  4.581679e-01
+  subiter:   1      |ddm|: 7.121730e+00
+  subiter:   2      |ddm|: 9.035795e+00
+  subiter:   3      |ddm|: 1.098353e+01
+ iter:  65:1        |ddm|: 9.276308e+00     Tr[DP]  7.256792e-01
+  subiter:   1      |ddm|: 2.456668e+02
+  subiter:   2      |ddm|: 1.273661e+03
+  subiter:   3      |ddm|: 1.277752e+03
+ iter:  65:2        |ddm|: 2.470539e+02     Tr[DP]  2.823714e+00
+  subiter:   1      |ddm|: 1.065557e+01
+  subiter:   2      |ddm|: 1.208290e+01
+  subiter:   3      |ddm|: 1.328843e+01
+ iter:  66:1        |ddm|: 1.206490e+01     Tr[DP]  4.584377e-01
+  subiter:   1      |ddm|: 2.353116e+02
+  subiter:   2      |ddm|: 7.508751e+02
+  subiter:   3      |ddm|: 7.428173e+02
+ iter:  66:2        |ddm|: 1.358190e+02     Tr[DP]  4.312424e-02
+  subiter:   1      |ddm|: 7.664811e+00
+  subiter:   2      |ddm|: 6.251112e+00
+  subiter:   3      |ddm|: 1.079402e+01
+ iter:  67:1        |ddm|: 1.173674e+01     Tr[DP]  2.620098e-01
+  subiter:   1      |ddm|: 2.661323e+02
+  subiter:   2      |ddm|: 1.223479e+03
+  subiter:   3      |ddm|: 1.206533e+03
+ iter:  67:2        |ddm|: 9.524392e+01     Tr[DP]  9.514964e-01
+  subiter:   1      |ddm|: 8.903773e+00
+  subiter:   2      |ddm|: 7.403328e+00
+  subiter:   3      |ddm|: 9.303176e+00
+ iter:  68:1        |ddm|: 1.058848e+01     Tr[DP]  5.352533e-01
+  subiter:   1      |ddm|: 1.771356e+02
+  subiter:   2      |ddm|: 8.042841e+02
+  subiter:   3      |ddm|: 8.099760e+02
+ iter:  68:2        |ddm|: 1.299554e+02     Tr[DP]  1.521108e-02
+  subiter:   1      |ddm|: 9.571365e+00
+  subiter:   2      |ddm|: 1.007382e+01
+  subiter:   3      |ddm|: 9.221894e+00
+ iter:  69:1        |ddm|: 8.073824e+00     Tr[DP]  4.529541e-01
+  subiter:   1      |ddm|: 1.571010e+02
+  subiter:   2      |ddm|: 6.763923e+02
+  subiter:   3      |ddm|: 8.130225e+02
+ iter:  69:2        |ddm|: 4.715035e+02     Tr[DP]  3.502839e+00
+  subiter:   1      |ddm|: 1.349201e+01
+  subiter:   2      |ddm|: 1.430818e+01
+  subiter:   3      |ddm|: 1.275327e+01
+ iter:  70:1        |ddm|: 1.147191e+01     Tr[DP]  1.505714e+00
+  subiter:   1      |ddm|: 6.261440e+02
+  subiter:   2      |ddm|: 8.934902e+02
+  subiter:   3      |ddm|: 9.004828e+02
+ iter:  70:2        |ddm|: 6.351256e+02     Tr[DP]  1.688867e-02
+  subiter:   1      |ddm|: 8.778594e+00
+  subiter:   2      |ddm|: 1.014731e+01
+  subiter:   3      |ddm|: 1.644583e+01
+ iter:  71:1        |ddm|: 1.451353e+01     Tr[DP]  6.282583e-01
+  subiter:   1      |ddm|: 4.871833e+02
+  subiter:   2      |ddm|: 1.534166e+03
+  subiter:   3      |ddm|: 1.531894e+03
+ iter:  71:2        |ddm|: 4.561185e+02     Tr[DP]  1.685779e+00
+  subiter:   1      |ddm|: 1.571546e+01
+  subiter:   2      |ddm|: 1.461193e+01
+  subiter:   3      |ddm|: 1.314189e+01
+ iter:  72:1        |ddm|: 1.400377e+01     Tr[DP]  1.922455e-01
+  subiter:   1      |ddm|: 1.133086e+02
+  subiter:   2      |ddm|: 7.626925e+02
+  subiter:   3      |ddm|: 8.809780e+02
+ iter:  72:2        |ddm|: 4.297742e+02     Tr[DP]  4.883870e-01
+  subiter:   1      |ddm|: 9.941020e+00
+  subiter:   2      |ddm|: 1.146861e+01
+  subiter:   3      |ddm|: 1.393647e+01
+ iter:  73:1        |ddm|: 1.267535e+01     Tr[DP]  7.396759e-01
+  subiter:   1      |ddm|: 6.287717e+02
+  subiter:   2      |ddm|: 1.662277e+03
+  subiter:   3      |ddm|: 1.627341e+03
+ iter:  73:2        |ddm|: 4.682628e+02     Tr[DP]  1.313104e-02
+  subiter:   1      |ddm|: 1.084380e+01
+  subiter:   2      |ddm|: 7.287503e+00
+  subiter:   3      |ddm|: 1.677059e+01
+ iter:  74:1        |ddm|: 1.790165e+01     Tr[DP]  3.221818e-01
+  subiter:   1      |ddm|: 1.717438e+02
+  subiter:   2      |ddm|: 9.626097e+02
+  subiter:   3      |ddm|: 1.043229e+03
+ iter:  74:2        |ddm|: 4.982209e+02     Tr[DP]  2.179726e-01
+  subiter:   1      |ddm|: 1.493837e+01
+  subiter:   2      |ddm|: 1.561131e+01
+  subiter:   3      |ddm|: 1.576759e+01
+ iter:  75:1        |ddm|: 1.516071e+01     Tr[DP]  2.932544e-01
+  subiter:   1      |ddm|: 4.998515e+02
+  subiter:   2      |ddm|: 7.911955e+02
+  subiter:   3      |ddm|: 7.997339e+02
+ iter:  75:2        |ddm|: 5.118808e+02     Tr[DP]  2.303579e-01
+  subiter:   1      |ddm|: 3.629751e+00
+  subiter:   2      |ddm|: 3.938024e+00
+  subiter:   3      |ddm|: 6.766614e+00
+ iter:  76:1        |ddm|: 6.228198e+00     Tr[DP]  5.925304e-02
+  subiter:   1      |ddm|: 2.675992e+02
+  subiter:   2      |ddm|: 7.480838e+02
+  subiter:   3      |ddm|: 7.179204e+02
+ iter:  76:2        |ddm|: 1.451645e+02     Tr[DP]  9.852756e-01
+  subiter:   1      |ddm|: 9.575066e+00
+  subiter:   2      |ddm|: 1.161595e+01
+  subiter:   3      |ddm|: 1.123121e+01
+ iter:  77:1        |ddm|: 9.102303e+00     Tr[DP]  9.702581e-01
+  subiter:   1      |ddm|: 7.342130e+02
+  subiter:   2      |ddm|: 1.006840e+03
+  subiter:   3      |ddm|: 8.656295e+02
+ iter:  77:2        |ddm|: 5.250693e+02     Tr[DP]  1.434877e-03
+  subiter:   1      |ddm|: 7.932926e+00
+  subiter:   2      |ddm|: 9.958694e+00
+  subiter:   3      |ddm|: 1.824979e+01
+ iter:  78:1        |ddm|: 1.716005e+01     Tr[DP]  3.594889e-01
+  subiter:   1      |ddm|: 5.985825e+02
+  subiter:   2      |ddm|: 1.480440e+03
+  subiter:   3      |ddm|: 1.484015e+03
+ iter:  78:2        |ddm|: 5.703590e+02     Tr[DP]  1.453755e+00
+  subiter:   1      |ddm|: 1.891660e+01
+  subiter:   2      |ddm|: 1.378831e+01
+  subiter:   3      |ddm|: 1.129105e+01
+ iter:  79:1        |ddm|: 1.715533e+01     Tr[DP]  5.576699e-02
+  subiter:   1      |ddm|: 2.997515e+02
+  subiter:   2      |ddm|: 3.112198e+03
+  subiter:   3      |ddm|: 3.133201e+03
+ iter:  79:2        |ddm|: 4.435923e+02     Tr[DP]  8.027787e-01
+  subiter:   1      |ddm|: 7.595853e+00
+  subiter:   2      |ddm|: 8.177734e+00
+  subiter:   3      |ddm|: 1.863400e+01
+ iter:  80:1        |ddm|: 1.804701e+01     Tr[DP]  2.991599e-01
+  subiter:   1      |ddm|: 4.292592e+02
+  subiter:   2      |ddm|: 1.287445e+03
+  subiter:   3      |ddm|: 1.289175e+03
+ iter:  80:2        |ddm|: 4.059167e+02     Tr[DP]  6.499204e-02
+  subiter:   1      |ddm|: 1.999066e+01
+  subiter:   2      |ddm|: 1.593601e+01
+  subiter:   3      |ddm|: 1.303764e+01
+ iter:  81:1        |ddm|: 1.819333e+01     Tr[DP]  1.281838e-01
+  subiter:   1      |ddm|: 1.837163e+02
+  subiter:   2      |ddm|: 1.415422e+03
+  subiter:   3      |ddm|: 1.431275e+03
+ iter:  81:2        |ddm|: 1.633971e+02     Tr[DP]  1.126229e+00
+  subiter:   1      |ddm|: 6.991982e+00
+  subiter:   2      |ddm|: 7.151166e+00
+  subiter:   3      |ddm|: 1.261248e+01
+ iter:  82:1        |ddm|: 1.170505e+01     Tr[DP]  2.070525e-01
+  subiter:   1      |ddm|: 1.270605e+02
+  subiter:   2      |ddm|: 1.239453e+03
+  subiter:   3      |ddm|: 1.253901e+03
+ iter:  82:2        |ddm|: 1.828742e+02     Tr[DP]  1.622183e-05
+  subiter:   1      |ddm|: 1.226597e+01
+  subiter:   2      |ddm|: 1.327631e+01
+  subiter:   3      |ddm|: 1.427990e+01
+ iter:  83:1        |ddm|: 1.313524e+01     Tr[DP]  1.851477e-05
+  subiter:   1      |ddm|: 2.262562e+02
+  subiter:   2      |ddm|: 6.287366e+02
+  subiter:   3      |ddm|: 6.343666e+02
+ iter:  83:2        |ddm|: 2.250722e+02     Tr[DP]  2.674874e-02
+  subiter:   1      |ddm|: 7.651374e+00
+  subiter:   2      |ddm|: 9.619790e+00
+  subiter:   3      |ddm|: 9.735597e+00
+ iter:  84:1        |ddm|: 7.794349e+00     Tr[DP]  3.086175e-01
+  subiter:   1      |ddm|: 4.437577e+02
+  subiter:   2      |ddm|: 1.324061e+03
+  subiter:   3      |ddm|: 1.315656e+03
+ iter:  84:2        |ddm|: 1.529755e+02     Tr[DP]  1.019692e-01
+  subiter:   1      |ddm|: 2.178262e+00
+  subiter:   2      |ddm|: 6.186736e+00
+  subiter:   3      |ddm|: 8.482337e+00
+ iter:  85:1        |ddm|: 6.135668e+00     Tr[DP]  8.936472e-02
+  subiter:   1      |ddm|: 2.711222e+02
+  subiter:   2      |ddm|: 1.188273e+03
+  subiter:   3      |ddm|: 1.225949e+03
+ iter:  85:2        |ddm|: 9.039229e+01     Tr[DP]  9.354337e-01
+  subiter:   1      |ddm|: 1.482489e+01
+  subiter:   2      |ddm|: 1.698544e+01
+  subiter:   3      |ddm|: 1.473769e+01
+ iter:  86:1        |ddm|: 1.275971e+01     Tr[DP] -8.231317e-02
+  subiter:   1      |ddm|: 2.517452e+02
+  subiter:   2      |ddm|: 5.662198e+02
+  subiter:   3      |ddm|: 5.386116e+02
+ iter:  86:2        |ddm|: 7.996562e+01     Tr[DP]  9.299355e-03
+  subiter:   1      |ddm|: 1.241587e+01
+  subiter:   2      |ddm|: 9.821461e+00
+  subiter:   3      |ddm|: 1.230452e+01
+ iter:  87:1        |ddm|: 1.398176e+01     Tr[DP]  1.627175e-01
+  subiter:   1      |ddm|: 1.847978e+02
+  subiter:   2      |ddm|: 3.954189e+02
+  subiter:   3      |ddm|: 3.975605e+02
+ iter:  87:2        |ddm|: 8.717334e+01     Tr[DP]  9.606442e-01
+  subiter:   1      |ddm|: 1.168566e+01
+  subiter:   2      |ddm|: 1.306053e+01
+  subiter:   3      |ddm|: 1.328204e+01
+ iter:  88:1        |ddm|: 1.173782e+01     Tr[DP]  1.734380e-01
+  subiter:   1      |ddm|: 1.174904e+02
+  subiter:   2      |ddm|: 7.241306e+02
+  subiter:   3      |ddm|: 7.981301e+02
+ iter:  88:2        |ddm|: 3.041857e+02     Tr[DP]  5.948564e-02
+  subiter:   1      |ddm|: 7.059529e+00
+  subiter:   2      |ddm|: 7.490365e+00
+  subiter:   3      |ddm|: 1.266148e+01
+ iter:  89:1        |ddm|: 1.085006e+01     Tr[DP]  2.326583e-01
+  subiter:   1      |ddm|: 3.163899e+02
+  subiter:   2      |ddm|: 1.822171e+03
+  subiter:   3      |ddm|: 1.828697e+03
+ iter:  89:2        |ddm|: 3.029531e+02     Tr[DP]  1.200407e+00
+  subiter:   1      |ddm|: 1.287112e+01
+  subiter:   2      |ddm|: 1.733697e+01
+  subiter:   3      |ddm|: 1.794834e+01
+ iter:  90:1        |ddm|: 1.388428e+01     Tr[DP]  5.709068e-01
+  subiter:   1      |ddm|: 1.592480e+02
+  subiter:   2      |ddm|: 5.560524e+02
+  subiter:   3      |ddm|: 7.231588e+02
+ iter:  90:2        |ddm|: 4.608246e+02     Tr[DP]  2.099014e-04
+  subiter:   1      |ddm|: 5.476238e+00
+  subiter:   2      |ddm|: 7.183971e+00
+  subiter:   3      |ddm|: 8.877939e+00
+ iter:  91:1        |ddm|: 7.269224e+00     Tr[DP]  2.169430e-04
+  subiter:   1      |ddm|: 4.654757e+02
+  subiter:   2      |ddm|: 3.675326e+03
+  subiter:   3      |ddm|: 3.690452e+03
+ iter:  91:2        |ddm|: 4.830937e+02     Tr[DP]  1.681970e-01
+  subiter:   1      |ddm|: 8.877153e+00
+  subiter:   2      |ddm|: 1.104271e+01
+  subiter:   3      |ddm|: 1.105073e+01
+ iter:  92:1        |ddm|: 8.885986e+00     Tr[DP]  1.356530e-01
+  subiter:   1      |ddm|: 2.154677e+02
+  subiter:   2      |ddm|: 7.320315e+02
+  subiter:   3      |ddm|: 7.523245e+02
+ iter:  92:2        |ddm|: 2.470279e+02     Tr[DP]  1.342142e-02
+  subiter:   1      |ddm|: 6.025964e+00
+  subiter:   2      |ddm|: 7.577435e+00
+  subiter:   3      |ddm|: 7.682471e+00
+ iter:  93:1        |ddm|: 6.139232e+00     Tr[DP]  6.439552e-01
+  subiter:   1      |ddm|: 2.443007e+02
+  subiter:   2      |ddm|: 1.791921e+03
+  subiter:   3      |ddm|: 1.792134e+03
+ iter:  93:2        |ddm|: 2.331462e+02     Tr[DP]  2.579760e+00
+  subiter:   1      |ddm|: 8.095169e+00
+  subiter:   2      |ddm|: 2.117522e+01
+  subiter:   3      |ddm|: 2.243392e+01
+ iter:  94:1        |ddm|: 8.556180e+00     Tr[DP]  5.796922e-01
+  subiter:   1      |ddm|: 1.944377e+02
+  subiter:   2      |ddm|: 1.250537e+03
+  subiter:   3      |ddm|: 1.264784e+03
+ iter:  94:2        |ddm|: 2.402110e+02     Tr[DP]  1.804226e-04
+  subiter:   1      |ddm|: 9.812625e+00
+  subiter:   2      |ddm|: 1.088296e+01
+  subiter:   3      |ddm|: 1.069914e+01
+ iter:  95:1        |ddm|: 9.611788e+00     Tr[DP]  1.746265e-04
+  subiter:   1      |ddm|: 3.053056e+02
+  subiter:   2      |ddm|: 1.385863e+03
+  subiter:   3      |ddm|: 1.509833e+03
+ iter:  95:2        |ddm|: 6.337609e+02     Tr[DP]  3.034461e-01
+  subiter:   1      |ddm|: 1.505871e+01
+  subiter:   2      |ddm|: 1.601478e+01
+  subiter:   3      |ddm|: 1.263735e+01
+ iter:  96:1        |ddm|: 1.150209e+01     Tr[DP]  1.539064e-01
+  subiter:   1      |ddm|: 7.058486e+02
+  subiter:   2      |ddm|: 2.072156e+03
+  subiter:   3      |ddm|: 2.059416e+03
+ iter:  96:2        |ddm|: 6.606091e+02     Tr[DP]  1.886252e+00
+  subiter:   1      |ddm|: 1.155247e+01
+  subiter:   2      |ddm|: 1.205135e+01
+  subiter:   3      |ddm|: 1.546347e+01
+ iter:  97:1        |ddm|: 1.474387e+01     Tr[DP]  3.132963e-01
+  subiter:   1      |ddm|: 2.795177e+02
+  subiter:   2      |ddm|: 1.036662e+03
+  subiter:   3      |ddm|: 1.038347e+03
+ iter:  97:2        |ddm|: 1.819983e+02     Tr[DP]  1.120578e-01
+  subiter:   1      |ddm|: 8.162026e+00
+  subiter:   2      |ddm|: 1.030865e+01
+  subiter:   3      |ddm|: 1.240115e+01
+ iter:  98:1        |ddm|: 1.011344e+01     Tr[DP]  2.180320e-02
+  subiter:   1      |ddm|: 6.759787e+02
+  subiter:   2      |ddm|: 1.209332e+03
+  subiter:   3      |ddm|: 1.077168e+03
+ iter:  98:2        |ddm|: 3.137435e+02     Tr[DP]  6.872049e-01
+  subiter:   1      |ddm|: 6.932825e+00
+  subiter:   2      |ddm|: 9.408383e+00
+  subiter:   3      |ddm|: 1.057704e+01
+ iter:  99:1        |ddm|: 8.132872e+00     Tr[DP]  3.062512e-01
+  subiter:   1      |ddm|: 4.373946e+02
+  subiter:   2      |ddm|: 9.362560e+02
+  subiter:   3      |ddm|: 8.994285e+02
+ iter:  99:2        |ddm|: 3.175473e+02     Tr[DP]  1.044538e-01
+  subiter:   1      |ddm|: 5.799301e+00
+  subiter:   2      |ddm|: 6.624372e+00
+  subiter:   3      |ddm|: 8.993239e+00
+ iter: 100:1        |ddm|: 8.101452e+00     Tr[DP]  2.865735e-01
+  subiter:   1      |ddm|: 2.546738e+02
+  subiter:   2      |ddm|: 1.064478e+03
+  subiter:   3      |ddm|: 1.064342e+03
+ iter: 100:2        |ddm|: 2.604531e+02     Tr[DP]  1.344639e+00
+  subiter:   1      |ddm|: 6.454425e+00
+  subiter:   2      |ddm|: 7.145567e+00
+  subiter:   3      |ddm|: 7.479382e+00
+ iter: 101:1        |ddm|: 6.715079e+00     Tr[DP]  5.524009e-01
+  subiter:   1      |ddm|: 2.922507e+02
+  subiter:   2      |ddm|: 1.315201e+03
+  subiter:   3      |ddm|: 1.513073e+03
+ iter: 101:2        |ddm|: 7.989367e+02     Tr[DP]  7.718925e+00
+  subiter:   1      |ddm|: 1.187935e+01
+  subiter:   2      |ddm|: 1.251668e+01
+  subiter:   3      |ddm|: 2.048458e+01
+ iter: 102:1        |ddm|: 2.116132e+01     Tr[DP]  1.589362e+00
+  subiter:   1      |ddm|: 8.255888e+02
+  subiter:   2      |ddm|: 1.906410e+03
+  subiter:   3      |ddm|: 1.910148e+03
+ iter: 102:2        |ddm|: 8.221372e+02     Tr[DP]  2.019353e-02
+  subiter:   1      |ddm|: 1.691364e+01
+  subiter:   2      |ddm|: 2.424509e+01
+  subiter:   3      |ddm|: 2.641069e+01
+ iter: 103:1        |ddm|: 2.083266e+01     Tr[DP]  3.854962e-01
+  subiter:   1      |ddm|: 5.190776e+02
+  subiter:   2      |ddm|: 1.250238e+03
+  subiter:   3      |ddm|: 1.162395e+03
+ iter: 103:2        |ddm|: 2.307504e+02     Tr[DP]  1.084070e+00
+  subiter:   1      |ddm|: 1.109917e+01
+  subiter:   2      |ddm|: 1.114458e+01
+  subiter:   3      |ddm|: 1.131292e+01
+ iter: 104:1        |ddm|: 1.114976e+01     Tr[DP]  3.089736e-01
+  subiter:   1      |ddm|: 3.359124e+02
+  subiter:   2      |ddm|: 1.116443e+03
+  subiter:   3      |ddm|: 1.106649e+03
+ iter: 104:2        |ddm|: 2.365211e+02     Tr[DP]  8.769837e-02
+  subiter:   1      |ddm|: 2.365428e+00
+  subiter:   2      |ddm|: 1.589664e+00
+  subiter:   3      |ddm|: 1.683869e+00
+ iter: 105:1        |ddm|: 1.969672e+00     Tr[DP]  2.526295e-01
+  subiter:   1      |ddm|: 3.121341e+02
+  subiter:   2      |ddm|: 1.382630e+03
+  subiter:   3      |ddm|: 1.394842e+03
+ iter: 105:2        |ddm|: 3.425098e+02     Tr[DP]  1.385439e+00
+  subiter:   1      |ddm|: 3.764248e+00
+  subiter:   2      |ddm|: 9.211472e+00
+  subiter:   3      |ddm|: 1.128420e+01
+ iter: 106:1        |ddm|: 7.493493e+00     Tr[DP]  1.797090e-01
+  subiter:   1      |ddm|: 3.958409e+02
+  subiter:   2      |ddm|: 1.838004e+03
+  subiter:   3      |ddm|: 1.833556e+03
+ iter: 106:2        |ddm|: 2.978866e+02     Tr[DP]  7.241640e-02
+  subiter:   1      |ddm|: 7.501497e+00
+  subiter:   2      |ddm|: 8.947981e+00
+  subiter:   3      |ddm|: 1.071096e+01
+ iter: 107:1        |ddm|: 9.550719e+00     Tr[DP]  5.650046e-01
+  subiter:   1      |ddm|: 5.179605e+02
+  subiter:   2      |ddm|: 7.803111e+02
+  subiter:   3      |ddm|: 6.484169e+02
+ iter: 107:2        |ddm|: 2.350625e+02     Tr[DP]  3.094244e-01
+  subiter:   1      |ddm|: 5.532331e+00
+  subiter:   2      |ddm|: 3.847276e+00
+  subiter:   3      |ddm|: 4.113996e+00
+ iter: 108:1        |ddm|: 5.726560e+00     Tr[DP]  4.267464e-01
+  subiter:   1      |ddm|: 3.434914e+02
+  subiter:   2      |ddm|: 1.298081e+03
+  subiter:   3      |ddm|: 1.396731e+03
+ iter: 108:2        |ddm|: 6.177032e+02     Tr[DP]  5.462860e+00
+  subiter:   1      |ddm|: 3.621845e+00
+  subiter:   2      |ddm|: 4.003091e+00
+  subiter:   3      |ddm|: 4.372001e+00
+ iter: 109:1        |ddm|: 4.518308e+00     Tr[DP]  8.160328e-01
+  subiter:   1      |ddm|: 6.322236e+02
+  subiter:   2      |ddm|: 1.802266e+03
+  subiter:   3      |ddm|: 1.803704e+03
+ iter: 109:2        |ddm|: 5.914205e+02     Tr[DP]  5.646694e-02
+  subiter:   1      |ddm|: 4.755351e+00
+  subiter:   2      |ddm|: 8.066587e+00
+  subiter:   3      |ddm|: 9.968585e+00
+ iter: 110:1        |ddm|: 7.709502e+00     Tr[DP]  7.591929e-02
+  subiter:   1      |ddm|: 3.207750e+02
+  subiter:   2      |ddm|: 8.295556e+02
+  subiter:   3      |ddm|: 8.028162e+02
+ iter: 110:2        |ddm|: 9.529538e+01     Tr[DP]  6.370495e-01
+  subiter:   1      |ddm|: 7.023354e+00
+  subiter:   2      |ddm|: 9.703541e+00
+  subiter:   3      |ddm|: 1.389558e+01
+ iter: 111:1        |ddm|: 1.206464e+01     Tr[DP]  5.079643e-01
+  subiter:   1      |ddm|: 3.209095e+02
+  subiter:   2      |ddm|: 5.767398e+02
+  subiter:   3      |ddm|: 5.857635e+02
+ iter: 111:2        |ddm|: 2.896178e+02     Tr[DP]  6.234105e-02
+  subiter:   1      |ddm|: 1.468024e+01
+  subiter:   2      |ddm|: 1.451966e+01
+  subiter:   3      |ddm|: 1.142550e+01
+ iter: 112:1        |ddm|: 1.434510e+01     Tr[DP]  4.929553e-01
+  subiter:   1      |ddm|: 5.364767e+02
+  subiter:   2      |ddm|: 1.218057e+03
+  subiter:   3      |ddm|: 1.184341e+03
+ iter: 112:2        |ddm|: 4.150789e+02     Tr[DP]  2.772377e+00
+  subiter:   1      |ddm|: 1.218881e+01
+  subiter:   2      |ddm|: 1.142278e+01
+  subiter:   3      |ddm|: 1.523402e+01
+ iter: 113:1        |ddm|: 1.538270e+01     Tr[DP]  4.596292e-01
+  subiter:   1      |ddm|: 3.796528e+02
+  subiter:   2      |ddm|: 2.275419e+03
+  subiter:   3      |ddm|: 2.289404e+03
+ iter: 113:2        |ddm|: 3.159880e+02     Tr[DP]  9.209111e-02
+  subiter:   1      |ddm|: 1.087490e+01
+  subiter:   2      |ddm|: 9.885833e+00
+  subiter:   3      |ddm|: 1.377131e+01
+ iter: 114:1        |ddm|: 1.489625e+01     Tr[DP]  2.784660e-02
+  subiter:   1      |ddm|: 3.032623e+02
+  subiter:   2      |ddm|: 1.463751e+03
+  subiter:   3      |ddm|: 1.484097e+03
+ iter: 114:2        |ddm|: 3.847143e+02     Tr[DP]  2.154167e-01
+  subiter:   1      |ddm|: 1.041811e+01
+  subiter:   2      |ddm|: 6.609796e+00
+  subiter:   3      |ddm|: 1.208018e+01
+ iter: 115:1        |ddm|: 1.440043e+01     Tr[DP]  5.486766e-01
+  subiter:   1      |ddm|: 4.543407e+02
+  subiter:   2      |ddm|: 2.366977e+03
+  subiter:   3      |ddm|: 2.383254e+03
+ iter: 115:2        |ddm|: 5.151401e+02     Tr[DP]  4.413771e+00
+  subiter:   1      |ddm|: 1.060106e+01
+  subiter:   2      |ddm|: 9.441714e+00
+  subiter:   3      |ddm|: 1.122354e+01
+ iter: 116:1        |ddm|: 1.235755e+01     Tr[DP]  8.485999e-01
+  subiter:   1      |ddm|: 4.086943e+02
+  subiter:   2      |ddm|: 2.626962e+03
+  subiter:   3      |ddm|: 2.711003e+03
+ iter: 116:2        |ddm|: 7.591131e+02     Tr[DP]  2.108389e-02
+  subiter:   1      |ddm|: 1.014939e+01
+  subiter:   2      |ddm|: 1.163684e+01
+  subiter:   3      |ddm|: 1.419650e+01
+ iter: 117:1        |ddm|: 1.300818e+01     Tr[DP]  9.657968e-03
+  subiter:   1      |ddm|: 6.654630e+02
+  subiter:   2      |ddm|: 1.784901e+03
+  subiter:   3      |ddm|: 1.806206e+03
+ iter: 117:2        |ddm|: 6.883928e+02     Tr[DP]  2.387131e-01
+  subiter:   1      |ddm|: 1.104514e+01
+  subiter:   2      |ddm|: 6.367340e+00
+  subiter:   3      |ddm|: 1.116481e+01
+ iter: 118:1        |ddm|: 1.428789e+01     Tr[DP]  6.656059e-01
+  subiter:   1      |ddm|: 5.641606e+02
+  subiter:   2      |ddm|: 1.032859e+03
+  subiter:   3      |ddm|: 9.230375e+02
+ iter: 118:2        |ddm|: 2.434682e+02     Tr[DP]  6.445612e-02
+  subiter:   1      |ddm|: 6.505625e+00
+  subiter:   2      |ddm|: 5.479644e+00
+  subiter:   3      |ddm|: 7.122646e+00
+ iter: 119:1        |ddm|: 8.446373e+00     Tr[DP]  4.670617e-01
+  subiter:   1      |ddm|: 3.466662e+02
+  subiter:   2      |ddm|: 5.369939e+02
+  subiter:   3      |ddm|: 4.771123e+02
+ iter: 119:2        |ddm|: 2.046426e+02     Tr[DP]  2.223908e+00
+  subiter:   1      |ddm|: 4.075823e+00
+  subiter:   2      |ddm|: 7.831922e+00
+  subiter:   3      |ddm|: 9.826419e+00
+ iter: 120:1        |ddm|: 7.079684e+00     Tr[DP]  4.449097e-01
+  subiter:   1      |ddm|: 3.035995e+02
+  subiter:   2      |ddm|: 3.321389e+02
+  subiter:   3      |ddm|: 6.382695e+02
+ iter: 120:2        |ddm|: 6.079252e+02     Tr[DP]  1.033544e-02
+  subiter:   1      |ddm|: 6.286583e+00
+  subiter:   2      |ddm|: 8.599463e+00
+  subiter:   3      |ddm|: 8.880262e+00
+ iter: 121:1        |ddm|: 6.635897e+00     Tr[DP]  4.717633e-02
+  subiter:   1      |ddm|: 7.217366e+02
+  subiter:   2      |ddm|: 3.280332e+03
+  subiter:   3      |ddm|: 3.276304e+03
+ iter: 121:2        |ddm|: 6.256627e+02     Tr[DP]  4.103959e-01
+  subiter:   1      |ddm|: 2.841793e+00
+  subiter:   2      |ddm|: 2.520128e+00
+  subiter:   3      |ddm|: 3.056691e+00
+ iter: 122:1        |ddm|: 3.308481e+00     Tr[DP]  4.550725e-01
+  subiter:   1      |ddm|: 3.534466e+02
+  subiter:   2      |ddm|: 7.924465e+02
+  subiter:   3      |ddm|: 9.609373e+02
+ iter: 122:2        |ddm|: 6.072757e+02     Tr[DP]  2.641895e+00
+  subiter:   1      |ddm|: 3.732628e+00
+  subiter:   2      |ddm|: 1.267542e+01
+  subiter:   3      |ddm|: 1.391315e+01
+ iter: 123:1        |ddm|: 9.547408e+00     Tr[DP]  3.946306e-01
+  subiter:   1      |ddm|: 6.414634e+02
+  subiter:   2      |ddm|: 3.613131e+03
+  subiter:   3      |ddm|: 3.676458e+03
+ iter: 123:2        |ddm|: 8.971759e+02     Tr[DP]  1.142198e-01
+  subiter:   1      |ddm|: 9.762267e+00
+  subiter:   2      |ddm|: 8.488590e+00
+  subiter:   3      |ddm|: 1.249411e+01
+ iter: 124:1        |ddm|: 1.312959e+01     Tr[DP]  2.638342e-01
+  subiter:   1      |ddm|: 6.784970e+02
+  subiter:   2      |ddm|: 1.348545e+03
+  subiter:   3      |ddm|: 1.344471e+03
+ iter: 124:2        |ddm|: 6.619989e+02     Tr[DP]  3.893105e-01
+  subiter:   1      |ddm|: 9.577397e+00
+  subiter:   2      |ddm|: 6.717247e+00
+  subiter:   3      |ddm|: 1.371638e+01
+ iter: 125:1        |ddm|: 1.524682e+01     Tr[DP]  1.665627e-01
+  subiter:   1      |ddm|: 5.318591e+02
+  subiter:   2      |ddm|: 5.615387e+02
+  subiter:   3      |ddm|: 4.260652e+02
+ iter: 125:2        |ddm|: 3.601704e+02     Tr[DP]  1.713672e-01
+  subiter:   1      |ddm|: 1.130199e+01
+  subiter:   2      |ddm|: 9.260134e+00
+  subiter:   3      |ddm|: 1.055739e+01
+ iter: 126:1        |ddm|: 1.200918e+01     Tr[DP]  6.264013e-01
+  subiter:   1      |ddm|: 3.785974e+02
+  subiter:   2      |ddm|: 1.441707e+03
+  subiter:   3      |ddm|: 1.445716e+03
+ iter: 126:2        |ddm|: 3.858925e+02     Tr[DP]  2.753083e+00
+  subiter:   1      |ddm|: 1.058116e+01
+  subiter:   2      |ddm|: 1.260720e+01
+  subiter:   3      |ddm|: 1.452135e+01
+ iter: 127:1        |ddm|: 1.302243e+01     Tr[DP]  6.288628e-01
+  subiter:   1      |ddm|: 3.892644e+02
+  subiter:   2      |ddm|: 1.132805e+03
+  subiter:   3      |ddm|: 1.152825e+03
+ iter: 127:2        |ddm|: 4.397562e+02     Tr[DP]  5.342728e-05
+  subiter:   1      |ddm|: 1.109915e+01
+  subiter:   2      |ddm|: 8.748713e+00
+  subiter:   3      |ddm|: 1.133412e+01
+ iter: 128:1        |ddm|: 1.323719e+01     Tr[DP]  7.916716e-05
+  subiter:   1      |ddm|: 4.249816e+02
+  subiter:   2      |ddm|: 1.782002e+03
+  subiter:   3      |ddm|: 1.796276e+03
+ iter: 128:2        |ddm|: 4.457430e+02     Tr[DP]  3.756350e-01
+  subiter:   1      |ddm|: 1.315618e+01
+  subiter:   2      |ddm|: 1.356950e+01
+  subiter:   3      |ddm|: 1.286982e+01
+ iter: 129:1        |ddm|: 1.274450e+01     Tr[DP]  8.313463e-01
+  subiter:   1      |ddm|: 1.961875e+02
+  subiter:   2      |ddm|: 5.961360e+02
+  subiter:   3      |ddm|: 6.108173e+02
+ iter: 129:2        |ddm|: 1.777760e+02     Tr[DP]  2.072130e+00
+  subiter:   1      |ddm|: 1.023103e+01
+  subiter:   2      |ddm|: 1.065561e+01
+  subiter:   3      |ddm|: 1.219779e+01
+ iter: 130:1        |ddm|: 1.179890e+01     Tr[DP]  2.501549e-01
+  subiter:   1      |ddm|: 1.273260e+02
+  subiter:   2      |ddm|: 4.246735e+02
+  subiter:   3      |ddm|: 6.414999e+02
+ iter: 130:2        |ddm|: 4.667494e+02     Tr[DP]  2.113505e+00
+  subiter:   1      |ddm|: 8.119864e+00
+  subiter:   2      |ddm|: 9.014859e+00
+  subiter:   3      |ddm|: 1.004782e+01
+ iter: 131:1        |ddm|: 9.203187e+00     Tr[DP]  1.236693e+00
+  subiter:   1      |ddm|: 5.657079e+02
+  subiter:   2      |ddm|: 1.245451e+03
+  subiter:   3      |ddm|: 1.249667e+03
+ iter: 131:2        |ddm|: 5.578531e+02     Tr[DP]  8.405201e-03
+  subiter:   1      |ddm|: 6.394628e+00
+  subiter:   2      |ddm|: 6.043120e+00
+  subiter:   3      |ddm|: 1.084004e+01
+ iter: 132:1        |ddm|: 1.068825e+01     Tr[DP]  1.890749e-01
+  subiter:   1      |ddm|: 4.219834e+02
+  subiter:   2      |ddm|: 1.071250e+03
+  subiter:   3      |ddm|: 1.091596e+03
+ iter: 132:2        |ddm|: 2.875985e+02     Tr[DP]  1.706760e+00
+  subiter:   1      |ddm|: 8.193501e+00
+  subiter:   2      |ddm|: 5.938282e+00
+  subiter:   3      |ddm|: 2.277028e+01
+ iter: 133:1        |ddm|: 2.360890e+01     Tr[DP]  4.155056e-01
+  subiter:   1      |ddm|: 1.960054e+02
+  subiter:   2      |ddm|: 5.488607e+02
+  subiter:   3      |ddm|: 5.838411e+02
+ iter: 133:2        |ddm|: 2.122808e+02     Tr[DP]  6.145061e-05
+  subiter:   1      |ddm|: 2.233195e+01
+  subiter:   2      |ddm|: 7.351548e+00
+  subiter:   3      |ddm|: 1.090395e+01
+ iter: 134:1        |ddm|: 2.303746e+01     Tr[DP]  6.380324e-05
+  subiter:   1      |ddm|: 3.511432e+02
+  subiter:   2      |ddm|: 1.239099e+03
+  subiter:   3      |ddm|: 1.214873e+03
+ iter: 134:2        |ddm|: 2.015180e+02     Tr[DP]  3.291501e-01
+  subiter:   1      |ddm|: 9.069800e+00
+  subiter:   2      |ddm|: 1.089636e+01
+  subiter:   3      |ddm|: 1.236178e+01
+ iter: 135:1        |ddm|: 1.101197e+01     Tr[DP]  1.459275e-01
+  subiter:   1      |ddm|: 1.208396e+02
+  subiter:   2      |ddm|: 5.240482e+02
+  subiter:   3      |ddm|: 5.518309e+02
+ iter: 135:2        |ddm|: 2.039045e+02     Tr[DP]  5.147276e-01
+  subiter:   1      |ddm|: 5.156763e+00
+  subiter:   2      |ddm|: 4.436898e+00
+  subiter:   3      |ddm|: 5.144141e+00
+ iter: 136:1        |ddm|: 6.482002e+00     Tr[DP]  5.884743e-01
+  subiter:   1      |ddm|: 2.768787e+02
+  subiter:   2      |ddm|: 4.830761e+02
+  subiter:   3      |ddm|: 6.310513e+02
+ iter: 136:2        |ddm|: 4.888076e+02     Tr[DP]  4.149189e-02
+  subiter:   1      |ddm|: 2.390195e+00
+  subiter:   2      |ddm|: 1.534614e+00
+  subiter:   3      |ddm|: 1.544325e+00
+ iter: 137:1        |ddm|: 2.659634e+00     Tr[DP]  4.086831e-01
+  subiter:   1      |ddm|: 4.533700e+02
+  subiter:   2      |ddm|: 2.199878e+03
+  subiter:   3      |ddm|: 2.198900e+03
+ iter: 137:2        |ddm|: 4.536546e+02     Tr[DP]  1.789209e+00
+  subiter:   1      |ddm|: 2.011043e+00
+  subiter:   2      |ddm|: 8.943439e-01
+  subiter:   3      |ddm|: 5.804059e-01
+ iter: 138:1        |ddm|: 1.986182e+00     Tr[DP]  5.474112e-01
+  subiter:   1      |ddm|: 8.315334e+01
+  subiter:   2      |ddm|: 4.904257e+02
+  subiter:   3      |ddm|: 5.908679e+02
+ iter: 138:2        |ddm|: 3.353294e+02     Tr[DP]  5.984656e+00
+  subiter:   1      |ddm|: 1.293342e+01
+  subiter:   2      |ddm|: 1.820417e+01
+  subiter:   3      |ddm|: 1.645035e+01
+ iter: 139:1        |ddm|: 7.651374e+00     Tr[DP]  2.255791e+00
+  subiter:   1      |ddm|: 3.519809e+02
+  subiter:   2      |ddm|: 1.869428e+03
+  subiter:   3      |ddm|: 1.921578e+03
+ iter: 139:2        |ddm|: 4.728043e+02     Tr[DP]  5.117278e-05
+  subiter:   1      |ddm|: 1.136154e+01
+  subiter:   2      |ddm|: 1.265720e+01
+  subiter:   3      |ddm|: 1.306973e+01
+ iter: 140:1        |ddm|: 1.173155e+01     Tr[DP]  7.081682e-05
+  subiter:   1      |ddm|: 3.329794e+02
+  subiter:   2      |ddm|: 1.404242e+03
+  subiter:   3      |ddm|: 1.406517e+03
+ iter: 140:2        |ddm|: 3.104601e+02     Tr[DP]  3.016029e-01
+  subiter:   1      |ddm|: 1.592016e+01
+  subiter:   2      |ddm|: 1.611607e+01
+  subiter:   3      |ddm|: 1.957653e+01
+ iter: 141:1        |ddm|: 1.935727e+01     Tr[DP]  2.910193e-01
+  subiter:   1      |ddm|: 3.087875e+02
+  subiter:   2      |ddm|: 8.951136e+02
+  subiter:   3      |ddm|: 9.094529e+02
+ iter: 141:2        |ddm|: 1.383571e+02     Tr[DP]  2.181920e-01
+  subiter:   1      |ddm|: 1.714798e+01
+  subiter:   2      |ddm|: 9.647479e+00
+  subiter:   3      |ddm|: 9.887911e+00
+ iter: 142:1        |ddm|: 1.693148e+01     Tr[DP]  3.554308e-01
+  subiter:   1      |ddm|: 4.382954e+02
+  subiter:   2      |ddm|: 1.055410e+03
+  subiter:   3      |ddm|: 1.157067e+03
+ iter: 142:2        |ddm|: 5.472687e+02     Tr[DP]  2.021515e-02
+  subiter:   1      |ddm|: 2.758356e+00
+  subiter:   2      |ddm|: 1.157027e+00
+  subiter:   3      |ddm|: 9.263412e-01
+ iter: 143:1        |ddm|: 2.937457e+00     Tr[DP]  4.243663e-03
+  subiter:   1      |ddm|: 6.083064e+02
+  subiter:   2      |ddm|: 1.079390e+03
+  subiter:   3      |ddm|: 1.091263e+03
+ iter: 143:2        |ddm|: 5.995224e+02     Tr[DP]  2.288247e-01
+  subiter:   1      |ddm|: 2.297535e+00
+  subiter:   2      |ddm|: 8.516214e-01
+  subiter:   3      |ddm|: 9.235286e-01
+ iter: 144:1        |ddm|: 2.239804e+00     Tr[DP]  1.036491e-01
+  subiter:   1      |ddm|: 4.770867e+02
+  subiter:   2      |ddm|: 2.001352e+03
+  subiter:   3      |ddm|: 2.045123e+03
+ iter: 144:2        |ddm|: 4.418809e+02     Tr[DP]  1.838797e-01
+  subiter:   1      |ddm|: 4.547931e+00
+  subiter:   2      |ddm|: 9.029854e+00
+  subiter:   3      |ddm|: 1.097825e+01
+ iter: 145:1        |ddm|: 7.608327e+00     Tr[DP]  9.486419e-02
+  subiter:   1      |ddm|: 5.788372e+02
+  subiter:   2      |ddm|: 5.652589e+02
+  subiter:   3      |ddm|: 5.645964e+02
+ iter: 145:2        |ddm|: 5.771954e+02     Tr[DP]  5.158879e+00
+  subiter:   1      |ddm|: 1.481151e+01
+  subiter:   2      |ddm|: 1.621313e+01
+  subiter:   3      |ddm|: 1.376011e+01
+ iter: 146:1        |ddm|: 1.202303e+01     Tr[DP]  7.319140e-01
+  subiter:   1      |ddm|: 5.863713e+02
+  subiter:   2      |ddm|: 1.033386e+03
+  subiter:   3      |ddm|: 9.669182e+02
+ iter: 146:2        |ddm|: 4.495757e+02     Tr[DP]  6.992708e-03
+  subiter:   1      |ddm|: 1.039103e+01
+  subiter:   2      |ddm|: 7.648184e+00
+  subiter:   3      |ddm|: 1.106744e+01
+ iter: 147:1        |ddm|: 1.272704e+01     Tr[DP]  8.952379e-03
+  subiter:   1      |ddm|: 1.034723e+02
+  subiter:   2      |ddm|: 1.298085e+03
+  subiter:   3      |ddm|: 1.370753e+03
+ iter: 147:2        |ddm|: 4.931485e+02     Tr[DP]  2.654483e-01
+  subiter:   1      |ddm|: 9.552964e+00
+  subiter:   2      |ddm|: 1.073897e+01
+  subiter:   3      |ddm|: 1.542443e+01
+ iter: 148:1        |ddm|: 1.497510e+01     Tr[DP]  3.801498e-01
+  subiter:   1      |ddm|: 5.096102e+02
+  subiter:   2      |ddm|: 1.212972e+03
+  subiter:   3      |ddm|: 1.223170e+03
+ iter: 148:2        |ddm|: 5.496842e+02     Tr[DP]  2.158016e+00
+  subiter:   1      |ddm|: 1.406448e+01
+  subiter:   2      |ddm|: 1.062508e+01
+  subiter:   3      |ddm|: 1.073982e+01
+ iter: 149:1        |ddm|: 1.413642e+01     Tr[DP]  8.495123e-01
+  subiter:   1      |ddm|: 2.396517e+02
+  subiter:   2      |ddm|: 1.467309e+03
+  subiter:   3      |ddm|: 1.479857e+03
+ iter: 149:2        |ddm|: 2.777745e+02     Tr[DP]  1.397679e-02
+  subiter:   1      |ddm|: 7.439907e+00
+  subiter:   2      |ddm|: 8.496344e+00
+  subiter:   3      |ddm|: 8.929458e+00
+ iter: 150:1        |ddm|: 7.796994e+00     Tr[DP]  4.013606e-01
+  subiter:   1      |ddm|: 5.587584e+02
+  subiter:   2      |ddm|: 1.273297e+03
+  subiter:   3      |ddm|: 1.220755e+03
+ iter: 150:2        |ddm|: 4.011598e+02     Tr[DP]  9.591569e-01
+  subiter:   1      |ddm|: 3.987157e+00
+  subiter:   2      |ddm|: 1.750840e+00
+  subiter:   3      |ddm|: 1.757446e+00
+ iter: 151:1        |ddm|: 3.967793e+00     Tr[DP]  9.841176e-02
+  subiter:   1      |ddm|: 5.294647e+02
+  subiter:   2      |ddm|: 1.218371e+03
+  subiter:   3      |ddm|: 1.172299e+03
+ iter: 151:2        |ddm|: 3.854747e+02     Tr[DP]  1.094278e-01
+  subiter:   1      |ddm|: 2.620854e+00
+  subiter:   2      |ddm|: 6.582861e+00
+  subiter:   3      |ddm|: 8.871590e+00
+ iter: 152:1        |ddm|: 6.556983e+00     Tr[DP]  1.159868e-01
+  subiter:   1      |ddm|: 2.783143e+02
+  subiter:   2      |ddm|: 9.754196e+02
+  subiter:   3      |ddm|: 9.470873e+02
+ iter: 152:2        |ddm|: 1.191461e+02     Tr[DP]  1.771746e-01
+  subiter:   1      |ddm|: 6.842115e+00
+  subiter:   2      |ddm|: 9.356579e+00
+  subiter:   3      |ddm|: 1.150406e+01
+ iter: 153:1        |ddm|: 9.488366e+00     Tr[DP]  5.667028e-01
+  subiter:   1      |ddm|: 4.466163e+02
+  subiter:   2      |ddm|: 6.402388e+02
+  subiter:   3      |ddm|: 5.516097e+02
+ iter: 153:2        |ddm|: 2.244905e+02     Tr[DP]  7.925418e-01
+  subiter:   1      |ddm|: 6.281929e+00
+  subiter:   2      |ddm|: 9.237476e+00
+  subiter:   3      |ddm|: 5.777680e+00
+ iter: 154:1        |ddm|: 5.729815e+00     Tr[DP]  6.184976e-01
+  subiter:   1      |ddm|: 3.474909e+02
+  subiter:   2      |ddm|: 1.531636e+03
+  subiter:   3      |ddm|: 1.596740e+03
+ iter: 154:2        |ddm|: 4.999056e+02     Tr[DP]  4.968183e+00
+  subiter:   1      |ddm|: 1.560699e+01
+  subiter:   2      |ddm|: 1.810496e+01
+  subiter:   3      |ddm|: 3.370361e+01
+ iter: 155:1        |ddm|: 3.201627e+01     Tr[DP] -2.032620e+00
+  subiter:   1      |ddm|: 4.293320e+02
+  subiter:   2      |ddm|: 1.286561e+03
+  subiter:   3      |ddm|: 1.376722e+03
+ iter: 155:2        |ddm|: 4.981307e+02     Tr[DP]  8.185568e-02
+  subiter:   1      |ddm|: 3.297854e+01
+  subiter:   2      |ddm|: 3.274509e+01
+  subiter:   3      |ddm|: 3.265343e+01
+ iter: 156:1        |ddm|: 3.304498e+01     Tr[DP]  7.859520e-02
+  subiter:   1      |ddm|: 2.180938e+02
+  subiter:   2      |ddm|: 1.148233e+03
+  subiter:   3      |ddm|: 1.176685e+03
+ iter: 156:2        |ddm|: 3.473773e+02     Tr[DP]  1.757792e-01
+  subiter:   1      |ddm|: 2.746938e+00
+  subiter:   2      |ddm|: 5.598117e+00
+  subiter:   3      |ddm|: 8.089713e+00
+ iter: 157:1        |ddm|: 6.277949e+00     Tr[DP]  8.629293e-02
+  subiter:   1      |ddm|: 3.474890e+02
+  subiter:   2      |ddm|: 4.824678e+03
+  subiter:   3      |ddm|: 4.835630e+03
+ iter: 157:2        |ddm|: 4.290925e+02     Tr[DP]  7.221249e-01
+  subiter:   1      |ddm|: 5.773182e+00
+  subiter:   2      |ddm|: 6.496490e+00
+  subiter:   3      |ddm|: 7.278057e+00
+ iter: 158:1        |ddm|: 6.541622e+00     Tr[DP]  5.460751e-01
+  subiter:   1      |ddm|: 3.089256e+02
+  subiter:   2      |ddm|: 1.243791e+03
+  subiter:   3      |ddm|: 1.290560e+03
+ iter: 158:2        |ddm|: 3.756158e+02     Tr[DP]  7.010379e-02
+  subiter:   1      |ddm|: 6.962480e+00
+  subiter:   2      |ddm|: 8.910146e+00
+  subiter:   3      |ddm|: 1.002938e+01
+ iter: 159:1        |ddm|: 8.389329e+00     Tr[DP]  2.303594e-02
+  subiter:   1      |ddm|: 3.187809e+02
+  subiter:   2      |ddm|: 1.391287e+03
+  subiter:   3      |ddm|: 1.392188e+03
+ iter: 159:2        |ddm|: 2.719815e+02     Tr[DP]  7.687307e-01
+  subiter:   1      |ddm|: 8.969913e+00
+  subiter:   2      |ddm|: 1.063318e+01
+  subiter:   3      |ddm|: 1.086803e+01
+ iter: 160:1        |ddm|: 9.248398e+00     Tr[DP]  3.948134e-01
+  subiter:   1      |ddm|: 2.248257e+02
+  subiter:   2      |ddm|: 8.478915e+02
+  subiter:   3      |ddm|: 8.541510e+02
+ iter: 160:2        |ddm|: 1.883808e+02     Tr[DP]  1.443968e-01
+  subiter:   1      |ddm|: 4.436159e+00
+  subiter:   2      |ddm|: 6.564463e+00
+  subiter:   3      |ddm|: 8.776759e+00
+ iter: 161:1        |ddm|: 6.992498e+00     Tr[DP]  1.248147e-01
+  subiter:   1      |ddm|: 3.025965e+02
+  subiter:   2      |ddm|: 1.009336e+03
+  subiter:   3      |ddm|: 9.874435e+02
+ iter: 161:2        |ddm|: 1.894380e+02     Tr[DP]  9.561972e-01
+  subiter:   1      |ddm|: 1.014385e+01
+  subiter:   2      |ddm|: 1.231503e+01
+  subiter:   3      |ddm|: 1.374590e+01
+ iter: 162:1        |ddm|: 1.170187e+01     Tr[DP]  6.826081e-01
+  subiter:   1      |ddm|: 6.043466e+02
+  subiter:   2      |ddm|: 7.775844e+02
+  subiter:   3      |ddm|: 5.794177e+02
+ iter: 162:2        |ddm|: 2.830200e+02     Tr[DP]  6.241048e-02
+  subiter:   1      |ddm|: 1.053933e+01
+  subiter:   2      |ddm|: 7.331466e+00
+  subiter:   3      |ddm|: 1.005537e+01
+ iter: 163:1        |ddm|: 1.221343e+01     Tr[DP]  5.086231e-01
+  subiter:   1      |ddm|: 4.090683e+02
+  subiter:   2      |ddm|: 1.330012e+03
+  subiter:   3      |ddm|: 1.311639e+03
+ iter: 163:2        |ddm|: 3.312438e+02     Tr[DP]  1.474150e+00
+  subiter:   1      |ddm|: 1.205173e+01
+  subiter:   2      |ddm|: 1.440578e+01
+  subiter:   3      |ddm|: 1.336776e+01
+ iter: 164:1        |ddm|: 1.074691e+01     Tr[DP]  4.789337e-01
+  subiter:   1      |ddm|: 2.248521e+02
+  subiter:   2      |ddm|: 2.278507e+03
+  subiter:   3      |ddm|: 2.327001e+03
+ iter: 164:2        |ddm|: 4.923256e+02     Tr[DP]  3.088094e+00
+  subiter:   1      |ddm|: 1.738761e+01
+  subiter:   2      |ddm|: 2.028431e+01
+  subiter:   3      |ddm|: 1.733586e+01
+ iter: 165:1        |ddm|: 1.530630e+01     Tr[DP] -4.908911e+00
+  subiter:   1      |ddm|: 4.615094e+02
+  subiter:   2      |ddm|: 1.592742e+03
+  subiter:   3      |ddm|: 1.616798e+03
+ iter: 165:2        |ddm|: 4.779859e+02     Tr[DP]  8.392080e-02
+  subiter:   1      |ddm|: 1.557627e+01
+  subiter:   2      |ddm|: 7.462436e+00
+  subiter:   3      |ddm|: 8.578407e+00
+ iter: 166:1        |ddm|: 1.485444e+01     Tr[DP]  3.113557e-01
+  subiter:   1      |ddm|: 1.355844e+02
+  subiter:   2      |ddm|: 3.820013e+02
+  subiter:   3      |ddm|: 3.982851e+02
+ iter: 166:2        |ddm|: 1.188953e+02     Tr[DP]  1.466435e-01
+  subiter:   1      |ddm|: 1.162486e+01
+  subiter:   2      |ddm|: 6.675288e+00
+  subiter:   3      |ddm|: 1.097781e+01
+ iter: 167:1        |ddm|: 1.460275e+01     Tr[DP]  3.263980e-01
+  subiter:   1      |ddm|: 3.086549e+02
+  subiter:   2      |ddm|: 6.588874e+02
+  subiter:   3      |ddm|: 7.508846e+02
+ iter: 167:2        |ddm|: 3.511993e+02     Tr[DP]  8.819711e-01
+  subiter:   1      |ddm|: 8.938193e+00
+  subiter:   2      |ddm|: 6.857390e+00
+  subiter:   3      |ddm|: 1.335395e+01
+ iter: 168:1        |ddm|: 1.453045e+01     Tr[DP]  1.016209e+00
+  subiter:   1      |ddm|: 3.865395e+02
+  subiter:   2      |ddm|: 1.305771e+03
+  subiter:   3      |ddm|: 1.325429e+03
+ iter: 168:2        |ddm|: 4.482281e+02     Tr[DP]  2.248657e-01
+  subiter:   1      |ddm|: 1.150639e+01
+  subiter:   2      |ddm|: 9.702212e+00
+  subiter:   3      |ddm|: 9.859306e+00
+ iter: 169:1        |ddm|: 1.172655e+01     Tr[DP]  3.192089e-01
+  subiter:   1      |ddm|: 4.569112e+02
+  subiter:   2      |ddm|: 2.264297e+03
+  subiter:   3      |ddm|: 2.418882e+03
+ iter: 169:2        |ddm|: 9.009053e+02     Tr[DP]  3.733581e-01
+  subiter:   1      |ddm|: 5.917123e+00
+  subiter:   2      |ddm|: 8.298838e+00
+  subiter:   3      |ddm|: 1.047198e+01
+ iter: 170:1        |ddm|: 8.650298e+00     Tr[DP] -4.143997e-03
+  subiter:   1      |ddm|: 8.615659e+02
+  subiter:   2      |ddm|: 2.553042e+03
+  subiter:   3      |ddm|: 2.610618e+03
+ iter: 170:2        |ddm|: 8.821129e+02     Tr[DP]  1.183504e+00
+  subiter:   1      |ddm|: 9.975749e+00
+  subiter:   2      |ddm|: 9.944880e+00
+  subiter:   3      |ddm|: 1.063253e+01
+ iter: 171:1        |ddm|: 1.063788e+01     Tr[DP]  6.377799e-01
+  subiter:   1      |ddm|: 4.220939e+02
+  subiter:   2      |ddm|: 6.794112e+02
+  subiter:   3      |ddm|: 6.118992e+02
+ iter: 171:2        |ddm|: 1.286983e+02     Tr[DP]  1.642561e-02
+  subiter:   1      |ddm|: 6.599715e+00
+  subiter:   2      |ddm|: 7.887533e+00
+  subiter:   3      |ddm|: 1.276728e+01
+ iter: 172:1        |ddm|: 1.204767e+01     Tr[DP]  1.745773e-03
+  subiter:   1      |ddm|: 1.639221e+02
+  subiter:   2      |ddm|: 5.363575e+02
+  subiter:   3      |ddm|: 6.226673e+02
+ iter: 172:2        |ddm|: 3.510597e+02     Tr[DP]  1.603018e-01
+  subiter:   1      |ddm|: 9.653934e+00
+  subiter:   2      |ddm|: 6.149881e+00
+  subiter:   3      |ddm|: 6.666234e+00
+ iter: 173:1        |ddm|: 9.236490e+00     Tr[DP]  3.240152e-01
+  subiter:   1      |ddm|: 3.576841e+02
+  subiter:   2      |ddm|: 2.158701e+03
+  subiter:   3      |ddm|: 2.174168e+03
+ iter: 173:2        |ddm|: 3.922800e+02     Tr[DP]  5.221580e-01
+  subiter:   1      |ddm|: 3.359640e+00
+  subiter:   2      |ddm|: 2.854815e+00
+  subiter:   3      |ddm|: 3.024210e+00
+ iter: 174:1        |ddm|: 3.335292e+00     Tr[DP]  4.366909e-01
+  subiter:   1      |ddm|: 2.615571e+02
+  subiter:   2      |ddm|: 1.231738e+03
+  subiter:   3      |ddm|: 1.235859e+03
+ iter: 174:2        |ddm|: 1.958713e+02     Tr[DP]  1.292697e-01
+  subiter:   1      |ddm|: 1.075388e+01
+  subiter:   2      |ddm|: 1.322845e+01
+  subiter:   3      |ddm|: 1.086672e+01
+ iter: 175:1        |ddm|: 7.866124e+00     Tr[DP] -3.869897e-02
+  subiter:   1      |ddm|: 2.342184e+02
+  subiter:   2      |ddm|: 7.666655e+02
+  subiter:   3      |ddm|: 1.087668e+03
+ iter: 175:2        |ddm|: 7.375504e+02     Tr[DP]  1.783463e-01
+  subiter:   1      |ddm|: 7.452837e+00
+  subiter:   2      |ddm|: 7.542965e+00
+  subiter:   3      |ddm|: 7.524749e+00
+ iter: 176:1        |ddm|: 7.433208e+00     Tr[DP]  4.141281e-01
+  subiter:   1      |ddm|: 8.790207e+02
+  subiter:   2      |ddm|: 3.104675e+03
+  subiter:   3      |ddm|: 3.088302e+03
+ iter: 176:2        |ddm|: 8.108808e+02     Tr[DP]  1.387235e+00
+  subiter:   1      |ddm|: 2.678746e+00
+  subiter:   2      |ddm|: 8.627546e+00
+  subiter:   3      |ddm|: 1.055442e+01
+ iter: 177:1        |ddm|: 6.645078e+00     Tr[DP]  6.245569e-02
+  subiter:   1      |ddm|: 3.435713e+02
+  subiter:   2      |ddm|: 2.020029e+03
+  subiter:   3      |ddm|: 2.058961e+03
+ iter: 177:2        |ddm|: 4.

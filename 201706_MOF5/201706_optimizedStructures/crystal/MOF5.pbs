@@ -1,0 +1,13 @@
+#!/bin/bash
+#PBS -N MOF5_opt
+#PBS -l nodes=3:ppn=8
+#PBS -l walltime=24:00:00
+#PBS -l pmem=2700mb
+#PBS -e /panfs/roc/groups/13/goodpast/graha682/201706_MOF5/201706_optimizedStructures/crystal/MOF5.err
+#PBS -o /panfs/roc/groups/13/goodpast/graha682/201706_MOF5/201706_optimizedStructures/crystal/MOF5.log
+#PBS -q batch
+
+module load crystal
+
+cd ${PBS_O_WORKDIR}
+OMP_NUM_THREADS=24 runmpi17 MOF5

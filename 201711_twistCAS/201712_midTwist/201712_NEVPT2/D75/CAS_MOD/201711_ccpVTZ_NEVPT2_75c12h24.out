@@ -1,0 +1,196 @@
+********************************************************************************
+*                              PySCF CALCULATION                               *
+********************************************************************************
+
+================================== Input File ==================================
+atoms
+C          6.25404       -1.41394        0.03683
+H          6.33882       -1.63326       -1.04121
+H          5.90731       -2.33889        0.52841
+H          7.26735       -1.20057        0.41133
+C          5.29554       -0.26685        0.28912
+H          5.25003       -0.04254        1.37200
+H          5.67838        0.65755       -0.18429
+C          3.89131       -0.54079       -0.22038
+H          3.50223       -1.46495        0.25241
+H          3.93029       -0.76396       -1.30567
+C          2.92022        0.59879        0.02574
+H          3.30520        1.52180       -0.45176
+H          2.87668        0.82618        1.10863
+C          1.51182        0.31589       -0.48245
+H          1.11343       -0.59243        0.00800
+H          1.57071        0.07605       -1.56325
+C          0.57265        1.45610       -0.26891
+H          0.84845        2.40898       -0.74939
+C         -0.53847        1.41735        0.47079
+H         -0.43619        1.39807        1.56810
+C         -1.93206        1.36293       -0.06085
+H         -1.91298        1.43054       -1.16509
+H         -2.50106        2.24837        0.28753
+C         -2.68513        0.10838        0.36444
+H         -2.68148        0.03412        1.47016
+H         -2.13365       -0.78396        0.00970
+C         -4.11509        0.06196       -0.14084
+H         -4.66176        0.95763        0.21707
+H         -4.11791        0.14251       -1.24650
+C         -4.86909       -1.18901        0.27519
+H         -4.31768       -2.07945       -0.08267
+H         -4.86156       -1.26568        1.37939
+C         -6.29549       -1.22164       -0.23716
+H         -6.82894       -2.13383        0.07252
+H         -6.87284       -0.35803        0.13473
+H         -6.32447       -1.17917       -1.33932
+end
+
+basis cc-pVTZ
+scf
+method cas[2,2]/nevpt2
+casguess m06
+grid 4
+conv 1e-8
+grad 1e-8
+maxiter 100
+end
+================================== End Input ===================================
+
+
+******** <class 'pyscf.dft.rks.RKS'> flags ********
+method = RKS
+initial guess = atom
+damping factor = 0
+level shift factor = 0
+DIIS = <class 'pyscf.scf.diis.CDIIS'>
+DIIS start cycle = 1
+DIIS space = 8
+SCF tol = 1e-08
+SCF gradient tol = 1e-08
+max. SCF cycles = 100
+direct_scf = True
+direct_scf_tol = 1e-13
+chkfile to save SCF result = /panfs/roc/scratch/graha682/CAS_MOD/201711_ccpVTZ_NEVPT2_75c12h24-0/tmp2q71g5a6
+max_memory 4000 MB (current use 44 MB)
+XC functionals = m06
+small_rho_cutoff = 1e-07
+radial grids: Treutler-Ahlrichs (JCP 102, 346 (M4)) radial grids
+becke partition: Becke, JCP, 88, 2547 (1988)
+pruning grids: <function nwchem_prune at 0x7fffdeb25d90>
+grids dens level: 3
+symmetrized grids: False
+atomic radii adjust function: <function treutler_atomic_radii_adjust at 0x7fffdeb25c80>
+Initial guess from superpostion of atomic densties.
+tot grids = 407400
+init E= -474.991040203522
+  HOMO = -0.374955514766321  LUMO = -0.322574480882735
+cycle= 1 E= -470.435079030775  delta_E= 4.56  |g|= 1.85  |ddm|= 4.51
+  HOMO = 0.00126200147269131  LUMO = 0.0766186133738238
+cycle= 2 E= -470.006953193635  delta_E= 0.428  |g|= 2.27  |ddm|= 5.18
+  HOMO = -0.168058989122152  LUMO = -0.048146569689129
+cycle= 3 E= -471.377149298113  delta_E= -1.37  |g|= 0.149  |ddm|= 4.06
+  HOMO = -0.184116826133652  LUMO = -0.0610665317432169
+cycle= 4 E= -471.380608085216  delta_E= -0.00346  |g|= 0.0723  |ddm|= 0.452
+  HOMO = -0.177928859815893  LUMO = -0.0544203399673374
+cycle= 5 E= -471.381772443245  delta_E= -0.00116  |g|= 0.0273  |ddm|= 0.133
+  HOMO = -0.179577878812723  LUMO = -0.0557599196451954
+cycle= 6 E= -471.381880683603  delta_E= -0.000108  |g|= 0.0187  |ddm|= 0.0421
+  HOMO = -0.179977114449413  LUMO = -0.0561482552249745
+cycle= 7 E= -471.3819636095  delta_E= -8.29e-05  |g|= 0.00402  |ddm|= 0.0182
+  HOMO = -0.179872994585102  LUMO = -0.0560613178846933
+cycle= 8 E= -471.381967451568  delta_E= -3.84e-06  |g|= 0.00133  |ddm|= 0.00595
+  HOMO = -0.180000188487199  LUMO = -0.0561888641299067
+cycle= 9 E= -471.381967854047  delta_E= -4.02e-07  |g|= 0.000426  |ddm|= 0.00202
+  HOMO = -0.179983168921144  LUMO = -0.0561723216008299
+cycle= 10 E= -471.381967894914  delta_E= -4.09e-08  |g|= 0.000122  |ddm|= 0.000607
+  HOMO = -0.179988384483958  LUMO = -0.0561781055593498
+cycle= 11 E= -471.381967898142  delta_E= -3.23e-09  |g|= 4.92e-05  |ddm|= 0.000262
+  HOMO = -0.179986432156237  LUMO = -0.0561763372011363
+cycle= 12 E= -471.381967898669  delta_E= -5.26e-10  |g|= 1.94e-05  |ddm|= 5.55e-05
+  HOMO = -0.179986155969431  LUMO = -0.0561761488335404
+cycle= 13 E= -471.38196789875  delta_E= -8.14e-11  |g|= 8.76e-06  |ddm|= 3.27e-05
+  HOMO = -0.179986441388732  LUMO = -0.0561764639794387
+cycle= 14 E= -471.38196789877  delta_E= -2.02e-11  |g|= 3.45e-06  |ddm|= 1.42e-05
+  HOMO = -0.179986548172072  LUMO = -0.0561765733364258
+cycle= 15 E= -471.38196789877  delta_E= 2.27e-13  |g|= 1.27e-06  |ddm|= 4.96e-06
+  HOMO = -0.179986411729825  LUMO = -0.0561764423509608
+cycle= 16 E= -471.381967898772  delta_E= -2.5e-12  |g|= 4.66e-07  |ddm|= 2.23e-06
+  HOMO = -0.179986450816654  LUMO = -0.0561764787862602
+cycle= 17 E= -471.381967898771  delta_E= 1.14e-12  |g|= 1.23e-07  |ddm|= 7.71e-07
+  HOMO = -0.179986456120268  LUMO = -0.0561764836983294
+cycle= 18 E= -471.381967898775  delta_E= -4.09e-12  |g|= 6.02e-08  |ddm|= 3.53e-07
+  HOMO = -0.179986450751861  LUMO = -0.0561764783807849
+cycle= 19 E= -471.381967898771  delta_E= 4.09e-12  |g|= 2.42e-08  |ddm|= 1.61e-07
+  HOMO = -0.179986452078741  LUMO = -0.0561764795705494
+cycle= 20 E= -471.381967898769  delta_E= 2.5e-12  |g|= 6.23e-09  |ddm|= 4.1e-08
+  HOMO = -0.17998645147511  LUMO = -0.0561764789387002
+Extra cycle  E= -471.381967898764  delta_E= 4.55e-12  |g|= 7.89e-09  |ddm|= 2.23e-08
+converged SCF energy = -471.381967898764
+
+******** <class 'pyscf.mcscf.mc1step.CASSCF'> flags ********
+CAS (1e+1e, 2o), ncore = 47, nvir = 647
+max_cycle_macro = 50
+max_cycle_micro = 4
+conv_tol = 1e-07
+conv_tol_grad = None
+orbital rotation max_stepsize = 0.02
+augmented hessian ah_max_cycle = 30
+augmented hessian ah_conv_tol = 1e-12
+augmented hessian ah_linear dependence = 1e-14
+augmented hessian ah_level shift = 0
+augmented hessian ah_start_tol = 2.5
+augmented hessian ah_start_cycle = 3
+augmented hessian ah_grad_trust_region = 3
+kf_trust_region = 3
+kf_interval = 4
+ci_response_space = 4
+ci_grad_trust_region = 3
+with_dep4 0
+natorb = False
+canonicalization = True
+sorting_mo_energy = False
+chkfile = /panfs/roc/scratch/graha682/CAS_MOD/201711_ccpVTZ_NEVPT2_75c12h24-0/tmp2q71g5a6
+max_memory 4000 MB (current use 306 MB)
+internal_rotation = False
+******** <class 'pyscf.fci.direct_spin1.FCISolver'> flags ********
+max. cycles = 50
+conv_tol = 1e-08
+davidson only = False
+linear dependence = 1e-10
+level shift = 0.001
+max iter space = 12
+max_memory 4000 MB
+nroots = 1
+pspace_size = 400
+spin = None
+CASCI E = -468.345647985432  S^2 = 0.0000000
+Set conv_tol_grad to 0.000316228
+macro iter 1 (17 JK  4 micro), CASSCF E = -468.464169390539  dE = -0.11852141  S^2 = 0.0000000
+               |grad[o]|=0.968  |grad[c]|= 0.121433925657  |ddm|=0.142
+macro iter 2 (13 JK  4 micro), CASSCF E = -468.465428342628  dE = -0.0012589521  S^2 = 0.0000000
+               |grad[o]|=0.0209  |grad[c]|= 0.00252369677599  |ddm|=0.0745
+macro iter 3 (11 JK  4 micro), CASSCF E = -468.46544014062  dE = -1.1797992e-05  S^2 = 0.0000000
+               |grad[o]|=0.00173  |grad[c]|= 0.000104010551374  |ddm|=0.00893
+macro iter 4 (3 JK  1 micro), CASSCF E = -468.465440148171  dE = -7.5507955e-09  S^2 = 0.0000000
+               |grad[o]|=5.9e-05  |grad[c]|= 2.26348724516e-05  |ddm|=0.000166
+1-step CASSCF converged in 4 macro (44 JK 13 micro) steps
+CASSCF canonicalization
+CASSCF energy = -468.465440148171
+Sr    (-1)',   E = -0.00000000011716
+Si    (+1)',   E = -0.00000000021160
+Sijrs (0)  ,   E = -2.09489106933316
+Sijr  (+1) ,   E = -0.02759072148367
+Srsi  (-1) ,   E = -0.09281199395666
+Srs   (-2) ,   E = -0.00337753094860
+Sij   (+2) ,   E = -0.00059369275191
+Sir   (0)' ,   E = -0.02861038137526
+Nevpt2 Energy = -2.247875390178030
+Total NEVPT2 = -470.713315538348752
+================================================================================
+TIMING STATISTICS:
+                   dft   7745.69s   (54.04%)
+                   cas   4580.10s   (31.95%)
+                nevpt2   2008.66s   (14.01%)
+                 TOTAL  14334.47s
+================================================================================
+
+********************************************************************************
+*                              END OF CALCULATION                              *
+********************************************************************************

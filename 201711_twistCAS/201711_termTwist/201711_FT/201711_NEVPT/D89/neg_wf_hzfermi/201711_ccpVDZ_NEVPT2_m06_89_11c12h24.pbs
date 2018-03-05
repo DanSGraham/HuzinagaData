@@ -1,0 +1,28 @@
+#!/bin/bash
+#PBS -N 201711_ccpVDZ_NEVPT2_m06_89_11c12h24
+#PBS -l nodes=1:ppn=8
+#PBS -l walltime=8:00:00
+#PBS -l pmem=2000mb
+#PBS -e /panfs/roc/groups/13/goodpast/graha682/201711_twistCAS/201711_FT/201711_NEVPT/D89/neg_wf_hzfermi/201711_ccpVDZ_NEVPT2_m06_89_11c12h24.err
+#PBS -o /panfs/roc/groups/13/goodpast/graha682/201711_twistCAS/201711_FT/201711_NEVPT/D89/neg_wf_hzfermi/201711_ccpVDZ_NEVPT2_m06_89_11c12h24.log
+#PBS -q mesabi
+
+module load python
+
+# create scratch directory
+scratch=/scratch.global/graha682/neg_wf_hzfermi/201711_ccpVDZ_NEVPT2_m06_89_11c12h24
+if [[ -d $scratch ]]; then
+    i=0
+    while [[ -d $scratch-$i ]]; do
+        let i++
+    done
+    scratch=$scratch-$i
+fi
+rm -rf $scratch 2> /dev/null
+mkdir -p $scratch
+cd $scratch
+
+python /home/goodpast/graha682/code/python/freeze_and_thaw/cython/cmain.py /panfs/roc/groups/13/goodpast/graha682/201711_twistCAS/201711_FT/201711_NEVPT/D89/neg_wf_hzfermi/201711_ccpVDZ_NEVPT2_m06_89_11c12h24.inp > /panfs/roc/groups/13/goodpast/graha682/201711_twistCAS/201711_FT/201711_NEVPT/D89/neg_wf_hzfermi/201711_ccpVDZ_NEVPT2_m06_89_11c12h24.out
+
+cd ${PBS_O_WORKDIR}
+rm -rf $scratch 2> /dev/null

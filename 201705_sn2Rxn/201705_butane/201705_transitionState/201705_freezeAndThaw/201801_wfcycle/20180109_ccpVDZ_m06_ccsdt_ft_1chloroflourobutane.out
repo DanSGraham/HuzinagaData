@@ -1,0 +1,2003 @@
+********************************************************************************
+*                         FREEZE-AND-THAW CALCULATION                          *
+********************************************************************************
+
+================================== Input File ==================================
+
+
+subsystem
+C         -0.70127        0.76529        0.05266
+H         -1.31711        1.31874        0.71511
+H         -0.80712        0.97237       -0.98081
+Cl        -2.13077       -0.93681       -0.04134
+F          0.28559        2.66926       -0.12831
+charge -2
+end
+
+subsystem
+C          0.53997        0.11422        0.58185
+H          1.10719        0.92692        1.01255
+H          0.26964       -0.58058        1.36669
+C          1.36767       -0.58306       -0.48968
+H          0.76840       -1.35142       -0.96544
+H          1.62436        0.14697       -1.24975
+C          2.64288       -1.20342        0.07261
+H          3.27197       -0.44982        0.53612
+H          2.41540       -1.95266        0.82545
+H          3.22446       -1.68633       -0.70699
+charge +1
+end
+
+wfembed
+ cycles 100
+ conv 1e-6
+end
+
+embed
+ huzinaga
+ cycles 300
+ conv 1e-9
+ method m06
+end
+
+basis cc-pVDZ
+method ccsd(t)
+grid 4
+conv 1e-9
+grad 1e-8
+maxiter 300
+================================== End Input ===================================
+tot grids = 316066
+
+                      Getting subsystem overlap integrals                       
+
+                          Initial subsystem densities                           
+Guessing initial subsystem densities
+Initial guess from superpostion of atomic densties.
+Guessing initial subsystem densities
+Initial guess from superpostion of atomic densties.
+
+========================== Starting WFT-in-DFT Cycles ==========================
+
+=========================== Starting Freeze-and-Thaw ===========================
+ iter:   1:1        |ddm|: 2.539355e+00     Tr[DP]  4.198476e-01
+ iter:   1:2        |ddm|: 3.109136e+00     Tr[DP]  1.634443e-01
+ iter:   2:1        |ddm|: 1.148468e+01     Tr[DP]  3.613051e-01
+ iter:   2:2        |ddm|: 1.379453e+00     Tr[DP]  1.864581e-01
+ iter:   3:1        |ddm|: 8.392101e+00     Tr[DP]  3.840208e-01
+ iter:   3:2        |ddm|: 7.456387e-01     Tr[DP]  1.906516e-01
+ iter:   4:1        |ddm|: 1.580927e+00     Tr[DP]  3.676448e-01
+ iter:   4:2        |ddm|: 2.912871e-01     Tr[DP]  2.339000e-01
+ iter:   5:1        |ddm|: 1.129900e+00     Tr[DP]  3.520192e-01
+ iter:   5:2        |ddm|: 2.185004e-01     Tr[DP]  2.602359e-01
+ iter:   6:1        |ddm|: 6.063979e-01     Tr[DP]  3.317506e-01
+ iter:   6:2        |ddm|: 1.419580e-01     Tr[DP]  2.709467e-01
+ iter:   7:1        |ddm|: 2.394333e-01     Tr[DP]  3.179136e-01
+ iter:   7:2        |ddm|: 5.870998e-02     Tr[DP]  2.820339e-01
+ iter:   8:1        |ddm|: 1.407997e-01     Tr[DP]  3.042402e-01
+ iter:   8:2        |ddm|: 3.588572e-02     Tr[DP]  2.861998e-01
+ iter:   9:1        |ddm|: 1.073384e-01     Tr[DP]  2.985897e-01
+ iter:   9:2        |ddm|: 3.374276e-02     Tr[DP]  2.868560e-01
+ iter:  10:1        |ddm|: 4.440841e-02     Tr[DP]  2.960390e-01
+ iter:  10:2        |ddm|: 1.460514e-02     Tr[DP]  2.902409e-01
+ iter:  11:1        |ddm|: 3.370427e-02     Tr[DP]  2.930367e-01
+ iter:  11:2        |ddm|: 1.086961e-02     Tr[DP]  2.901203e-01
+ iter:  12:1        |ddm|: 1.408951e-02     Tr[DP]  2.920551e-01
+ iter:  12:2        |ddm|: 4.169397e-03     Tr[DP]  2.903875e-01
+ iter:  13:1        |ddm|: 5.068153e-03     Tr[DP]  2.915764e-01
+ iter:  13:2        |ddm|: 1.496184e-03     Tr[DP]  2.907119e-01
+ iter:  14:1        |ddm|: 3.247362e-03     Tr[DP]  2.912183e-01
+ iter:  14:2        |ddm|: 9.100732e-04     Tr[DP]  2.907881e-01
+ iter:  15:1        |ddm|: 1.605705e-03     Tr[DP]  2.910607e-01
+ iter:  15:2        |ddm|: 4.276198e-04     Tr[DP]  2.908369e-01
+ iter:  16:1        |ddm|: 1.281446e-03     Tr[DP]  2.909629e-01
+ iter:  16:2        |ddm|: 4.177066e-04     Tr[DP]  2.908441e-01
+ iter:  17:1        |ddm|: 4.165801e-04     Tr[DP]  2.909362e-01
+ iter:  17:2        |ddm|: 1.509114e-04     Tr[DP]  2.908745e-01
+ iter:  18:1        |ddm|: 1.961402e-04     Tr[DP]  2.909097e-01
+ iter:  18:2        |ddm|: 5.229292e-05     Tr[DP]  2.908803e-01
+ iter:  19:1        |ddm|: 1.243136e-04     Tr[DP]  2.908977e-01
+ iter:  19:2        |ddm|: 3.498585e-05     Tr[DP]  2.908826e-01
+ iter:  20:1        |ddm|: 9.051455e-05     Tr[DP]  2.908909e-01
+ iter:  20:2        |ddm|: 2.925276e-05     Tr[DP]  2.908830e-01
+ iter:  21:1        |ddm|: 2.620573e-05     Tr[DP]  2.908890e-01
+ iter:  21:2        |ddm|: 8.187113e-06     Tr[DP]  2.908848e-01
+ iter:  22:1        |ddm|: 1.387182e-05     Tr[DP]  2.908873e-01
+ iter:  22:2        |ddm|: 3.607211e-06     Tr[DP]  2.908852e-01
+ iter:  23:1        |ddm|: 7.312583e-06     Tr[DP]  2.908865e-01
+ iter:  23:2        |ddm|: 1.900218e-06     Tr[DP]  2.908855e-01
+ iter:  24:1        |ddm|: 5.596436e-06     Tr[DP]  2.908861e-01
+ iter:  24:2        |ddm|: 1.750481e-06     Tr[DP]  2.908855e-01
+ iter:  25:1        |ddm|: 1.784448e-06     Tr[DP]  2.908859e-01
+ iter:  25:2        |ddm|: 4.692987e-07     Tr[DP]  2.908856e-01
+ iter:  26:1        |ddm|: 2.278056e-06     Tr[DP]  2.908857e-01
+ iter:  26:2        |ddm|: 7.991699e-07     Tr[DP]  2.908856e-01
+ iter:  27:1        |ddm|: 5.364208e-07     Tr[DP]  2.908857e-01
+ iter:  27:2        |ddm|: 1.811763e-07     Tr[DP]  2.908856e-01
+ iter:  28:1        |ddm|: 2.190150e-07     Tr[DP]  2.908857e-01
+ iter:  28:2        |ddm|: 6.029840e-08     Tr[DP]  2.908856e-01
+ iter:  29:1        |ddm|: 1.433338e-07     Tr[DP]  2.908857e-01
+ iter:  29:2        |ddm|: 3.877787e-08     Tr[DP]  2.908857e-01
+ iter:  30:1        |ddm|: 7.081054e-08     Tr[DP]  2.908857e-01
+ iter:  30:2        |ddm|: 1.922072e-08     Tr[DP]  2.908857e-01
+ iter:  31:1        |ddm|: 7.453960e-08     Tr[DP]  2.908857e-01
+ iter:  31:2        |ddm|: 2.506849e-08     Tr[DP]  2.908857e-01
+ iter:  32:1        |ddm|: 2.223980e-08     Tr[DP]  2.908857e-01
+ iter:  32:2        |ddm|: 5.975761e-09     Tr[DP]  2.908857e-01
+ iter:  33:1        |ddm|: 7.540871e-08     Tr[DP]  2.908857e-01
+ iter:  33:2        |ddm|: 2.568897e-08     Tr[DP]  2.908857e-01
+ iter:  34:1        |ddm|: 4.134318e-08     Tr[DP]  2.908857e-01
+ iter:  34:2        |ddm|: 1.438855e-08     Tr[DP]  2.908857e-01
+ iter:  35:1        |ddm|: 2.044412e-08     Tr[DP]  2.908857e-01
+ iter:  35:2        |ddm|: 5.525159e-09     Tr[DP]  2.908857e-01
+ iter:  36:1        |ddm|: 3.284507e-09     Tr[DP]  2.908857e-01
+ iter:  36:2        |ddm|: 7.102247e-10     Tr[DP]  2.908857e-01
+ iter:  37:1        |ddm|: 1.291284e-09     Tr[DP]  2.908857e-01
+ iter:  37:2        |ddm|: 3.227724e-10     Tr[DP]  2.908857e-01
+ iter:  38:1        |ddm|: 7.194616e-10     Tr[DP]  2.908857e-01
+ iter:  38:2        |ddm|: 2.505174e-10     Tr[DP]  2.908857e-01
+                           Freeze-and-Thaw converged!                           
+
+=================== Subsystem 1 at higher mean-field method ====================
+  subiter:   1      |ddm|: 2.895107e-01
+  subiter:   2      |ddm|: 1.058380e-01
+  subiter:   3      |ddm|: 2.935315e-02
+  subiter:   4      |ddm|: 1.857981e-02
+  subiter:   5      |ddm|: 1.082488e-02
+  subiter:   6      |ddm|: 2.869572e-03
+  subiter:   7      |ddm|: 1.122369e-03
+  subiter:   8      |ddm|: 2.137557e-04
+  subiter:   9      |ddm|: 2.942877e-05
+  subiter:  10      |ddm|: 1.668988e-05
+  subiter:  11      |ddm|: 6.045683e-06
+  subiter:  12      |ddm|: 1.559296e-06
+  subiter:  13      |ddm|: 3.773328e-07
+  subiter:  14      |ddm|: 3.029386e-07
+  subiter:  15      |ddm|: 3.025024e-08
+  subiter:  16      |ddm|: 1.251465e-08
+  subiter:  17      |ddm|: 1.177215e-08
+  subiter:  18      |ddm|: 2.249672e-08
+  subiter:  19      |ddm|: 2.484300e-08
+  subiter:  20      |ddm|: 4.282134e-09
+  subiter:  21      |ddm|: 2.822423e-09
+  subiter:  22      |ddm|: 1.533444e-09
+  subiter:  23      |ddm|: 8.191069e-10
+
+
+******** <class 'pyscf.scf.hf.RHF'> flags ********
+method = RHF
+initial guess = minao
+damping factor = 0
+level shift factor = 0
+DIIS = <class 'pyscf.scf.diis.CDIIS'>
+DIIS start cycle = 1
+DIIS space = 8
+SCF tol = 1e-09
+SCF gradient tol = None
+max. SCF cycles = 300
+direct_scf = True
+direct_scf_tol = 1e-13
+chkfile to save SCF result = /panfs/roc/scratch/graha682/201801_wfcycle/20180109_ccpVDZ_m06_ccsdt_ft_1chloroflourobutane-1/tmpTniilS
+max_memory 4000 MB (current use 597 MB)
+Set gradient conv threshold to 3.16228e-05
+init E= -607.24211887463
+  HOMO = -0.186005218781352  LUMO = 0.36690100162813
+cycle= 1 E= -607.24211887463  delta_E= 5.68e-13  |g|= 1.59e-09  |ddm|= 4.76e-09
+  HOMO = -0.186005218744948  LUMO = 0.366901001630699
+Extra cycle  E= -607.242118874632  delta_E= -2.27e-12  |g|= 8.66e-10  |ddm|= 2.55e-09
+converged SCF energy = -607.242118874632
+
+
+******** <class 'pyscf.dft.rks.RKS'> flags ********
+method = RKS
+initial guess = atom
+damping factor = 0
+level shift factor = 0.0
+DIIS = <class 'pyscf.scf.diis.CDIIS'>
+DIIS start cycle = 1
+DIIS space = 8
+SCF tol = 1e-09
+SCF gradient tol = 1e-08
+max. SCF cycles = 1
+direct_scf = True
+direct_scf_tol = 1e-13
+chkfile to save SCF result = /panfs/roc/scratch/graha682/201801_wfcycle/20180109_ccpVDZ_m06_ccsdt_ft_1chloroflourobutane-1/tmpIYIyEq
+max_memory 4000 MB (current use 598 MB)
+XC functionals = m06
+small_rho_cutoff = 1e-20
+radial grids: Treutler-Ahlrichs (JCP 102, 346 (M4)) radial grids
+becke partition: Becke, JCP, 88, 2547 (1988)
+pruning grids: <function nwchem_prune at 0x159b578>
+grids dens level: 4
+symmetrized grids: False
+atomic radii adjust function: <function treutler_atomic_radii_adjust at 0x159b410>
+init E= -608.586307815155
+  HOMO = -0.0294751054636696  LUMO = 0.208402237977279
+cycle= 1 E= -608.586307815155  delta_E= -2.27e-13  |g|= 7.99e-10  |ddm|= 9.91e-10
+  HOMO = -0.0294751051028625  LUMO = 0.208402238003497
+Extra cycle  E= -608.586307815155  delta_E= 1.14e-13  |g|= 1.45e-09  |ddm|= 1.65e-09
+converged SCF energy = -608.586307815155
+ iter:  39:1        |ddm|: 3.905663e-01     Tr[DP]  2.859305e-01
+
+==================== Doing CCSD Calculation on Subsystem 1 =====================
+
+******** <class 'pyscf.cc.ccsd.CCSD'> flags ********
+CCSD nocc = 18, nvir = 38
+max_cycle = 50
+direct = 0
+conv_tol = 1e-07
+conv_tol_normt = 1e-05
+diis_space = 6
+diis_start_cycle = 0
+diis_start_energy_diff = 1e+09
+max_memory 4000 MB (current use 658 MB)
+Build MO integrals with incore ao2mo
+Init t2, MP2 energy = -0.469815769844723
+cycle = 1  E(CCSD) = -0.486539445470085  dE = -0.486539445  norm(t1,t2) = 0.103015
+cycle = 2  E(CCSD) = -0.497619200773965  dE = -0.0110797553  norm(t1,t2) = 0.0392368
+cycle = 3  E(CCSD) = -0.497997131318441  dE = -0.000377930544  norm(t1,t2) = 0.0315309
+cycle = 4  E(CCSD) = -0.499511958237499  dE = -0.00151482692  norm(t1,t2) = 0.0163006
+cycle = 5  E(CCSD) = -0.500853064619298  dE = -0.00134110638  norm(t1,t2) = 0.00885771
+cycle = 6  E(CCSD) = -0.500856796351002  dE = -3.7317317e-06  norm(t1,t2) = 0.00259496
+cycle = 7  E(CCSD) = -0.500700457772461  dE = 0.000156338579  norm(t1,t2) = 0.00113219
+cycle = 8  E(CCSD) = -0.500701682456616  dE = -1.22468416e-06  norm(t1,t2) = 0.000433359
+cycle = 9  E(CCSD) = -0.50071240495795  dE = -1.07225013e-05  norm(t1,t2) = 0.000220975
+cycle = 10  E(CCSD) = -0.500723435276615  dE = -1.10303187e-05  norm(t1,t2) = 0.000103605
+cycle = 11  E(CCSD) = -0.500724027766811  dE = -5.92490196e-07  norm(t1,t2) = 2.20626e-05
+cycle = 12  E(CCSD) = -0.50072396184794  dE = 6.5918871e-08  norm(t1,t2) = 8.58491e-06
+CCSD converged
+E(CCSD) = -607.7428428364801  E_corr = -0.5007239618479404
+Build MO integrals with incore ao2mo
+cycle = 1  norm(lambda1,lambda2) = 0.0322777
+cycle = 2  norm(lambda1,lambda2) = 0.00883775
+cycle = 3  norm(lambda1,lambda2) = 0.00695209
+cycle = 4  norm(lambda1,lambda2) = 0.00335913
+cycle = 5  norm(lambda1,lambda2) = 0.00231921
+cycle = 6  norm(lambda1,lambda2) = 0.000734587
+cycle = 7  norm(lambda1,lambda2) = 0.000308078
+cycle = 8  norm(lambda1,lambda2) = 0.000111225
+cycle = 9  norm(lambda1,lambda2) = 4.75424e-05
+cycle = 10  norm(lambda1,lambda2) = 2.16352e-05
+cycle = 11  norm(lambda1,lambda2) = 4.98436e-06
+Hartree-Fock Energy:  -607.24211887463218
+CCSD Correlation:       -0.50072396184794
+CCSD Energy:          -607.74284283648012
+
+=================== Doing CCSD(T) Calculation on Subsystem 1 ===================
+Build MO integrals with incore ao2mo
+CCSD(T) correction = -0.00887462410276865
+Build MO integrals with incore ao2mo
+istep = 0  norm(lambda1,lambda2) = 0.075971
+istep = 1  norm(lambda1,lambda2) = 0.041428
+istep = 2  norm(lambda1,lambda2) = 0.0265014
+istep = 3  norm(lambda1,lambda2) = 0.0187167
+istep = 4  norm(lambda1,lambda2) = 0.0017631
+istep = 5  norm(lambda1,lambda2) = 0.00103036
+istep = 6  norm(lambda1,lambda2) = 0.000216689
+istep = 7  norm(lambda1,lambda2) = 0.000109842
+istep = 8  norm(lambda1,lambda2) = 3.97389e-05
+istep = 9  norm(lambda1,lambda2) = 2.07213e-05
+istep = 10  norm(lambda1,lambda2) = 8.68162e-06
+istep = 11  norm(lambda1,lambda2) = 2.43321e-06
+istep = 12  norm(lambda1,lambda2) = 1.00416e-06
+istep = 13  norm(lambda1,lambda2) = 4.28874e-07
+istep = 14  norm(lambda1,lambda2) = 1.92224e-07
+istep = 15  norm(lambda1,lambda2) = 1.07815e-07
+istep = 16  norm(lambda1,lambda2) = 8.4666e-08
+istep = 17  norm(lambda1,lambda2) = 6.96423e-08
+istep = 18  norm(lambda1,lambda2) = 5.21164e-08
+istep = 19  norm(lambda1,lambda2) = 4.67898e-08
+istep = 20  norm(lambda1,lambda2) = 4.20541e-08
+istep = 21  norm(lambda1,lambda2) = 4.24177e-08
+istep = 22  norm(lambda1,lambda2) = 3.51301e-08
+istep = 23  norm(lambda1,lambda2) = 3.00958e-08
+istep = 24  norm(lambda1,lambda2) = 2.64899e-08
+istep = 25  norm(lambda1,lambda2) = 2.44221e-08
+istep = 26  norm(lambda1,lambda2) = 2.26382e-08
+istep = 27  norm(lambda1,lambda2) = 2.0882e-08
+istep = 28  norm(lambda1,lambda2) = 1.85828e-08
+istep = 29  norm(lambda1,lambda2) = 1.67819e-08
+istep = 30  norm(lambda1,lambda2) = 1.52789e-08
+istep = 31  norm(lambda1,lambda2) = 1.399e-08
+istep = 32  norm(lambda1,lambda2) = 1.27899e-08
+istep = 33  norm(lambda1,lambda2) = 1.16842e-08
+istep = 34  norm(lambda1,lambda2) = 1.06158e-08
+istep = 35  norm(lambda1,lambda2) = 9.68011e-09
+Hartree-Fock Energy:  -607.24211887463218
+CCSD(T) Correlation:       -0.50959858595071
+CCSD(T) Energy:          -607.75171746058288
+
+========================= Density Matrix Purification ==========================
+ iter:   1       |idem_diff|: 1.000000000000     
+ iter:   2       |idem_diff|: 0.011708751169     
+ iter:   3       |idem_diff|: 0.000036165415     
+ iter:   4       |idem_diff|: 0.000000001216     
+Density Purified!
+
+============================== Supermolecular DFT ==============================
+  subiter:   1      |ddm|: 4.228427e+01
+  subiter:   2      |ddm|: 4.473754e+01
+  subiter:   3      |ddm|: 3.119666e+01
+  subiter:   4      |ddm|: 3.310796e+01
+  subiter:   5      |ddm|: 2.309408e+01
+  subiter:   6      |ddm|: 1.515008e+01
+  subiter:   7      |ddm|: 8.111517e+00
+  subiter:   8      |ddm|: 1.512694e+00
+  subiter:   9      |ddm|: 3.637732e-01
+  subiter:  10      |ddm|: 2.283893e-01
+  subiter:  11      |ddm|: 2.370973e-01
+  subiter:  12      |ddm|: 1.175605e-01
+  subiter:  13      |ddm|: 6.216266e-02
+  subiter:  14      |ddm|: 3.079716e-02
+  subiter:  15      |ddm|: 5.035296e-03
+  subiter:  16      |ddm|: 2.197275e-03
+  subiter:  17      |ddm|: 8.852564e-04
+  subiter:  18      |ddm|: 5.069824e-04
+  subiter:  19      |ddm|: 2.386652e-04
+  subiter:  20      |ddm|: 7.092330e-05
+  subiter:  21      |ddm|: 3.096607e-05
+  subiter:  22      |ddm|: 8.966223e-06
+  subiter:  23      |ddm|: 1.883327e-06
+  subiter:  24      |ddm|: 5.686654e-07
+  subiter:  25      |ddm|: 6.137069e-07
+  subiter:  26      |ddm|: 3.383364e-07
+  subiter:  27      |ddm|: 7.569628e-08
+  subiter:  28      |ddm|: 9.377755e-09
+  subiter:  29      |ddm|: 6.241302e-09
+  subiter:  30      |ddm|: 1.680749e-08
+  subiter:  31      |ddm|: 4.207799e-09
+  subiter:  32      |ddm|: 1.160608e-08
+  subiter:  33      |ddm|: 3.160571e-09
+  subiter:  34      |ddm|: 6.911247e-09
+  subiter:  35      |ddm|: 3.339717e-09
+  subiter:  36      |ddm|: 1.560791e-09
+  subiter:  37      |ddm|: 1.389810e-09
+  subiter:  38      |ddm|: 1.086336e-09
+  subiter:  39      |ddm|: 3.665552e-09
+  subiter:  40      |ddm|: 2.561688e-09
+  subiter:  41      |ddm|: 8.730103e-10
+
+
+******** <class 'pyscf.dft.rks.RKS'> flags ********
+method = RKS
+initial guess = atom
+damping factor = 0
+level shift factor = 0.0
+DIIS = <class 'pyscf.scf.diis.CDIIS'>
+DIIS start cycle = 1
+DIIS space = 8
+SCF tol = 1e-09
+SCF gradient tol = 1e-08
+max. SCF cycles = 300
+direct_scf = True
+direct_scf_tol = 1e-13
+chkfile to save SCF result = /panfs/roc/scratch/graha682/201801_wfcycle/20180109_ccpVDZ_m06_ccsdt_ft_1chloroflourobutane-1/tmpeELuwn
+max_memory 4000 MB (current use 900 MB)
+XC functionals = m06
+small_rho_cutoff = 1e-20
+radial grids: Treutler-Ahlrichs (JCP 102, 346 (M4)) radial grids
+becke partition: Becke, JCP, 88, 2547 (1988)
+pruning grids: <function nwchem_prune at 0x159b578>
+grids dens level: 4
+symmetrized grids: False
+atomic radii adjust function: <function treutler_atomic_radii_adjust at 0x159b410>
+init E= -717.721300608829
+  HOMO = -0.0555350674584922  LUMO = 0.169212285433179
+cycle= 1 E= -717.72130060883  delta_E= -7.96e-13  |g|= 6.05e-09  |ddm|= 8.02e-09
+  HOMO = -0.0555350695811574  LUMO = 0.169212285964919
+Extra cycle  E= -717.721300608831  delta_E= -1.71e-12  |g|= 1.26e-08  |ddm|= 1.69e-08
+converged SCF energy = -717.721300608831
+Supermolecular DFT   -717.72130060883148
+WF-in-DFT Cycle Errors            12.69129485668183
+
+============================== Embedding Energies ==============================
+Subsystem DFT               -16.65882384959086
+Interaction                -110.09317330430868
+DFT-in-DFT                 -126.75199715389954
+Supermolecular DFT         -717.72130060883148
+Difference                 -590.96930345493195
+Corrected DFT-in-DFT       -717.72130060883148
+WF-in-DFT                  -717.84489076489160
+Corrected WF-in-DFT        -1308.81419421982355
+
+=========================== Starting Freeze-and-Thaw ===========================
+ iter:   1:2        |ddm|: 2.703857e+00     Tr[DP]  7.763799e-01
+ iter:   2:2        |ddm|: 0.000000e+00     Tr[DP]  7.763799e-01
+                           Freeze-and-Thaw converged!                           
+
+=================== Subsystem 1 at higher mean-field method ====================
+  subiter:   1      |ddm|: 1.070743e+01
+  subiter:   2      |ddm|: 3.287639e+01
+  subiter:   3      |ddm|: 1.832298e+01
+  subiter:   4      |ddm|: 1.683654e+01
+  subiter:   5      |ddm|: 9.695264e-01
+  subiter:   6      |ddm|: 1.454626e+00
+  subiter:   7      |ddm|: 5.098806e-01
+  subiter:   8      |ddm|: 2.154693e-01
+  subiter:   9      |ddm|: 4.936561e-01
+  subiter:  10      |ddm|: 5.001258e-02
+  subiter:  11      |ddm|: 5.545264e-02
+  subiter:  12      |ddm|: 1.839594e-02
+  subiter:  13      |ddm|: 1.507795e-02
+  subiter:  14      |ddm|: 1.367716e-03
+  subiter:  15      |ddm|: 3.058728e-04
+  subiter:  16      |ddm|: 1.455364e-04
+  subiter:  17      |ddm|: 4.105554e-05
+  subiter:  18      |ddm|: 1.492150e-05
+  subiter:  19      |ddm|: 1.335501e-05
+  subiter:  20      |ddm|: 1.480954e-06
+  subiter:  21      |ddm|: 8.197294e-07
+  subiter:  22      |ddm|: 1.687540e-07
+  subiter:  23      |ddm|: 8.306461e-08
+  subiter:  24      |ddm|: 5.302574e-08
+  subiter:  25      |ddm|: 2.136936e-07
+  subiter:  26      |ddm|: 2.310273e-07
+  subiter:  27      |ddm|: 1.088645e-07
+  subiter:  28      |ddm|: 4.087228e-08
+  subiter:  29      |ddm|: 2.980616e-08
+  subiter:  30      |ddm|: 2.879193e-08
+  subiter:  31      |ddm|: 2.621556e-08
+  subiter:  32      |ddm|: 4.632154e-08
+  subiter:  33      |ddm|: 2.807107e-08
+  subiter:  34      |ddm|: 2.010136e-08
+  subiter:  35      |ddm|: 1.814378e-08
+  subiter:  36      |ddm|: 1.699054e-08
+  subiter:  37      |ddm|: 1.578126e-08
+  subiter:  38      |ddm|: 1.471870e-08
+  subiter:  39      |ddm|: 1.156321e-08
+  subiter:  40      |ddm|: 9.897835e-09
+  subiter:  41      |ddm|: 8.863315e-09
+  subiter:  42      |ddm|: 7.911676e-09
+  subiter:  43      |ddm|: 6.983438e-09
+  subiter:  44      |ddm|: 6.087894e-09
+  subiter:  45      |ddm|: 5.216449e-09
+  subiter:  46      |ddm|: 4.576511e-09
+  subiter:  47      |ddm|: 4.036757e-09
+  subiter:  48      |ddm|: 3.546186e-09
+  subiter:  49      |ddm|: 3.102593e-09
+  subiter:  50      |ddm|: 2.708300e-09
+  subiter:  51      |ddm|: 2.367414e-09
+  subiter:  52      |ddm|: 2.076514e-09
+  subiter:  53      |ddm|: 1.820389e-09
+  subiter:  54      |ddm|: 1.595003e-09
+  subiter:  55      |ddm|: 1.397928e-09
+  subiter:  56      |ddm|: 1.224201e-09
+  subiter:  57      |ddm|: 1.072198e-09
+  subiter:  58      |ddm|: 9.388738e-10
+
+
+******** <class 'pyscf.scf.hf.RHF'> flags ********
+method = RHF
+initial guess = minao
+damping factor = 0
+level shift factor = 0
+DIIS = <class 'pyscf.scf.diis.CDIIS'>
+DIIS start cycle = 1
+DIIS space = 8
+SCF tol = 1e-09
+SCF gradient tol = None
+max. SCF cycles = 300
+direct_scf = True
+direct_scf_tol = 1e-13
+chkfile to save SCF result = /panfs/roc/scratch/graha682/201801_wfcycle/20180109_ccpVDZ_m06_ccsdt_ft_1chloroflourobutane-1/tmpG7DXbV
+max_memory 4000 MB (current use 910 MB)
+Set gradient conv threshold to 3.16228e-05
+init E= -478.157803153839
+  HOMO = -0.293658953825977  LUMO = 0.225999823220067
+cycle= 1 E= -478.157803153841  delta_E= -1.36e-12  |g|= 1.39e-10  |ddm|= 2.58e-09
+  HOMO = -0.293658953827477  LUMO = 0.225999823220253
+Extra cycle  E= -478.157803153838  delta_E= 2.27e-12  |g|= 8.69e-11  |ddm|= 1.59e-09
+converged SCF energy = -478.157803153838
+
+
+******** <class 'pyscf.dft.rks.RKS'> flags ********
+method = RKS
+initial guess = atom
+damping factor = 0
+level shift factor = 0.0
+DIIS = <class 'pyscf.scf.diis.CDIIS'>
+DIIS start cycle = 1
+DIIS space = 8
+SCF tol = 1e-09
+SCF gradient tol = 1e-08
+max. SCF cycles = 1
+direct_scf = True
+direct_scf_tol = 1e-13
+chkfile to save SCF result = /panfs/roc/scratch/graha682/201801_wfcycle/20180109_ccpVDZ_m06_ccsdt_ft_1chloroflourobutane-1/tmpIYIyEq
+max_memory 4000 MB (current use 910 MB)
+XC functionals = m06
+small_rho_cutoff = 1e-20
+radial grids: Treutler-Ahlrichs (JCP 102, 346 (M4)) radial grids
+becke partition: Becke, JCP, 88, 2547 (1988)
+pruning grids: <function nwchem_prune at 0x159b578>
+grids dens level: 4
+symmetrized grids: False
+atomic radii adjust function: <function treutler_atomic_radii_adjust at 0x159b410>
+init E= -249.617233912182
+  HOMO = -0.0295134101377013  LUMO = 0.202781283502503
+cycle= 1 E= -321.098312789598  delta_E= -71.5  |g|= 23.9  |ddm|= 9.84
+  HOMO = -3.43215157582348  LUMO = -2.68786954941369
+Extra cycle  E= -463.264032989295  delta_E= -142  |g|= 4.27  |ddm|= 37.7
+SCF not converged.
+SCF energy = -463.264032989295 after 1 cycles
+ iter:   3:1        |ddm|: 3.431716e+01     Tr[DP]  1.394006e+00
+
+==================== Doing CCSD Calculation on Subsystem 1 =====================
+
+******** <class 'pyscf.cc.ccsd.CCSD'> flags ********
+CCSD nocc = 18, nvir = 38
+max_cycle = 50
+direct = 0
+conv_tol = 1e-07
+conv_tol_normt = 1e-05
+diis_space = 6
+diis_start_cycle = 0
+diis_start_energy_diff = 1e+09
+max_memory 4000 MB (current use 892 MB)
+Build MO integrals with incore ao2mo
+Init t2, MP2 energy = -0.198194232940955
+cycle = 1  E(CCSD) = -0.211856767129205  dE = -0.211856767  norm(t1,t2) = 0.0542618
+cycle = 2  E(CCSD) = -0.217306239238521  dE = -0.00544947211  norm(t1,t2) = 0.0165674
+cycle = 3  E(CCSD) = -0.218430562411203  dE = -0.00112432317  norm(t1,t2) = 0.00724995
+cycle = 4  E(CCSD) = -0.219086477252216  dE = -0.000655914841  norm(t1,t2) = 0.00360268
+cycle = 5  E(CCSD) = -0.219156995167981  dE = -7.05179158e-05  norm(t1,t2) = 0.00155747
+cycle = 6  E(CCSD) = -0.219068907867406  dE = 8.80873006e-05  norm(t1,t2) = 0.000702571
+cycle = 7  E(CCSD) = -0.219077354769159  dE = -8.44690175e-06  norm(t1,t2) = 0.00023927
+cycle = 8  E(CCSD) = -0.219089821576434  dE = -1.24668073e-05  norm(t1,t2) = 0.000119656
+cycle = 9  E(CCSD) = -0.219089143345495  dE = 6.78230939e-07  norm(t1,t2) = 3.3298e-05
+cycle = 10  E(CCSD) = -0.219088974224384  dE = 1.69121111e-07  norm(t1,t2) = 1.38279e-05
+cycle = 11  E(CCSD) = -0.219088442760811  dE = 5.31463573e-07  norm(t1,t2) = 6.08461e-06
+cycle = 12  E(CCSD) = -0.219088326811437  dE = 1.15949374e-07  norm(t1,t2) = 2.01104e-06
+cycle = 13  E(CCSD) = -0.219088327217539  dE = -4.06101125e-10  norm(t1,t2) = 8.79008e-07
+CCSD converged
+E(CCSD) = -478.376891481056  E_corr = -0.2190883272175386
+Build MO integrals with incore ao2mo
+cycle = 1  norm(lambda1,lambda2) = 0.00929531
+cycle = 2  norm(lambda1,lambda2) = 0.00203758
+cycle = 3  norm(lambda1,lambda2) = 0.000861505
+cycle = 4  norm(lambda1,lambda2) = 0.000440537
+cycle = 5  norm(lambda1,lambda2) = 0.000142036
+cycle = 6  norm(lambda1,lambda2) = 6.24155e-05
+cycle = 7  norm(lambda1,lambda2) = 2.61346e-05
+cycle = 8  norm(lambda1,lambda2) = 1.19941e-05
+cycle = 9  norm(lambda1,lambda2) = 4.29003e-06
+Hartree-Fock Energy:  -478.15780315383847
+CCSD Correlation:       -0.21908832721754
+CCSD Energy:          -478.37689148105602
+
+=================== Doing CCSD(T) Calculation on Subsystem 1 ===================
+Build MO integrals with incore ao2mo
+CCSD(T) correction = -0.00289477425050721
+Build MO integrals with incore ao2mo
+istep = 0  norm(lambda1,lambda2) = 0.0201587
+istep = 1  norm(lambda1,lambda2) = 0.00388446
+istep = 2  norm(lambda1,lambda2) = 0.0018048
+istep = 3  norm(lambda1,lambda2) = 0.000860178
+istep = 4  norm(lambda1,lambda2) = 0.000460965
+istep = 5  norm(lambda1,lambda2) = 0.000111084
+istep = 6  norm(lambda1,lambda2) = 5.04719e-05
+istep = 7  norm(lambda1,lambda2) = 2.00125e-05
+istep = 8  norm(lambda1,lambda2) = 9.25729e-06
+istep = 9  norm(lambda1,lambda2) = 3.90046e-06
+istep = 10  norm(lambda1,lambda2) = 1.64783e-06
+istep = 11  norm(lambda1,lambda2) = 7.98071e-07
+istep = 12  norm(lambda1,lambda2) = 3.67338e-07
+istep = 13  norm(lambda1,lambda2) = 1.5866e-07
+istep = 14  norm(lambda1,lambda2) = 7.62396e-08
+istep = 15  norm(lambda1,lambda2) = 4.5016e-08
+istep = 16  norm(lambda1,lambda2) = 3.21756e-08
+istep = 17  norm(lambda1,lambda2) = 2.96366e-08
+istep = 18  norm(lambda1,lambda2) = 2.52417e-08
+istep = 19  norm(lambda1,lambda2) = 3.13886e-08
+istep = 20  norm(lambda1,lambda2) = 2.26247e-08
+istep = 21  norm(lambda1,lambda2) = 1.77739e-08
+istep = 22  norm(lambda1,lambda2) = 1.52494e-08
+istep = 23  norm(lambda1,lambda2) = 1.39037e-08
+istep = 24  norm(lambda1,lambda2) = 1.27685e-08
+istep = 25  norm(lambda1,lambda2) = 1.19552e-08
+istep = 26  norm(lambda1,lambda2) = 1.00045e-08
+istep = 27  norm(lambda1,lambda2) = 8.77213e-09
+Hartree-Fock Energy:  -478.15780315383847
+CCSD(T) Correlation:       -0.22198310146805
+CCSD(T) Energy:          -478.37978625530650
+
+========================= Density Matrix Purification ==========================
+ iter:   1       |idem_diff|: 1.000000000000     
+ iter:   2       |idem_diff|: 0.003345643653     
+ iter:   3       |idem_diff|: 0.000002709695     
+ iter:   4       |idem_diff|: 0.000000000004     
+Density Purified!
+WF-in-DFT Cycle Errors             2.98393023749143
+
+============================== Embedding Energies ==============================
+Subsystem DFT              -249.68400737293254
+Interaction                 122.66642740259161
+DFT-in-DFT                 -127.01757997034093
+Supermolecular DFT         -717.72130060883148
+Difference                 -590.70372063849049
+Corrected DFT-in-DFT       -717.72130060883137
+WF-in-DFT                  -355.71335885271492
+Corrected WF-in-DFT        -946.41707949120541
+
+=========================== Starting Freeze-and-Thaw ===========================
+ iter:   1:2        |ddm|: 4.251586e-02     Tr[DP]  7.759942e-01
+ iter:   2:2        |ddm|: 0.000000e+00     Tr[DP]  7.759942e-01
+                           Freeze-and-Thaw converged!                           
+
+=================== Subsystem 1 at higher mean-field method ====================
+  subiter:   1      |ddm|: 1.067423e+01
+  subiter:   2      |ddm|: 3.283250e+01
+  subiter:   3      |ddm|: 1.844576e+01
+  subiter:   4      |ddm|: 1.680326e+01
+  subiter:   5      |ddm|: 9.419955e-01
+  subiter:   6      |ddm|: 1.454373e+00
+  subiter:   7      |ddm|: 5.062654e-01
+  subiter:   8      |ddm|: 2.155200e-01
+  subiter:   9      |ddm|: 4.931982e-01
+  subiter:  10      |ddm|: 5.447686e-02
+  subiter:  11      |ddm|: 5.419742e-02
+  subiter:  12      |ddm|: 1.922634e-02
+  subiter:  13      |ddm|: 1.516067e-02
+  subiter:  14      |ddm|: 1.312418e-03
+  subiter:  15      |ddm|: 2.784042e-04
+  subiter:  16      |ddm|: 1.588194e-04
+  subiter:  17      |ddm|: 4.851975e-05
+  subiter:  18      |ddm|: 1.792926e-05
+  subiter:  19      |ddm|: 1.580714e-05
+  subiter:  20      |ddm|: 9.564195e-07
+  subiter:  21      |ddm|: 4.406404e-07
+  subiter:  22      |ddm|: 1.058060e-07
+  subiter:  23      |ddm|: 8.920030e-08
+  subiter:  24      |ddm|: 4.818363e-08
+  subiter:  25      |ddm|: 1.304827e-07
+  subiter:  26      |ddm|: 1.302980e-07
+  subiter:  27      |ddm|: 5.555846e-08
+  subiter:  28      |ddm|: 2.254246e-08
+  subiter:  29      |ddm|: 1.502830e-08
+  subiter:  30      |ddm|: 1.398388e-08
+  subiter:  31      |ddm|: 1.483855e-08
+  subiter:  32      |ddm|: 2.332614e-08
+  subiter:  33      |ddm|: 1.360984e-08
+  subiter:  34      |ddm|: 9.686392e-09
+  subiter:  35      |ddm|: 8.475879e-09
+  subiter:  36      |ddm|: 7.888478e-09
+  subiter:  37      |ddm|: 7.440066e-09
+  subiter:  38      |ddm|: 6.792441e-09
+  subiter:  39      |ddm|: 5.245407e-09
+  subiter:  40      |ddm|: 4.431078e-09
+  subiter:  41      |ddm|: 3.917342e-09
+  subiter:  42      |ddm|: 3.467370e-09
+  subiter:  43      |ddm|: 3.034447e-09
+  subiter:  44      |ddm|: 2.602595e-09
+  subiter:  45      |ddm|: 2.197042e-09
+  subiter:  46      |ddm|: 1.900693e-09
+  subiter:  47      |ddm|: 1.656393e-09
+  subiter:  48      |ddm|: 1.436270e-09
+  subiter:  49      |ddm|: 1.238337e-09
+  subiter:  50      |ddm|: 1.064386e-09
+  subiter:  51      |ddm|: 9.159998e-10
+
+
+******** <class 'pyscf.scf.hf.RHF'> flags ********
+method = RHF
+initial guess = minao
+damping factor = 0
+level shift factor = 0
+DIIS = <class 'pyscf.scf.diis.CDIIS'>
+DIIS start cycle = 1
+DIIS space = 8
+SCF tol = 1e-09
+SCF gradient tol = None
+max. SCF cycles = 300
+direct_scf = True
+direct_scf_tol = 1e-13
+chkfile to save SCF result = /panfs/roc/scratch/graha682/201801_wfcycle/20180109_ccpVDZ_m06_ccsdt_ft_1chloroflourobutane-1/tmp021K9L
+max_memory 4000 MB (current use 986 MB)
+Set gradient conv threshold to 3.16228e-05
+init E= -476.200874974046
+  HOMO = -0.286560934031681  LUMO = 0.231352566319528
+cycle= 1 E= -476.200874974043  delta_E= 2.27e-12  |g|= 1.65e-10  |ddm|= 2.44e-09
+  HOMO = -0.286560934030141  LUMO = 0.231352566315815
+Extra cycle  E= -476.200874974044  delta_E= -3.41e-13  |g|= 9.55e-11  |ddm|= 1.41e-09
+converged SCF energy = -476.200874974044
+
+
+******** <class 'pyscf.dft.rks.RKS'> flags ********
+method = RKS
+initial guess = atom
+damping factor = 0
+level shift factor = 0.0
+DIIS = <class 'pyscf.scf.diis.CDIIS'>
+DIIS start cycle = 1
+DIIS space = 8
+SCF tol = 1e-09
+SCF gradient tol = 1e-08
+max. SCF cycles = 1
+direct_scf = True
+direct_scf_tol = 1e-13
+chkfile to save SCF result = /panfs/roc/scratch/graha682/201801_wfcycle/20180109_ccpVDZ_m06_ccsdt_ft_1chloroflourobutane-1/tmpIYIyEq
+max_memory 4000 MB (current use 986 MB)
+XC functionals = m06
+small_rho_cutoff = 1e-20
+radial grids: Treutler-Ahlrichs (JCP 102, 346 (M4)) radial grids
+becke partition: Becke, JCP, 88, 2547 (1988)
+pruning grids: <function nwchem_prune at 0x159b578>
+grids dens level: 4
+symmetrized grids: False
+atomic radii adjust function: <function treutler_atomic_radii_adjust at 0x159b410>
+init E= -249.139564622743
+  HOMO = -0.0295137117821975  LUMO = 0.202766272734638
+cycle= 1 E= -318.712240608946  delta_E= -69.6  |g|= 23.9  |ddm|= 9.84
+  HOMO = -3.42547564256679  LUMO = -2.67772015235087
+Extra cycle  E= -461.262534606922  delta_E= -143  |g|= 4.28  |ddm|= 37.6
+SCF not converged.
+SCF energy = -461.262534606922 after 1 cycles
+ iter:   3:1        |ddm|: 3.439217e+01     Tr[DP]  1.397964e+00
+
+==================== Doing CCSD Calculation on Subsystem 1 =====================
+
+******** <class 'pyscf.cc.ccsd.CCSD'> flags ********
+CCSD nocc = 18, nvir = 38
+max_cycle = 50
+direct = 0
+conv_tol = 1e-07
+conv_tol_normt = 1e-05
+diis_space = 6
+diis_start_cycle = 0
+diis_start_energy_diff = 1e+09
+max_memory 4000 MB (current use 972 MB)
+Build MO integrals with incore ao2mo
+Init t2, MP2 energy = -0.197764201973935
+cycle = 1  E(CCSD) = -0.211124962482315  dE = -0.211124962  norm(t1,t2) = 0.0537213
+cycle = 2  E(CCSD) = -0.21644745683155  dE = -0.00532249435  norm(t1,t2) = 0.0162618
+cycle = 3  E(CCSD) = -0.217536115203587  dE = -0.00108865837  norm(t1,t2) = 0.00707318
+cycle = 4  E(CCSD) = -0.218180793959646  dE = -0.000644678756  norm(t1,t2) = 0.00350736
+cycle = 5  E(CCSD) = -0.2182281871064  dE = -4.73931468e-05  norm(t1,t2) = 0.00145735
+cycle = 6  E(CCSD) = -0.218143909492194  dE = 8.42776142e-05  norm(t1,t2) = 0.000698945
+cycle = 7  E(CCSD) = -0.218154534373466  dE = -1.06248813e-05  norm(t1,t2) = 0.00023285
+cycle = 8  E(CCSD) = -0.218165966941665  dE = -1.14325682e-05  norm(t1,t2) = 0.000114121
+cycle = 9  E(CCSD) = -0.21816523999261  dE = 7.26949055e-07  norm(t1,t2) = 3.25786e-05
+cycle = 10  E(CCSD) = -0.218165009818953  dE = 2.30173657e-07  norm(t1,t2) = 1.36911e-05
+cycle = 11  E(CCSD) = -0.218164462327441  dE = 5.47491512e-07  norm(t1,t2) = 5.75647e-06
+cycle = 12  E(CCSD) = -0.218164351077388  dE = 1.11250053e-07  norm(t1,t2) = 1.99725e-06
+cycle = 13  E(CCSD) = -0.218164358030953  dE = -6.95356497e-09  norm(t1,t2) = 8.64555e-07
+CCSD converged
+E(CCSD) = -476.4190393320746  E_corr = -0.218164358030953
+Build MO integrals with incore ao2mo
+cycle = 1  norm(lambda1,lambda2) = 0.0092031
+cycle = 2  norm(lambda1,lambda2) = 0.00199949
+cycle = 3  norm(lambda1,lambda2) = 0.000840439
+cycle = 4  norm(lambda1,lambda2) = 0.000428987
+cycle = 5  norm(lambda1,lambda2) = 0.000135646
+cycle = 6  norm(lambda1,lambda2) = 6.09523e-05
+cycle = 7  norm(lambda1,lambda2) = 2.55335e-05
+cycle = 8  norm(lambda1,lambda2) = 1.17365e-05
+cycle = 9  norm(lambda1,lambda2) = 4.11728e-06
+Hartree-Fock Energy:  -476.20087497404370
+CCSD Correlation:       -0.21816435803095
+CCSD Energy:          -476.41903933207465
+
+=================== Doing CCSD(T) Calculation on Subsystem 1 ===================
+Build MO integrals with incore ao2mo
+CCSD(T) correction = -0.00288966269524517
+Build MO integrals with incore ao2mo
+istep = 0  norm(lambda1,lambda2) = 0.0199652
+istep = 1  norm(lambda1,lambda2) = 0.00381621
+istep = 2  norm(lambda1,lambda2) = 0.00176788
+istep = 3  norm(lambda1,lambda2) = 0.000852483
+istep = 4  norm(lambda1,lambda2) = 0.000443369
+istep = 5  norm(lambda1,lambda2) = 0.000112769
+istep = 6  norm(lambda1,lambda2) = 5.02469e-05
+istep = 7  norm(lambda1,lambda2) = 2.02815e-05
+istep = 8  norm(lambda1,lambda2) = 9.41338e-06
+istep = 9  norm(lambda1,lambda2) = 3.92488e-06
+istep = 10  norm(lambda1,lambda2) = 1.72899e-06
+istep = 11  norm(lambda1,lambda2) = 7.99079e-07
+istep = 12  norm(lambda1,lambda2) = 3.48817e-07
+istep = 13  norm(lambda1,lambda2) = 1.47372e-07
+istep = 14  norm(lambda1,lambda2) = 6.83092e-08
+istep = 15  norm(lambda1,lambda2) = 3.86759e-08
+istep = 16  norm(lambda1,lambda2) = 2.71094e-08
+istep = 17  norm(lambda1,lambda2) = 2.61188e-08
+istep = 18  norm(lambda1,lambda2) = 2.24351e-08
+istep = 19  norm(lambda1,lambda2) = 2.76195e-08
+istep = 20  norm(lambda1,lambda2) = 1.95965e-08
+istep = 21  norm(lambda1,lambda2) = 1.52839e-08
+istep = 22  norm(lambda1,lambda2) = 1.31507e-08
+istep = 23  norm(lambda1,lambda2) = 1.20658e-08
+istep = 24  norm(lambda1,lambda2) = 1.10566e-08
+istep = 25  norm(lambda1,lambda2) = 1.02915e-08
+istep = 26  norm(lambda1,lambda2) = 8.58111e-09
+Hartree-Fock Energy:  -476.20087497404370
+CCSD(T) Correlation:       -0.22105402072620
+CCSD(T) Energy:          -476.42192899476987
+
+========================= Density Matrix Purification ==========================
+ iter:   1       |idem_diff|: 1.000000000000     
+ iter:   2       |idem_diff|: 0.003605418402     
+ iter:   3       |idem_diff|: 0.000003012703     
+ iter:   4       |idem_diff|: 0.000000000004     
+Density Purified!
+WF-in-DFT Cycle Errors             0.06832030334227
+
+============================== Embedding Energies ==============================
+Subsystem DFT              -249.12663354790746
+Interaction                 122.12051058656934
+DFT-in-DFT                 -127.00612296133812
+Supermolecular DFT         -717.72130060883148
+Difference                 -590.71517764749342
+Corrected DFT-in-DFT       -717.72130060883160
+WF-in-DFT                  -354.30141840820056
+Corrected WF-in-DFT        -945.01659605569398
+
+=========================== Starting Freeze-and-Thaw ===========================
+ iter:   1:2        |ddm|: 3.498279e-03     Tr[DP]  7.760618e-01
+ iter:   2:2        |ddm|: 0.000000e+00     Tr[DP]  7.760618e-01
+                           Freeze-and-Thaw converged!                           
+
+=================== Subsystem 1 at higher mean-field method ====================
+  subiter:   1      |ddm|: 1.067170e+01
+  subiter:   2      |ddm|: 3.283183e+01
+  subiter:   3      |ddm|: 1.844961e+01
+  subiter:   4      |ddm|: 1.679557e+01
+  subiter:   5      |ddm|: 9.396889e-01
+  subiter:   6      |ddm|: 1.456715e+00
+  subiter:   7      |ddm|: 5.057558e-01
+  subiter:   8      |ddm|: 2.148820e-01
+  subiter:   9      |ddm|: 4.930515e-01
+  subiter:  10      |ddm|: 5.533243e-02
+  subiter:  11      |ddm|: 5.386233e-02
+  subiter:  12      |ddm|: 1.913163e-02
+  subiter:  13      |ddm|: 1.505421e-02
+  subiter:  14      |ddm|: 1.312572e-03
+  subiter:  15      |ddm|: 2.717550e-04
+  subiter:  16      |ddm|: 1.583976e-04
+  subiter:  17      |ddm|: 4.866454e-05
+  subiter:  18      |ddm|: 1.817196e-05
+  subiter:  19      |ddm|: 1.576876e-05
+  subiter:  20      |ddm|: 9.912420e-07
+  subiter:  21      |ddm|: 4.572989e-07
+  subiter:  22      |ddm|: 9.909526e-08
+  subiter:  23      |ddm|: 8.892891e-08
+  subiter:  24      |ddm|: 5.264341e-08
+  subiter:  25      |ddm|: 1.314627e-07
+  subiter:  26      |ddm|: 1.327388e-07
+  subiter:  27      |ddm|: 5.532028e-08
+  subiter:  28      |ddm|: 2.170900e-08
+  subiter:  29      |ddm|: 1.470676e-08
+  subiter:  30      |ddm|: 1.385621e-08
+  subiter:  31      |ddm|: 1.479224e-08
+  subiter:  32      |ddm|: 2.313538e-08
+  subiter:  33      |ddm|: 1.330783e-08
+  subiter:  34      |ddm|: 9.440789e-09
+  subiter:  35      |ddm|: 8.300963e-09
+  subiter:  36      |ddm|: 7.739769e-09
+  subiter:  37      |ddm|: 7.311353e-09
+  subiter:  38      |ddm|: 6.649711e-09
+  subiter:  39      |ddm|: 5.127819e-09
+  subiter:  40      |ddm|: 4.330992e-09
+  subiter:  41      |ddm|: 3.831561e-09
+  subiter:  42      |ddm|: 3.392687e-09
+  subiter:  43      |ddm|: 2.967679e-09
+  subiter:  44      |ddm|: 2.541893e-09
+  subiter:  45      |ddm|: 2.146521e-09
+  subiter:  46      |ddm|: 1.858811e-09
+  subiter:  47      |ddm|: 1.618087e-09
+  subiter:  48      |ddm|: 1.404029e-09
+  subiter:  49      |ddm|: 1.211357e-09
+  subiter:  50      |ddm|: 1.041607e-09
+  subiter:  51      |ddm|: 8.939464e-10
+
+
+******** <class 'pyscf.scf.hf.RHF'> flags ********
+method = RHF
+initial guess = minao
+damping factor = 0
+level shift factor = 0
+DIIS = <class 'pyscf.scf.diis.CDIIS'>
+DIIS start cycle = 1
+DIIS space = 8
+SCF tol = 1e-09
+SCF gradient tol = None
+max. SCF cycles = 300
+direct_scf = True
+direct_scf_tol = 1e-13
+chkfile to save SCF result = /panfs/roc/scratch/graha682/201801_wfcycle/20180109_ccpVDZ_m06_ccsdt_ft_1chloroflourobutane-1/tmpBrvkYo
+max_memory 4000 MB (current use 1008 MB)
+Set gradient conv threshold to 3.16228e-05
+init E= -476.483974350782
+  HOMO = -0.286574542416944  LUMO = 0.231583944302229
+cycle= 1 E= -476.483974350781  delta_E= 7.96e-13  |g|= 1.66e-10  |ddm|= 2.38e-09
+  HOMO = -0.286574542415285  LUMO = 0.231583944298357
+Extra cycle  E= -476.483974350781  delta_E=    0  |g|= 9.68e-11  |ddm|= 1.38e-09
+converged SCF energy = -476.483974350781
+
+
+******** <class 'pyscf.dft.rks.RKS'> flags ********
+method = RKS
+initial guess = atom
+damping factor = 0
+level shift factor = 0.0
+DIIS = <class 'pyscf.scf.diis.CDIIS'>
+DIIS start cycle = 1
+DIIS space = 8
+SCF tol = 1e-09
+SCF gradient tol = 1e-08
+max. SCF cycles = 1
+direct_scf = True
+direct_scf_tol = 1e-13
+chkfile to save SCF result = /panfs/roc/scratch/graha682/201801_wfcycle/20180109_ccpVDZ_m06_ccsdt_ft_1chloroflourobutane-1/tmpIYIyEq
+max_memory 4000 MB (current use 1008 MB)
+XC functionals = m06
+small_rho_cutoff = 1e-20
+radial grids: Treutler-Ahlrichs (JCP 102, 346 (M4)) radial grids
+becke partition: Becke, JCP, 88, 2547 (1988)
+pruning grids: <function nwchem_prune at 0x159b578>
+grids dens level: 4
+symmetrized grids: False
+atomic radii adjust function: <function treutler_atomic_radii_adjust at 0x159b410>
+init E= -249.110615032998
+  HOMO = -0.0295137246094806  LUMO = 0.202768069322988
+cycle= 1 E= -318.977723570037  delta_E= -69.9  |g|= 23.9  |ddm|= 9.84
+  HOMO = -3.4250871686304  LUMO = -2.67734202453048
+Extra cycle  E= -461.531395771806  delta_E= -143  |g|= 4.27  |ddm|= 37.6
+SCF not converged.
+SCF energy = -461.531395771806 after 1 cycles
+ iter:   3:1        |ddm|: 3.439013e+01     Tr[DP]  1.397921e+00
+
+==================== Doing CCSD Calculation on Subsystem 1 =====================
+
+******** <class 'pyscf.cc.ccsd.CCSD'> flags ********
+CCSD nocc = 18, nvir = 38
+max_cycle = 50
+direct = 0
+conv_tol = 1e-07
+conv_tol_normt = 1e-05
+diis_space = 6
+diis_start_cycle = 0
+diis_start_energy_diff = 1e+09
+max_memory 4000 MB (current use 1003 MB)
+Build MO integrals with incore ao2mo
+Init t2, MP2 energy = -0.197673478338855
+cycle = 1  E(CCSD) = -0.21100181607192  dE = -0.211001816  norm(t1,t2) = 0.0536886
+cycle = 2  E(CCSD) = -0.216312064300896  dE = -0.00531024823  norm(t1,t2) = 0.0162462
+cycle = 3  E(CCSD) = -0.217396453745193  dE = -0.00108438944  norm(t1,t2) = 0.00706213
+cycle = 4  E(CCSD) = -0.218039749139742  dE = -0.000643295395  norm(t1,t2) = 0.00349939
+cycle = 5  E(CCSD) = -0.218085228360389  dE = -4.54792206e-05  norm(t1,t2) = 0.00144615
+cycle = 6  E(CCSD) = -0.218001574742407  dE = 8.3653618e-05  norm(t1,t2) = 0.000695253
+cycle = 7  E(CCSD) = -0.218012316899714  dE = -1.07421573e-05  norm(t1,t2) = 0.000231235
+cycle = 8  E(CCSD) = -0.2180236092026  dE = -1.12923029e-05  norm(t1,t2) = 0.000113085
+cycle = 9  E(CCSD) = -0.218022880103841  dE = 7.29098759e-07  norm(t1,t2) = 3.24033e-05
+cycle = 10  E(CCSD) = -0.218022641451425  dE = 2.38652416e-07  norm(t1,t2) = 1.36182e-05
+cycle = 11  E(CCSD) = -0.218022094280942  dE = 5.47170483e-07  norm(t1,t2) = 5.69042e-06
+cycle = 12  E(CCSD) = -0.218021984916527  dE = 1.09364416e-07  norm(t1,t2) = 1.98036e-06
+cycle = 13  E(CCSD) = -0.218021992555837  dE = -7.63931016e-09  norm(t1,t2) = 8.55563e-07
+CCSD converged
+E(CCSD) = -476.7019963433368  E_corr = -0.218021992555837
+Build MO integrals with incore ao2mo
+cycle = 1  norm(lambda1,lambda2) = 0.00920834
+cycle = 2  norm(lambda1,lambda2) = 0.00199956
+cycle = 3  norm(lambda1,lambda2) = 0.000839684
+cycle = 4  norm(lambda1,lambda2) = 0.000428279
+cycle = 5  norm(lambda1,lambda2) = 0.000135071
+cycle = 6  norm(lambda1,lambda2) = 6.06057e-05
+cycle = 7  norm(lambda1,lambda2) = 2.53413e-05
+cycle = 8  norm(lambda1,lambda2) = 1.16531e-05
+cycle = 9  norm(lambda1,lambda2) = 4.07965e-06
+Hartree-Fock Energy:  -476.48397435078095
+CCSD Correlation:       -0.21802199255584
+CCSD Energy:          -476.70199634333682
+
+=================== Doing CCSD(T) Calculation on Subsystem 1 ===================
+Build MO integrals with incore ao2mo
+CCSD(T) correction = -0.00289039458615697
+Build MO integrals with incore ao2mo
+istep = 0  norm(lambda1,lambda2) = 0.0199692
+istep = 1  norm(lambda1,lambda2) = 0.00381225
+istep = 2  norm(lambda1,lambda2) = 0.00176442
+istep = 3  norm(lambda1,lambda2) = 0.00085075
+istep = 4  norm(lambda1,lambda2) = 0.000441084
+istep = 5  norm(lambda1,lambda2) = 0.000112504
+istep = 6  norm(lambda1,lambda2) = 4.9993e-05
+istep = 7  norm(lambda1,lambda2) = 2.017e-05
+istep = 8  norm(lambda1,lambda2) = 9.35267e-06
+istep = 9  norm(lambda1,lambda2) = 3.89199e-06
+istep = 10  norm(lambda1,lambda2) = 1.71522e-06
+istep = 11  norm(lambda1,lambda2) = 7.8884e-07
+istep = 12  norm(lambda1,lambda2) = 3.43807e-07
+istep = 13  norm(lambda1,lambda2) = 1.44994e-07
+istep = 14  norm(lambda1,lambda2) = 6.68744e-08
+istep = 15  norm(lambda1,lambda2) = 3.75106e-08
+istep = 16  norm(lambda1,lambda2) = 2.63124e-08
+istep = 17  norm(lambda1,lambda2) = 2.5394e-08
+istep = 18  norm(lambda1,lambda2) = 2.183e-08
+istep = 19  norm(lambda1,lambda2) = 2.69246e-08
+istep = 20  norm(lambda1,lambda2) = 1.90384e-08
+istep = 21  norm(lambda1,lambda2) = 1.4812e-08
+istep = 22  norm(lambda1,lambda2) = 1.27599e-08
+istep = 23  norm(lambda1,lambda2) = 1.16952e-08
+istep = 24  norm(lambda1,lambda2) = 1.07146e-08
+istep = 25  norm(lambda1,lambda2) = 9.97904e-09
+Hartree-Fock Energy:  -476.48397435078095
+CCSD(T) Correlation:       -0.22091238714199
+CCSD(T) Energy:          -476.70488673792295
+
+========================= Density Matrix Purification ==========================
+ iter:   1       |idem_diff|: 1.000000000000     
+ iter:   2       |idem_diff|: 0.003596000017     
+ iter:   3       |idem_diff|: 0.000003003698     
+ iter:   4       |idem_diff|: 0.000000000004     
+Density Purified!
+WF-in-DFT Cycle Errors             0.00649477836108
+
+============================== Embedding Energies ==============================
+Subsystem DFT              -249.10733178180769
+Interaction                 122.10416729840588
+DFT-in-DFT                 -127.00316448340180
+Supermolecular DFT         -717.72130060883148
+Difference                 -590.71813612542974
+Corrected DFT-in-DFT       -717.72130060883160
+WF-in-DFT                  -354.60071943951709
+Corrected WF-in-DFT        -945.31885556494683
+
+=========================== Starting Freeze-and-Thaw ===========================
+ iter:   1:2        |ddm|: 2.196652e-04     Tr[DP]  7.760619e-01
+ iter:   2:2        |ddm|: 0.000000e+00     Tr[DP]  7.760619e-01
+                           Freeze-and-Thaw converged!                           
+
+=================== Subsystem 1 at higher mean-field method ====================
+  subiter:   1      |ddm|: 1.067201e+01
+  subiter:   2      |ddm|: 3.283170e+01
+  subiter:   3      |ddm|: 1.845047e+01
+  subiter:   4      |ddm|: 1.679470e+01
+  subiter:   5      |ddm|: 9.387394e-01
+  subiter:   6      |ddm|: 1.456794e+00
+  subiter:   7      |ddm|: 5.052676e-01
+  subiter:   8      |ddm|: 2.148831e-01
+  subiter:   9      |ddm|: 4.926880e-01
+  subiter:  10      |ddm|: 5.546345e-02
+  subiter:  11      |ddm|: 5.376538e-02
+  subiter:  12      |ddm|: 1.912847e-02
+  subiter:  13      |ddm|: 1.503088e-02
+  subiter:  14      |ddm|: 1.308080e-03
+  subiter:  15      |ddm|: 2.707533e-04
+  subiter:  16      |ddm|: 1.582394e-04
+  subiter:  17      |ddm|: 4.858691e-05
+  subiter:  18      |ddm|: 1.816579e-05
+  subiter:  19      |ddm|: 1.582741e-05
+  subiter:  20      |ddm|: 9.561938e-07
+  subiter:  21      |ddm|: 4.424930e-07
+  subiter:  22      |ddm|: 9.517509e-08
+  subiter:  23      |ddm|: 8.977957e-08
+  subiter:  24      |ddm|: 5.574024e-08
+  subiter:  25      |ddm|: 1.267293e-07
+  subiter:  26      |ddm|: 1.271288e-07
+  subiter:  27      |ddm|: 5.315124e-08
+  subiter:  28      |ddm|: 2.124461e-08
+  subiter:  29      |ddm|: 1.456391e-08
+  subiter:  30      |ddm|: 1.407440e-08
+  subiter:  31      |ddm|: 1.487352e-08
+  subiter:  32      |ddm|: 2.214799e-08
+  subiter:  33      |ddm|: 1.291035e-08
+  subiter:  34      |ddm|: 9.262511e-09
+  subiter:  35      |ddm|: 8.144028e-09
+  subiter:  36      |ddm|: 7.579639e-09
+  subiter:  37      |ddm|: 7.124100e-09
+  subiter:  38      |ddm|: 6.436324e-09
+  subiter:  39      |ddm|: 5.000657e-09
+  subiter:  40      |ddm|: 4.233042e-09
+  subiter:  41      |ddm|: 3.740408e-09
+  subiter:  42      |ddm|: 3.310505e-09
+  subiter:  43      |ddm|: 2.894571e-09
+  subiter:  44      |ddm|: 2.480904e-09
+  subiter:  45      |ddm|: 2.099321e-09
+  subiter:  46      |ddm|: 1.816811e-09
+  subiter:  47      |ddm|: 1.581675e-09
+  subiter:  48      |ddm|: 1.372677e-09
+  subiter:  49      |ddm|: 1.183397e-09
+  subiter:  50      |ddm|: 1.017405e-09
+  subiter:  51      |ddm|: 8.783782e-10
+
+
+******** <class 'pyscf.scf.hf.RHF'> flags ********
+method = RHF
+initial guess = minao
+damping factor = 0
+level shift factor = 0
+DIIS = <class 'pyscf.scf.diis.CDIIS'>
+DIIS start cycle = 1
+DIIS space = 8
+SCF tol = 1e-09
+SCF gradient tol = None
+max. SCF cycles = 300
+direct_scf = True
+direct_scf_tol = 1e-13
+chkfile to save SCF result = /panfs/roc/scratch/graha682/201801_wfcycle/20180109_ccpVDZ_m06_ccsdt_ft_1chloroflourobutane-1/tmpChfkZd
+max_memory 4000 MB (current use 1010 MB)
+Set gradient conv threshold to 3.16228e-05
+init E= -476.514337839109
+  HOMO = -0.286495801400891  LUMO = 0.231671982645021
+cycle= 1 E= -476.514337839108  delta_E= 5.68e-13  |g|= 1.72e-10  |ddm|= 2.34e-09
+  HOMO = -0.286495801398927  LUMO = 0.231671982640946
+Extra cycle  E= -476.514337839107  delta_E= 1.14e-12  |g|= 1.01e-10  |ddm|= 1.36e-09
+converged SCF energy = -476.514337839107
+
+
+******** <class 'pyscf.dft.rks.RKS'> flags ********
+method = RKS
+initial guess = atom
+damping factor = 0
+level shift factor = 0.0
+DIIS = <class 'pyscf.scf.diis.CDIIS'>
+DIIS start cycle = 1
+DIIS space = 8
+SCF tol = 1e-09
+SCF gradient tol = 1e-08
+max. SCF cycles = 1
+direct_scf = True
+direct_scf_tol = 1e-13
+chkfile to save SCF result = /panfs/roc/scratch/graha682/201801_wfcycle/20180109_ccpVDZ_m06_ccsdt_ft_1chloroflourobutane-1/tmpIYIyEq
+max_memory 4000 MB (current use 1010 MB)
+XC functionals = m06
+small_rho_cutoff = 1e-20
+radial grids: Treutler-Ahlrichs (JCP 102, 346 (M4)) radial grids
+becke partition: Becke, JCP, 88, 2547 (1988)
+pruning grids: <function nwchem_prune at 0x159b578>
+grids dens level: 4
+symmetrized grids: False
+atomic radii adjust function: <function treutler_atomic_radii_adjust at 0x159b410>
+init E= -249.103099615753
+  HOMO = -0.0295137267083347  LUMO = 0.202768294254809
+cycle= 1 E= -318.992960637084  delta_E= -69.9  |g|= 23.9  |ddm|= 9.84
+  HOMO = -3.42501322297921  LUMO = -2.67726197555835
+Extra cycle  E= -461.55893518227  delta_E= -143  |g|= 4.27  |ddm|= 37.6
+SCF not converged.
+SCF energy = -461.55893518227 after 1 cycles
+ iter:   3:1        |ddm|: 3.439054e+01     Tr[DP]  1.397947e+00
+
+==================== Doing CCSD Calculation on Subsystem 1 =====================
+
+******** <class 'pyscf.cc.ccsd.CCSD'> flags ********
+CCSD nocc = 18, nvir = 38
+max_cycle = 50
+direct = 0
+conv_tol = 1e-07
+conv_tol_normt = 1e-05
+diis_space = 6
+diis_start_cycle = 0
+diis_start_energy_diff = 1e+09
+max_memory 4000 MB (current use 1002 MB)
+Build MO integrals with incore ao2mo
+Init t2, MP2 energy = -0.197645031059172
+cycle = 1  E(CCSD) = -0.210963862945313  dE = -0.210963863  norm(t1,t2) = 0.0536626
+cycle = 2  E(CCSD) = -0.216269006778041  dE = -0.00530514383  norm(t1,t2) = 0.0162338
+cycle = 3  E(CCSD) = -0.217352047804887  dE = -0.00108304103  norm(t1,t2) = 0.00705532
+cycle = 4  E(CCSD) = -0.217995083850859  dE = -0.000643036046  norm(t1,t2) = 0.0034963
+cycle = 5  E(CCSD) = -0.218039461276197  dE = -4.43774253e-05  norm(t1,t2) = 0.00144191
+cycle = 6  E(CCSD) = -0.217955942725745  dE = 8.35185505e-05  norm(t1,t2) = 0.000695216
+cycle = 7  E(CCSD) = -0.217966796431286  dE = -1.08537055e-05  norm(t1,t2) = 0.000230781
+cycle = 8  E(CCSD) = -0.217978030964276  dE = -1.1234533e-05  norm(t1,t2) = 0.000112688
+cycle = 9  E(CCSD) = -0.217977300717705  dE = 7.3024657e-07  norm(t1,t2) = 3.23402e-05
+cycle = 10  E(CCSD) = -0.217977058761499  dE = 2.41956207e-07  norm(t1,t2) = 1.35986e-05
+cycle = 11  E(CCSD) = -0.217976511425191  dE = 5.47336307e-07  norm(t1,t2) = 5.66653e-06
+cycle = 12  E(CCSD) = -0.217976402551947  dE = 1.08873244e-07  norm(t1,t2) = 1.97503e-06
+cycle = 13  E(CCSD) = -0.21797641038382  dE = -7.83187268e-09  norm(t1,t2) = 8.52793e-07
+CCSD converged
+E(CCSD) = -476.7323142494907  E_corr = -0.2179764103838198
+Build MO integrals with incore ao2mo
+cycle = 1  norm(lambda1,lambda2) = 0.00920451
+cycle = 2  norm(lambda1,lambda2) = 0.00199784
+cycle = 3  norm(lambda1,lambda2) = 0.000838784
+cycle = 4  norm(lambda1,lambda2) = 0.000427838
+cycle = 5  norm(lambda1,lambda2) = 0.000134862
+cycle = 6  norm(lambda1,lambda2) = 6.06067e-05
+cycle = 7  norm(lambda1,lambda2) = 2.5341e-05
+cycle = 8  norm(lambda1,lambda2) = 1.1649e-05
+cycle = 9  norm(lambda1,lambda2) = 4.06819e-06
+Hartree-Fock Energy:  -476.51433783910693
+CCSD Correlation:       -0.21797641038382
+CCSD Energy:          -476.73231424949074
+
+=================== Doing CCSD(T) Calculation on Subsystem 1 ===================
+Build MO integrals with incore ao2mo
+CCSD(T) correction = -0.00288979259144881
+Build MO integrals with incore ao2mo
+istep = 0  norm(lambda1,lambda2) = 0.0199593
+istep = 1  norm(lambda1,lambda2) = 0.00380789
+istep = 2  norm(lambda1,lambda2) = 0.00176184
+istep = 3  norm(lambda1,lambda2) = 0.000849748
+istep = 4  norm(lambda1,lambda2) = 0.000439574
+istep = 5  norm(lambda1,lambda2) = 0.000112334
+istep = 6  norm(lambda1,lambda2) = 4.98384e-05
+istep = 7  norm(lambda1,lambda2) = 2.01078e-05
+istep = 8  norm(lambda1,lambda2) = 9.31932e-06
+istep = 9  norm(lambda1,lambda2) = 3.87526e-06
+istep = 10  norm(lambda1,lambda2) = 1.70969e-06
+istep = 11  norm(lambda1,lambda2) = 7.85037e-07
+istep = 12  norm(lambda1,lambda2) = 3.41972e-07
+istep = 13  norm(lambda1,lambda2) = 1.44277e-07
+istep = 14  norm(lambda1,lambda2) = 6.64598e-08
+istep = 15  norm(lambda1,lambda2) = 3.73723e-08
+istep = 16  norm(lambda1,lambda2) = 2.61567e-08
+istep = 17  norm(lambda1,lambda2) = 2.52347e-08
+istep = 18  norm(lambda1,lambda2) = 2.17316e-08
+istep = 19  norm(lambda1,lambda2) = 2.68161e-08
+istep = 20  norm(lambda1,lambda2) = 1.8933e-08
+istep = 21  norm(lambda1,lambda2) = 1.47336e-08
+istep = 22  norm(lambda1,lambda2) = 1.2679e-08
+istep = 23  norm(lambda1,lambda2) = 1.16532e-08
+istep = 24  norm(lambda1,lambda2) = 1.06647e-08
+istep = 25  norm(lambda1,lambda2) = 9.9343e-09
+Hartree-Fock Energy:  -476.51433783910693
+CCSD(T) Correlation:       -0.22086620297527
+CCSD(T) Energy:          -476.73520404208222
+
+========================= Density Matrix Purification ==========================
+ iter:   1       |idem_diff|: 1.000000000000     
+ iter:   2       |idem_diff|: 0.003596949895     
+ iter:   3       |idem_diff|: 0.000003003259     
+ iter:   4       |idem_diff|: 0.000000000004     
+Density Purified!
+WF-in-DFT Cycle Errors             0.00085761794340
+
+============================== Embedding Energies ==============================
+Subsystem DFT              -249.10363984136538
+Interaction                 122.10036640550859
+DFT-in-DFT                 -127.00327343585678
+Supermolecular DFT         -717.72130060883148
+Difference                 -590.71802717297464
+Corrected DFT-in-DFT       -717.72130060883137
+WF-in-DFT                  -354.63483763657359
+Corrected WF-in-DFT        -945.35286480954824
+
+=========================== Starting Freeze-and-Thaw ===========================
+ iter:   1:2        |ddm|: 5.949636e-05     Tr[DP]  7.760624e-01
+ iter:   2:2        |ddm|: 0.000000e+00     Tr[DP]  7.760624e-01
+                           Freeze-and-Thaw converged!                           
+
+=================== Subsystem 1 at higher mean-field method ====================
+  subiter:   1      |ddm|: 1.067200e+01
+  subiter:   2      |ddm|: 3.283177e+01
+  subiter:   3      |ddm|: 1.845024e+01
+  subiter:   4      |ddm|: 1.679487e+01
+  subiter:   5      |ddm|: 9.388604e-01
+  subiter:   6      |ddm|: 1.456768e+00
+  subiter:   7      |ddm|: 5.053201e-01
+  subiter:   8      |ddm|: 2.148924e-01
+  subiter:   9      |ddm|: 4.927042e-01
+  subiter:  10      |ddm|: 5.543293e-02
+  subiter:  11      |ddm|: 5.377854e-02
+  subiter:  12      |ddm|: 1.912890e-02
+  subiter:  13      |ddm|: 1.503359e-02
+  subiter:  14      |ddm|: 1.308523e-03
+  subiter:  15      |ddm|: 2.709277e-04
+  subiter:  16      |ddm|: 1.582525e-04
+  subiter:  17      |ddm|: 4.859442e-05
+  subiter:  18      |ddm|: 1.816244e-05
+  subiter:  19      |ddm|: 1.582727e-05
+  subiter:  20      |ddm|: 9.588008e-07
+  subiter:  21      |ddm|: 4.380556e-07
+  subiter:  22      |ddm|: 9.632416e-08
+  subiter:  23      |ddm|: 8.956334e-08
+  subiter:  24      |ddm|: 5.477251e-08
+  subiter:  25      |ddm|: 1.265317e-07
+  subiter:  26      |ddm|: 1.273364e-07
+  subiter:  27      |ddm|: 5.310254e-08
+  subiter:  28      |ddm|: 2.138871e-08
+  subiter:  29      |ddm|: 1.462089e-08
+  subiter:  30      |ddm|: 1.406968e-08
+  subiter:  31      |ddm|: 1.488000e-08
+  subiter:  32      |ddm|: 2.223164e-08
+  subiter:  33      |ddm|: 1.295880e-08
+  subiter:  34      |ddm|: 9.306130e-09
+  subiter:  35      |ddm|: 8.173415e-09
+  subiter:  36      |ddm|: 7.605253e-09
+  subiter:  37      |ddm|: 7.150072e-09
+  subiter:  38      |ddm|: 6.461615e-09
+  subiter:  39      |ddm|: 5.020619e-09
+  subiter:  40      |ddm|: 4.249743e-09
+  subiter:  41      |ddm|: 3.755378e-09
+  subiter:  42      |ddm|: 3.322645e-09
+  subiter:  43      |ddm|: 2.903133e-09
+  subiter:  44      |ddm|: 2.490602e-09
+  subiter:  45      |ddm|: 2.106262e-09
+  subiter:  46      |ddm|: 1.822923e-09
+  subiter:  47      |ddm|: 1.585955e-09
+  subiter:  48      |ddm|: 1.377120e-09
+  subiter:  49      |ddm|: 1.188845e-09
+  subiter:  50      |ddm|: 1.020997e-09
+  subiter:  51      |ddm|: 8.794894e-10
+
+
+******** <class 'pyscf.scf.hf.RHF'> flags ********
+method = RHF
+initial guess = minao
+damping factor = 0
+level shift factor = 0
+DIIS = <class 'pyscf.scf.diis.CDIIS'>
+DIIS start cycle = 1
+DIIS space = 8
+SCF tol = 1e-09
+SCF gradient tol = None
+max. SCF cycles = 300
+direct_scf = True
+direct_scf_tol = 1e-13
+chkfile to save SCF result = /panfs/roc/scratch/graha682/201801_wfcycle/20180109_ccpVDZ_m06_ccsdt_ft_1chloroflourobutane-1/tmpjEcml7
+max_memory 4000 MB (current use 1016 MB)
+Set gradient conv threshold to 3.16228e-05
+init E= -476.510508035214
+  HOMO = -0.286520440406966  LUMO = 0.231643438673932
+cycle= 1 E= -476.510508035214  delta_E= -9.09e-13  |g|= 1.71e-10  |ddm|= 2.35e-09
+  HOMO = -0.286520440405044  LUMO = 0.231643438669862
+Extra cycle  E= -476.510508035214  delta_E=    0  |g|= 1e-10  |ddm|= 1.36e-09
+converged SCF energy = -476.510508035214
+
+
+******** <class 'pyscf.dft.rks.RKS'> flags ********
+method = RKS
+initial guess = atom
+damping factor = 0
+level shift factor = 0.0
+DIIS = <class 'pyscf.scf.diis.CDIIS'>
+DIIS start cycle = 1
+DIIS space = 8
+SCF tol = 1e-09
+SCF gradient tol = 1e-08
+max. SCF cycles = 1
+direct_scf = True
+direct_scf_tol = 1e-13
+chkfile to save SCF result = /panfs/roc/scratch/graha682/201801_wfcycle/20180109_ccpVDZ_m06_ccsdt_ft_1chloroflourobutane-1/tmpIYIyEq
+max_memory 4000 MB (current use 1016 MB)
+XC functionals = m06
+small_rho_cutoff = 1e-20
+radial grids: Treutler-Ahlrichs (JCP 102, 346 (M4)) radial grids
+becke partition: Becke, JCP, 88, 2547 (1988)
+pruning grids: <function nwchem_prune at 0x159b578>
+grids dens level: 4
+symmetrized grids: False
+atomic radii adjust function: <function treutler_atomic_radii_adjust at 0x159b410>
+init E= -249.105182718321
+  HOMO = -0.0295137268671023  LUMO = 0.202768310447233
+cycle= 1 E= -318.990011533674  delta_E= -69.9  |g|= 23.9  |ddm|= 9.84
+  HOMO = -3.42504263255352  LUMO = -2.67729279584964
+Extra cycle  E= -461.555686293004  delta_E= -143  |g|= 4.27  |ddm|= 37.6
+SCF not converged.
+SCF energy = -461.555686293004 after 1 cycles
+ iter:   3:1        |ddm|: 3.439043e+01     Tr[DP]  1.397941e+00
+
+==================== Doing CCSD Calculation on Subsystem 1 =====================
+
+******** <class 'pyscf.cc.ccsd.CCSD'> flags ********
+CCSD nocc = 18, nvir = 38
+max_cycle = 50
+direct = 0
+conv_tol = 1e-07
+conv_tol_normt = 1e-05
+diis_space = 6
+diis_start_cycle = 0
+diis_start_energy_diff = 1e+09
+max_memory 4000 MB (current use 1003 MB)
+Build MO integrals with incore ao2mo
+Init t2, MP2 energy = -0.197647434599759
+cycle = 1  E(CCSD) = -0.210967327815997  dE = -0.210967328  norm(t1,t2) = 0.0536653
+cycle = 2  E(CCSD) = -0.216273004798033  dE = -0.00530567698  norm(t1,t2) = 0.0162352
+cycle = 3  E(CCSD) = -0.21735620460596  dE = -0.00108319981  norm(t1,t2) = 0.00705615
+cycle = 4  E(CCSD) = -0.217999285758561  dE = -0.000643081153  norm(t1,t2) = 0.00349675
+cycle = 5  E(CCSD) = -0.218043776401394  dE = -4.44906428e-05  norm(t1,t2) = 0.00144243
+cycle = 6  E(CCSD) = -0.217960237637894  dE = 8.35387635e-05  norm(t1,t2) = 0.000695281
+cycle = 7  E(CCSD) = -0.217971081268367  dE = -1.08436305e-05  norm(t1,t2) = 0.000230841
+cycle = 8  E(CCSD) = -0.217982322214411  dE = -1.1240946e-05  norm(t1,t2) = 0.000112735
+cycle = 9  E(CCSD) = -0.217981592052741  dE = 7.3016167e-07  norm(t1,t2) = 3.23484e-05
+cycle = 10  E(CCSD) = -0.217981350442554  dE = 2.41610188e-07  norm(t1,t2) = 1.36014e-05
+cycle = 11  E(CCSD) = -0.217980803092274  dE = 5.4735028e-07  norm(t1,t2) = 5.66929e-06
+cycle = 12  E(CCSD) = -0.217980694147107  dE = 1.08945167e-07  norm(t1,t2) = 1.97572e-06
+cycle = 13  E(CCSD) = -0.217980701970036  dE = -7.82292942e-09  norm(t1,t2) = 8.53134e-07
+CCSD converged
+E(CCSD) = -476.7284887371845  E_corr = -0.2179807019700361
+Build MO integrals with incore ao2mo
+cycle = 1  norm(lambda1,lambda2) = 0.00920482
+cycle = 2  norm(lambda1,lambda2) = 0.001998
+cycle = 3  norm(lambda1,lambda2) = 0.000838879
+cycle = 4  norm(lambda1,lambda2) = 0.000427892
+cycle = 5  norm(lambda1,lambda2) = 0.00013489
+cycle = 6  norm(lambda1,lambda2) = 6.06131e-05
+cycle = 7  norm(lambda1,lambda2) = 2.53443e-05
+cycle = 8  norm(lambda1,lambda2) = 1.16508e-05
+cycle = 9  norm(lambda1,lambda2) = 4.06961e-06
+Hartree-Fock Energy:  -476.51050803521446
+CCSD Correlation:       -0.21798070197004
+CCSD Energy:          -476.72848873718448
+
+=================== Doing CCSD(T) Calculation on Subsystem 1 ===================
+Build MO integrals with incore ao2mo
+CCSD(T) correction = -0.00288983615837304
+Build MO integrals with incore ao2mo
+istep = 0  norm(lambda1,lambda2) = 0.0199601
+istep = 1  norm(lambda1,lambda2) = 0.00380832
+istep = 2  norm(lambda1,lambda2) = 0.00176211
+istep = 3  norm(lambda1,lambda2) = 0.000849858
+istep = 4  norm(lambda1,lambda2) = 0.00043973
+istep = 5  norm(lambda1,lambda2) = 0.000112351
+istep = 6  norm(lambda1,lambda2) = 4.98535e-05
+istep = 7  norm(lambda1,lambda2) = 2.01139e-05
+istep = 8  norm(lambda1,lambda2) = 9.32269e-06
+istep = 9  norm(lambda1,lambda2) = 3.87697e-06
+istep = 10  norm(lambda1,lambda2) = 1.71025e-06
+istep = 11  norm(lambda1,lambda2) = 7.85459e-07
+istep = 12  norm(lambda1,lambda2) = 3.42259e-07
+istep = 13  norm(lambda1,lambda2) = 1.44401e-07
+istep = 14  norm(lambda1,lambda2) = 6.65451e-08
+istep = 15  norm(lambda1,lambda2) = 3.74392e-08
+istep = 16  norm(lambda1,lambda2) = 2.61827e-08
+istep = 17  norm(lambda1,lambda2) = 2.52376e-08
+istep = 18  norm(lambda1,lambda2) = 2.17376e-08
+istep = 19  norm(lambda1,lambda2) = 2.68328e-08
+istep = 20  norm(lambda1,lambda2) = 1.89457e-08
+istep = 21  norm(lambda1,lambda2) = 1.47402e-08
+istep = 22  norm(lambda1,lambda2) = 1.26779e-08
+istep = 23  norm(lambda1,lambda2) = 1.16521e-08
+istep = 24  norm(lambda1,lambda2) = 1.06642e-08
+istep = 25  norm(lambda1,lambda2) = 9.93739e-09
+Hartree-Fock Energy:  -476.51050803521446
+CCSD(T) Correlation:       -0.22087053812841
+CCSD(T) Energy:          -476.73137857334285
+
+========================= Density Matrix Purification ==========================
+ iter:   1       |idem_diff|: 1.000000000000     
+ iter:   2       |idem_diff|: 0.003596853037     
+ iter:   3       |idem_diff|: 0.000003003345     
+ iter:   4       |idem_diff|: 0.000000000004     
+Density Purified!
+WF-in-DFT Cycle Errors             0.00016372298488
+
+============================== Embedding Energies ==============================
+Subsystem DFT              -249.10507996599247
+Interaction                 122.10184794082087
+DFT-in-DFT                 -127.00323202517160
+Supermolecular DFT         -717.72130060883148
+Difference                 -590.71806858365994
+Corrected DFT-in-DFT       -717.72130060883160
+WF-in-DFT                  -354.62953063252201
+Corrected WF-in-DFT        -945.34759921618195
+
+=========================== Starting Freeze-and-Thaw ===========================
+ iter:   1:2        |ddm|: 9.226049e-06     Tr[DP]  7.760623e-01
+ iter:   2:2        |ddm|: 0.000000e+00     Tr[DP]  7.760623e-01
+                           Freeze-and-Thaw converged!                           
+
+=================== Subsystem 1 at higher mean-field method ====================
+  subiter:   1      |ddm|: 1.617906e+01
+  subiter:   2      |ddm|: 3.008039e+01
+  subiter:   3      |ddm|: 2.933902e+01
+  subiter:   4      |ddm|: 8.628539e+00
+  subiter:   5      |ddm|: 4.168911e+00
+  subiter:   6      |ddm|: 3.253555e+00
+  subiter:   7      |ddm|: 7.656162e-01
+  subiter:   8      |ddm|: 7.428138e-01
+  subiter:   9      |ddm|: 3.710449e-01
+  subiter:  10      |ddm|: 1.554904e-01
+  subiter:  11      |ddm|: 1.993606e-01
+  subiter:  12      |ddm|: 2.422107e-01
+  subiter:  13      |ddm|: 4.418862e-02
+  subiter:  14      |ddm|: 7.937709e-03
+  subiter:  15      |ddm|: 1.514485e-02
+  subiter:  16      |ddm|: 1.148257e-02
+  subiter:  17      |ddm|: 4.320931e-04
+  subiter:  18      |ddm|: 1.971196e-04
+  subiter:  19      |ddm|: 1.337161e-04
+  subiter:  20      |ddm|: 5.731463e-05
+  subiter:  21      |ddm|: 5.165550e-05
+  subiter:  22      |ddm|: 1.946078e-05
+  subiter:  23      |ddm|: 4.121049e-06
+  subiter:  24      |ddm|: 1.659371e-06
+  subiter:  25      |ddm|: 6.540059e-07
+  subiter:  26      |ddm|: 2.055742e-07
+  subiter:  27      |ddm|: 6.268384e-08
+  subiter:  28      |ddm|: 5.964809e-08
+  subiter:  29      |ddm|: 5.688686e-07
+  subiter:  30      |ddm|: 2.357648e-07
+  subiter:  31      |ddm|: 8.270244e-08
+  subiter:  32      |ddm|: 4.031361e-08
+  subiter:  33      |ddm|: 5.588755e-08
+  subiter:  34      |ddm|: 6.148162e-08
+  subiter:  35      |ddm|: 6.873884e-08
+  subiter:  36      |ddm|: 7.593445e-09
+  subiter:  37      |ddm|: 3.722708e-08
+  subiter:  38      |ddm|: 3.326878e-08
+  subiter:  39      |ddm|: 3.276154e-08
+  subiter:  40      |ddm|: 2.993014e-08
+  subiter:  41      |ddm|: 2.604744e-08
+  subiter:  42      |ddm|: 2.074881e-08
+  subiter:  43      |ddm|: 2.242548e-08
+  subiter:  44      |ddm|: 2.059307e-08
+  subiter:  45      |ddm|: 1.904215e-08
+  subiter:  46      |ddm|: 1.735875e-08
+  subiter:  47      |ddm|: 1.580169e-08
+  subiter:  48      |ddm|: 1.452473e-08
+  subiter:  49      |ddm|: 1.374584e-08
+  subiter:  50      |ddm|: 1.266274e-08
+  subiter:  51      |ddm|: 1.167230e-08
+  subiter:  52      |ddm|: 1.075169e-08
+  subiter:  53      |ddm|: 9.927485e-09
+  subiter:  54      |ddm|: 9.194239e-09
+  subiter:  55      |ddm|: 8.528507e-09
+  subiter:  56      |ddm|: 7.875579e-09
+  subiter:  57      |ddm|: 7.276048e-09
+  subiter:  58      |ddm|: 6.725375e-09
+  subiter:  59      |ddm|: 6.220076e-09
+  subiter:  60      |ddm|: 5.755349e-09
+  subiter:  61      |ddm|: 5.323991e-09
+  subiter:  62      |ddm|: 4.922112e-09
+  subiter:  63      |ddm|: 4.551808e-09
+  subiter:  64      |ddm|: 4.209932e-09
+  subiter:  65      |ddm|: 3.894145e-09
+  subiter:  66      |ddm|: 3.602178e-09
+  subiter:  67      |ddm|: 3.331822e-09
+  subiter:  68      |ddm|: 3.081523e-09
+  subiter:  69      |ddm|: 2.850274e-09
+  subiter:  70      |ddm|: 2.636540e-09
+  subiter:  71      |ddm|: 2.438768e-09
+  subiter:  72      |ddm|: 2.255996e-09
+  subiter:  73      |ddm|: 2.086780e-09
+  subiter:  74      |ddm|: 1.930491e-09
+  subiter:  75      |ddm|: 1.785670e-09
+  subiter:  76      |ddm|: 1.651861e-09
+  subiter:  77      |ddm|: 1.528094e-09
+  subiter:  78      |ddm|: 1.413597e-09
+  subiter:  79      |ddm|: 1.307574e-09
+  subiter:  80      |ddm|: 1.209615e-09
+  subiter:  81      |ddm|: 1.119074e-09
+  subiter:  82      |ddm|: 1.035161e-09
+  subiter:  83      |ddm|: 9.576763e-10
+
+
+******** <class 'pyscf.scf.hf.RHF'> flags ********
+method = RHF
+initial guess = minao
+damping factor = 0
+level shift factor = 0
+DIIS = <class 'pyscf.scf.diis.CDIIS'>
+DIIS start cycle = 1
+DIIS space = 8
+SCF tol = 1e-09
+SCF gradient tol = None
+max. SCF cycles = 300
+direct_scf = True
+direct_scf_tol = 1e-13
+chkfile to save SCF result = /panfs/roc/scratch/graha682/201801_wfcycle/20180109_ccpVDZ_m06_ccsdt_ft_1chloroflourobutane-1/tmpL11QLX
+max_memory 4000 MB (current use 1020 MB)
+Set gradient conv threshold to 3.16228e-05
+init E= -550.695886180758
+  HOMO = -1.80477225514195  LUMO = -1.58416638286193
+cycle= 1 E= -550.695886180758  delta_E= 1.14e-13  |g|= 2.55e-10  |ddm|= 2.9e-09
+  HOMO = -1.80477225513353  LUMO = -1.58416638286158
+Extra cycle  E= -550.69588618076  delta_E= -2.27e-12  |g|= 1.93e-10  |ddm|= 2.19e-09
+converged SCF energy = -550.69588618076
+
+
+******** <class 'pyscf.dft.rks.RKS'> flags ********
+method = RKS
+initial guess = atom
+damping factor = 0
+level shift factor = 0.0
+DIIS = <class 'pyscf.scf.diis.CDIIS'>
+DIIS start cycle = 1
+DIIS space = 8
+SCF tol = 1e-09
+SCF gradient tol = 1e-08
+max. SCF cycles = 1
+direct_scf = True
+direct_scf_tol = 1e-13
+chkfile to save SCF result = /panfs/roc/scratch/graha682/201801_wfcycle/20180109_ccpVDZ_m06_ccsdt_ft_1chloroflourobutane-1/tmpIYIyEq
+max_memory 4000 MB (current use 1020 MB)
+XC functionals = m06
+small_rho_cutoff = 1e-20
+radial grids: Treutler-Ahlrichs (JCP 102, 346 (M4)) radial grids
+becke partition: Becke, JCP, 88, 2547 (1988)
+pruning grids: <function nwchem_prune at 0x159b578>
+grids dens level: 4
+symmetrized grids: False
+atomic radii adjust function: <function treutler_atomic_radii_adjust at 0x159b410>
+init E= -155.279726701209
+  HOMO = -4.42777208596628  LUMO = -4.25467451067339
+cycle= 1 E= -455.877092631013  delta_E= -301  |g|= 23.6  |ddm|= 15.6
+  HOMO = -3.0630789008689  LUMO = -2.94590941096509
+Extra cycle  E= -451.473728728546  delta_E=  4.4  |g|= 10.1  |ddm|= 30.8
+SCF not converged.
+SCF energy = -451.473728728546 after 1 cycles
+ iter:   3:1        |ddm|: 2.710348e+01     Tr[DP] -4.199319e-01
+
+==================== Doing CCSD Calculation on Subsystem 1 =====================
+
+******** <class 'pyscf.cc.ccsd.CCSD'> flags ********
+CCSD nocc = 18, nvir = 38
+max_cycle = 50
+direct = 0
+conv_tol = 1e-07
+conv_tol_normt = 1e-05
+diis_space = 6
+diis_start_cycle = 0
+diis_start_energy_diff = 1e+09
+max_memory 4000 MB (current use 1017 MB)
+Build MO integrals with incore ao2mo
+Init t2, MP2 energy = -0.356091018578097
+cycle = 1  E(CCSD) = -0.355659681930269  dE = -0.355659682  norm(t1,t2) = 0.260051
+cycle = 2  E(CCSD) = -0.388891421799844  dE = -0.0332317399  norm(t1,t2) = 0.239321
+cycle = 3  E(CCSD) = -0.370430841814917  dE = 0.01846058  norm(t1,t2) = 0.269787
+cycle = 4  E(CCSD) = -0.384797706129586  dE = -0.0143668643  norm(t1,t2) = 0.310177
+cycle = 5  E(CCSD) = -0.391891997815485  dE = -0.00709429169  norm(t1,t2) = 0.0839497
+cycle = 6  E(CCSD) = -0.401308014472409  dE = -0.00941601666  norm(t1,t2) = 0.066728
+cycle = 7  E(CCSD) = -0.396891067387222  dE = 0.00441694709  norm(t1,t2) = 0.0655583
+cycle = 8  E(CCSD) = -0.396844878151439  dE = 4.61892358e-05  norm(t1,t2) = 0.0328983
+cycle = 9  E(CCSD) = -0.40052446152896  dE = -0.00367958338  norm(t1,t2) = 0.0411496
+cycle = 10  E(CCSD) = -0.40044472204065  dE = 7.97394883e-05  norm(t1,t2) = 0.0141521
+cycle = 11  E(CCSD) = -0.400500241592443  dE = -5.55195518e-05  norm(t1,t2) = 0.00586247
+cycle = 12  E(CCSD) = -0.400566836199458  dE = -6.6594607e-05  norm(t1,t2) = 0.00379512
+cycle = 13  E(CCSD) = -0.400525864475735  dE = 4.09717237e-05  norm(t1,t2) = 0.00245666
+cycle = 14  E(CCSD) = -0.400479515903736  dE = 4.6348572e-05  norm(t1,t2) = 0.001485
+cycle = 15  E(CCSD) = -0.400472435104101  dE = 7.08079963e-06  norm(t1,t2) = 0.000734899
+cycle = 16  E(CCSD) = -0.400434376521743  dE = 3.80585824e-05  norm(t1,t2) = 0.000643127
+cycle = 17  E(CCSD) = -0.400429424287284  dE = 4.95223446e-06  norm(t1,t2) = 0.000441624
+cycle = 18  E(CCSD) = -0.400426828396925  dE = 2.59589036e-06  norm(t1,t2) = 0.000306643
+cycle = 19  E(CCSD) = -0.400429012401177  dE = -2.18400425e-06  norm(t1,t2) = 9.90976e-05
+cycle = 20  E(CCSD) = -0.400428988494112  dE = 2.39070652e-08  norm(t1,t2) = 4.58473e-05
+cycle = 21  E(CCSD) = -0.400429250183797  dE = -2.61689685e-07  norm(t1,t2) = 3.08818e-05
+cycle = 22  E(CCSD) = -0.400427980800584  dE = 1.26938321e-06  norm(t1,t2) = 2.40224e-05
+cycle = 23  E(CCSD) = -0.400428071964759  dE = -9.11641747e-08  norm(t1,t2) = 1.97948e-05
+cycle = 24  E(CCSD) = -0.400427273212268  dE = 7.98752491e-07  norm(t1,t2) = 1.16019e-05
+cycle = 25  E(CCSD) = -0.400427012679262  dE = 2.60533006e-07  norm(t1,t2) = 6.68886e-06
+cycle = 26  E(CCSD) = -0.400426801550312  dE = 2.1112895e-07  norm(t1,t2) = 4.9305e-06
+cycle = 27  E(CCSD) = -0.400426727212301  dE = 7.43380104e-08  norm(t1,t2) = 3.99808e-06
+CCSD converged
+E(CCSD) = -551.0963129079722  E_corr = -0.4004267272123012
+Build MO integrals with incore ao2mo
+cycle = 1  norm(lambda1,lambda2) = 0.41926
+cycle = 2  norm(lambda1,lambda2) = 0.229059
+cycle = 3  norm(lambda1,lambda2) = 0.224916
+cycle = 4  norm(lambda1,lambda2) = 0.307014
+cycle = 5  norm(lambda1,lambda2) = 0.0567017
+cycle = 6  norm(lambda1,lambda2) = 0.0418569
+cycle = 7  norm(lambda1,lambda2) = 0.0249096
+cycle = 8  norm(lambda1,lambda2) = 0.0179082
+cycle = 9  norm(lambda1,lambda2) = 0.0110491
+cycle = 10  norm(lambda1,lambda2) = 0.00717941
+cycle = 11  norm(lambda1,lambda2) = 0.00394423
+cycle = 12  norm(lambda1,lambda2) = 0.00215967
+cycle = 13  norm(lambda1,lambda2) = 0.0010679
+cycle = 14  norm(lambda1,lambda2) = 0.000801308
+cycle = 15  norm(lambda1,lambda2) = 0.000529406
+cycle = 16  norm(lambda1,lambda2) = 0.000349369
+cycle = 17  norm(lambda1,lambda2) = 0.000210352
+cycle = 18  norm(lambda1,lambda2) = 0.000166097
+cycle = 19  norm(lambda1,lambda2) = 9.67229e-05
+cycle = 20  norm(lambda1,lambda2) = 7.21247e-05
+cycle = 21  norm(lambda1,lambda2) = 3.43185e-05
+cycle = 22  norm(lambda1,lambda2) = 2.04609e-05
+cycle = 23  norm(lambda1,lambda2) = 1.03112e-05
+cycle = 24  norm(lambda1,lambda2) = 7.22317e-06
+Hartree-Fock Energy:  -550.69588618075989
+CCSD Correlation:       -0.40042672721230
+CCSD Energy:          -551.09631290797222
+
+=================== Doing CCSD(T) Calculation on Subsystem 1 ===================
+Build MO integrals with incore ao2mo
+CCSD(T) correction = -0.0519399278694366
+Build MO integrals with incore ao2mo
+istep = 0  norm(lambda1,lambda2) = 0.376939
+istep = 1  norm(lambda1,lambda2) = 0.366032
+istep = 2  norm(lambda1,lambda2) = 0.392009
+istep = 3  norm(lambda1,lambda2) = 0.508216
+istep = 4  norm(lambda1,lambda2) = 0.126497
+istep = 5  norm(lambda1,lambda2) = 0.101481
+istep = 6  norm(lambda1,lambda2) = 0.0336487
+istep = 7  norm(lambda1,lambda2) = 0.0234588
+istep = 8  norm(lambda1,lambda2) = 0.00900409
+istep = 9  norm(lambda1,lambda2) = 0.00543475
+istep = 10  norm(lambda1,lambda2) = 0.00407061
+istep = 11  norm(lambda1,lambda2) = 0.00239928
+istep = 12  norm(lambda1,lambda2) = 0.00151194
+istep = 13  norm(lambda1,lambda2) = 0.000835421
+istep = 14  norm(lambda1,lambda2) = 0.00052314
+istep = 15  norm(lambda1,lambda2) = 0.000310442
+istep = 16  norm(lambda1,lambda2) = 0.000217836
+istep = 17  norm(lambda1,lambda2) = 0.000148331
+istep = 18  norm(lambda1,lambda2) = 9.27881e-05
+istep = 19  norm(lambda1,lambda2) = 6.5404e-05
+istep = 20  norm(lambda1,lambda2) = 3.16447e-05
+istep = 21  norm(lambda1,lambda2) = 2.16694e-05
+istep = 22  norm(lambda1,lambda2) = 1.377e-05
+istep = 23  norm(lambda1,lambda2) = 8.25864e-06
+istep = 24  norm(lambda1,lambda2) = 4.85572e-06
+istep = 25  norm(lambda1,lambda2) = 2.73076e-06
+istep = 26  norm(lambda1,lambda2) = 1.66667e-06
+istep = 27  norm(lambda1,lambda2) = 1.08891e-06
+istep = 28  norm(lambda1,lambda2) = 6.60319e-07
+istep = 29  norm(lambda1,lambda2) = 3.25722e-07
+istep = 30  norm(lambda1,lambda2) = 2.04538e-07
+istep = 31  norm(lambda1,lambda2) = 1.71268e-07
+istep = 32  norm(lambda1,lambda2) = 1.26227e-07
+istep = 33  norm(lambda1,lambda2) = 1.06034e-07
+istep = 34  norm(lambda1,lambda2) = 9.05218e-08
+istep = 35  norm(lambda1,lambda2) = 9.60076e-08
+istep = 36  norm(lambda1,lambda2) = 9.47078e-08
+istep = 37  norm(lambda1,lambda2) = 8.24387e-08
+istep = 38  norm(lambda1,lambda2) = 7.45193e-08
+istep = 39  norm(lambda1,lambda2) = 6.98617e-08
+istep = 40  norm(lambda1,lambda2) = 6.65528e-08
+istep = 41  norm(lambda1,lambda2) = 6.44717e-08
+istep = 42  norm(lambda1,lambda2) = 6.03888e-08
+istep = 43  norm(lambda1,lambda2) = 5.59946e-08
+istep = 44  norm(lambda1,lambda2) = 5.25689e-08
+istep = 45  norm(lambda1,lambda2) = 4.98014e-08
+istep = 46  norm(lambda1,lambda2) = 4.72644e-08
+istep = 47  norm(lambda1,lambda2) = 4.4845e-08
+istep = 48  norm(lambda1,lambda2) = 4.23719e-08
+istep = 49  norm(lambda1,lambda2) = 3.99886e-08
+Hartree-Fock Energy:  -550.69588618075989
+CCSD(T) Correlation:       -0.45236665508174
+CCSD(T) Energy:          -551.14825283584162
+
+========================= Density Matrix Purification ==========================
+ iter:   1       |idem_diff|: 1.000000000000     
+ iter:   2       |idem_diff|: 0.660904262437     
+ iter:   3       |idem_diff|: 0.469116500862     
+ iter:   4       |idem_diff|: 0.304030060935     
+ iter:   5       |idem_diff|: 0.181661130476     
+ iter:   6       |idem_diff|: 0.134377676325     
+ iter:   7       |idem_diff|: 0.127031193704     
+ iter:   8       |idem_diff|: 0.119722868682     
+ iter:   9       |idem_diff|: 0.104913286010     
+ iter:  10       |idem_diff|: 0.078265513627     
+ iter:  11       |idem_diff|: 0.041255283066     
+ iter:  12       |idem_diff|: 0.010575041364     
+ iter:  13       |idem_diff|: 0.000646478897     
+ iter:  14       |idem_diff|: 0.000002357518     
+ iter:  15       |idem_diff|: 0.000000000031     
+Density Purified!
+WF-in-DFT Cycle Errors             2.89866999086049
+
+============================== Embedding Energies ==============================
+Subsystem DFT              -155.90701261496756
+Interaction                  28.92741306486951
+DFT-in-DFT                 -126.97959955009804
+Supermolecular DFT         -717.72130060883148
+Difference                 -590.74170105873350
+Corrected DFT-in-DFT       -717.72130060883160
+WF-in-DFT                  -522.22083977097213
+Corrected WF-in-DFT        -1112.96254082970563
+
+=========================== Starting Freeze-and-Thaw ===========================
+ iter:   1:2        |ddm|: 6.832342e+01     Tr[DP] -3.053316e+01
+ iter:   2:2        |ddm|: 0.000000e+00     Tr[DP] -3.053316e+01
+                           Freeze-and-Thaw converged!                           
+
+=================== Subsystem 1 at higher mean-field method ====================
+  subiter:   1      |ddm|: 1.589548e+01
+  subiter:   2      |ddm|: 2.550871e+01
+  subiter:   3      |ddm|: 2.456993e+01
+  subiter:   4      |ddm|: 5.214446e+00
+  subiter:   5      |ddm|: 3.722758e+00
+  subiter:   6      |ddm|: 1.090481e+00
+  subiter:   7      |ddm|: 6.364401e-01
+  subiter:   8      |ddm|: 3.521343e-01
+  subiter:   9      |ddm|: 2.196856e-01
+  subiter:  10      |ddm|: 1.941816e-01
+  subiter:  11      |ddm|: 1.070497e-01
+  subiter:  12      |ddm|: 8.196329e-02
+  subiter:  13      |ddm|: 8.980425e-03
+  subiter:  14      |ddm|: 1.092182e-02
+  subiter:  15      |ddm|: 1.809646e-03
+  subiter:  16      |ddm|: 1.476469e-03
+  subiter:  17      |ddm|: 4.428684e-04
+  subiter:  18      |ddm|: 8.656781e-05
+  subiter:  19      |ddm|: 1.471111e-05
+  subiter:  20      |ddm|: 6.681552e-06
+  subiter:  21      |ddm|: 4.358476e-06
+  subiter:  22      |ddm|: 4.844485e-07
+  subiter:  23      |ddm|: 4.625709e-07
+  subiter:  24      |ddm|: 3.289023e-07
+  subiter:  25      |ddm|: 1.900073e-07
+  subiter:  26      |ddm|: 2.202578e-07
+  subiter:  27      |ddm|: 1.365988e-08
+  subiter:  28      |ddm|: 1.470578e-08
+  subiter:  29      |ddm|: 4.404543e-08
+  subiter:  30      |ddm|: 3.137694e-08
+  subiter:  31      |ddm|: 8.867014e-09
+  subiter:  32      |ddm|: 2.544900e-08
+  subiter:  33      |ddm|: 4.905470e-09
+  subiter:  34      |ddm|: 4.865651e-09
+  subiter:  35      |ddm|: 5.864646e-09
+  subiter:  36      |ddm|: 2.845393e-09
+  subiter:  37      |ddm|: 4.875342e-09
+  subiter:  38      |ddm|: 4.858090e-09
+  subiter:  39      |ddm|: 2.766897e-09
+  subiter:  40      |ddm|: 2.614573e-09
+  subiter:  41      |ddm|: 2.414691e-09
+  subiter:  42      |ddm|: 2.068056e-09
+  subiter:  43      |ddm|: 2.143200e-09
+  subiter:  44      |ddm|: 1.816006e-09
+  subiter:  45      |ddm|: 1.459677e-09
+  subiter:  46      |ddm|: 1.306705e-09
+  subiter:  47      |ddm|: 1.165108e-09
+  subiter:  48      |ddm|: 1.036450e-09
+  subiter:  49      |ddm|: 9.324068e-10
+
+
+******** <class 'pyscf.scf.hf.RHF'> flags ********
+method = RHF
+initial guess = minao
+damping factor = 0
+level shift factor = 0
+DIIS = <class 'pyscf.scf.diis.CDIIS'>
+DIIS start cycle = 1
+DIIS space = 8
+SCF tol = 1e-09
+SCF gradient tol = None
+max. SCF cycles = 300
+direct_scf = True
+direct_scf_tol = 1e-13
+chkfile to save SCF result = /panfs/roc/scratch/graha682/201801_wfcycle/20180109_ccpVDZ_m06_ccsdt_ft_1chloroflourobutane-1/tmpLJWAKW
+max_memory 4000 MB (current use 1018 MB)
+Set gradient conv threshold to 3.16228e-05
+init E= -541.155487084617
+  HOMO = -1.39763669222623  LUMO = -1.17775931586654
+cycle= 1 E= -541.155487084617  delta_E= 4.55e-13  |g|= 2.2e-10  |ddm|= 2.59e-09
+  HOMO = -1.39763669221484  LUMO = -1.17775931585139
+Extra cycle  E= -541.155487084616  delta_E= 2.27e-13  |g|= 1.45e-10  |ddm|= 1.64e-09
+converged SCF energy = -541.155487084616
+
+
+******** <class 'pyscf.dft.rks.RKS'> flags ********
+method = RKS
+initial guess = atom
+damping factor = 0
+level shift factor = 0.0
+DIIS = <class 'pyscf.scf.diis.CDIIS'>
+DIIS start cycle = 1
+DIIS space = 8
+SCF tol = 1e-09
+SCF gradient tol = 1e-08
+max. SCF cycles = 1
+direct_scf = True
+direct_scf_tol = 1e-13
+chkfile to save SCF result = /panfs/roc/scratch/graha682/201801_wfcycle/20180109_ccpVDZ_m06_ccsdt_ft_1chloroflourobutane-1/tmpIYIyEq
+max_memory 4000 MB (current use 1018 MB)
+XC functionals = m06
+small_rho_cutoff = 1e-20
+radial grids: Treutler-Ahlrichs (JCP 102, 346 (M4)) radial grids
+becke partition: Becke, JCP, 88, 2547 (1988)
+pruning grids: <function nwchem_prune at 0x159b578>
+grids dens level: 4
+symmetrized grids: False
+atomic radii adjust function: <function treutler_atomic_radii_adjust at 0x159b410>
+init E= -158.019958186212
+  HOMO = -3.7299736071634  LUMO = -3.38931061597802
+cycle= 1 E= -387.475923345463  delta_E= -229  |g|= 23.7  |ddm|= 16.4
+  HOMO = -2.85540389570449  LUMO = -2.7504803594676
+Extra cycle  E= -434.185848748482  delta_E= -46.7  |g|= 10.7  |ddm|= 31.2
+SCF not converged.
+SCF energy = -434.185848748482 after 1 cycles
+ iter:   3:1        |ddm|: 2.777241e+01     Tr[DP] -2.109250e+01
+
+==================== Doing CCSD Calculation on Subsystem 1 =====================
+
+******** <class 'pyscf.cc.ccsd.CCSD'> flags ********
+CCSD nocc = 18, nvir = 38
+max_cycle = 50
+direct = 0
+conv_tol = 1e-07
+conv_tol_normt = 1e-05
+diis_space = 6
+diis_start_cycle = 0
+diis_start_energy_diff = 1e+09
+max_memory 4000 MB (current use 1006 MB)
+Build MO integrals with incore ao2mo
+Init t2, MP2 energy = -0.331985120518193
+cycle = 1  E(CCSD) = -0.316218217736056  dE = -0.316218218  norm(t1,t2) = 0.363983
+cycle = 2  E(CCSD) = -0.375085453460076  dE = -0.0588672357  norm(t1,t2) = 0.470085
+cycle = 3  E(CCSD) = -0.307343722931528  dE = 0.0677417305  norm(t1,t2) = 0.658007
+cycle = 4  E(CCSD) = -0.354381409540477  dE = -0.0470376866  norm(t1,t2) = 0.949774
+cycle = 5  E(CCSD) = -0.355094750977119  dE = -0.000713341437  norm(t1,t2) = 0.0872456
+cycle = 6  E(CCSD) = -0.363638646039167  dE = -0.00854389506  norm(t1,t2) = 0.0797098
+cycle = 7  E(CCSD) = -0.369081071515332  dE = -0.00544242548  norm(t1,t2) = 0.0366788
+cycle = 8  E(CCSD) = -0.367295109066667  dE = 0.00178596245  norm(t1,t2) = 0.0229456
+cycle = 9  E(CCSD) = -0.367760863576005  dE = -0.000465754509  norm(t1,t2) = 0.00928601
+cycle = 10  E(CCSD) = -0.367523666268503  dE = 0.000237197308  norm(t1,t2) = 0.00498638
+cycle = 11  E(CCSD) = -0.367707607126659  dE = -0.000183940858  norm(t1,t2) = 0.00349544
+cycle = 12  E(CCSD) = -0.367560705662008  dE = 0.000146901465  norm(t1,t2) = 0.00212666
+cycle = 13  E(CCSD) = -0.367583726014254  dE = -2.30203522e-05  norm(t1,t2) = 0.00142187
+cycle = 14  E(CCSD) = -0.367550383665529  dE = 3.33423487e-05  norm(t1,t2) = 0.000738317
+cycle = 15  E(CCSD) = -0.367552132294434  dE = -1.7486289e-06  norm(t1,t2) = 0.00031687
+cycle = 16  E(CCSD) = -0.367549569508324  dE = 2.56278611e-06  norm(t1,t2) = 0.000191433
+cycle = 17  E(CCSD) = -0.367552167295769  dE = -2.59778745e-06  norm(t1,t2) = 0.000127841
+cycle = 18  E(CCSD) = -0.36755863015006  dE = -6.46285429e-06  norm(t1,t2) = 8.38381e-05
+cycle = 19  E(CCSD) = -0.367556642400921  dE = 1.98774914e-06  norm(t1,t2) = 6.99814e-05
+cycle = 20  E(CCSD) = -0.367558169805265  dE = -1.52740434e-06  norm(t1,t2) = 2.7201e-05
+cycle = 21  E(CCSD) = -0.367557458601241  dE = 7.11204023e-07  norm(t1,t2) = 1.74583e-05
+cycle = 22  E(CCSD) = -0.367557344532984  dE = 1.14068258e-07  norm(t1,t2) = 1.12484e-05
+cycle = 23  E(CCSD) = -0.367557067526956  dE = 2.77006028e-07  norm(t1,t2) = 6.67339e-06
+cycle = 24  E(CCSD) = -0.367557044680196  dE = 2.28467597e-08  norm(t1,t2) = 3.33214e-06
+CCSD converged
+E(CCSD) = -541.5230441292965  E_corr = -0.3675570446801964
+Build MO integrals with incore ao2mo
+cycle = 1  norm(lambda1,lambda2) = 0.341932
+cycle = 2  norm(lambda1,lambda2) = 0.10683
+cycle = 3  norm(lambda1,lambda2) = 0.13224
+cycle = 4  norm(lambda1,lambda2) = 0.160047
+cycle = 5  norm(lambda1,lambda2) = 0.0413118
+cycle = 6  norm(lambda1,lambda2) = 0.0252225
+cycle = 7  norm(lambda1,lambda2) = 0.00982325
+cycle = 8  norm(lambda1,lambda2) = 0.00639682
+cycle = 9  norm(lambda1,lambda2) = 0.00387776
+cycle = 10  norm(lambda1,lambda2) = 0.00238773
+cycle = 11  norm(lambda1,lambda2) = 0.00125613
+cycle = 12  norm(lambda1,lambda2) = 0.000901895
+cycle = 13  norm(lambda1,lambda2) = 0.000575142
+cycle = 14  norm(lambda1,lambda2) = 0.000298124
+cycle = 15  norm(lambda1,lambda2) = 0.000197506
+cycle = 16  norm(lambda1,lambda2) = 0.000120152
+cycle = 17  norm(lambda1,lambda2) = 9.76981e-05
+cycle = 18  norm(lambda1,lambda2) = 7.03873e-05
+cycle = 19  norm(lambda1,lambda2) = 4.98007e-05
+cycle = 20  norm(lambda1,lambda2) = 3.07064e-05
+cycle = 21  norm(lambda1,lambda2) = 2.12987e-05
+cycle = 22  norm(lambda1,lambda2) = 1.29248e-05
+cycle = 23  norm(lambda1,lambda2) = 9.15079e-06
+Hartree-Fock Energy:  -541.15548708461631
+CCSD Correlation:       -0.36755704468020
+CCSD Energy:          -541.52304412929652
+
+=================== Doing CCSD(T) Calculation on Subsystem 1 ===================
+Build MO integrals with incore ao2mo
+CCSD(T) correction = -0.036834787964551
+Build MO integrals with incore ao2mo
+istep = 0  norm(lambda1,lambda2) = 0.382303
+istep = 1  norm(lambda1,lambda2) = 0.495463
+istep = 2  norm(lambda1,lambda2) = 0.720711
+istep = 3  norm(lambda1,lambda2) = 1.08359
+istep = 4  norm(lambda1,lambda2) = 0.03943
+istep = 5  norm(lambda1,lambda2) = 0.0260784
+istep = 6  norm(lambda1,lambda2) = 0.0110548
+istep = 7  norm(lambda1,lambda2) = 0.00652139
+istep = 8  norm(lambda1,lambda2) = 0.00375252
+istep = 9  norm(lambda1,lambda2) = 0.00244981
+istep = 10  norm(lambda1,lambda2) = 0.00144747
+istep = 11  norm(lambda1,lambda2) = 0.000596909
+istep = 12  norm(lambda1,lambda2) = 0.000317183
+istep = 13  norm(lambda1,lambda2) = 0.000218126
+istep = 14  norm(lambda1,lambda2) = 0.000159736
+istep = 15  norm(lambda1,lambda2) = 8.96163e-05
+istep = 16  norm(lambda1,lambda2) = 5.63659e-05
+istep = 17  norm(lambda1,lambda2) = 3.31713e-05
+istep = 18  norm(lambda1,lambda2) = 2.10079e-05
+istep = 19  norm(lambda1,lambda2) = 1.40031e-05
+istep = 20  norm(lambda1,lambda2) = 7.2795e-06
+istep = 21  norm(lambda1,lambda2) = 3.84374e-06
+istep = 22  norm(lambda1,lambda2) = 3.23067e-06
+istep = 23  norm(lambda1,lambda2) = 1.92714e-06
+istep = 24  norm(lambda1,lambda2) = 1.5593e-06
+istep = 25  norm(lambda1,lambda2) = 8.60001e-07
+istep = 26  norm(lambda1,lambda2) = 5.78484e-07
+istep = 27  norm(lambda1,lambda2) = 4.16569e-07
+istep = 28  norm(lambda1,lambda2) = 1.84765e-07
+istep = 29  norm(lambda1,lambda2) = 1.39429e-07
+istep = 30  norm(lambda1,lambda2) = 9.32979e-08
+istep = 31  norm(lambda1,lambda2) = 7.79996e-08
+istep = 32  norm(lambda1,lambda2) = 7.34634e-08
+istep = 33  norm(lambda1,lambda2) = 7.10318e-08
+istep = 34  norm(lambda1,lambda2) = 6.60033e-08
+istep = 35  norm(lambda1,lambda2) = 5.73778e-08
+istep = 36  norm(lambda1,lambda2) = 4.91215e-08
+istep = 37  norm(lambda1,lambda2) = 4.5869e-08
+istep = 38  norm(lambda1,lambda2) = 4.29172e-08
+istep = 39  norm(lambda1,lambda2) = 4.13199e-08
+istep = 40  norm(lambda1,lambda2) = 3.74954e-08
+istep = 41  norm(lambda1,lambda2) = 3.4227e-08
+istep = 42  norm(lambda1,lambda2) = 3.11172e-08
+istep = 43  norm(lambda1,lambda2) = 2.86709e-08
+istep = 44  norm(lambda1,lambda2) = 2.65828e-08
+istep = 45  norm(lambda1,lambda2) = 2.468e-08
+istep = 46  norm(lambda1,lambda2) = 2.28217e-08
+istep = 47  norm(lambda1,lambda2) = 2.10602e-08
+istep = 48  norm(lambda1,lambda2) = 1.95336e-08
+istep = 49  norm(lambda1,lambda2) = 1.81001e-08

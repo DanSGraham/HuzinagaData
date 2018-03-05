@@ -1,0 +1,31 @@
+Overwritten attributes  get_hcore  of <class 'pyscf.scf.hf.RHF'>
+Overwritten attributes  get_hcore  of <class 'pyscf.dft.rks.RKS'>
+Traceback (most recent call last):
+  File "/home/goodpast/graha682/code/python/freeze_and_thaw/cython/cmain.py", line 6, in <module>
+    main.main(sys.argv[1])
+  File "main.pyx", line 46, in main.main (main.c:2465)
+    inp = read_input(filename)
+  File "read_input.pyx", line 72, in read_input.read_input (read_input.c:2153)
+    inp  = reader.read_input(filename)
+  File "/home/goodpast/graha682/.local/lib/python2.7/site-packages/input_reader/input_reader.py", line 88, in read_input
+    i, namespace = self._parse_key_level(f, 0)
+  File "/home/goodpast/graha682/.local/lib/python2.7/site-packages/input_reader/key_adder.py", line 542, in _parse_key_level
+    i, namespace = self._find_keys_in_input(f, i, namespace)
+  File "/home/goodpast/graha682/.local/lib/python2.7/site-packages/input_reader/key_adder.py", line 566, in _find_keys_in_input
+    raise ReaderError (self.name+': '+str(e))
+input_reader.helpers.ReaderError: main: embed: One and only one of 'hm', 'huzinaga', 'manby', or 'mu' must be included.
+Traceback (most recent call last):
+  File "/home/goodpast/graha682/code/python/freeze_and_thaw/cython/cmain.py", line 6, in <module>
+    main.main(sys.argv[1])
+  File "main.pyx", line 46, in main.main (main.c:2465)
+    inp = read_input(filename)
+  File "read_input.pyx", line 72, in read_input.read_input (read_input.c:2153)
+    # read the input filename
+  File "/home/goodpast/graha682/.local/lib/python2.7/site-packages/input_reader/input_reader.py", line 88, in read_input
+    i, namespace = self._parse_key_level(f, 0)
+  File "/home/goodpast/graha682/.local/lib/python2.7/site-packages/input_reader/key_adder.py", line 542, in _parse_key_level
+    i, namespace = self._find_keys_in_input(f, i, namespace)
+  File "/home/goodpast/graha682/.local/lib/python2.7/site-packages/input_reader/key_adder.py", line 566, in _find_keys_in_input
+    raise ReaderError (self.name+': '+str(e))
+input_reader.helpers.ReaderError: main: embed: One and only one of 'hm', 'huzinaga', 'manby', or 'mu' must be included.
+=>> PBS: job killed: walltime 624 exceeded limit 600

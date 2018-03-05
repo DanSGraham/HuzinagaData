@@ -1,0 +1,31 @@
+#!/bin/bash -l
+#
+# Job: 201708_ccpVTZ_m06_12Hpentacene
+#
+#
+# qg09 version 1.0.10
+#
+# To submit this script to the queue type:
+#    qsub 201708_ccpVTZ_m06_12Hpentacene.pbs
+#
+#PBS -m n
+#PBS -l nodes=1:ppn=24
+#PBS -l walltime=48:00:00
+#PBS -l mem=60000mb
+#PBS -e 201708_ccpVTZ_m06_12Hpentacene.e
+#PBS -o 201708_ccpVTZ_m06_12Hpentacene.o
+#PBS -q mesabi
+#
+
+cd $PBS_O_WORKDIR
+
+ulimit -s unlimited
+
+cd /home/goodpast/graha682/201705_pentaceneRxn/201705_singleMolecule/201705_product/201705_M06
+mkdir -p /scratch/$USER/$PBS_JOBID  
+export GAUSS_SCRDIR=/scratch/$USER/$PBS_JOBID  
+module load gaussian/g09.e01  
+fix_input 201708_ccpVTZ_m06_12Hpentacene.gjf  
+/usr/bin/time g09 < 201708_ccpVTZ_m06_12Hpentacene.gjf >& 201708_ccpVTZ_m06_12Hpentacene.out  
+rm /scratch/$USER/$PBS_JOBID/*.rwf  
+

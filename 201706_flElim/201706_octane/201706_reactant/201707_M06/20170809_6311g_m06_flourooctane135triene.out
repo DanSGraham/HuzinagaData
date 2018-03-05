@@ -1,0 +1,260 @@
+********************************************************************************
+*                              PySCF CALCULATION                               *
+********************************************************************************
+
+================================== Input File ==================================
+
+atoms
+C         -3.72401        0.30490        0.00000
+H         -4.62500        0.90369        0.00000
+C         -2.48669        0.78623        0.00000
+H         -2.39448        1.86629        0.00000
+C         -1.28737       -0.00178        0.00000
+H         -1.40023       -1.08205        0.00000
+C         -0.05210        0.52335        0.00000
+H          0.05924        1.60640        0.00000
+C          1.15147       -0.24994        0.00000
+H          1.04118       -1.33299        0.00000
+C          2.38726        0.27283        0.00000
+H          2.50078        1.35554        0.00000
+F         -3.97266       -1.00253       -0.00000
+C          3.59428       -0.50752        0.00000
+H          3.46932       -1.58774        0.00000
+C          4.82114        0.00952        0.00000
+H          5.70364       -0.61446        0.00000
+H          4.97555        1.08260        0.00000
+end
+
+basis 6-311g
+scf
+ method ks
+ xc m06
+ grid 4
+ conv 1e-8
+ grad 1e-8
+ maxiter 100
+ shift 1.0
+ damp 1.0
+end
+================================== End Input ===================================
+#INFO: **** input file is /home/goodpast/shared/repositories/pyscf_wrapper/run_pySCF.py ****
+#!/usr/bin/env python
+
+def main():
+    '''Python wrapper to read a pySCF input file
+    and run the corresponding calculations.'''
+
+    from argparse import ArgumentParser, RawDescriptionHelpFormatter
+    from textwrap import dedent
+    from read_input import read_input, pstr
+    import sys
+    from simple_timer import timer
+    from scf import do_scf
+    from geomopt import do_geomopt
+    from vfreq import vibrations
+
+    # generate a parser to read the input files
+    parser = ArgumentParser(description=dedent(main.__doc__),
+                            formatter_class=RawDescriptionHelpFormatter)
+    parser.add_argument('input_files', nargs='*', default=sys.stdin,
+                        help='The pySCF input files.')
+    args = parser.parse_args()
+
+    # Cycle through all input files
+    for files in args.input_files:
+
+        # print header
+        pstr ("", delim="*", addline=False)
+        pstr ("PySCF CALCULATION", delim="*", fill=False, addline=False)
+        pstr ("", delim="*", addline=False)
+
+        # get input data
+        inp = read_input(files)
+
+        # start timer
+        inp.timer = timer()
+
+        # do single point energy
+        inp = do_scf(inp)
+
+        # do geomotry optimization
+        if inp.geomopt: inp = do_geomopt(inp)
+
+        if inp.vfreq: vibrations(inp)
+
+        # end timer
+        inp.timer.close()
+
+        # print footer
+        pstr("", delim="*")
+        pstr("END OF CALCULATION", delim="*", fill=False, addline=False)
+        pstr("", delim="*", addline=False)
+
+if __name__=='__main__':
+    main()
+#INFO: ******************** input file end ********************
+
+
+System: ('Linux', 'cn0168', '2.6.32-696.6.3.el6.x86_64', '#1 SMP Wed Jul 12 14:17:22 UTC 2017', 'x86_64', 'x86_64')  Threads 24
+Python 2.7.6 | 64-bit | (default, Sep 15 2014, 17:36:10) 
+[GCC 4.1.2 20080704 (Red Hat 4.1.2-54)]
+numpy 1.10.4  scipy 0.17.0
+Date: Fri Aug 18 14:25:11 2017
+PySCF version 1.4a
+PySCF path  /home/goodpast/graha682/code/python/pyscf/pyscf
+GIT ORIG_HEAD 94b2c398b04426124a84f8d60968bbe95f5efd88
+GIT HEAD      ref: refs/heads/master
+GIT master branch  9330ea3bfcc413f76711ba39e39d531f72dcda29
+
+[INPUT] VERBOSE 4
+[INPUT] num atoms = 18
+[INPUT] num electrons = 66
+[INPUT] charge = 0
+[INPUT] spin (= nelec alpha-beta = 2S) = 0
+[INPUT] symmetry False subgroup None
+[INPUT]  1 C     -3.724010000000   0.304900000000   0.000000000000 AA   -7.037358985142   0.576177495380   0.000000000000 Bohr
+[INPUT]  2 H     -4.625000000000   0.903690000000   0.000000000000 AA   -8.739983326113   1.707726601508   0.000000000000 Bohr
+[INPUT]  3 C     -2.486690000000   0.786230000000   0.000000000000 AA   -4.699163056695   1.485759370917   0.000000000000 Bohr
+[INPUT]  4 H     -2.394480000000   1.866290000000   0.000000000000 AA   -4.524911410749   3.526776969015   0.000000000000 Bohr
+[INPUT]  5 C     -1.287370000000  -0.001780000000   0.000000000000 AA   -2.432776720981  -0.003363712502   0.000000000000 Bohr
+[INPUT]  6 H     -1.400230000000  -1.082050000000   0.000000000000 AA   -2.646051211400  -2.044778153086   0.000000000000 Bohr
+[INPUT]  7 C     -0.052100000000   0.523350000000   0.000000000000 AA   -0.098454731090   0.988988167291   0.000000000000 Bohr
+[INPUT]  8 H      0.059240000000   1.606400000000   0.000000000000 AA    0.111947375619   3.035656046501   0.000000000000 Bohr
+[INPUT]  9 C      1.151470000000  -0.249940000000   0.000000000000 AA    2.175962940653  -0.472318147574   0.000000000000 Bohr
+[INPUT] 10 H      1.041180000000  -1.332990000000   0.000000000000 AA    1.967545046375  -2.518986026784   0.000000000000 Bohr
+[INPUT] 11 C      2.387260000000   0.272830000000   0.000000000000 AA    4.511267588129   0.515573978565   0.000000000000 Bohr
+[INPUT] 12 H      2.500780000000   1.355540000000   0.000000000000 AA    4.725789297790   2.561599350893   0.000000000000 Bohr
+[INPUT] 13 F     -3.972660000000  -1.002530000000   0.000000000000 AA   -7.507239386015  -1.894507131660   0.000000000000 Bohr
+[INPUT] 14 C      3.594280000000  -0.507520000000   0.000000000000 AA    6.792204815002  -0.959073802739   0.000000000000 Bohr
+[INPUT] 15 H      3.469320000000  -1.587740000000   0.000000000000 AA    6.556064638476  -3.000393757017   0.000000000000 Bohr
+[INPUT] 16 C      4.821140000000   0.009520000000   0.000000000000 AA    9.110634208186   0.017990192706   0.000000000000 Bohr
+[INPUT] 17 H      5.703640000000  -0.614460000000   0.000000000000 AA   10.778317513114  -1.161161114500   0.000000000000 Bohr
+[INPUT] 18 H      4.975550000000   1.082600000000   0.000000000000 AA    9.402426819080   2.045817502454   0.000000000000 Bohr
+[INPUT] ---------------- BASIS SET ---------------- 
+[INPUT] l, kappa, [nprim/nctr], expnt,             c_1 c_2 ...
+[INPUT] H
+[INPUT] 0    0    [3    /1   ]  33.865            0.0254938
+                                5.09479           0.190373
+                                1.15879           0.852161
+[INPUT] 0    0    [1    /1   ]  0.32584              1
+[INPUT] 0    0    [1    /1   ]  0.102741             1
+[INPUT] C
+[INPUT] 0    0    [6    /1   ]  4563.24           0.00196665
+                                682.024           0.0152306
+                                154.973           0.0761269
+                                44.4553           0.260801
+                                13.029            0.616462
+                                1.82773           0.221006
+[INPUT] 0    0    [3    /1   ]  20.9642           0.11466
+                                4.80331           0.919999
+                                1.45933           -0.00303068
+[INPUT] 0    0    [1    /1   ]  0.483456             1
+[INPUT] 0    0    [1    /1   ]  0.145585             1
+[INPUT] 1    0    [3    /1   ]  20.9642           0.0402487
+                                4.80331           0.237594
+                                1.45933           0.815854
+[INPUT] 1    0    [1    /1   ]  0.483456             1
+[INPUT] 1    0    [1    /1   ]  0.145585             1
+[INPUT] F
+[INPUT] 0    0    [6    /1   ]  11427.1           0.00180093
+                                1722.35           0.0137419
+                                395.746           0.0681334
+                                115.139           0.233325
+                                33.6026           0.589086
+                                4.91901           0.299505
+[INPUT] 0    0    [3    /1   ]  55.4441           0.114536
+                                12.6323           0.920512
+                                3.71756           -0.00337804
+[INPUT] 0    0    [1    /1   ]  1.16545              1
+[INPUT] 0    0    [1    /1   ]  0.321892             1
+[INPUT] 1    0    [3    /1   ]  55.4441           0.0354609
+                                12.6323           0.237451
+                                3.71756           0.820458
+[INPUT] 1    0    [1    /1   ]  1.16545              1
+[INPUT] 1    0    [1    /1   ]  0.321892             1
+nuclear repulsion = 367.612829309459
+number of shells = 90
+number of NR pGTOs = 279
+number of NR cGTOs = 144
+basis = {'H': [[0, [33.865, 0.0254938], [5.09479, 0.190373], [1.15879, 0.852161]], [0, [0.32584, 1.0]], [0, [0.102741, 1.0]]], 'C': [[0, [4563.24, 0.00196665], [682.024, 0.0152306], [154.973, 0.0761269], [44.4553, 0.260801], [13.029, 0.616462], [1.82773, 0.221006]], [0, [20.9642, 0.11466], [4.80331, 0.919999], [1.45933, -0.00303068]], [0, [0.483456, 1.0]], [0, [0.145585, 1.0]], [1, [20.9642, 0.0402487], [4.80331, 0.237594], [1.45933, 0.815854]], [1, [0.483456, 1.0]], [1, [0.145585, 1.0]]], 'F': [[0, [11427.1, 0.00180093], [1722.35, 0.0137419], [395.746, 0.0681334], [115.139, 0.233325], [33.6026, 0.589086], [4.91901, 0.299505]], [0, [55.4441, 0.114536], [12.6323, 0.920512], [3.71756, -0.00337804]], [0, [1.16545, 1.0]], [0, [0.321892, 1.0]], [1, [55.4441, 0.0354609], [12.6323, 0.237451], [3.71756, 0.820458]], [1, [1.16545, 1.0]], [1, [0.321892, 1.0]]]}
+ecp = {}
+CPU time:         0.61
+tot grids = 399648
+
+
+******** <class 'pyscf.dft.rks.RKS'> flags ********
+method = RKS
+initial guess = atom
+damping factor = 0
+level shift factor = 0
+DIIS = <class 'pyscf.scf.diis.CDIIS'>
+DIIS start cycle = 1
+DIIS space = 8
+SCF tol = 1e-08
+SCF gradient tol = 1e-08
+max. SCF cycles = 100
+direct_scf = True
+direct_scf_tol = 1e-13
+chkfile to save SCF result = /panfs/roc/scratch/graha682/20170809_6311g_m06_flourooctane135triene/tmpq6Kopu
+max_memory 4000 MB (current use 83 MB)
+XC functionals = m06
+small_rho_cutoff = 1e-20
+radial grids: Treutler-Ahlrichs (JCP 102, 346 (M4)) radial grids
+becke partition: Becke, JCP, 88, 2547 (1988)
+pruning grids: <function nwchem_prune at 0x162a488>
+grids dens level: 4
+symmetrized grids: False
+atomic radii adjust function: <function treutler_atomic_radii_adjust at 0x162a320>
+Initial guess from superpostion of atomic densties.
+init E= -412.313005833642
+  HOMO = -0.383354780784156  LUMO = -0.274173641176319
+cycle= 1 E= -409.365739500286  delta_E= 2.95  |g|= 1.17  |ddm|= 3.97
+  HOMO = -0.0700535887999451  LUMO = 0.0273745363140145
+cycle= 2 E= -409.295166747409  delta_E= 0.0706  |g|= 1.26  |ddm|= 2.23
+  HOMO = -0.206340943240545  LUMO = -0.0573827544628088
+cycle= 3 E= -409.732794566269  delta_E= -0.438  |g|= 0.298  |ddm|= 1.57
+  HOMO = -0.217133964678666  LUMO = -0.0643691780474865
+cycle= 4 E= -409.758504119286  delta_E= -0.0257  |g|= 0.0522  |ddm|= 0.358
+  HOMO = -0.218234007047036  LUMO = -0.0626922191757022
+cycle= 5 E= -409.759007218048  delta_E= -0.000503  |g|= 0.0318  |ddm|= 0.0866
+  HOMO = -0.218168198190166  LUMO = -0.0620487185634174
+cycle= 6 E= -409.759253251264  delta_E= -0.000246  |g|= 0.00744  |ddm|= 0.033
+  HOMO = -0.218742545540758  LUMO = -0.0624615948809307
+cycle= 7 E= -409.759267912174  delta_E= -1.47e-05  |g|= 0.00321  |ddm|= 0.0105
+  HOMO = -0.218843138894677  LUMO = -0.0625194716972264
+cycle= 8 E= -409.759270451008  delta_E= -2.54e-06  |g|= 0.000624  |ddm|= 0.00331
+  HOMO = -0.218836292044547  LUMO = -0.0624991729807564
+cycle= 9 E= -409.759270508479  delta_E= -5.75e-08  |g|= 0.000326  |ddm|= 0.000721
+  HOMO = -0.218828342456977  LUMO = -0.0624852124471191
+cycle= 10 E= -409.759270528469  delta_E= -2e-08  |g|= 4.32e-05  |ddm|= 0.00044
+  HOMO = -0.21882843781509  LUMO = -0.0624836500506001
+cycle= 11 E= -409.759270528797  delta_E= -3.28e-10  |g|= 3.25e-05  |ddm|= 7.78e-05
+  HOMO = -0.218828589636005  LUMO = -0.0624828670753695
+cycle= 12 E= -409.759270529044  delta_E= -2.47e-10  |g|= 7.46e-06  |ddm|= 3.57e-05
+  HOMO = -0.218828818087508  LUMO = -0.0624828006837945
+cycle= 13 E= -409.759270529059  delta_E= -1.52e-11  |g|= 2.42e-06  |ddm|= 1.07e-05
+  HOMO = -0.218828919397041  LUMO = -0.0624828044002842
+cycle= 14 E= -409.759270529061  delta_E= -2.16e-12  |g|= 1.12e-06  |ddm|= 3.68e-06
+  HOMO = -0.218828928890573  LUMO = -0.0624827670916276
+cycle= 15 E= -409.759270529061  delta_E= 5.68e-13  |g|= 7.03e-07  |ddm|= 1.72e-06
+  HOMO = -0.218828907854103  LUMO = -0.0624827479416145
+cycle= 16 E= -409.759270529059  delta_E= 1.36e-12  |g|= 1.61e-07  |ddm|= 7.86e-07
+  HOMO = -0.218828913730781  LUMO = -0.0624827557180072
+cycle= 17 E= -409.75927052906  delta_E= -2.27e-13  |g|= 4.32e-08  |ddm|= 2.02e-07
+  HOMO = -0.218828915436071  LUMO = -0.0624827559995947
+cycle= 18 E= -409.759270529061  delta_E= -9.09e-13  |g|= 1.66e-08  |ddm|= 4.99e-08
+  HOMO = -0.21882891513285  LUMO = -0.0624827557483848
+cycle= 19 E= -409.75927052906  delta_E= 9.09e-13  |g|= 9.89e-09  |ddm|= 1.55e-08
+  HOMO = -0.218828914028291  LUMO = -0.0624827546760949
+Extra cycle  E= -409.759270529061  delta_E= -1.14e-12  |g|= 9.89e-09  |ddm|= 2.3e-08
+converged SCF energy = -409.759270529061
+================================================================================
+TIMING STATISTICS:
+                 grids      0.27s   ( 0.31%)
+                    ks     89.22s   (100.00%)
+                 TOTAL     89.22s
+================================================================================
+
+********************************************************************************
+*                              END OF CALCULATION                              *
+********************************************************************************
